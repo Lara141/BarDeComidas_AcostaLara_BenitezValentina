@@ -116,18 +116,18 @@ p{
     </div>
   </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
 
 
 <!--Lado Derecho-->
 
 <div class="container">
-  <div class="row">
+  <div class="row justify-content-end">
     <div class="col-md-6">
       <h3 class="color-titulo">Dejanos tus datos</h3>
       <p >Para que un encargado pueda responder sus preguntas, por favor déjenos sus datos y sus dudas. Muchas gracias.</p>
-     
+
     </div>
   </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
