@@ -26,7 +26,7 @@ class Home extends BaseController
         $data['titulo'] = "Contacto";
         return view('plantillas/encabezado', $data)
             . view('plantillas/barraNavegacion')
-            . view('contenido/contacto')
+            . view('contenido/contacto_view')
             . view('plantillas/piePagina');
     }
 
