@@ -1,109 +1,3 @@
- <!-- Contenido principal -->
-<!-- Carrusel de imágenes 
-<section>-->
-    <!-- Título centrado
-    <div class="text-center text-uppercase fw-boldbadge">
-        <h4 class="mb-1">Promos imperdibles</h4>
-
-    </div>
--->
-    <!-- Carrusel 
-    <div id="carouselExampleIndicators" class="carousel slide">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-        </div>
-
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="assets/Img/imag_1.jpg" class="d-block w-100 img-fluid" alt="...">
-                <div class="carousel-caption d-none d-md-block text-black">
-                    <h4>Empanadas de carne picada</h4>
-                    <h4>$10.000</h4>
-                    <p>fritas/horno, carne picada-verdeo-papas (opcional)</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="assets/Img/imag2.jpg" class="d-block w-100 img-fluid" alt="...">
-                <div class="carousel-caption d-none d-md-block text-black">
-                    <h5>First slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="assets/Img/imag3.jpg" class="d-block w-100 img-fluid" alt="...">
-                <div class="carousel-caption d-none d-md-block text-black">
-                    <h5>First slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
-                </div>
-            </div>
-        </div>
-
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Siguiente</span>
-        </button>
-    </div>
-    </section>
-
-
-    <section class="mt-5">
-  <div class="container">
-
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-      <div class="col">
-        <div class="card h-100">
-          <img src="assets/Img/arrollado.jpg" class="card-img-top img-fluid" alt="Arrollado">
-          <div class="card-body">
-            <h5 class="card-title">Arrollado</h5>
-            <p class="card-text">Contiene: carne, huevo, morrón, etc.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card h-100">
-          <img src="assets/Img/choclo.jpeg" class="card-img-top img-fluid" alt="Envueltitos">
-          <div class="card-body">
-            <h5 class="card-title">Envueltitos</h5>
-            <p class="card-text">Contiene choclo y más cosas ricas. Perfectos para picar algo distinto.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card h-100">
-          <img src="assets/Img/mila.jpg" class="card-img-top img-fluid" alt="Milanesa">
-          <div class="card-body">
-            <h5 class="card-title">Milanesa</h5>
-            <p class="card-text">Ni idea, Lara sabrá 😅</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card h-100">
-          <img src="assets/Img/matam.jpg" class="card-img-top img-fluid" alt="Matambre">
-          <div class="card-body">
-            <h5 class="card-title">Matambre</h5>
-            <p class="card-text">Bueno, no sé qué contiene, después le pregunto a mamá 🙈</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
--->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -137,9 +31,9 @@
 <!-- 🌀 Carrusel automático -->
 <section class="mb-5">
   <div class="container">
-    <div class="text-center text-uppercase fw-bold mb-3">
+    <!--<div class="text-center text-uppercase fw-bold mb-3">
       <h3>🔥 Promos del día 🔥</h3>
-    </div>
+    </div-->
 
     <div id="carouselPromos" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
       <div class="carousel-inner rounded shadow">
@@ -147,7 +41,7 @@
           <img src="assets/Img/imag_1.jpg" class="d-block w-100" alt="Empanadas">
           <div class="carousel-caption">
             <h5>Empanadas de Carne</h5>
-            <p>$10.000 - Fritas u horno 🍴</p>
+            <p>$10.000 doc - Fritas u horno 🍴</p>
           </div>
         </div>
         <div class="carousel-item">
