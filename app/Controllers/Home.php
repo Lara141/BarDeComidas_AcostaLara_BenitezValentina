@@ -4,17 +4,13 @@ namespace App\Controllers;
 
 class Home extends BaseController
 {
-    public function index()
-    {
-<<<<<<< HEAD
-        return view('contenido/comercializacion.php');//si esta en una carpeta escribimos view(nombre de carpeta/archivo)
-=======
+    public function index(){
         $data['titulo'] = "ProyectoValentina";
         return view('plantillas/encabezado', $data)
             . view('plantillas/barraNavegacion')
             . view('contenido/principal')
             . view('plantillas/piePagina');
->>>>>>> e8527969dab9c3fe4c7376e3b8cd0b06e5cd223e
+            
     }
 
     public function somos()
@@ -36,7 +32,7 @@ class Home extends BaseController
 
     public function comercio()
     {
-        $data['titulo'] = "Comercialización";
+        $data['titulo'] = "Comercializacion";
         return view('plantillas/encabezado', $data)
             . view('plantillas/barraNavegacion')
             . view('contenido/comercializacion')
