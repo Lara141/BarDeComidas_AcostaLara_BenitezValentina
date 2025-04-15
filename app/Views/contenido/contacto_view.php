@@ -21,14 +21,14 @@ p{
       <form class="row g-3 needs-validation" id="miFormulario" novalidate>
         <div class="col-md-6 position-relative">
           <label for="validationTooltip01" class="form-label color-fuente">Nombre</label>
-          <input type="text" class="form-control" id="validationTooltip01" value=" " required>
+          <input type="text" name="nombre" class="form-control" id="validationTooltip01" value=" " required>
           <div class="valid-tooltip">
             Looks good!
           </div>
         </div>
         <div class="col-md-6 position-relative">
           <label for="validationTooltip02" class="form-label color-fuente">Apellido</label>
-          <input type="text" class="form-control" id="validationTooltip02" value=" " required>
+          <input type="text" name="apellido" class="form-control" id="validationTooltip02" value=" " required>
           <div class="valid-tooltip">
             Looks good!
           </div>
@@ -62,7 +62,7 @@ p{
         </div>
         <div class="col-md-6 position-relative">
           <label for="validationTooltipTelefono" class="form-label color-fuente">Teléfono para contactar</label>
-          <input type="text" class="form-control" id="validationTooltipTelefono" value=" " required>
+          <input type="numbers" name="numeros" class="form-control" id="validationTooltipTelefono" value=" " required>
           <div>
             <select class="form-select" id="validationTooltipTipoTelefono" required>
               <option selected disabled value="">Teléfono Particular</option>
@@ -78,7 +78,7 @@ p{
         </div>
         <div class="col-md-12 position-relative">
           <label for="validationTooltipPregunta" class="form-label color-fuente">Pregunta</label>
-          <input type="text" class="form-control" id="validationTooltipPregunta" required>
+          <input type="text" name="descripcion" class="form-control" id="validationTooltipPregunta" required>
           <div class="invalid-tooltip">
             Por favor, ingresa tu pregunta.
           </div>

@@ -11,33 +11,33 @@ body {
 /* Barra de navegación personalizada */
 .navbar {
     padding: 10px;
-    background-color: #2C3E50; /* Azul oscuro para navbar */
+    background-color: #05b2f7; /* Azul oscuro para navbar */
 }
 
 .navbar .navbar-brand {
-    color: #0b0b0b;
+    color: #0b0b0b;/*color de la letra del titulo*/
     font-size: 1rem;
     font-weight: bold;
     padding: 10px 20px;
 }
 
 .navbar .navbar-brand:hover {
-    color: #1a1a1a;
+    color: #220de4;/*el titulo en la barra de navegacion cambia el color al pocisionar el mause*/
     text-decoration: none;
 }
 
 .navbar .navbar-nav .nav-link {
-    color: #121212;
+    color: #121212;/*color de las opciones en mi boton desplegable*/
     font-size: 1rem;
     padding: 8px 15px;
 }
 
 .navbar-toggler {
-    border-color: #5dade2; /* Azul medio para el borde */
+    border-color: #4e6cf1; /* Azul medio para el borde, borde del boton desplegable */
 }
 
 .navbar .navbar-nav .nav-link:hover {
-    background-color: #f5f8fa; /* Azul claro en hover */
+    background-color: #8cd1d3; /* Azul claro en hover, el color de seleccion en el boton desplegable */
     border-radius: 5px;
 }
 
@@ -49,12 +49,12 @@ body {
 }
 
 .navbar .dropdown-menu .dropdown-item {
-    color: #050505;
+    color: #050505;/*color de la letra de las opciones del menu desplegable*/
     padding: 10px 20px;
 }
 
 .navbar .dropdown-menu .dropdown-item:hover {
-    background-color: #ffffff; /* Azul más intenso */
+    background-color: #ffffff; /* cambia el color del fondo de las opciones en el boton de menu */
     color: #0f0e0e;
 }
 
@@ -120,6 +120,44 @@ footer {
     margin-top: 20px;
 }
 
+.footer-container {
+    background-color: #c3d8e2;
+    padding: 20px;
+    width: 100%;
+  }
+  
+  .footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .left-icons {
+    justify-content: flex-start;
+  }
+  
+  .right-icons {
+    justify-content: flex-end;
+  }
+  
+  .social-icons li a {
+    text-decoration: none;
+    color: #121210;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
 /* Sección de marg */
 .marg {
     background-color: #dff6ff; /* Azul claro suave */

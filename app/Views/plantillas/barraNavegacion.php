@@ -1,5 +1,5 @@
     <!-- Nueva barra de navegación con estilo Offcanvas -->
-<nav class="navbar bg-body-tertiary fixed-top">
+    <nav class="navbar fixed-top" style="background-color: #d0f0ff;">
   <div class="container-fluid">
     <!-- Logo -->
     <img src="assets/Img/logoB.jpg" alt="..." width="50" height="44">
