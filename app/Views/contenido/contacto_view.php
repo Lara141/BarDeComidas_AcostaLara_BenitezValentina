@@ -1,8 +1,4 @@
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<link rel="stylesheet" href="<?php echo base_url('assets/css/estilo.css'); ?>"/>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 <style>
 
 .color-fuente {
@@ -15,10 +11,6 @@
 p{
     color:rgb(3, 45, 59);
 }
-/* Si prefieres un celeste más oscuro, puedes usar: */
-/* .color-fuente {
-  color: #87CEEB; /* Código hexadecimal para celeste estándar */
-/* } */
 </style>
 
 <div class="container">

@@ -2,7 +2,7 @@
 body {
     margin: 20px;
     padding: 10px;
-    background-color: #d4eef8; /* Azul pastel claro */
+    background-color: #ffffff; /* Azul pastel claro */
     font-family: Arial, sans-serif;
     color: #2C3E50; /* Azul oscuro para buen contraste */
     font-size: 16px;
@@ -37,7 +37,7 @@ body {
 }
 
 .navbar .navbar-nav .nav-link:hover {
-    background-color: #95c1ed; /* Azul claro en hover */
+    background-color: #f5f8fa; /* Azul claro en hover */
     border-radius: 5px;
 }
 
@@ -54,7 +54,7 @@ body {
 }
 
 .navbar .dropdown-menu .dropdown-item:hover {
-    background-color: #6ba4e6; /* Azul más intenso */
+    background-color: #ffffff; /* Azul más intenso */
     color: #0f0e0e;
 }
 
@@ -113,7 +113,7 @@ body {
 
 /* Pie de página */
 footer {
-    background-color: #bce7f9;
+    background-color: #c3d8e2;
     color: #121210;
     padding: 20px;
     width: 100%;
@@ -143,15 +143,6 @@ a:hover {
     text-shadow: none !important;
 }
 
-/* Redes sociales */
-a.facebook {
-    color: #1877f2; /* azul fuerte para Facebook */
-}
-
-a.instagram {
-    color: #6e6e6e; /* Gris para no usar rosado */
-}
-
 .social-media a {
     text-decoration: none;
     font-size: 18px;
@@ -162,9 +153,6 @@ a.instagram {
 
 /* Clases sueltas corregidas */
 button:hover {
-    background-color: #3498db; /* Azul brillante */
+    background-color: #718491; /* Azul brillante */
 }
 
-.color {
-    color: #3498db; /* Azul bonito */
-}
