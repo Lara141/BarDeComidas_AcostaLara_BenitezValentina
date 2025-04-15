@@ -42,8 +42,8 @@
               Menú
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="https://menu.fu.do/mirandalegal/qr-menu">Comida</a></li>
-              <li><a class="dropdown-item" href="<?= base_url('menuu') ?>">Bebida</a></li>
+              <li><a class="dropdown-item" href="">Comida</a></li>
+              <li><a class="dropdown-item" href="">Bebida</a></li>
             </ul>
           </li>
         </ul>
