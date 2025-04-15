@@ -42,17 +42,11 @@
               Menú
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="https://menu.fu.do/mirandalegal/qr-menu">Comida</a></li>
-              <li><a class="dropdown-item" href="<?= base_url('menuu') ?>">Bebida</a></li>
+              <li><a class="dropdown-item" href="">Comida</a></li>
+              <li><a class="dropdown-item" href="">Bebida</a></li>
             </ul>
           </li>
         </ul>
-
-        <!-- Buscador (opcional) 
-        <form class="d-flex mt-3" role="search">
-          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Buscar</button>
-        </form> -->
       </div>
     </div>
   </div>
