@@ -4,13 +4,13 @@ namespace App\Controllers;
 
 class Home extends BaseController
 {
-    public function index()
-    {
+    public function index(){
         $data['titulo'] = "Inicio";
         return view('plantillas/encabezado', $data)
             . view('plantillas/barraNavegacion')
             . view('contenido/principal')
             . view('plantillas/piePagina');
+            
     }
 
     public function somos()
@@ -32,7 +32,7 @@ class Home extends BaseController
 
     public function comercio()
     {
-        $data['titulo'] = "Comercialización";
+        $data['titulo'] = "Comercializacion";
         return view('plantillas/encabezado', $data)
             . view('plantillas/barraNavegacion')
             . view('contenido/comercializacion')
