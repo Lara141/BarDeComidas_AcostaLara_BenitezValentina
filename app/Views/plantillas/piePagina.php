@@ -11,6 +11,6 @@
         <li><a href=""><i class="fa-brands fa-whatsapp fa-2x1"></i> Whatsapp</a></li>
       </ul>
     </div>
-  </div>
+  </div> 
 </footer>
 
