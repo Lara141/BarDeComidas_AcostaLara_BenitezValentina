@@ -2,9 +2,10 @@
 body {
     margin: 20px;
     padding: 10px;
-    background-color: #e6f7fd; /* Azul pastel claro */
+    background-color: #d4eef8; /* Azul pastel claro */
     font-family: Arial, sans-serif;
-    color: #2C3E50; /* Azul oscuro para mejor contraste */
+    color: #2C3E50; /* Azul oscuro para buen contraste */
+    font-size: 16px;
 }
 
 /* Barra de navegación personalizada */
@@ -21,7 +22,7 @@ body {
 }
 
 .navbar .navbar-brand:hover {
-    color: #0c0c0c; /* Verde menta en hover */
+    color: #1a1a1a;
     text-decoration: none;
 }
 
@@ -32,17 +33,17 @@ body {
 }
 
 .navbar-toggler {
-    border-color: #27ae60; /* Verde menta para borde del botón */
+    border-color: #5dade2; /* Azul medio para el borde */
 }
 
 .navbar .navbar-nav .nav-link:hover {
-    background-color: #95c1ed; /* Azul-gris oscuro en hover */
+    background-color: #95c1ed; /* Azul claro en hover */
     border-radius: 5px;
 }
 
-/* Estilos para el menú desplegable */
+/* Menú desplegable */
 .navbar .dropdown-menu {
-    background-color: #c4e6f7; /* Azul oscuro */
+    background-color: #c4e6f7; /* Azul muy claro */
     border-radius: 5px;
     padding: 10px 0;
 }
@@ -53,11 +54,11 @@ body {
 }
 
 .navbar .dropdown-menu .dropdown-item:hover {
-    background-color: #6ba4e6;
-    color: rgb(15, 14, 14);
+    background-color: #6ba4e6; /* Azul más intenso */
+    color: #0f0e0e;
 }
 
-/* Estilos para el formulario de búsqueda */
+/* Formulario de búsqueda */
 .navbar .form-control {
     width: 200px;
     border-radius: 20px;
@@ -66,24 +67,23 @@ body {
 .navbar .btn-outline-success {
     border-radius: 20px;
     padding: 6px 20px;
-    color: #27ae60;
-    border: 2px solid #27ae60;
+    color: #2C3E50;
+    border: 2px solid #2C3E50;
 }
 
 .navbar .btn-outline-success:hover {
-    background-color: #27ae60;
+    background-color: #2C3E50;
     color: white;
 }
 
-/* Estilos para el contenedor principal */
+/* Contenedor principal */
 .contenedor {
     padding: 40px;
     background-color: #ecf0f1; /* Gris claro */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 40px auto;
+    margin: 40px auto 20px;
     max-width: 800px;
-    margin-top: 20px;
     text-align: center;
 }
 
@@ -92,13 +92,12 @@ body {
     font-size: 2.5rem;
     font-weight: bold;
     color: #2C3E50;
-    margin-right: 10px;
     margin-bottom: 0;
 }
 
-/* Estilo para el botón */
+/* Botón */
 .boton {
-    background-color: #27ae60;
+    background-color: #5dade2; /* Azul medio */
     color: white;
     padding: 15px 40px;
     font-size: 1rem;
@@ -109,48 +108,48 @@ body {
 }
 
 .boton:hover {
-    background-color: #2ecc71;
+    background-color: #3498db; /* Azul más fuerte */
 }
 
-/* Estilo para el pie de página */
+/* Pie de página */
 footer {
     background-color: #bce7f9;
     color: #121210;
     padding: 20px;
     width: 100%;
     margin-top: 20px;
-  }
-  
+}
 
-/* Estilo para la sección de marg */
+/* Sección de marg */
 .marg {
     background-color: #dff6ff; /* Azul claro suave */
     color: #2C3E50;
     margin-top: 20px;
 }
 
-/* Estilo para los enlaces */
+/* Enlaces */
 a {
-    color: #27ae60;
+    color: #2C3E50;
     text-decoration: none;
 }
 
 a:hover {
-    color: #1abc9c;
+    color: #3498db;
 }
 
+/* Carrusel */
 .carousel-caption {
     color: #000 !important;
     text-shadow: none !important;
 }
 
-/* Estilos individuales */
+/* Redes sociales */
 a.facebook {
     color: #1877f2; /* azul fuerte para Facebook */
 }
 
 a.instagram {
-    color: #e1306c; /* rosado para Instagram */
+    color: #6e6e6e; /* Gris para no usar rosado */
 }
 
 .social-media a {
@@ -161,20 +160,11 @@ a.instagram {
     gap: 8px;
 }
 
-body{
-    font-size: 16px;
-    background-color:palegreen;
-    color: brown;
-}
-.boton{
-    background-color: aquamarine;
-    color: blue;
-}
-button:hover{
-    background-color: pink;
+/* Clases sueltas corregidas */
+button:hover {
+    background-color: #3498db; /* Azul brillante */
 }
 
-.color{
-    color: pink;
-    
+.color {
+    color: #3498db; /* Azul bonito */
 }
