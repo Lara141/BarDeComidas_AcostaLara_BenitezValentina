@@ -5,7 +5,7 @@ namespace App\Controllers;
 class Home extends BaseController
 {
     public function index(){
-        $data['titulo'] = "ProyectoValentina";
+        $data['titulo'] = "Inicio";
         return view('plantillas/encabezado', $data)
             . view('plantillas/barraNavegacion')
             . view('contenido/principal')

@@ -16,22 +16,7 @@
  
  <section class="mt-5 pt-5">
  
- <!--
- <div class="container">
-     <header>
-         <ul class="nav justify-content-center">
-             <a class="nav-item" href="">
-                 <i class="fa-brands fa-facebook fa-2x1"></i>   
-             </a>
-         </ul>
-         <ul class="nav justify-content-center">
-         <a class="nav-item" href="">
-             <i class="fa-brands fa-instagram"></i>   
-             </a>
- </ul>
-     </header>
- </div>
- -->
+ 
  
  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
