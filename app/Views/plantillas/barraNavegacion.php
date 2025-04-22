@@ -1,8 +1,8 @@
     <!-- Nueva barra de navegación con estilo Offcanvas -->
     <nav class="navbar fixed-top" style="top: 40px; background-color: #d0f0ff;">
   <div class="container-fluid">
-    <!-- Logo -->
-    <img src="assets/Img/logoB.jpg" alt="..." width="50" height="44">
+    <!-- Logo 
+    <img src="assets/Img/logoB.jpg" alt="..." width="50" height="44">-->
     <a class="navbar-brand" href="#">Sabor Argentino</a>
 
     <!-- Botón para abrir el offcanvas -->

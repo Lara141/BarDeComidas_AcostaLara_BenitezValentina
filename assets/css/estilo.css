@@ -227,3 +227,26 @@ button:hover {
     background-color: #e9e3e3;
 }
 
+.encabezado-top {
+    position: fixed; /*hace quesea estaticco*/
+    top: 0;
+    width: 100%;
+    background-color: #c3d8e2;
+    z-index: 1000;
+    padding: 10px 20px;
+}
+
+.container-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.container-header img {
+    height: 30px;
+    width: auto;
+}
+
+main, section {
+    margin-top: 90px; /* espacio para que no tape el header */
+}

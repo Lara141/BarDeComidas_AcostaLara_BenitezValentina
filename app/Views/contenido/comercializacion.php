@@ -484,7 +484,6 @@
  </div>
  
  
-<<<<<<< HEAD
  <div class="modal fade" id="modalPago6" tabindex="-1" aria-labelledby="modalPago6Label" aria-hidden="true">
    <div class="modal-dialog modal-dialog-centered modal-lg">
      <div class="modal-content">
@@ -588,9 +587,11 @@
  
          <h6 class="fw-bold mt-3">Información del Restaurante:</h6>
          <ul class="text-secondary" style="font-size: 0.9rem;">
-           <li><strong>Nombre del Restaurante:</strong> [Nombre de tu Restaurante]</li>
-           <li><strong>Dirección:</strong> [Dirección completa de tu Restaurante, incluyendo calle, número, localidad y provincia (Corrientes, Corrientes)]</li>
-           <li><strong>Horarios de Retiro:</strong> [Indica los días y horarios en los que los clientes pueden retirar sus pedidos. Ejemplo: Lunes a Viernes de 10:00 a 20:00 hs, Sábados de 12:00 a 18:00 hs]</li>
+           <li><strong>Nombre del Restaurante:</strong> Sabor Argentino</li>
+           <li><strong>Dirección sucursal 1:</strong> Corrientes Capital: av. 3 de abril y chacabuco</li>
+           <li><strong>Dirección sucursal 2:</strong> Buenos Aires: C. Gaspar M. de Jovellanos 151, C1268</li>
+           <li><strong>Dirección sucursal 3:</strong> Itati, Corrientes: av. 25 de Mayo, W3414 Itati, Corientes</li>
+           <li><strong>Horarios de Retiro:</strong>Lunes a Viernes de 20:00 a 23:00 hs, Sábados de 21:00 a 00:00 hs</li>
          </ul>
  
          <h6 class="fw-bold mt-3">¿Cómo seleccionar Retiro en el Restaurante?</h6>
@@ -676,8 +677,6 @@
  
  
  
-   
-=======
  <!-- Modal Pago Galicia --><div class="modal fade" id="modalPago6" tabindex="-1" aria-labelledby="modalPago6Label" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
@@ -757,7 +756,8 @@
 </div>
 
   </div>
-</div><!-- Modal Entrega Retiro Restaurante --><div class="modal fade" id="modalEntrega1" tabindex="-1" aria-labelledby="modalEntrega1Label" aria-hidden="true">
+</div><!-- Modal Entrega Retiro Restaurante -->
+<div class="modal fade" id="modalEntrega1" tabindex="-1" aria-labelledby="modalEntrega1Label" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
       <div class="modal-header">
@@ -794,11 +794,13 @@
     <p class="text-secondary" style="font-size: 0.8rem;">
       Si tienes dudas sobre el retiro, contáctanos.
     </p>
+   </div>
   </div>
 </div>
 
   </div>
-</div><!-- Modal Entrega Delivery --><div class="modal fade" id="modalEntrega2" tabindex="-1" aria-labelledby="modalEntrega2Label" aria-hidden="true">
+</div><!-- Modal Entrega Delivery -->
+<div class="modal fade" id="modalEntrega2" tabindex="-1" aria-labelledby="modalEntrega2Label" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
       <div class="modal-header">
@@ -837,9 +839,4 @@
 </div>
 
   </div>
-<<<<<<< HEAD
 </div>
-=======
-</div><!-- Bootstrap Bundle JS --><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
->>>>>>> 2951923aeacb65aad991d384068d04cfef24011a
->>>>>>> edd716b6301206b7bf781d1faf05dca508b40a95
