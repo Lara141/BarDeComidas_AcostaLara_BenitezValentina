@@ -484,6 +484,7 @@
  </div>
  
  
+<<<<<<< HEAD
  <div class="modal fade" id="modalPago6" tabindex="-1" aria-labelledby="modalPago6Label" aria-hidden="true">
    <div class="modal-dialog modal-dialog-centered modal-lg">
      <div class="modal-content">
@@ -676,3 +677,165 @@
  
  
    
+=======
+ <!-- Modal Pago Galicia --><div class="modal fade" id="modalPago6" tabindex="-1" aria-labelledby="modalPago6Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title fw-bold" id="modalPago6Label">Medio de Pago: Tarjeta Galicia</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <h6 class="fw-bold">Paga con tus tarjetas Galicia</h6>
+        <p class="text-secondary" style="font-size: 0.9rem;">
+          Aceptamos tarjetas de crédito y débito emitidas por el Banco Galicia para que puedas realizar tus compras de manera segura y aprovechar sus beneficios.
+        </p><h6 class="fw-bold mt-3">Beneficios Exclusivos (si aplica):</h6>
+    <p class="text-secondary" style="font-size: 0.9rem;">
+      [Aquí puedes detallar cualquier promoción o beneficio especial que ofrezcas al pagar con tarjetas Galicia.]
+    </p>
+    <ul class="text-secondary" style="font-size: 0.9rem;">
+      <li><strong>[Número] cuotas sin interés</strong> con tarjetas de crédito Galicia.</li>
+      <li><strong>[Porcentaje]% de descuento</strong> los días [Días de la semana] para clientes Galicia Éminent/Prefer.</li>
+      <li>Accede a <strong>planes de financiación</strong> con tu tarjeta Galicia.</li>
+      <li>Beneficios especiales en categorías como [Categorías relevantes].</li>
+    </ul>
+    <p class="text-secondary" style="font-size: 0.9rem;">
+      Consulta los términos y condiciones de cada promoción durante el proceso de pago.
+    </p>
+
+    <h6 class="fw-bold mt-3">¿Cómo pagar con Tarjeta Galicia?</h6>
+    <p class="text-secondary" style="font-size: 0.9rem;">
+      Al seleccionar Tarjeta Galicia como tu método de pago, serás redirigido a una pasarela de pago segura donde podrás ingresar los datos de tu tarjeta.
+    </p>
+
+    <h6 class="fw-bold mt-3">Galicia Online y App (si aplica):</h6>
+    <p class="text-secondary" style="font-size: 0.9rem;">
+      Si eres usuario de Galicia Online o la App Galicia, puedes tener opciones adicionales o una experiencia de pago más ágil.
+    </p>
+
+    <p class="text-secondary" style="font-size: 0.8rem;">
+      Para cualquier consulta sobre tus tarjetas Galicia o sus beneficios, contacta directamente con el Banco Galicia.
+    </p>
+  </div>
+</div>
+
+  </div>
+</div><!-- Modal Pago Cabal --><div class="modal fade" id="modalPago7" tabindex="-1" aria-labelledby="modalPago7Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title fw-bold" id="modalPago7Label">Medio de Pago: Tarjeta Cabal</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <h6 class="fw-bold">Paga con tu tarjeta Cabal</h6>
+        <p class="text-secondary" style="font-size: 0.9rem;">
+          Aceptamos tarjetas de crédito y débito de la red Cabal para que puedas abonar tus compras de manera práctica y segura.
+        </p><h6 class="fw-bold mt-3">Beneficios Exclusivos (si aplica):</h6>
+    <p class="text-secondary" style="font-size: 0.9rem;">
+      [Aquí puedes detallar cualquier promoción o beneficio especial que ofrezcas al pagar con tarjetas Cabal.]
+    </p>
+    <ul class="text-secondary" style="font-size: 0.9rem;">
+      <li><strong>[Número] cuotas sin interés</strong> con tarjetas de crédito Cabal.</li>
+      <li><strong>Promociones especiales</strong> para socios de la red Cabal.</li>
+      <li><strong>[Porcentaje]% de descuento</strong> en días específicos.</li>
+      <li>Beneficios en categorías como [Categorías relevantes].</li>
+    </ul>
+    <p class="text-secondary" style="font-size: 0.9rem;">
+      Consulta los términos y condiciones de cada promoción durante el proceso de pago.
+    </p>
+
+    <h6 class="fw-bold mt-3">¿Cómo pagar con Tarjeta Cabal?</h6>
+    <p class="text-secondary" style="font-size: 0.9rem;">
+      Al seleccionar Tarjeta Cabal como tu método de pago, serás redirigido a una pasarela de pago segura donde ingresarás los datos de tu tarjeta Cabal.
+    </p>
+
+    <p class="text-secondary" style="font-size: 0.8rem;">
+      Para cualquier consulta sobre tu tarjeta Cabal o sus beneficios, contacta a la entidad emisora.
+    </p>
+  </div>
+</div>
+
+  </div>
+</div><!-- Modal Entrega Retiro Restaurante --><div class="modal fade" id="modalEntrega1" tabindex="-1" aria-labelledby="modalEntrega1Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title fw-bold" id="modalEntrega1Label">Medio de Entrega: Retiro en el Restaurante</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <h6 class="fw-bold">Retira tu pedido directamente en nuestro restaurante</h6>
+        <p class="text-secondary" style="font-size: 0.9rem;">
+          Selecciona la opción de retiro para buscar tu pedido cuando te quede más cómodo.
+        </p><h6 class="fw-bold mt-3">Información del Restaurante:</h6>
+    <ul class="text-secondary" style="font-size: 0.9rem;">
+      <li><strong>Nombre:</strong> [Nombre de tu Restaurante]</li>
+      <li><strong>Dirección:</strong> [Dirección completa]</li>
+      <li><strong>Horarios:</strong> [Días y horarios de retiro]</li>
+    </ul>
+
+    <h6 class="fw-bold mt-3">¿Cómo seleccionar Retiro?</h6>
+    <p class="text-secondary" style="font-size: 0.9rem;">
+      Durante la compra, selecciona "Retiro en el Restaurante" en "Entrega".
+    </p>
+
+    <h6 class="fw-bold mt-3">Proceso de Retiro:</h6>
+    <p class="text-secondary" style="font-size: 0.9rem;">
+      Te notificaremos cuando tu pedido esté listo. Espera nuestra confirmación antes de acercarte.
+    </p>
+
+    <ul class="text-secondary" style="font-size: 0.9rem;">
+      <li><strong>Gratis</strong>: Sin costo adicional.</li>
+      <li><strong>Flexible</strong>: Dentro de los horarios.</li>
+      <li><strong>Rápido</strong>: Evita demoras.</li>
+    </ul>
+
+    <p class="text-secondary" style="font-size: 0.8rem;">
+      Si tienes dudas sobre el retiro, contáctanos.
+    </p>
+  </div>
+</div>
+
+  </div>
+</div><!-- Modal Entrega Delivery --><div class="modal fade" id="modalEntrega2" tabindex="-1" aria-labelledby="modalEntrega2Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title fw-bold" id="modalEntrega2Label">Medio de Entrega: Delivery</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <h6 class="fw-bold">Recibe tu pedido donde estés</h6>
+        <p class="text-secondary" style="font-size: 0.9rem;">
+          Delivery disponible para tu comodidad. Recibe tus compras en la dirección que indiques.
+        </p><h6 class="fw-bold mt-3">Cobertura de Delivery:</h6>
+    <ul class="text-secondary" style="font-size: 0.9rem;">
+      <li>[Zonas cubiertas]</li>
+      <li>[Limitaciones geográficas, si aplica]</li>
+    </ul>
+
+    <h6 class="fw-bold mt-3">Costos y Tiempos:</h6>
+    <p class="text-secondary" style="font-size: 0.9rem;">
+      Costo de envío: <strong>$[Monto]</strong>. Tiempo estimado: <strong>[24-48 horas]</strong>.
+    </p>
+
+    <h6 class="fw-bold mt-3">¿Cómo seleccionar Delivery?</h6>
+    <p class="text-secondary" style="font-size: 0.9rem;">
+      Selecciona "Delivery" en la sección "Entrega" si estás dentro de nuestra zona de cobertura.
+    </p>
+
+    <h6 class="fw-bold mt-3">Información Adicional:</h6>
+    <p class="text-secondary" style="font-size: 0.9rem;">
+      Te contactaremos para coordinar la entrega. Verifica tus datos de contacto.
+    </p>
+
+    <p class="text-secondary" style="font-size: 0.8rem;">
+      Para consultas sobre delivery, contáctanos.
+    </p>
+  </div>
+</div>
+
+  </div>
+</div><!-- Bootstrap Bundle JS --><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+>>>>>>> 2951923aeacb65aad991d384068d04cfef24011a
