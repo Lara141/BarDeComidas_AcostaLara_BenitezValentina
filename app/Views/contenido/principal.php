@@ -71,17 +71,16 @@
       
       <!--  Arrollado -->
       <div class="col">
-        <div class="card h-100 shadow-sm">
+        <div class="card h-100 shadow-sm position-relative">
           <img src="assets/Img/arrollado.jpg" class="card-img-top" alt="Arrollado">
           <div class="card-body">
-            <p class="promo-title">Arrollado</p>
-            <p class="promo-price">$5500</p>
-            <p class="card-text">Carne, huevo, morrón... un clásico infalible.</p>
-
-            <button type="button" class="btn btn-primary position-relative">
-            <img src="assets/Img/carrito.jpg"  alt="carrito">
-            </button>
+        <p class="promo-title">Arrollado</p>
+        <p class="promo-price">$5500</p>
+        <p class="card-text">Carne, huevo, morrón... un clásico infalible.</p>
           </div>
+          <button class="position-absolute border-0" style="bottom: 0; right: 0; background-color: transparent;" onmouseover="this.style.backgroundColor='transparent';" onmouseout="this.style.backgroundColor='transparent';">
+        <img src="assets/Img/carrito.jpg" alt="carrito" style="width: 30px; height: 30px;">
+          </button>
         </div>
       </div>
 
@@ -94,6 +93,9 @@
             <p class="promo-price">$4500</p>
             <p class="card-text">Choclo y más sorpresas deliciosas.</p>
           </div>
+          <button class="position-absolute border-0" style="bottom: 0; right: 0; background-color: transparent;" onmouseover="this.style.backgroundColor='transparent';" onmouseout="this.style.backgroundColor='transparent';">
+        <img src="assets/Img/carrito.jpg" alt="carrito" style="width: 30px; height: 30px;">
+          </button>
         </div>
       </div>
 
@@ -106,6 +108,9 @@
             <p class="promo-price">$6000</p>
             <p class="card-text">Clásica, sabrosa, enorme. Ideal para matar el hambre.</p>
           </div>
+          <button class="position-absolute border-0" style="bottom: 0; right: 0; background-color: transparent;" onmouseover="this.style.backgroundColor='transparent';" onmouseout="this.style.backgroundColor='transparent';">
+        <img src="assets/Img/carrito.jpg" alt="carrito" style="width: 30px; height: 30px;">
+          </button>
         </div>
       </div>
 
@@ -118,6 +123,9 @@
             <p class="promo-price">$7000</p>
             <p class="card-text">Receta familiar, sabor que no falla </p>
           </div>
+          <button class="position-absolute border-0" style="bottom: 0; right: 0; background-color: transparent;" onmouseover="this.style.backgroundColor='transparent';" onmouseout="this.style.backgroundColor='transparent';">
+        <img src="assets/Img/carrito.jpg" alt="carrito" style="width: 30px; height: 30px;">
+          </button>
         </div>
       </div>
 
@@ -153,6 +161,7 @@
         nombre: "Chivito",
         descripcion: "Sandwich de tierno chivo cocinado lentamente con especias regionales.",
         precio: "$9500",
+        botonCarrito: "Agregar al carrito",
         imagen: "assets/Img/chivito.jpg",
         ingredientes: "Chivo, ajo, romero, vino blanco, pan casero."
       }
@@ -162,6 +171,7 @@
         nombre: "Tamales salteños",
         descripcion: "Masa de maíz rellena de carne, envuelta en chala.",
         precio: "$3500",
+        botonCarrito: "Agregar al carrito",
         imagen: "assets/Img/tamales.jpg",
         ingredientes: "Harina de maíz, carne vacuna, cebolla, pimentón, chala de maíz."
       },
@@ -169,6 +179,7 @@
         nombre: "Empanadas salteñas",
         descripcion: "Empanadas rellenas de carne, jugosas y especiadas.",
         precio: "$4500",
+        botonCarrito: "Agregar al carrito",
         imagen: "assets/Img/empsalta.jpg",
         ingredientes: "Carne cortada a cuchillo, papa, cebolla, huevo duro, comino."
       }
@@ -178,6 +189,7 @@
         nombre: "Locro Cordobés",
         descripcion: "Guiso criollo con maíz, zapallo, carne y embutidos.",
         precio: "$6000",
+        botonCarrito: "Agregar al carrito",
         imagen: "assets/Img/locrito.jpg",
         ingredientes: "Maíz blanco, zapallo, panceta, chorizo colorado, cebolla."
       },
@@ -185,6 +197,7 @@
         nombre: "Cabrito al horno",
         descripcion: "Cabrito tierno cocinado lentamente al horno.",
         precio: "$20000",
+        botonCarrito: "Agregar al carrito",
         imagen: "assets/Img/cabrito.jpg",
         ingredientes: "Cabrito, limón, sal gruesa, hierbas frescas."
       }
@@ -194,6 +207,7 @@
         nombre: "Mbeyú",
         descripcion: "Torta de almidón de mandioca, queso y manteca.",
         precio: "$4000",
+        botonCarrito: "Agregar al carrito",
         imagen: "assets/Img/mbeyu.jpg",
         ingredientes: "Almidón de mandioca, queso, leche, manteca, sal."
       },
@@ -201,6 +215,7 @@
         nombre: "Chipa so'o",
         descripcion: "Pan de queso relleno de carne picada.",
         precio: "$5500",
+        botonCarrito: "Agregar al carrito",
         imagen: "assets/Img/chipasoo.jpg",
         ingredientes: "Almidón de mandioca, queso, carne picada, cebolla, huevos."
       },
@@ -210,6 +225,7 @@
         nombre: "Milanesa Napolitana",
         descripcion: "Milanesa de carne con salsa de tomate y queso gratinado.",
         precio: "$12000",
+        botonCarrito: "Agregar al carrito",
         imagen: "assets/Img/napolitana.jpg",
         ingredientes: "Carne vacuna, pan rallado, huevo, salsa de tomate, jamón, queso mozzarella."
       },
@@ -217,6 +233,7 @@
         nombre: "Empanadas Fritas",
         descripcion: "Empanadas rellenas de carne fritas en grasa.",
         precio: "$5500",
+        botonCarrito: "Agregar al carrito",
         imagen: "assets/Img/empfritas.jpg",
         ingredientes: "Carne picada, cebolla, pimentón, huevo duro, masa para empanadas."
       },
@@ -224,6 +241,7 @@
         nombre: "Choripán",
         descripcion: "Chorizo a la parrilla servido en pan crujiente con chimichurri.",
         precio: "$5000",
+        botonCarrito: "Agregar al carrito",
         imagen: "assets/Img/choripa.jpg",
         ingredientes: "Chorizo criollo, pan francés, chimichurri (ajo, perejil, vinagre, aceite)."
       }
@@ -243,7 +261,10 @@
               <h5 class="card-title">${plato.nombre}</h5>
               <p class="card-text">${plato.descripcion}</p>
               <p class="promo-price fw-bold">${plato.precio}</p>
-
+              <button class="position-absolute border-0" style="bottom: 0; right: 0; background-color: transparent;" onmouseover="this.style.backgroundColor='transparent';" onmouseout="this.style.backgroundColor='transparent';"  data-bs-target="#collapse${plato.botonCarrito.replace(/\s+/g, '')}" 
+                      aria-expanded="false">
+                <img src="assets/Img/carrito.jpg" alt="carrito" style="width: 30px; height: 30px;">
+              </button>
               <button class="btn btn-sm btn-outline-secondary" 
                       type="button" 
                       data-bs-toggle="collapse" 
