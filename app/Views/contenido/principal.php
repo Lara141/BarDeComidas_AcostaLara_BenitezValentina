@@ -31,9 +31,6 @@
 <!--  Carrusel automático -->
 <section class="mb-5">
   <div class="container">
-    <!--<div class="text-center text-uppercase fw-bold mb-3">
-      <h3> Promos del día </h3>
-    </div-->
 
     <div id="carouselPromos" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
       <div class="carousel-inner rounded shadow">
@@ -63,7 +60,7 @@
   </div>
 </section>
 
-<!-- Cards de promos estilo PedidosYa -->
+<!-- Cards de promos -->
 <section class="mb-5">
   <div class="container">
     <h4 class="text-uppercase fw-bold text-center mb-4">Promociones Rápidas</h4>
@@ -136,7 +133,7 @@
 
 <section class="mb-5 py-5 bg-pastel">
   <div class="container">
-    <h4 class="text-uppercase fw-bold text-center mb-4">Elegí una Provincia y explora sus delicias</h4>
+    <h4 class="text-uppercase fw-bold text-center mb-4">Elíge una Provincia y explora sus delicias</h4>
 
     <!-- Botones de Provincias -->
     <div class="d-flex justify-content-center flex-wrap gap-2 mb-4">
@@ -217,7 +214,7 @@
         precio: "$5500",
         botonCarrito: "Agregar al carrito",
         imagen: "assets/Img/chipasoo.jpg",
-        ingredientes: "Almidón de mandioca, queso, carne picada, cebolla, huevos."
+        ingredientes: "Almidón de mandioca, queso, carne picada, cebolla, huevos.",
       },
     ],
     buenosaires: [
