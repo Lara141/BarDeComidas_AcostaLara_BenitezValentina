@@ -1,153 +1,115 @@
 
-   <style>
-     .promo-card {
-       border: 3px solid rgb(97, 192, 230);;
-       border-radius: 20px;
-       text-align: center;
-       padding: 1rem;
-     }
- 
-     .promo-header {
-       background-color: rgb(97, 192, 230);
-       color: white;
-       font-weight: bold;
-       border-radius: 20px;
-       padding: 0.3rem 0;
-       margin-bottom: 0.5rem;
-     }
- 
-     .promo-subtitle {
-       font-weight: bold;
-       color: #555;
-     }
- 
-     .promo-btn {
-       background-color: rgb(97, 192, 230);;
-       color: white;
-       font-weight: bold;
-       border-radius: 10px;
-     }
- 
-     .promo-btn:hover {
-       background-color:rgb(97, 192, 230);
-     }
- 
-     .promo-img {
-       height: 100px;
-       object-fit: contain;
-       margin: 10px 0;
-     }
-   </style>
- 
- <div class="container">
-   
- 
-     <div class="row g-4">
-       <!-- PROMOS-->
-       <h2 class="text-info fw-bold mb-2">PROMOCIONES</h2>
-       <!-- Tarjeta 1 -->
-       <div class="col-md-3">
+<style>
+  /* Estilos generales */
+  .promo-card {
+    border: 3px solid rgb(97, 192, 230);
+    border-radius: 20px;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .promo-header {
+    background-color: rgb(97, 192, 230);
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 0.3rem 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .promo-btn {
+    background-color: rgb(97, 192, 230);
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+  }
+
+  .promo-btn:hover {
+    background-color: rgb(80, 170, 210);
+  }
+
+  .promo-img {
+    height: 100px;
+    object-fit: contain;
+    margin: 10px 0;
+  }
+</style>
+
+<div class="container">
+  <div class="row g-4">
+
+    <!-- Sección de Promociones -->
+    <h2 class="text-info fw-bold mb-2">PROMOCIONES</h2>
+
+    <!-- Tarjeta 1 -->
+    <div class="col-md-3">
+      <div class="promo-card">
+        <div class="promo-header">JUEVES Y VIERNES</div>
+        <img src="assets/img/mercadopago.jpg" alt="Mercado Pago" class="promo-img">
+        <div class="text-info fw-bold mb-2">-%15</div>
+        <button class="btn promo-btn mb-2" data-bs-toggle="modal" data-bs-target="#modalPromo1">Más información</button>
+      </div>
+    </div>
+
+    <!-- Tarjeta 2 -->
+    <div class="col-md-3">
+      <div class="promo-card">
+        <div class="promo-header">TODOS LOS DÍAS</div>
+        <img src="assets/img/efectivo.jpg" alt="Efectivo" class="promo-img">
+        <div class="text-info fw-bold mb-2">-5%</div>
+        <button class="btn promo-btn mb-2" data-bs-toggle="modal" data-bs-target="#modalPromo2">Más información</button>
+      </div>
+    </div>
+
+    <!-- Tarjeta 3 -->
+    <div class="col-md-3">
+      <div class="promo-card">
+        <div class="promo-header">LUNES Y MIÉRCOLES</div>
+        <img src="assets/img/naranjax.jpg" alt="Naranja X" class="promo-img">
+        <div class="text-info fw-bold mb-2">EN Z</div>
+        <button class="btn promo-btn mb-2" data-bs-toggle="modal" data-bs-target="#modalPromo3">Más información</button>
+      </div>
+    </div>
+
+    <!-- Sección de Medios de Pago -->
+    <h2 class="text-info fw-bold mb-2">MEDIOS DE PAGO</h2>
+
+    <!-- Tarjeta 1 -->
+    <div class="col-md-3">
+      <div class="promo-card">
+        <img src="assets/img/mercadopago.jpg" alt="Mercado Pago" class="promo-img">
+        <button class="btn promo-btn mb-2" data-bs-toggle="modal" data-bs-target="#modalPago1">Más información</button>
+      </div>
+    </div>
+
+    <!-- Tarjeta 2 -->
+    <div class="col-md-3">
+      <div class="promo-card">
+        <img src="assets/img/efectivo.jpg" alt="Efectivo" class="promo-img">
+        <button class="btn promo-btn mb-2" data-bs-toggle="modal" data-bs-target="#modalPago2">Más información</button>
+      </div>
+    </div>
+
+    <!-- Tarjeta 3 -->
+    <div class="col-md-3">
+      <div class="promo-card">
+        <img src="assets/img/naranjax.jpg" alt="Naranja X" class="promo-img">
+        <button class="btn promo-btn mb-2" data-bs-toggle="modal" data-bs-target="#modalPago3">Más información</button>
+      </div>
+    </div>
+
+    
+    <!-- Tarjeta 4 -->
+    <div class="col-md-3">
          <div class="promo-card">
-           <div class="promo-header">JUEVES Y VIERNES</div>
-           
-           <img src="assets/img/mercadopago.jpg" alt="Mercado Pago" class="promo-img">
-           <div class="text-info fw-bold mb-2">-%15</div>
- 
-           <button class="btn promo-btn mb-2" data-bs-toggle="modal" data-bs-target="#modalPromo1">
-             Mas informacion
-           </button>
-       
-         </div>
-       </div>
-       <!-- Tarjeta 2 -->
-       <div class="col-md-3">
-         <div class="promo-card">
-           <div class="promo-header">TODOS LOS DIAS</div>
-           
-           <img src="assets/img/efectivo.jpg" alt="Efectivo" class="promo-img">
-           <div class="text-info fw-bold mb-2">-5%</div>
- 
-           <button class="btn promo-btn mb-2" data-bs-toggle="modal" data-bs-target="#modalPromo2">
-             Mas informacion
-           </button>
-       
-         </div>
-       </div>
- 
-       <!-- Tarjeta 3 -->
-       <div class="col-md-3">
-         <div class="promo-card">
-           <div class="promo-header">LUNES Y MIERCOSLES</div>
-           
-           <img src="assets/img/naranjax.jpg" alt="Naranja X" class="promo-img">
-           <div class="text-info fw-bold mb-2">EN Z</div>
- 
-           <button class="btn promo-btn mb-2" data-bs-toggle="modal" data-bs-target="#modalPromo3">
-             Mas informacion
-           </button>
-       
-         </div>
-       </div>
- 
-  <!-- MEDIOS DE PAGO-->
-  <h2 class="text-info fw-bold mb-2">MEDIOS DE PAGO</h2>
-       <!-- Tarjeta 1 -->
-       <div class="col-md-3">
-         <div class="promo-card">
-           
-           <img src="assets/img/mercadopago.jpg" alt="Mercado Pago" class="promo-img">
-           
- 
-           <button class="btn promo-btn mb-2" data-bs-toggle="modal" data-bs-target="#modalPago1">
-             Mas informacion
-           </button>
-       
-         </div>
-       </div>
-       <!-- Tarjeta 2 -->
-       <div class="col-md-3">
-         <div class="promo-card">
-           
-           
-           <img src="assets/img/efectivo.jpg" alt="Efectivo" class="promo-img">
-           
- 
-           <button class="btn promo-btn mb-2" data-bs-toggle="modal" data-bs-target="#modalPago2">
-             Mas informacion
-           </button>
-       
-         </div>
-       </div>
- 
-       <!-- Tarjeta 3 -->
-       <div class="col-md-3">
-         <div class="promo-card">
-           
-           
-           <img src="assets/img/naranjax.jpg" alt="Naranja X" class="promo-img">
-          
- 
-           <button class="btn promo-btn mb-2" data-bs-toggle="modal" data-bs-target="#modalPago3">
-             Mas informacion
-           </button>
-       
-         </div>
-       </div>
- <!-- Tarjeta 4 -->
- <div class="col-md-3">
-         <div class="promo-card">
-           
-           
            <img src="assets/img/BNA.jpg" alt="Banco nacion" class="promo-img">
-          
- 
            <button class="btn promo-btn mb-2" data-bs-toggle="modal" data-bs-target="#modalPago4">
-             Mas informacion
+              Mas informacion
            </button>
-       
          </div>
        </div>
- 
+       
+       
        <!-- Tarjeta 5 -->
        <div class="col-md-3">
          <div class="promo-card">
@@ -193,138 +155,75 @@
          </div>
        </div>
        
-  <!-- MEDIOS DE ENTREGA-->
-  <h2 class="text-info fw-bold mb-2">MEDIOS DE ENTREGRA</h2>
-       <!-- Tarjeta 1 -->
-       <div class="col-md-3">
-   <div class="promo-card rounded-circle overflow-hidden" style="width: 200px; height: 200px;">
-     
+
+
+
+    <!-- Sección de Medios de Entrega -->
+    <h2 class="text-info fw-bold mb-2">MEDIOS DE ENTREGA</h2>
+
+    <!-- Tarjeta 1 -->
+    <div class="col-md-3">
+      <div class="promo-card rounded-circle overflow-hidden" style="width: 200px; height: 200px;">
+        <a data-bs-toggle="modal" data-bs-target="#modalEntrega1">
+          <img src="assets/img/rlocal.jpg" alt="Retiro en Local" class="promo-img w-100 h-auto">
+        </a>
+      </div>
+    </div>
+
+    <!-- Tarjeta 2 -->
+    <div class="col-md-3">
+      <div class="promo-card rounded-circle overflow-hidden" style="width: 200px; height: 200px;">
+        <a data-bs-toggle="modal" data-bs-target="#modalEntrega2">
+          <img src="assets/img/delivery.jpg" alt="Delivery" class="promo-img w-100 h-auto">
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modales -->
+<!-- Modal Promoción 1 -->
+<div class="modal fade" id="modalPromo1" tabindex="-1" aria-labelledby="modalPromo1Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title fw-bold" id="modalPromo1Label">Promoción: Jueves y Viernes</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <h6 class="fw-bold">15% de descuento</h6>
+        <p class="text-secondary" style="font-size: 0.9rem;">
+          Válido los días jueves y viernes hasta el 30/10/2025. Aplica sobre precio contado de los productos.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Pago 1 -->
+<div class="modal fade" id="modalPago1" tabindex="-1" aria-labelledby="modalPago1Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title fw-bold" id="modalPago1Label">Medio de Pago: Mercado Pago</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p class="text-secondary" style="font-size: 0.9rem;">
+          Mercado Pago es la plataforma de pagos online líder en Latinoamérica que te permite pagar de forma rápida y segura.
+        </p>
+        <ul class="text-secondary" style="font-size: 0.9rem;">
+          <li><strong>Tarjetas de Crédito y Débito:</strong> Visa, Mastercard, American Express, y otras.</li>
+          <li><strong>Saldo en tu cuenta de Mercado Pago:</strong> Utiliza el saldo disponible en tu cuenta.</li>
+          <li><strong>Efectivo en puntos de pago:</strong> Genera un código y paga en tu Pago Fácil o Rapipago más cercano.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
  
-   
-     <a  data-bs-toggle="modal" data-bs-target="#modalEntrega1">
-     <img src="assets/img/rlocal.jpg" alt="Entrega" class="promo-img w-100 h-auto">
-   </a>
-   </div>
-   
- </div>
-       <!-- Tarjeta 2 -->
-       <div class="col-md-3">
-   <div class="promo-card rounded-circle overflow-hidden" style="width: 200px; height: 200px;">
-     
- 
-   
-     <a  data-bs-toggle="modal" data-bs-target="#modalEntrega2">
-     <img src="assets/img/delivery.jpg" alt="Envio" class="promo-img w-100 h-auto">
-   </a>
-   </div>
-   
- </div>
-     </div>
-   </div>
-   <div class="col">
-     <div class="card h-100">
-       <img src="..." class="card-img-top" alt="...">
-       <div class="card-body">
-         <h5 class="card-title">Card title</h5>
-         <p class="card-text">This is a short card.</p>
- 
-   <!-- Modal -->
-     <!-- Modal Promos -->
-   <div class="modal fade" id="modalPromo1" tabindex="-1" aria-labelledby="modalPromo1Label" aria-hidden="true">
-     <div class="modal-dialog modal-dialog-centered modal-lg">
-       <div class="modal-content">
-         <div class="modal-header">
-           <h5 class="modal-title fw-bold" id="modalPromo1">Promociones</h5>
-           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-         </div>
-         <div class="modal-body">
-           <h6 class="fw-bold">15% de descuento</h6>
-           <p class="text-uppercase text-secondary" style="font-size: 0.9rem;">
-             Válido días jueves y viernes hasta el 30/10/2025. Aplica sobre precio contado de los productos. Válido para todas nuestras sucursules en la República Argentina.
-           </p>
-         </div>
-       </div>
-     </div>
-   </div>
-   <div class="col">
-     <div class="card h-100">
-       <img src="..." class="card-img-top" alt="...">
-       <div class="card-body">
-         <h5 class="card-title">Card title</h5>
-         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
- 
-   <div class="modal fade" id="modalPromo2" tabindex="-1" aria-labelledby="modalPromo2Label" aria-hidden="true">
-     <div class="modal-dialog modal-dialog-centered modal-lg">
-       <div class="modal-content">
-         <div class="modal-header">
-           <h5 class="modal-title fw-bold" id="modalPromo2">Promociones</h5>
-           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-         </div>
-         <div class="modal-body">
-           <h6 class="fw-bold">5% de descuento</h6>
-           <p class="text-uppercase text-secondary" style="font-size: 0.9rem;">
-              Aplica sobre compras en fisico. Válido para todas nuestras sucursules en la República Argentina.
-           </p>
-         </div>
-       </div>
-     </div>
-   </div>
-   <div class="col">
-     <div class="card h-100">
-       <img src="..." class="card-img-top" alt="...">
-       <div class="card-body">
-         <h5 class="card-title">Card title</h5>
-         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
- 
-   <div class="modal fade" id="modalPromo3" tabindex="-1" aria-labelledby="modalPromo3Label" aria-hidden="true">
-     <div class="modal-dialog modal-dialog-centered modal-lg">
-       <div class="modal-content">
-         <div class="modal-header">
-           <h5 class="modal-title fw-bold" id="modalPromo3">Promociones</h5>
-           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-         </div>
-         <div class="modal-body">
-           <h6 class="fw-bold">Hasta 3 cuotas sin interes</h6>
-           <p class="text-uppercase text-secondary" style="font-size: 0.9rem;">
-             Válido días lunes y miercoles.  Aplica sobre precio contado de los productos. Válido para todas nuestras sucursules en la República Argentina.
-             </p>
-         </div>
-       </div>
-     </div>
-   </div>
-  <!-- Modal Medios de Pago -->
- 
-  <div class="modal fade" id="modalPago1" tabindex="-1" aria-labelledby="modalPago1Label" aria-hidden="true">
-     <div class="modal-dialog modal-dialog-centered modal-lg">
-       <div class="modal-content">
-         <div class="modal-header">
-           <h5 class="modal-title fw-danger" id="modalPago1">Medios de pago</h5>
-           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-         </div>
-         <div class="modal-body">
-           <p class="text-uppercase text-secondary" style="font-size: 0.9rem;">
-           
-   Mercado Pago es la plataforma de pagos online líder en Latinoamérica que te permite pagar de forma rápida y segura.
-   Aceptamos las siguientes opciones a través de Mercado Pago:
- </p>
- <ul class="text-secondary" style="font-size: 0.9rem;">
-   <li><strong>Tarjetas de Crédito y Débito:</strong> Visa, Mastercard, American Express, y otras. Consulta si tenemos cuotas sin interés disponibles.</li>
-   <li><strong>Saldo en tu cuenta de Mercado Pago:</strong> Utiliza el saldo disponible en tu cuenta para pagar tus compras.</li>
-   <li><strong>Efectivo en puntos de pago:</strong> Genera un código y paga en tu Pago Fácil o Rapipago más cercano (si está habilitado).</li>
- </ul>
- <p class="text-secondary" style="font-size: 0.9rem;">
-   Disfruta de la comodidad y seguridad que te ofrece Mercado Pago en cada compra. ¡Tus datos están protegidos!
- </p>
- <p class="text-secondary" style="font-size: 0.8rem;">
-   Para más información, puedes visitar la <a href="https://www.mercadopago.com.ar/ayuda" target="_blank">página de ayuda de Mercado Pago</a>.
- </p>
-   </p>
-         </div>
-       </div>
-     </div>
-   </div>
- 
-   <div class="modal fade" id="modalPago2" tabindex="-1" aria-labelledby="modalPago2Label" aria-hidden="true">
+<div class="modal fade" id="modalPago2" tabindex="-1" aria-labelledby="modalPago2Label" aria-hidden="true">
      <div class="modal-dialog modal-dialog-centered modal-lg">
        <div class="modal-content">
          <div class="modal-header">
@@ -402,9 +301,8 @@
      </div>
    </div>
  </div>
- 
- 
- <div class="modal fade" id="modalPago4" tabindex="-1" aria-labelledby="modalPago4abel" aria-hidden="true">
+
+<div class="modal fade" id="modalPago4" tabindex="-1" aria-labelledby="modalPago4abel" aria-hidden="true">
    <div class="modal-dialog modal-dialog-centered modal-lg">
      <div class="modal-content">
        <div class="modal-header">
@@ -442,7 +340,8 @@
      </div>
    </div>
  </div>
-     
+
+  
  <div class="modal fade" id="modalPago5" tabindex="-1" aria-labelledby="modalPago5Label" aria-hidden="true">
    <div class="modal-dialog modal-dialog-centered modal-lg">
      <div class="modal-content">
@@ -484,7 +383,7 @@
  </div>
  
  
-<<<<<<< HEAD
+<!-- Galicia-->
  <div class="modal fade" id="modalPago6" tabindex="-1" aria-labelledby="modalPago6Label" aria-hidden="true">
    <div class="modal-dialog modal-dialog-centered modal-lg">
      <div class="modal-content">
@@ -570,10 +469,11 @@
    </div>
  </div>
  
- <!-- Modal Medios de Entrega -->
+
+<!-- Modal Entrega 1 -->
+
  
- 
- <div class="modal fade" id="modalEntrega1" tabindex="-1" aria-labelledby="modalEntrega1Label" aria-hidden="true">
+<div class="modal fade" id="modalEntrega1" tabindex="-1" aria-labelledby="modalEntrega1Label" aria-hidden="true">
    <div class="modal-dialog modal-dialog-centered modal-lg">
      <div class="modal-content">
        <div class="modal-header">
@@ -677,8 +577,8 @@
  
  
    
-=======
- <!-- Modal Pago Galicia --><div class="modal fade" id="modalPago6" tabindex="-1" aria-labelledby="modalPago6Label" aria-hidden="true">
+ <!-- Modal Pago Galicia -->
+  <div class="modal fade" id="modalPago6" tabindex="-1" aria-labelledby="modalPago6Label" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
       <div class="modal-header">
@@ -718,9 +618,11 @@
     </p>
   </div>
 </div>
+</div>
+</div>
 
-  </div>
-</div><!-- Modal Pago Cabal --><div class="modal fade" id="modalPago7" tabindex="-1" aria-labelledby="modalPago7Label" aria-hidden="true">
+<!-- Modal Pago Cabal -->
+ <div class="modal fade" id="modalPago7" tabindex="-1" aria-labelledby="modalPago7Label" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
       <div class="modal-header">
@@ -755,9 +657,11 @@
     </p>
   </div>
 </div>
+ </div>
+</div>
 
-  </div>
-</div><!-- Modal Entrega Retiro Restaurante --><div class="modal fade" id="modalEntrega1" tabindex="-1" aria-labelledby="modalEntrega1Label" aria-hidden="true">
+<!-- Modal Entrega Retiro Restaurante -->
+ <div class="modal fade" id="modalEntrega1" tabindex="-1" aria-labelledby="modalEntrega1Label" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
       <div class="modal-header">
@@ -798,7 +702,9 @@
 </div>
 
   </div>
-</div><!-- Modal Entrega Delivery --><div class="modal fade" id="modalEntrega2" tabindex="-1" aria-labelledby="modalEntrega2Label" aria-hidden="true">
+</div>
+<!-- Modal Entrega Delivery -->
+ <div class="modal fade" id="modalEntrega2" tabindex="-1" aria-labelledby="modalEntrega2Label" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
       <div class="modal-header">
@@ -835,11 +741,5 @@
     </p>
   </div>
 </div>
-
-  </div>
-<<<<<<< HEAD
 </div>
-=======
-</div><!-- Bootstrap Bundle JS --><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
->>>>>>> 2951923aeacb65aad991d384068d04cfef24011a
->>>>>>> edd716b6301206b7bf781d1faf05dca508b40a95
+</div>

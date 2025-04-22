@@ -77,6 +77,10 @@
             <p class="promo-title">Arrollado</p>
             <p class="promo-price">$5500</p>
             <p class="card-text">Carne, huevo, morrón... un clásico infalible.</p>
+
+            <button type="button" class="btn btn-primary position-relative">
+            <img src="assets/Img/carrito.jpg"  alt="carrito">
+            </button>
           </div>
         </div>
       </div>
