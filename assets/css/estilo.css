@@ -127,13 +127,26 @@ footer {
     width: 100%;
   }
   
-  .footer-row {
+.footer-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
   }
   
+  /* Estilo para los enlaces en el pie de página */
+footer a {
+    color: #121210; /* Color negro por defecto */
+    text-decoration: none; /* Quitar subrayado */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Efecto suave */
+  }
+
+/* Estilo cuando se pasa el mouse sobre el enlace */
+footer a:hover {
+    color: #3498db; /* Color azul al pasar el mouse */
+    text-decoration: underline; /* Subrayado al hacer hover */
+  }
+
   .social-icons { 
     list-style: none !important;
     padding: 0;
@@ -195,22 +208,21 @@ button:hover {
     background-color: #718491; /* Azul brillante */
 }
 
-.social-icons {
-    display: flex;
-    gap: 15px;
-    padding: 0;
-    list-style: none;
-  }
-  
-  .social-icons li a {
-   /* font-size: 1.8rem;  tamaño base */
-    color: #fff;
+.social-icons li a {
+    font-size: 1.8rem; 
+    color: #fff; /* color predeterminado (blanco) */
     transition: color 0.3s ease, transform 0.3s ease;
-  }
-  .encabezado-top {
-    background-color: #f8f9fa; /* Color de fondo claro */
-    padding: 10px 0; /* Espaciado arriba y abajo */
-    margin-top: 60px; /* Para que no quede tapado por la navbar */
-    font-size: 14px;
-    color: #333; /* Color del texto */
-  }
+ }
+ 
+ /* Cambiar color a negro cuando el mouse pasa por encima */
+ .social-icons li a:hover {
+    color: #000; /* Cambia el color a negro */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño del icono */
+ }
+ .modal-content {
+    background-image: none !important;
+}
+
+.bg-pastel{
+    background-color: #e9e3e3;
+}

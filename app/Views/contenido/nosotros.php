@@ -114,7 +114,6 @@
             <li><strong>Compromiso con la calidad:</strong> usamos ingredientes frescos y de primera.</li>
             <li><strong>Respeto por la tradición:</strong> nuestras recetas respetan el legado cultural argentino.</li>
             <li><strong>Calidez humana:</strong> cada cliente es un invitado especial.</li>
-            <p> Te esperamos</p>
           </ul>
         </div>
       </div>

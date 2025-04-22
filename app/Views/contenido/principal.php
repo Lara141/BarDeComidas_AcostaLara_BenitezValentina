@@ -28,11 +28,11 @@
 </head>
 <body>
 
-<!-- 🌀 Carrusel automático -->
+<!--  Carrusel automático -->
 <section class="mb-5">
   <div class="container">
     <!--<div class="text-center text-uppercase fw-bold mb-3">
-      <h3>🔥 Promos del día 🔥</h3>
+      <h3> Promos del día </h3>
     </div-->
 
     <div id="carouselPromos" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
@@ -55,7 +55,7 @@
           <img src="assets/Img/imag3.jpg" class="d-block w-100" alt="Promo 3">
           <div class="carousel-caption">
             <h5>Mega Milanesa</h5>
-            <p>$12.000 - Para compartir 🍽️</p>
+            <p>$12.000 - Para compartir </p>
           </div>
         </div>
       </div>
@@ -69,7 +69,7 @@
     <h4 class="text-uppercase fw-bold text-center mb-4">Promociones Rápidas</h4>
     <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
       
-      <!-- 🥖 Arrollado -->
+      <!--  Arrollado -->
       <div class="col">
         <div class="card h-100 shadow-sm">
           <img src="assets/Img/arrollado.jpg" class="card-img-top" alt="Arrollado">
@@ -81,7 +81,7 @@
         </div>
       </div>
 
-      <!-- 🌽 Envueltitos -->
+      <!-- Envueltitos -->
       <div class="col">
         <div class="card h-100 shadow-sm">
           <img src="assets/Img/choclo.jpeg" class="card-img-top" alt="Envueltitos">
@@ -93,7 +93,7 @@
         </div>
       </div>
 
-      <!-- 🍖 Milanesa -->
+      <!--  Milanesa -->
       <div class="col">
         <div class="card h-100 shadow-sm">
           <img src="assets/Img/mila.jpg" class="card-img-top" alt="Milanesa">
@@ -105,14 +105,14 @@
         </div>
       </div>
 
-      <!-- 🥩 Matambre -->
+      <!--  Matambre -->
       <div class="col">
         <div class="card h-100 shadow-sm">
           <img src="assets/Img/matam.jpg" class="card-img-top" alt="Matambre">
           <div class="card-body">
             <p class="promo-title">Matambre Casero</p>
             <p class="promo-price">$7000</p>
-            <p class="card-text">Receta familiar, sabor que no falla 💯</p>
+            <p class="card-text">Receta familiar, sabor que no falla </p>
           </div>
         </div>
       </div>
@@ -121,8 +121,146 @@
   </div>
 </section>
 
-<!-- 🔧 Scripts -->
+
+<section class="mb-5 py-5 bg-pastel">
+  <div class="container">
+    <h4 class="text-uppercase fw-bold text-center mb-4">Elegí una Provincia y explora sus delicias</h4>
+
+    <!-- Botones de Provincias -->
+    <div class="d-flex justify-content-center flex-wrap gap-2 mb-4">
+      <button class="btn btn-outline-dark" onclick="mostrarComidas('mendoza')">Mendoza</button>
+      <button class="btn btn-outline-dark" onclick="mostrarComidas('cordoba')">Córdoba</button>
+      <button class="btn btn-outline-dark" onclick="mostrarComidas('buenosaires')">Buenos Aires</button>
+      <button class="btn btn-outline-dark" onclick="mostrarComidas('salta')">Salta</button>
+      <button class="btn btn-outline-dark" onclick="mostrarComidas('corrientes')">Corrientes</button>
+    </div>
+
+    <!-- Contenedor dinámico de comidas -->
+    <div id="comidasPorProvincia" class="row row-cols-1 row-cols-md-3 g-4">
+      <!-- Aquí se insertarán las cards -->
+    </div>
+  </div>
+</section>
+
+<script>
+  const comidasData = {
+    mendoza: [
+      {
+        nombre: "Chivito",
+        descripcion: "Sandwich de tierno chivo cocinado lentamente con especias regionales.",
+        precio: "$9500",
+        imagen: "assets/Img/chivito.jpg",
+        ingredientes: "Chivo, ajo, romero, vino blanco, pan casero."
+      }
+    ],
+    salta: [
+      {
+        nombre: "Tamales salteños",
+        descripcion: "Masa de maíz rellena de carne, envuelta en chala.",
+        precio: "$3500",
+        imagen: "assets/Img/tamales.jpg",
+        ingredientes: "Harina de maíz, carne vacuna, cebolla, pimentón, chala de maíz."
+      },
+      {
+        nombre: "Empanadas salteñas",
+        descripcion: "Empanadas rellenas de carne, jugosas y especiadas.",
+        precio: "$4500",
+        imagen: "assets/Img/empsalta.jpg",
+        ingredientes: "Carne cortada a cuchillo, papa, cebolla, huevo duro, comino."
+      }
+    ],
+    cordoba: [
+      {
+        nombre: "Locro Cordobés",
+        descripcion: "Guiso criollo con maíz, zapallo, carne y embutidos.",
+        precio: "$6000",
+        imagen: "assets/Img/locrito.jpg",
+        ingredientes: "Maíz blanco, zapallo, panceta, chorizo colorado, cebolla."
+      },
+      {
+        nombre: "Cabrito al horno",
+        descripcion: "Cabrito tierno cocinado lentamente al horno.",
+        precio: "$20000",
+        imagen: "assets/Img/cabrito.jpg",
+        ingredientes: "Cabrito, limón, sal gruesa, hierbas frescas."
+      }
+    ],
+    corrientes: [
+      {
+        nombre: "Mbeyú",
+        descripcion: "Torta de almidón de mandioca, queso y manteca.",
+        precio: "$4000",
+        imagen: "assets/Img/mbeyu.jpg",
+        ingredientes: "Almidón de mandioca, queso, leche, manteca, sal."
+      },
+      {
+        nombre: "Chipa so'o",
+        descripcion: "Pan de queso relleno de carne picada.",
+        precio: "$5500",
+        imagen: "assets/Img/chipasoo.jpg",
+        ingredientes: "Almidón de mandioca, queso, carne picada, cebolla, huevos."
+      },
+    ],
+    buenosaires: [
+      {
+        nombre: "Milanesa Napolitana",
+        descripcion: "Milanesa de carne con salsa de tomate y queso gratinado.",
+        precio: "$12000",
+        imagen: "assets/Img/napolitana.jpg",
+        ingredientes: "Carne vacuna, pan rallado, huevo, salsa de tomate, jamón, queso mozzarella."
+      },
+      {
+        nombre: "Empanadas Fritas",
+        descripcion: "Empanadas rellenas de carne fritas en grasa.",
+        precio: "$5500",
+        imagen: "assets/Img/empfritas.jpg",
+        ingredientes: "Carne picada, cebolla, pimentón, huevo duro, masa para empanadas."
+      },
+      {
+        nombre: "Choripán",
+        descripcion: "Chorizo a la parrilla servido en pan crujiente con chimichurri.",
+        precio: "$5000",
+        imagen: "assets/Img/choripa.jpg",
+        ingredientes: "Chorizo criollo, pan francés, chimichurri (ajo, perejil, vinagre, aceite)."
+      }
+    ]
+  };
+
+  function mostrarComidas(provincia) {
+    const contenedor = document.getElementById("comidasPorProvincia");
+    contenedor.innerHTML = "";
+
+    comidasData[provincia].forEach(plato => {
+      contenedor.innerHTML += `
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img src="${plato.imagen}" class="card-img-top" alt="${plato.nombre}">
+            <div class="card-body">
+              <h5 class="card-title">${plato.nombre}</h5>
+              <p class="card-text">${plato.descripcion}</p>
+              <p class="promo-price fw-bold">${plato.precio}</p>
+
+              <button class="btn btn-sm btn-outline-secondary" 
+                      type="button" 
+                      data-bs-toggle="collapse" 
+                      data-bs-target="#collapse${plato.nombre.replace(/\s+/g, '')}" 
+                      aria-expanded="false">
+                Ver ingredientes
+              </button>
+
+              <div class="collapse mt-2" id="collapse${plato.nombre.replace(/\s+/g, '')}">
+                <p class="small text-muted mb-0">
+                  ${plato.ingredientes}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+  }
+</script>
+
+<!-- Scripts de Bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
 
