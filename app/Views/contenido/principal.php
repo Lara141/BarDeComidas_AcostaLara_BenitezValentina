@@ -217,7 +217,7 @@
         precio: "$5500",
         botonCarrito: "Agregar al carrito",
         imagen: "assets/Img/chipasoo.jpg",
-        ingredientes: "Almidón de mandioca, queso, carne picada, cebolla, huevos."
+        ingredientes: "Almidón de mandioca, queso, carne picada, cebolla, huevos.",
       },
     ],
     buenosaires: [
