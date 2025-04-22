@@ -9,6 +9,7 @@
       <h2 class="accordion-header">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
           data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+          <i class="fa-solid fa-face-smile fa-flip me-2" style="--fa-animation-duration: 3s;"></i>
           ¿Quiénes somos?
         </button>
       </h2>
@@ -25,6 +26,7 @@
       <h2 class="accordion-header">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
           data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+          <i class="fa-solid fa-burger fa-bounce fa-flip me-2" style="--fa-animation-duration: 3s;"></i>
           ¿Qué ofrecemos?
         </button>
       </h2>
@@ -50,6 +52,7 @@
       <h2 class="accordion-header">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
           data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+          <i class="fa-solid fa-user-group fa-bounce fa-flip me-2" style="--fa-animation-duration: 3s;"></i>
           Nuestro equipo
         </button>
       </h2>
@@ -100,6 +103,7 @@
       <h2 class="accordion-header">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
           data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+          <i class="fa-solid fa-house fa-bounce fa-flip me-2" style="--fa-animation-duration: 3s;"></i>
           Nuestros valores
         </button>
       </h2>

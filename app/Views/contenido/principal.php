@@ -63,7 +63,7 @@
   </div>
 </section>
 
-<!-- 🧃 Cards de promos estilo PedidosYa -->
+<!-- Cards de promos estilo PedidosYa -->
 <section class="mb-5">
   <div class="container">
     <h4 class="text-uppercase fw-bold text-center mb-4">Promociones Rápidas</h4>

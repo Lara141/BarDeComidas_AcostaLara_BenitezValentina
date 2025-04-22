@@ -48,35 +48,4 @@ class Home extends BaseController
             . view('contenido/terminoUso')
             . view('plantillas/piePagina');
     }
-
-    public function menu()
-    {
-        $data['titulo'] = "Menu bar";
-        return view('menu/menuu', $data);
-    }
-
-    public function servicios() 
-    {
-        $data['titulo'] = "Servicios ofrecidos";
-        return view('terminos/servicios');
-    }
-
-    public function privacidad() 
-    {
-        $data['titulo'] = "politicas de privacidad";
-        return view('terminos/privacidad');
-    }
-
-    public function garantias() 
-    {
-        $data['titulo'] = "Garantias";
-        return view('terminos/garantias');
-    }
-
-    public function entregas() 
-    {
-        $data['titulo'] = "Servicios ofrecidos";
-        return view('terminos/entregas');
-    }
-
 }

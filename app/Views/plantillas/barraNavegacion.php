@@ -1,5 +1,5 @@
     <!-- Nueva barra de navegación con estilo Offcanvas -->
-    <nav class="navbar fixed-top" style="background-color: #d0f0ff;">
+    <nav class="navbar fixed-top" style="top: 40px; background-color: #d0f0ff;">
   <div class="container-fluid">
     <!-- Logo -->
     <img src="assets/Img/logoB.jpg" alt="..." width="50" height="44">
@@ -38,12 +38,12 @@
           <!-- Dropdown -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
+              aria-expanded="false" id="navbarDropdown">
               Menú
             </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="">Comida</a></li>
-              <li><a class="dropdown-item" href="">Bebida</a></li>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Comida</a></li>
+              <li><a class="dropdown-item" href="#">Bebida</a></li>
             </ul>
           </li>
         </ul>
