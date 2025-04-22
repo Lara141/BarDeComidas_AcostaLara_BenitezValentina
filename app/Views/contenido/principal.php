@@ -122,10 +122,6 @@
 </section>
 
 
-<<<<<<< HEAD
-</body>
-</html>
-=======
 <section class="mb-5 py-5 bg-pastel">
   <div class="container">
     <h4 class="text-uppercase fw-bold text-center mb-4">Elegí una Provincia y explora sus delicias</h4>
@@ -267,5 +263,4 @@
 
 <!-- Scripts de Bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
->>>>>>> 2951923aeacb65aad991d384068d04cfef24011a
 
