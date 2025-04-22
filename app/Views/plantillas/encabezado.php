@@ -11,6 +11,14 @@
 </head>
 <body>
 
+<!-- Encabezado -->
+<header class="encabezado-top">
+  <div class="container-header d-flex align-items-center">
+    <img src="assets/img/logoBar.jpg" alt="Logo del Bar">
+    <span class="frase">Tradición, sabor y calidad en cada bocado</span>
+    <i class="fa-solid fa-utensils"></i>
+  </div>
+</header>
 
 
 <section class="mt-5 pt-5">
@@ -20,6 +28,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
 
 </body>
 </html>
