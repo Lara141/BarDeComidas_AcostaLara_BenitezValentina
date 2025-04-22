@@ -202,7 +202,7 @@
  
    
      <a  data-bs-toggle="modal" data-bs-target="#modalEntrega1">
-     <img src="assets/img/logoDeGorroDeChef.jpg" alt="Entrega" class="promo-img w-100 h-auto">
+     <img src="assets/img/rlocal.jpg" alt="Entrega" class="promo-img w-100 h-auto">
    </a>
    </div>
    
@@ -837,5 +837,9 @@
 </div>
 
   </div>
+<<<<<<< HEAD
+</div>
+=======
 </div><!-- Bootstrap Bundle JS --><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 >>>>>>> 2951923aeacb65aad991d384068d04cfef24011a
+>>>>>>> edd716b6301206b7bf781d1faf05dca508b40a95
