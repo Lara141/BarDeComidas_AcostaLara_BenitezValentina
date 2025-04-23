@@ -383,10 +383,6 @@
  </div>
  
  
-<<<<<<< HEAD
-=======
-<!-- Galicia-->
->>>>>>> 50886678bbbdae257a20ca17ad1e430184eeffcd
  <div class="modal fade" id="modalPago6" tabindex="-1" aria-labelledby="modalPago6Label" aria-hidden="true">
    <div class="modal-dialog modal-dialog-centered modal-lg">
      <div class="modal-content">
@@ -581,13 +577,7 @@
  
  
  
-<<<<<<< HEAD
  <!-- Modal Pago Galicia --><div class="modal fade" id="modalPago6" tabindex="-1" aria-labelledby="modalPago6Label" aria-hidden="true">
-=======
-   
- <!-- Modal Pago Galicia -->
-  <div class="modal fade" id="modalPago6" tabindex="-1" aria-labelledby="modalPago6Label" aria-hidden="true">
->>>>>>> 50886678bbbdae257a20ca17ad1e430184eeffcd
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
       <div class="modal-header">
@@ -669,14 +659,9 @@
  </div>
 </div>
 
-<<<<<<< HEAD
   </div>
 </div><!-- Modal Entrega Retiro Restaurante -->
 <div class="modal fade" id="modalEntrega1" tabindex="-1" aria-labelledby="modalEntrega1Label" aria-hidden="true">
-=======
-<!-- Modal Entrega Retiro Restaurante -->
- <div class="modal fade" id="modalEntrega1" tabindex="-1" aria-labelledby="modalEntrega1Label" aria-hidden="true">
->>>>>>> 50886678bbbdae257a20ca17ad1e430184eeffcd
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
       <div class="modal-header">
@@ -718,14 +703,8 @@
 </div>
 
   </div>
-<<<<<<< HEAD
 </div><!-- Modal Entrega Delivery -->
 <div class="modal fade" id="modalEntrega2" tabindex="-1" aria-labelledby="modalEntrega2Label" aria-hidden="true">
-=======
-</div>
-<!-- Modal Entrega Delivery -->
- <div class="modal fade" id="modalEntrega2" tabindex="-1" aria-labelledby="modalEntrega2Label" aria-hidden="true">
->>>>>>> 50886678bbbdae257a20ca17ad1e430184eeffcd
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
       <div class="modal-header">
@@ -762,11 +741,6 @@
     </p>
   </div>
 </div>
-<<<<<<< HEAD
 
   </div>
 </div>
-=======
-</div>
-</div>
->>>>>>> 50886678bbbdae257a20ca17ad1e430184eeffcd

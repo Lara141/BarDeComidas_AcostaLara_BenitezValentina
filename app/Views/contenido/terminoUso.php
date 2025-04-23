@@ -79,35 +79,69 @@
     </div>
 
     <!-- Modal Política de Privacidad -->
-    <div class="modal fade" id="modalPrivacidad" tabindex="-1" aria-labelledby="modalPrivacidadLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="modalPrivacidadLabel">Política de Privacidad</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <h5>1. Información que recopilamos</h5>
-            <p>Puedes recopilar datos como nombre, dirección de correo electrónico, número de teléfono, etc.</p>
+<div class="modal fade" id="modalPrivacidad" tabindex="-1" aria-labelledby="modalPrivacidadLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalPrivacidadLabel">Política de Privacidad</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p>En nuestro bar de comidas argentinas y rápidas, valoramos tu confianza. Por eso, te explicamos claramente qué datos recopilamos, cómo los usamos y qué derechos tenés como usuario.</p>
 
-            <h5>2. Uso de la información</h5>
-            <p>Utilizamos tus datos para brindar el servicio solicitado, procesar pedidos y mejorar la experiencia.</p>
+        <h5>1. Información que recopilamos </h5>
+        <p>Recopilamos datos personales que vos mismo nos brindás al momento de:</p>
+        <ul>
+          <li>Hacer un pedido</li>
+          <li>Suscribirte a promociones</li>
+          <li>Contactarte con nosotros</li>
+        </ul>
+        <p>Esto puede incluir tu <strong>nombre, correo electrónico, número de teléfono, dirección</strong> y preferencias de pedido.</p>
 
-            <h5>3. Protección de datos</h5>
-            <p>Implementamos medidas para proteger tus datos personales.</p>
+        <h5>2. Cómo utilizamos tu información </h5>
+        <p>Usamos tus datos para:</p>
+        <ul>
+          <li>Procesar tus pedidos y entregas</li>
+          <li>Comunicarnos con vos si es necesario</li>
+          <li>Enviar promociones (solo si aceptaste recibirlas)</li>
+          <li>Mejorar tu experiencia en el sitio</li>
+        </ul>
+        <p><strong>No compartimos tu información personal con terceros sin tu consentimiento.</strong></p>
 
-            <h5>4. Cookies</h5>
-            <p>Utilizamos cookies para mejorar la navegación.</p>
+        <h5>3. Protección de tus datos </h5>
+        <p>Aplicamos medidas técnicas y organizativas para proteger tu información. Solo personal autorizado accede a tus datos, y usamos conexiones seguras para todo el proceso de compra y navegación.</p>
 
-            <h5>5. Derechos del usuario</h5>
-            <p>Tenés derecho a acceder, corregir o eliminar tus datos.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          </div>
-        </div>
+        <h5>4. Uso de cookies </h5>
+        <p>Este sitio usa cookies para:</p>
+        <ul>
+          <li>Mejorar tu experiencia de navegación</li>
+          <li>Recordar tus preferencias</li>
+          <li>Recolectar estadísticas de uso anónimas</li>
+        </ul>
+        <p>Podés desactivarlas desde la configuración de tu navegador si preferís.</p>
+
+        <h5>5. Tus derechos como usuario </h5>
+        <p>Podés:</p>
+        <ul>
+          <li>Acceder a tus datos personales</li>
+          <li>Solicitar su corrección</li>
+          <li>Pedir su eliminación</li>
+        </ul>
+        <p>Para ejercer estos derechos, escribinos a: <a href="mailto:tuemail@ejemplo.com">tuemail@ejemplo.com</a></p>
+
+        <h5>6. Cambios en esta política </h5>
+        <p>Esta política puede actualizarse ocasionalmente. Te recomendamos revisarla periódicamente. Última actualización: <strong>22 de abril de 2025</strong>.</p>
+
+        <h5>7. Contacto </h5>
+        <p>¿Tenés dudas? Escribinos a <a href="mailto:tuemail@ejemplo.com">saborargentino1@email.com</a> o pasá por nuestro local. ¡Gracias por elegirnos! </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
       </div>
     </div>
+  </div>
+</div>
+
 
     <!-- Formas y Tiempo de Entregas -->
     <div class="col-md-6">
