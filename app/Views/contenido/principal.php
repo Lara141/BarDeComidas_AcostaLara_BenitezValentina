@@ -59,7 +59,6 @@
 <!--  Carrusel automático -->
 <section class="mb-5">
   <div class="container">
-<!--
     <div id="carouselPromos" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
       <div class="carousel-inner rounded shadow">
         <div class="carousel-item active">
@@ -294,6 +293,26 @@
               </div>
             </div>
           </div>
+
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <img src="assets/Img/carbonada.jpg" class="card-img-top" alt="Carbonada">
+              <div class="card-body">
+                <h5 class="card-title">Carbonada criolla</h5>
+                <p class="card-text">Guiso calabaza</p>
+                <p class="fw-bold">$15.000</p>
+                <button type="button" class="btn btn-light border position-absolute" style="bottom: 10px; right: 10px;"
+                  data-bs-toggle="tooltip" data-bs-placement="top" title="Agregar al carrito">
+                  <img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
+                </button>
+                <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreMendoza1">Ver ingredientes</button>
+                <div class="collapse mt-2" id="ingreMendoza1">
+                  <p class="small text-muted">Zapallo, choclo, carne, durazno seco y papas (se sirve dentro de una calabaza).</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 
@@ -404,9 +423,52 @@
       </div>
     </div>
 
+
+    <div class="col">
+      <div class="card h-100">
+        <img src="assets/Img/calapurca.avif" class="card-img-top" alt="Calapurca">
+        <div class="card-body">
+          <h5 class="card-title">Calapurca</h5>
+          <p class="card-text">Sopa espesa andina.</p>
+          <p class="fw-bold">$6000</p>
+          <button type="button" class="btn btn-light border position-absolute" style="bottom: 10px; right: 10px;"
+          data-bs-toggle="tooltip" data-bs-placement="top" title="Agregar al carrito">
+            <img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
+          </button>
+          <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreSalta2">Ver ingredientes</button>
+          <div class="collapse mt-2" id="ingreSalta2">
+            <p class="small text-muted">Maíz, papas, carne de llama o vaca, ají y piedras calientes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col">
+      <div class="card h-100">
+        <img src="assets/Img/guiso.jpg" class="card-img-top" alt="Guiso">
+        <div class="card-body">
+          <h5 class="card-title">Guiso de Arroz</h5>
+          <p class="card-text">Guiso hecho a base de arroz, salsa de tomates, carne y verduras.</p>
+          <p class="fw-bold">$6000</p>
+          <button type="button" class="btn btn-light border position-absolute" style="bottom: 10px; right: 10px;"
+          data-bs-toggle="tooltip" data-bs-placement="top" title="Agregar al carrito">
+            <img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
+          </button>
+          <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreSalta2">Ver ingredientes</button>
+          <div class="collapse mt-2" id="ingreSalta2">
+            <p class="small text-muted">Arroz, carne, cebolla, condimentos, zanahoria, caldo, aceite.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
   </div>
 </div>
 
+
+<!--corrientes-->
 <div class="tab-pane fade" id="corrientes" role="tabpanel">
   <div class="row row-cols-1 row-cols-md-3 g-4">
     <!-- Mbeyú -->
@@ -433,14 +495,14 @@
     <div class="col">
       <div class="card h-100">
         <img src="assets/Img/chipasoo.jpg" class="card-img-top" alt="Chipa so'o">
-        <div class="card-body">
+        <div class="card-body" >
           <h5 class="card-title">Chipa so'o</h5>
           <p class="card-text">Pan de queso relleno de carne picada.</p>
           <p class="fw-bold">$5500</p>
           <button type="button" class="btn btn-light border position-absolute" style="bottom: 10px; right: 10px;"
           data-bs-toggle="tooltip" data-bs-placement="top" title="Agregar al carrito">
-    <img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
-  </button>
+          <img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
+          </button>
           <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreCorrientes2">Ver ingredientes</button>
           <div class="collapse mt-2" id="ingreCorrientes2">
             <p class="small text-muted">Almidón de mandioca, queso, carne picada, cebolla, huevos.</p>
@@ -448,10 +510,51 @@
         </div>
       </div>
     </div>
+
+
+    <div class="col">
+      <div class="card h-100">
+        <img src="assets/Img/pacu.jpg" class="card-img-top" alt="Pacu">
+        <div class="card-body" style="width: 18rem;">
+          <h5 class="card-title">Pacu</h5>
+          <p class="card-text">Pescado de río.</p>
+          <p class="fw-bold">$12000</p>
+          <button type="button" class="btn btn-light border position-absolute" style="bottom: 10px; right: 10px;"
+          data-bs-toggle="tooltip" data-bs-placement="top" title="Agregar al carrito">
+          <img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
+          </button>
+          <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreCorrientes2">Ver ingredientes</button>
+          <div class="collapse mt-2" id="ingreCorrientes2">
+            <p class="small text-muted">Filete de pacú, limon, ajo, perejil, aceite de oliva, sal y pimienta.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100">
+        <img src="assets/Img/chipaMboca.jpg" class="card-img-top" alt="Chipa Mboca">
+        <div class="card-body">
+          <h5 class="card-title">Chipa Mboca</h5>
+          <p class="card-text">Chipá de almidon de mandioca y queso, alargado.</p>
+          <p class="fw-bold">$5000</p>
+          <button type="button" class="btn btn-light border position-absolute" style="bottom: 10px; right: 10px;"
+          data-bs-toggle="tooltip" data-bs-placement="top" title="Agregar al carrito">
+          <img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
+          </button>
+          <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreCorrientes2">Ver ingredientes</button>
+          <div class="collapse mt-2" id="ingreCorrientes2">
+            <p class="small text-muted">Almidón de mandioca, queso semiduro, huevos, manteca, leche, sal.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
 
 
+<!--Buenos aires-->
 <div class="tab-pane fade" id="buenosaires" role="tabpanel">
   <div class="row row-cols-1 row-cols-md-3 g-4">
     <!-- Milanesa Napolitana -->
@@ -484,8 +587,8 @@
           <p class="fw-bold">$5500</p>
           <button type="button" class="btn btn-light border position-absolute" style="bottom: 10px; right: 10px;"
           data-bs-toggle="tooltip" data-bs-placement="top" title="Agregar al carrito">
-    <img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
-  </button>
+          <img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
+          </button>
           <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreBsAs2">Ver ingredientes</button>
           <div class="collapse mt-2" id="ingreBsAs2">
             <p class="small text-muted">Carne picada, cebolla, pimentón, huevo duro, masa para empanadas.</p>
@@ -513,6 +616,27 @@
         </div>
       </div>
     </div>
+
+    <div class="col">
+      <div class="card h-100">
+        <img src="assets/Img/achura.jpg" class="card-img-top" alt="Empanadas Fritas">
+        <div class="card-body">
+          <h5 class="card-title">Achuras<h5>
+          <p class="card-text">Asado de achura.</p>
+          <p class="fw-bold">$15000</p>
+          <button type="button" class="btn btn-light border position-absolute" style="bottom: 10px; right: 10px;"
+          data-bs-toggle="tooltip" data-bs-placement="top" title="Agregar al carrito">
+          <img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
+          </button>
+          <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreBsAs2">Ver ingredientes</button>
+          <div class="collapse mt-2" id="ingreBsAs2">
+            <p class="small text-muted">Chinchulines, riñones, vacío.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
   </div>
 </div>
     
