@@ -1,13 +1,12 @@
     <!-- Nueva barra de navegación con estilo Offcanvas -->
     <nav class="navbar " style=" background-color: #d0f0ff;">
   <div class="container-fluid">
-    <!-- Logo 
-    <img src="assets/Img/logoB.jpg" alt="..." width="50" height="44">-->
+    <!-- Logo -->
    
-    <a class="navbar-brand" href="#">
+    <a class="nav-link active" aria-current="page" href="<?= base_url() ?>">
       <img src="assets/img/logoBar.jpg" alt="" style="width: 40px; height: 40px; border-radius: 50%;">
     </a>
-
+    
     <!-- Botón para abrir el offcanvas -->
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
       aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -16,6 +15,7 @@
 
     <!-- Offcanvas -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -45,12 +45,13 @@
               Menú
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Comida</a></li>
-              <li><a class="dropdown-item" href="#">Bebida</a></li>
+              <li><a class="dropdown-item" href="https://rankea.com.ar/negocio/felix-pub-corrientes/menu-restaurante-mk/">Comida</a></li>
+              <li><a class="dropdown-item" href="https://www.gobar.com.ar/vinos">Bebida</a></li>
             </ul>
           </li>
         </ul>
       </div>
     </div>
+    
   </div>
 </nav>
