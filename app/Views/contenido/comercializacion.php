@@ -231,7 +231,7 @@
            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
          </div>
  
-   <div class="modal-body">
+        <div class="modal-body">
          <p class="text-secondary" style="font-size: 0.9rem;">
            Al seleccionar la opción de pago en efectivo, recibirás un <strong>5% de descuento</strong> sobre el total de tu compra.
          </p>
@@ -674,9 +674,9 @@
           Selecciona la opción de retiro para buscar tu pedido cuando te quede más cómodo.
         </p><h6 class="fw-bold mt-3">Información del Restaurante:</h6>
     <ul class="text-secondary" style="font-size: 0.9rem;">
-      <li><strong>Nombre:</strong> [Nombre de tu Restaurante]</li>
-      <li><strong>Dirección:</strong> [Dirección completa]</li>
-      <li><strong>Horarios:</strong> [Días y horarios de retiro]</li>
+      <li><strong>Nombre:</strong> Sabor Argentino</li>
+      <li><strong>Dirección:</strong> Av. 3 de Abriel y Chacabuco (sucursal de Corrientes)</li>
+      <li><strong>Horarios:</strong> de Lunes a Viernes: 20hs a 00hs - Sabados y Domingos: de 19hs a 01hs</li>
     </ul>
 
     <h6 class="fw-bold mt-3">¿Cómo seleccionar Retiro?</h6>
@@ -703,6 +703,7 @@
 </div>
 
   </div>
+
 </div><!-- Modal Entrega Delivery -->
 <div class="modal fade" id="modalEntrega2" tabindex="-1" aria-labelledby="modalEntrega2Label" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -717,13 +718,14 @@
           Delivery disponible para tu comodidad. Recibe tus compras en la dirección que indiques.
         </p><h6 class="fw-bold mt-3">Cobertura de Delivery:</h6>
     <ul class="text-secondary" style="font-size: 0.9rem;">
-      <li>[Zonas cubiertas]</li>
+      <li>Zona de Corrientes capital</li>
+      <li>Zona centrica de Itati</li>
       <li>[Limitaciones geográficas, si aplica]</li>
     </ul>
 
     <h6 class="fw-bold mt-3">Costos y Tiempos:</h6>
     <p class="text-secondary" style="font-size: 0.9rem;">
-      Costo de envío: <strong>$[Monto]</strong>. Tiempo estimado: <strong>[24-48 horas]</strong>.
+      Costo de envío: <strong>Entre $3.000 y $15.000 (dependiendo del lugar)</strong>. Tiempo estimado: <strong>[1-2 horas</strong>.
     </p>
 
     <h6 class="fw-bold mt-3">¿Cómo seleccionar Delivery?</h6>

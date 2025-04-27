@@ -15,8 +15,13 @@
       </h2>
       <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
         <div class="accordion-body">
-          <p><strong>Sabor Argentino</strong> es mucho más que un bar de comidas: es un sueño hecho realidad. Nació del corazon de dos amigas y hoy es un rincón donde la tradición y el sabor se encuentran. Fundado en 2023 con el sueño de compartir las delicias de nuestra tierra, hoy somos un punto de encuentro para quienes aman la buena comida y el país Argentino.</p>
-          <p>Desde nuestros inicios, apostamos por un espacio familiar, con atención cercana y platos que evocan la cocina de casa. Nuestro lema: <em>"Sabores que abrazan el alma"</em>.</p>
+          <p><strong>Sabor Argentino</strong> es mucho más que un bar de comidas: es un sueño hecho realidad. Nació del corazon de dos amigas y hoy 
+            es un rincón donde la tradición y el sabor se encuentran. Fundado en 2023 con el sueño de compartir las delicias de nuestra tierra, hoy 
+            somos un punto de encuentro para quienes aman la buena comida y el país Argentino.
+          </p>
+          <p>Desde nuestros inicios, apostamos por un espacio familiar, con atención cercana y platos que evocan la cocina de casa. Nuestro lema: 
+            <em>"Sabores que abrazan el alma"</em>.
+          </p>
         </div>
       </div>
     </div>
@@ -32,16 +37,21 @@
       </h2>
       <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
       <div class="accordion-body">
-        <p>En nuestro establecimiento, ofrecemos una amplia variedad de menús diseñados para satisfacer todos los gustos. Ya sea que busques lo mejor de la cocina tradicional argentina, opciones vegetarianas, o un menú rápido para disfrutar en cualquier momento, tenemos algo para ti:</p>
+        <p>En nuestro establecimiento, ofrecemos una amplia variedad de menús diseñados para satisfacer todos los gustos. Ya sea que busques lo mejor de la cocina 
+          tradicional argentina, opciones vegetarianas, o un menú rápido para disfrutar en cualquier momento, tenemos algo para ti:
+        </p>
           <ul>
-            <li><strong>Menú Tradicional Argentino:</strong> Disfruta de las delicias más emblemáticas de nuestra tierra, como empanadas artesanales (carne, pollo, humita y más), matambres, milanesas y choripán acompañado de nuestro chimichurri casero, y mucho más.</li>
-            <!--<li><strong>Menú Infantil:</strong> Pensado especialmente para los más pequeños, con opciones deliciosas y adaptadas a sus gustos.</li>-->
+            <li><strong>Menú Tradicional Argentino:</strong> Disfruta de las delicias más emblemáticas de nuestra tierra, como empanadas artesanales (carne, pollo, humita y más), 
+            matambres, milanesas y choripán acompañado de nuestro chimichurri casero, y mucho más.</li>
             <li><strong>Menú Vegetariano y Sin TACC:</strong> Sabores frescos y saludables, con opciones que se ajustan a diferentes necesidades alimentarias.</li>
-            <li><strong>Menú Rápido:</strong> Para aquellos que buscan un bocado delicioso pero veloz, ofrecemos hamburguesas artesanales, papas fritas, sándwiches y otras opciones ideales para una comida express sin perder el sabor y la calidad.</li>
+            <li><strong>Menú Rápido:</strong> Para aquellos que buscan un bocado delicioso pero veloz, ofrecemos hamburguesas artesanales, papas fritas, sándwiches y otras opciones 
+              ideales para una comida express sin perder el sabor y la calidad.</li>
             <li><strong>Menú de Bebidas:</strong> Una selección de bebidas, desde las clásicas cervezas argentinas hasta jugos naturales y opciones sin alcohol para acompañar cualquier comida.</li>
           </ul>
-        <p>Además, contamos con un ambiente climatizado y cuidadosamente ambientado para que en cada rincón se sienta nuestra cultura y nuestra pasión. Acompañamos tu experiencia con música seleccionada, y ofrecemos servicio de delivery nocturno para disfrutar de nuestras especialidades en cualquier lugar y a cualquier hora.</p>
-        <p>Para nosotros, la calidad y el buen servicio son nuestra prioridad. ¡Y no olvides que tenemos promociones semanales y atención personalizada! Porque en <strong>Sabor Argentino</strong>, comer RICO no tiene por qué ser caro!.</p>
+        <p>Además, contamos con un ambiente climatizado y cuidadosamente ambientado para que en cada rincón se sienta nuestra cultura y nuestra pasión. Acompañamos tu experiencia con música 
+          seleccionada, y ofrecemos servicio de delivery nocturno para disfrutar de nuestras especialidades en cualquier lugar y a cualquier hora.</p>
+        <p>Para nosotros, la calidad y el buen servicio son nuestra prioridad. ¡Y no olvides que tenemos promociones semanales y atención personalizada! Porque en 
+          <strong>Sabor Argentino</strong>, comer RICO no tiene por qué ser caro!.</p>
       </div>
 
       </div>
