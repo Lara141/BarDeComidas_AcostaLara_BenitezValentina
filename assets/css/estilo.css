@@ -228,7 +228,7 @@ button:hover {
 }
 
 .encabezado-top {
-    position: fixed; /*hace quesea estaticco*/
+    position: fixed; /*hace que sea estaticco*/
     top: 0;
     width: 100%;
     background-color: #c3d8e2;
@@ -289,7 +289,7 @@ main, section {
 
   /*contacto */
   .color-fuente {
-    color:rgb(4, 188, 250); /* Código hexadecimal para celeste claro */
+    color:rgb(4, 188, 250); 
   }
   .color-titulo{
       color: rgb(53, 157, 192);
