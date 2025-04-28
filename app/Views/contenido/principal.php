@@ -1,90 +1,14 @@
-
-  <style>
-    .promo-title {
-      font-size: 1.1rem;
-      font-weight: bold;
-      color: #e91e63;
-    }
-    .promo-price {
-      font-size: 1.2rem;
-      color: #4caf50;
-    }
-    .card-img-top {
-      height: 160px;
-      object-fit: cover;
-    }
-    .carousel-caption {
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 1rem;
-      border-radius: 10px;
-    }
-
-    
-.nav-pills .nav-link {
-    background-color: #fff;
-    color: #000;
-    border: 1px solid #000;
-    transition: all 0.3s ease;
-  }
-
-  /* Hover: blanco con texto negro */
-  .nav-pills .nav-link:hover {
-    background-color: #000;
-    color: #fff;
-    border-color: #000;
-  }
-
-  /* Botón activo (tab seleccionado) */
-  .nav-pills .nav-link.active {
-    background-color: #000;
-    color: #fff;
-    border: 1px solid #000;
-  }
-
-  /* Hover sobre el activo: que también cambie */
-  .nav-pills .nav-link.active:hover {
-    background-color: #000;
-    color: #fff;
-  }
-
-   .carousel-caption {
-      background: rgba(0, 0, 0, 0.5);
-      padding: 20px;
-      border-radius: 15px;
-    }
-
-   
-#carouselExampleIndicators {
-  width: 100%;        
-
-}
-
-
-
-#carouselExampleIndicators .carousel-inner {
-  max-height: 400px; /* Puedes ajustar la altura según lo que necesites */
-}
-
-#carouselExampleIndicators .carousel-item img {
-  width: 100%; 
-  height: auto; 
-}
-  </style>
-
-
-</head>
+<div style="margin: 20px;">
 
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    
-  
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="assets/img/carne1.jpg" class="d-block w-100" alt="...">
+      <img src="assets/img/bienveBar.jpg" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
       <img src="assets/img/empanadass.jpg" class="d-block w-100" alt="...">
@@ -92,7 +16,6 @@
     <div class="carousel-item">
       <img src="assets/img/dulceDeLeche.jpg" class="d-block w-100" alt="...">
     </div>
-   
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -102,6 +25,8 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
+</div>
+
 </div>
 
 

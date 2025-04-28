@@ -1,17 +1,4 @@
 
-<style>
-
-.color-fuente {
-  color:rgb(4, 188, 250); /* Código hexadecimal para celeste claro */
-}
-.color-titulo{
-    color: rgb(53, 157, 192);
-}
-
-p{
-    color:rgb(3, 45, 59);
-}
-</style>
 
 <div class="container">
   <div class="row">

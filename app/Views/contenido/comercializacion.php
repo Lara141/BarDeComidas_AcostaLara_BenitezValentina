@@ -1,40 +1,3 @@
-
-<style>
-  /* Estilos generales */
-  .promo-card {
-    border: 3px solid rgb(97, 192, 230);
-    border-radius: 20px;
-    text-align: center;
-    padding: 1rem;
-  }
-
-  .promo-header {
-    background-color: rgb(97, 192, 230);
-    color: white;
-    font-weight: bold;
-    border-radius: 20px;
-    padding: 0.3rem 0;
-    margin-bottom: 0.5rem;
-  }
-
-  .promo-btn {
-    background-color: rgb(97, 192, 230);
-    color: white;
-    font-weight: bold;
-    border-radius: 10px;
-  }
-
-  .promo-btn:hover {
-    background-color: rgb(80, 170, 210);
-  }
-
-  .promo-img {
-    height: 100px;
-    object-fit: contain;
-    margin: 10px 0;
-  }
-</style>
-
 <div class="container">
   <div class="row g-4">
 
@@ -200,6 +163,41 @@
   </div>
 </div>
 
+<!-- Modal Promoción 2 efectivo-->
+<div class="modal fade" id="modalPromo2" tabindex="-1" aria-labelledby="modalPromo2Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title fw-bold" id="modalPromo2Label">Promoción: Tododos los dias</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <h6 class="fw-bold">5% de descuento, abonando en efectivo en el bar.</h6>
+        <p class="text-secondary" style="font-size: 0.9rem;">
+           Aplica sobre precio contado de los productos.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Promoción 3 naranja zeta -->
+<div class="modal fade" id="modalPromo3" tabindex="-1" aria-labelledby="modalPromo3Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title fw-bold" id="modalPromo3Label">Promoción: Lunes y miercoles</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <h6 class="fw-bold">En Z sin interes</h6>
+        <p class="text-secondary" style="font-size: 0.9rem;">
+          Válido los días lunes y miercoles hasta el 30/10/2025. Aplica sobre precio contado de los productos.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- Modal Pago 1 -->
 <div class="modal fade" id="modalPago1" tabindex="-1" aria-labelledby="modalPago1Label" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -380,200 +378,6 @@
        </div>
      </div>
    </div>
- </div>
- 
- 
- <div class="modal fade" id="modalPago6" tabindex="-1" aria-labelledby="modalPago6Label" aria-hidden="true">
-   <div class="modal-dialog modal-dialog-centered modal-lg">
-     <div class="modal-content">
-       <div class="modal-header">
-         <h5 class="modal-title fw-bold" id="modalPago6Label">Medio de Pago: Tarjeta Galicia</h5>
-         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-       </div>
-       <div class="modal-body">
-         <h6 class="fw-bold">Paga con tus tarjetas Galicia</h6>
-         <p class="text-secondary" style="font-size: 0.9rem;">
-           Aceptamos tarjetas de crédito y débito emitidas por el Banco Galicia para que puedas realizar tus compras de manera segura y aprovechar sus beneficios.
-         </p>
- 
-         <h6 class="fw-bold mt-3">Beneficios Exclusivos (si aplica):</h6>
-         <p class="text-secondary" style="font-size: 0.9rem;">
-           [Aquí puedes detallar cualquier promoción o beneficio especial que ofrezcas al pagar con tarjetas Galicia. Por ejemplo:]
-         </p>
-         <ul class="text-secondary" style="font-size: 0.9rem;">
-           <li><strong>[Número] cuotas sin interés</strong> con tarjetas de crédito Galicia.</li>
-           <li><strong>[Porcentaje]% de descuento</strong> los días [Días de la semana] para clientes Galicia Éminent/Prefer.</li>
-           <li>Accede a <strong>planes de financiación</strong> con tu tarjeta Galicia.</li>
-           <li>Beneficios especiales en categorías como [Menciona categorías relevantes para tu negocio, por ejemplo, "gastronomía", "indumentaria", etc.].</li>
-         </ul>
-         <p class="text-secondary" style="font-size: 0.9rem;">
-           Consulta los términos y condiciones de cada promoción durante el proceso de pago.
-         </p>
- 
-         <h6 class="fw-bold mt-3">¿Cómo pagar con Tarjeta Galicia?</h6>
-         <p class="text-secondary" style="font-size: 0.9rem;">
-           Al seleccionar Tarjeta Galicia como tu método de pago, serás redirigido a una pasarela de pago segura donde podrás ingresar los datos de tu tarjeta (número, fecha de vencimiento, código de seguridad). El Banco Galicia se encargará de procesar tu pago de forma segura.
-         </p>
- 
-         <h6 class="fw-bold mt-3">Galicia Online y App (si aplica):</h6>
-         <p class="text-secondary" style="font-size: 0.9rem;">
-           Si eres usuario de Galicia Online o la App Galicia, puedes tener opciones adicionales o una experiencia de pago más ágil. Verifica las opciones disponibles durante el proceso de compra.
-         </p>
- 
-         <p class="text-secondary" style="font-size: 0.8rem;">
-           Para cualquier consulta sobre tus tarjetas Galicia o sus beneficios, por favor, contacta directamente con el Banco Galicia a través de sus canales de atención o visita su sitio web.
-         </p>
-       </div>
-     </div>
-   </div>
- </div>
- 
- <div class="modal fade" id="modalPago7" tabindex="-1" aria-labelledby="modalPago7Label" aria-hidden="true">
-   <div class="modal-dialog modal-dialog-centered modal-lg">
-     <div class="modal-content">
-       <div class="modal-header">
-         <h5 class="modal-title fw-bold" id="modalPago7Label">Medio de Pago: Tarjeta Cabal</h5>
-         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-       </div>
-       <div class="modal-body">
-         <h6 class="fw-bold">Paga con tu tarjeta Cabal</h6>
-         <p class="text-secondary" style="font-size: 0.9rem;">
-           Aceptamos tarjetas de crédito y débito de la red Cabal para que puedas abonar tus compras de manera práctica y segura.
-         </p>
- 
-         <h6 class="fw-bold mt-3">Beneficios Exclusivos (si aplica):</h6>
-         <p class="text-secondary" style="font-size: 0.9rem;">
-           [Aquí puedes detallar cualquier promoción o beneficio especial que ofrezcas al pagar con tarjetas Cabal. Por ejemplo:]
-         </p>
-         <ul class="text-secondary" style="font-size: 0.9rem;">
-           <li><strong>[Número] cuotas sin interés</strong> con tarjetas de crédito Cabal.</li>
-           <li><strong>Promociones especiales</strong> para socios de la red Cabal.</li>
-           <li><strong>[Porcentaje]% de descuento</strong> en días específicos al pagar con Cabal.</li>
-           <li>Beneficios en categorías como [Menciona categorías relevantes para tu negocio].</li>
-         </ul>
-         <p class="text-secondary" style="font-size: 0.9rem;">
-           Consulta los términos y condiciones de cada promoción durante el proceso de pago.
-         </p>
- 
-         <h6 class="fw-bold mt-3">¿Cómo pagar con Tarjeta Cabal?</h6>
-         <p class="text-secondary" style="font-size: 0.9rem;">
-           Al seleccionar Tarjeta Cabal como tu método de pago, serás redirigido a una pasarela de pago segura donde podrás ingresar los datos de tu tarjeta Cabal (número, fecha de vencimiento, código de seguridad). La red Cabal se encargará de procesar tu pago de forma segura.
-         </p>
- 
-         <p class="text-secondary" style="font-size: 0.8rem;">
-           Para cualquier consulta sobre tu tarjeta Cabal o sus beneficios, por favor, contacta directamente con la entidad emisora de tu tarjeta o visita el sitio web de Cabal.
-         </p>
-       </div>
-     </div>
-   </div>
- </div>
- 
-
-<!-- Modal Entrega 1 -->
-
- 
-<div class="modal fade" id="modalEntrega1" tabindex="-1" aria-labelledby="modalEntrega1Label" aria-hidden="true">
-   <div class="modal-dialog modal-dialog-centered modal-lg">
-     <div class="modal-content">
-       <div class="modal-header">
-         <h5 class="modal-title fw-bold" id="modalEntrega1Label">Medio de Entrega: Retiro en el Restaurante</h5>
-         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-       </div>
-       <div class="modal-body">
-         <h6 class="fw-bold">Retira tu pedido directamente en nuestro restaurante</h6>
-         <p class="text-secondary" style="font-size: 0.9rem;">
-           Selecciona la opción de retiro en el restaurante para pasar a buscar tu pedido cuando te quede más cómodo. ¡Es una forma rápida y gratuita de obtener tus productos!
-         </p>
- 
-         <h6 class="fw-bold mt-3">Información del Restaurante:</h6>
-         <ul class="text-secondary" style="font-size: 0.9rem;">
-           <li><strong>Nombre del Restaurante:</strong> Sabor Argentino</li>
-           <li><strong>Dirección sucursal 1:</strong> Corrientes Capital: av. 3 de abril y chacabuco</li>
-           <li><strong>Dirección sucursal 2:</strong> Chaco Resistencia: Leandro N. Alem Oeste 1866, H3500</li>
-           <li><strong>Horarios de Retiro:</strong>Lunes a Viernes de 21:00 a 01:00 hs, Sábados y Domingos de 20:00 a 01:30 hs</li>
-         </ul>
- 
-         <h6 class="fw-bold mt-3">¿Cómo seleccionar Retiro en el Restaurante?</h6>
-         <p class="text-secondary" style="font-size: 0.9rem;">
-           Durante el proceso de compra, en la sección de "Envío" o "Entrega", podrás seleccionar la opción "Retiro en el Restaurante".
-         </p>
- 
-         <h6 class="fw-bold mt-3">Proceso de Retiro:</h6>
-         <p class="text-secondary" style="font-size: 0.9rem;">
-           Una vez que tu pedido esté listo, te notificaremos por [Medio de notificación seleccionado por usted mismo en la sección de contacto, ej: correo electrónico, WhatsApp]. Por favor, espera esta confirmación antes de acercarte al restaurante.
-         </p>
-         <p class="text-secondary" style="font-size: 0.9rem;">
-           Al llegar al restaurante, acércate a la caja o al área designada para retiros online e indica tu nombre o número de pedido.
-         </p>
- 
-         <h6 class="fw-bold mt-3">Beneficios del Retiro en el Restaurante:</h6>
-         <ul class="text-secondary" style="font-size: 0.9rem;">
-           <li><strong>Gratis:</strong> No tiene costo adicional.</li>
-           <li><strong>Flexible:</strong> Puedes retirarlo dentro de nuestros horarios.</li>
-           <li><strong>Rápido:</strong> Evita esperas de envío.</li>
-         </ul>
- 
-         <p class="text-secondary" style="font-size: 0.8rem;">
-           Si tienes alguna pregunta sobre el retiro en el restaurante, no dudes en contactarnos a través de nuestros canales de atención.
-         </p>
-       </div>
-     </div>
-   </div>
- </div>
- 
- 
- <div class="modal fade" id="modalEntrega2" tabindex="-1" aria-labelledby="modalEntrega2Label" aria-hidden="true">
-   <div class="modal-dialog modal-dialog-centered modal-lg">
-     <div class="modal-content">
-       <div class="modal-header">
-         <h5 class="modal-title fw-bold" id="modalEntrega2Label">Medio de Entrega: Delivery</h5>
-         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-       </div>
-       <div class="modal-body">
-         <h6 class="fw-bold">Recibe tu pedido donde estés con nuestro servicio de Delivery</h6>
-         <p class="text-secondary" style="font-size: 0.9rem;">
-           Disfruta de la comodidad de recibir tus compras directamente en tu domicilio o en la dirección que nos indiques. Nuestro servicio de delivery está disponible para que no tengas que preocuparte por venir a buscar tu pedido.
-         </p>
- 
-         <h6 class="fw-bold mt-3">Cobertura de Delivery:</h6>
-         <p class="text-secondary" style="font-size: 0.9rem;">
-           Nuestro servicio de delivery actualmente cubre las siguientes zonas de Corrientes: Todo lo que sea Capital y San Luis Del Palmar. Chaco: Zona centrica de Reistencia y Barranqueras
-         </p>
-         <ul class="text-secondary" style="font-size: 0.9rem;">
-          <li><strong>Corrientes Capital:</strong> Todos los días, incluyendo barrios como Bañado Norte, Nuestra Señora de Pompeya, Hipódromo, Madariaga, 3 de Abril, Alta Gracia, Concepción, Parque Ingeniero Serantes, Nuestra Señora de la Asunción y Ciudades Correntinas. </li>
-          <li><strong>San Luis del Palmar:</strong> Entregas una vez por semana.</li>
-          <li><strong>Resistencia:</strong> Todos los días, abarcando barrios ubicados entre Combate Vuelta de Obligado, Avenida Sarmiento, el Paseo Costanero, Avenida Rivadavia, la ruta 11, Avenida Edison, Avenida Urquiza, Avenida 9 de Julio e Italia.</li>
-          <li><strong>Barranqueras:</strong> Todos los días.</li>
-         </ul>
-         <p class="text-secondary" style="font-size: 0.9rem;">
-           Puedes verificar si tu dirección está dentro de nuestra zona de cobertura al ingresar tus datos de envío durante el proceso de compra.
-         </p>
- 
-         <h6 class="fw-bold mt-3">Costos y Tiempos de Entrega:</h6>
-         <p class="text-secondary" style="font-size: 0.9rem;">
-           El costo del envío por delivery es de <strong>$[Monto del envío]</strong> para las zonas indicadas.
-         </p>
-         <p class="text-secondary" style="font-size: 0.9rem;">
-           El tiempo estimado de entrega es de <strong>30-60 min. dependiendo del lugar y clima.</strong> una vez confirmado tu pedido. Ten en cuenta que este tiempo puede variar ligeramente según la demanda y la ubicación.
-         </p>
- 
-         <h6 class="fw-bold mt-3">¿Cómo seleccionar Delivery?</h6>
-         <p class="text-secondary" style="font-size: 0.9rem;">
-           Durante el proceso de compra, en la sección de "Envío" o "Entrega", podrás seleccionar la opción "Delivery" si tu dirección se encuentra dentro de nuestra zona de cobertura.
-         </p>
- 
-         <h6 class="fw-bold mt-3">Información Adicional:</h6>
-         <p class="text-secondary" style="font-size: 0.9rem;">
-           Te contactaremos por el medio de contacto que hayas elegido previamente, [ej: WhatsApp, teléfono, correo electrónico] para coordinar la entrega de tu pedido. Por favor, asegúrate de proporcionar información de contacto correcta al realizar tu compra.
-         </p>
- 
-         <p class="text-secondary" style="font-size: 0.8rem;">
-           Si tienes alguna pregunta sobre nuestro servicio de delivery, no dudes en contactarnos a través de nuestros canales de atención.
-         </p>
-         </div>
-     </div>
-   </div>
- </div>
  </div>
  
  
