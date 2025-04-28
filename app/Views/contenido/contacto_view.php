@@ -39,8 +39,6 @@ p{
           <select class="form-select" id="validationTooltipProvincia" required>
             <option selected disabled value="">Elegir</option>
             <option>Corrientes</option>
-            <option>Formosa</option>
-            <option>Santa Fe</option>
             <option>Chaco</option>
           </select>
           <div class="invalid-tooltip">
@@ -52,9 +50,9 @@ p{
           <select class="form-select" id="validationTooltipLocalidad" required>
             <option selected disabled value="">Elegir</option>
             <option>Corrientes</option>
-            <option>Colonia Pando</option>
-            <option>San Roque</option>
-            <option>Itati</option>
+            <option>San Luis</option>
+            <option>Resistencia</option>
+            <option>Barranqueras</option>
           </select>
           <div class="invalid-tooltip">
             Por favor, selecciona una localidad válida.
@@ -93,16 +91,19 @@ p{
     </div>
     <div class="col-md-6">
       <h3 class="color-titulo">CONTACTO</h3>
-      <p > estos son los horario en los cual el restaurante esta abierto, y el telefono para contactar con el encargado, para sus dudas inmediatas y reservas</p>
+      <p > estos son los horario en los cual el bar esta abierto, y el telefono para contactar con el encargado, para sus dudas inmediatas y reservas</p>
       <p>
   <p class="fw-bold">Horarios:</p>
-  <p>-De Lunes a Viernes: 10 am a 14 pm - 17 pm a 22 pm </p>
-  <p>-Fines de Semana: 8 am a 23 pm </p>
+  <p>-De Lunes a Viernes: 20:00 a 02:00 </p>
+  <p>-Fines de Semana: 20:30 a 05:00</p>
       <p>
   <span class="fw-bold">Teléfono:</span> +54 3795-684058
 </p>
 <p>
-  <span style="font-weight: bold;">Direccion:</span> Av. 3 de abril y chacabuco
+  <span style="font-weight: bold;">Direccion Corrientes:</span> Av. 3 de abril y chacabuco
+</p>
+<p>
+  <span style="font-weight: bold;">Direccion Chaco:</span> Leandro N. Alem Oeste 1866, H3500
 </p>
 <div class="container">
   <div class="row">

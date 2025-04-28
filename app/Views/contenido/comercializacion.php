@@ -227,7 +227,7 @@
      <div class="modal-dialog modal-dialog-centered modal-lg">
        <div class="modal-content">
          <div class="modal-header">
-           <h5 class="modal-title fw-danger" id="modalPromo1">Medios de pago</h5>
+           <h5 class="modal-title fw-bold" id="modalPago2Label">Medios de pago</h5>
            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
          </div>
  
@@ -489,9 +489,8 @@
          <ul class="text-secondary" style="font-size: 0.9rem;">
            <li><strong>Nombre del Restaurante:</strong> Sabor Argentino</li>
            <li><strong>Dirección sucursal 1:</strong> Corrientes Capital: av. 3 de abril y chacabuco</li>
-           <li><strong>Dirección sucursal 2:</strong> Buenos Aires: C. Gaspar M. de Jovellanos 151, C1268</li>
-           <li><strong>Dirección sucursal 3:</strong> Itati, Corrientes: av. 25 de Mayo, W3414 Itati, Corientes</li>
-           <li><strong>Horarios de Retiro:</strong>Lunes a Viernes de 20:00 a 23:00 hs, Sábados de 21:00 a 00:00 hs</li>
+           <li><strong>Dirección sucursal 2:</strong> Chaco Resistencia: Leandro N. Alem Oeste 1866, H3500</li>
+           <li><strong>Horarios de Retiro:</strong>Lunes a Viernes de 21:00 a 01:00 hs, Sábados y Domingos de 20:00 a 01:30 hs</li>
          </ul>
  
          <h6 class="fw-bold mt-3">¿Cómo seleccionar Retiro en el Restaurante?</h6>
@@ -501,7 +500,7 @@
  
          <h6 class="fw-bold mt-3">Proceso de Retiro:</h6>
          <p class="text-secondary" style="font-size: 0.9rem;">
-           Una vez que tu pedido esté listo, te notificaremos por [Medio de notificación, ej: correo electrónico, WhatsApp]. Por favor, espera esta confirmación antes de acercarte al restaurante.
+           Una vez que tu pedido esté listo, te notificaremos por [Medio de notificación seleccionado por usted mismo en la sección de contacto, ej: correo electrónico, WhatsApp]. Por favor, espera esta confirmación antes de acercarte al restaurante.
          </p>
          <p class="text-secondary" style="font-size: 0.9rem;">
            Al llegar al restaurante, acércate a la caja o al área designada para retiros online e indica tu nombre o número de pedido.
@@ -538,11 +537,13 @@
  
          <h6 class="fw-bold mt-3">Cobertura de Delivery:</h6>
          <p class="text-secondary" style="font-size: 0.9rem;">
-           Nuestro servicio de delivery actualmente cubre las siguientes zonas de [Menciona tu ciudad/región]:
+           Nuestro servicio de delivery actualmente cubre las siguientes zonas de Corrientes: Todo lo que sea Capital y San Luis Del Palmar. Chaco: Zona centrica de Reistencia y Barranqueras
          </p>
          <ul class="text-secondary" style="font-size: 0.9rem;">
-           <li>[Listado de barrios o zonas específicas que cubres. Ejemplo: Centro, Barrio Norte, zona de la Costanera, etc.]</li>
-           <li>[Si tienes alguna limitación geográfica, indícala aquí. Ejemplo: No llegamos a zonas rurales o fuera del radio de X kilómetros.]</li>
+          <li><strong>Corrientes Capital:</strong> Todos los días, incluyendo barrios como Bañado Norte, Nuestra Señora de Pompeya, Hipódromo, Madariaga, 3 de Abril, Alta Gracia, Concepción, Parque Ingeniero Serantes, Nuestra Señora de la Asunción y Ciudades Correntinas. </li>
+          <li><strong>San Luis del Palmar:</strong> Entregas una vez por semana.</li>
+          <li><strong>Resistencia:</strong> Todos los días, abarcando barrios ubicados entre Combate Vuelta de Obligado, Avenida Sarmiento, el Paseo Costanero, Avenida Rivadavia, la ruta 11, Avenida Edison, Avenida Urquiza, Avenida 9 de Julio e Italia.</li>
+          <li><strong>Barranqueras:</strong> Todos los días.</li>
          </ul>
          <p class="text-secondary" style="font-size: 0.9rem;">
            Puedes verificar si tu dirección está dentro de nuestra zona de cobertura al ingresar tus datos de envío durante el proceso de compra.
@@ -553,7 +554,7 @@
            El costo del envío por delivery es de <strong>$[Monto del envío]</strong> para las zonas indicadas.
          </p>
          <p class="text-secondary" style="font-size: 0.9rem;">
-           El tiempo estimado de entrega es de <strong>[Rango de tiempo, ej: 24 a 48 horas hábiles]</strong> una vez confirmado tu pedido. Ten en cuenta que este tiempo puede variar ligeramente según la demanda y la ubicación.
+           El tiempo estimado de entrega es de <strong>30-60 min. dependiendo del lugar y clima.</strong> una vez confirmado tu pedido. Ten en cuenta que este tiempo puede variar ligeramente según la demanda y la ubicación.
          </p>
  
          <h6 class="fw-bold mt-3">¿Cómo seleccionar Delivery?</h6>
@@ -563,7 +564,7 @@
  
          <h6 class="fw-bold mt-3">Información Adicional:</h6>
          <p class="text-secondary" style="font-size: 0.9rem;">
-           Te contactaremos por [Medio de contacto, ej: WhatsApp, teléfono, correo electrónico] para coordinar la entrega de tu pedido. Por favor, asegúrate de proporcionar información de contacto correcta al realizar tu compra.
+           Te contactaremos por el medio de contacto que hayas elegido previamente, [ej: WhatsApp, teléfono, correo electrónico] para coordinar la entrega de tu pedido. Por favor, asegúrate de proporcionar información de contacto correcta al realizar tu compra.
          </p>
  
          <p class="text-secondary" style="font-size: 0.8rem;">
@@ -577,7 +578,8 @@
  
  
  
- <!-- Modal Pago Galicia --><div class="modal fade" id="modalPago6" tabindex="-1" aria-labelledby="modalPago6Label" aria-hidden="true">
+ <!-- Modal Pago Galicia -->
+  <div class="modal fade" id="modalPago6" tabindex="-1" aria-labelledby="modalPago6Label" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
       <div class="modal-header">
@@ -590,13 +592,12 @@
           Aceptamos tarjetas de crédito y débito emitidas por el Banco Galicia para que puedas realizar tus compras de manera segura y aprovechar sus beneficios.
         </p><h6 class="fw-bold mt-3">Beneficios Exclusivos (si aplica):</h6>
     <p class="text-secondary" style="font-size: 0.9rem;">
-      [Aquí puedes detallar cualquier promoción o beneficio especial que ofrezcas al pagar con tarjetas Galicia.]
+      Si tenes más de 5 compras echas con tarjeta Galicia;
     </p>
     <ul class="text-secondary" style="font-size: 0.9rem;">
-      <li><strong>[Número] cuotas sin interés</strong> con tarjetas de crédito Galicia.</li>
-      <li><strong>[Porcentaje]% de descuento</strong> los días [Días de la semana] para clientes Galicia Éminent/Prefer.</li>
+      <li><strong>3 cuotas sin interés</strong> con tarjetas de crédito Galicia.</li>
+      <li><strong>10% de descuento</strong> los días martes para clientes Galicia Éminent/Prefer.</li>
       <li>Accede a <strong>planes de financiación</strong> con tu tarjeta Galicia.</li>
-      <li>Beneficios especiales en categorías como [Categorías relevantes].</li>
     </ul>
     <p class="text-secondary" style="font-size: 0.9rem;">
       Consulta los términos y condiciones de cada promoción durante el proceso de pago.
@@ -634,13 +635,13 @@
           Aceptamos tarjetas de crédito y débito de la red Cabal para que puedas abonar tus compras de manera práctica y segura.
         </p><h6 class="fw-bold mt-3">Beneficios Exclusivos (si aplica):</h6>
     <p class="text-secondary" style="font-size: 0.9rem;">
-      [Aquí puedes detallar cualquier promoción o beneficio especial que ofrezcas al pagar con tarjetas Cabal.]
+      Si tenes más de 5 compras echas con tu tarjeta Cabral;
     </p>
     <ul class="text-secondary" style="font-size: 0.9rem;">
-      <li><strong>[Número] cuotas sin interés</strong> con tarjetas de crédito Cabal.</li>
+      <li><strong>5 cuotas sin interés</strong> con tarjetas de crédito Cabal.</li>
       <li><strong>Promociones especiales</strong> para socios de la red Cabal.</li>
-      <li><strong>[Porcentaje]% de descuento</strong> en días específicos.</li>
-      <li>Beneficios en categorías como [Categorías relevantes].</li>
+      <li><strong>y hasta un 20% de descuento</strong> en días específicos.</li>
+      <li>Beneficios en categorías como 2 y 3.</li>
     </ul>
     <p class="text-secondary" style="font-size: 0.9rem;">
       Consulta los términos y condiciones de cada promoción durante el proceso de pago.
@@ -677,6 +678,8 @@
       <li><strong>Nombre:</strong> Sabor Argentino</li>
       <li><strong>Dirección:</strong> Av. 3 de Abriel y Chacabuco (sucursal de Corrientes)</li>
       <li><strong>Horarios:</strong> de Lunes a Viernes: 20hs a 00hs - Sabados y Domingos: de 19hs a 01hs</li>
+      <li><strong>Dirección:</strong> Leandro N. Alem Oeste 1866, H3500 (sucursal de Chaco)</li>
+      <li><strong>Horarios:</strong> de Lunes a Viernes: 20hs a 00hs - Sabados y Domingos: de 19hs a 01hs</li>
     </ul>
 
     <h6 class="fw-bold mt-3">¿Cómo seleccionar Retiro?</h6>
@@ -696,7 +699,7 @@
     </ul>
 
     <p class="text-secondary" style="font-size: 0.8rem;">
-      Si tienes dudas sobre el retiro, contáctanos.
+      Si tienes dudas sobre el retiro, tenemos la parte de "Contacto" para que te puedas comunicar con nosotros.
     </p>
    </div>
   </div>
@@ -719,13 +722,12 @@
         </p><h6 class="fw-bold mt-3">Cobertura de Delivery:</h6>
     <ul class="text-secondary" style="font-size: 0.9rem;">
       <li>Zona de Corrientes capital</li>
-      <li>Zona centrica de Itati</li>
-      <li>[Limitaciones geográficas, si aplica]</li>
+      <li>Zona centrica de Chaco</li>
     </ul>
 
     <h6 class="fw-bold mt-3">Costos y Tiempos:</h6>
     <p class="text-secondary" style="font-size: 0.9rem;">
-      Costo de envío: <strong>Entre $3.000 y $15.000 (dependiendo del lugar)</strong>. Tiempo estimado: <strong>[1-2 horas</strong>.
+      Costo de envío: <strong>Entre $2.000 y $15.000 (dependiendo del lugar)</strong>. Tiempo estimado: <strong>30 a 60 min.</strong>.
     </p>
 
     <h6 class="fw-bold mt-3">¿Cómo seleccionar Delivery?</h6>

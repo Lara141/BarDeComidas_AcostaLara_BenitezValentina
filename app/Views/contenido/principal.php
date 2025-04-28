@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Promos Imperdibles</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  
+
   <style>
     .promo-title {
       font-size: 1.1rem;
@@ -77,8 +70,11 @@
   height: auto; 
 }
   </style>
+
+
 </head>
-<body><div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -108,43 +104,13 @@
   </button>
 </div>
 
-<!--  Carrusel automático 
-<section class="mb-5">
-  <div class="container">
-    <div id="carouselPromos" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
-      <div class="carousel-inner rounded shadow">
-        <div class="carousel-item active">
-          <img src="assets/Img/imag_1.jpg" class="d-block w-100" alt="Empanadas">
-          <div class="carousel-caption">
-            <h5>Empanadas de Carne</h5>
-            <p>$10.000 doc - Fritas u horno 🍴</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="assets/Img/imag2.jpg" class="d-block w-100" alt="Promo 2">
-          <div class="carousel-caption">
-            <h5>Combo Envueltitos</h5>
-            <p>$7.000 - ¡Los favoritos de siempre!</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="assets/Img/imag3.jpg" class="d-block w-100" alt="Promo 3">
-          <div class="carousel-caption">
-            <h5>Mega Milanesa</h5>
-            <p>$12.000 - Para compartir </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section-->
 
 
 <!-- Cards de promos -->
 <section class="mb-5">
   <div class="container">
     <h4 class="text-uppercase fw-bold text-center mb-4">
-    <i class="fa-solid fa-burger fa-spin"></i>  
+    <i class="fa-solid fa-burger fa-beat"></i>  
       Promociones de comidas Rápidas</h4>
     <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
       
@@ -309,6 +275,7 @@
       <!-- Mendoza -->
       <div class="tab-pane fade show active" id="mendoza" role="tabpanel">
         <div class="row row-cols-1 row-cols-md-3 g-4">
+
           <div class="col">
             <div class="card h-100 shadow-sm">
               <img src="assets/Img/chivito.jpg" class="card-img-top" alt="Chivito">
@@ -339,8 +306,8 @@
                   data-bs-toggle="tooltip" data-bs-placement="top" title="Agregar al carrito">
                   <img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
                 </button>
-                <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreMendoza1">Ver ingredientes</button>
-                <div class="collapse mt-2" id="ingreMendoza1">
+                <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreMendoza2">Ver ingredientes</button>
+                <div class="collapse mt-2" id="ingreMendoza2">
                   <p class="small text-muted">Tomate, cebolla, maiz, carne, huevo, albahaca.</p>
                 </div>
               </div>
@@ -358,8 +325,8 @@
                   data-bs-toggle="tooltip" data-bs-placement="top" title="Agregar al carrito">
                   <img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
                 </button>
-                <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreMendoza1">Ver ingredientes</button>
-                <div class="collapse mt-2" id="ingreMendoza1">
+                <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreMendoza3">Ver ingredientes</button>
+                <div class="collapse mt-2" id="ingreMendoza3">
                   <p class="small text-muted">Zapallo, choclo, carne, durazno seco y papas (se sirve dentro de una calabaza).</p>
                 </div>
               </div>
@@ -428,8 +395,8 @@
           data-bs-toggle="tooltip" data-bs-placement="top" title="Agregar al carrito">
     <img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
   </button>
-          <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreSalta1">Ver ingredientes</button>
-          <div class="collapse mt-2" id="ingreSalta1">
+          <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreSalta3">Ver ingredientes</button>
+          <div class="collapse mt-2" id="ingreSalta3">
             <p class="small text-muted">Harina de maíz, carne vacuna, cebolla, pimentón, chala de maíz.</p>
           </div>
         </div>
@@ -448,8 +415,8 @@
           data-bs-toggle="tooltip" data-bs-placement="top" title="Agregar al carrito">
             <img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
           </button>
-          <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreSalta2">Ver ingredientes</button>
-          <div class="collapse mt-2" id="ingreSalta2">
+          <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreSalta4">Ver ingredientes</button>
+          <div class="collapse mt-2" id="ingreSalta4">
             <p class="small text-muted">Carne cortada a cuchillo, papa, cebolla, huevo duro, comino.</p>
           </div>
         </div>
@@ -468,8 +435,8 @@
           data-bs-toggle="tooltip" data-bs-placement="top" title="Agregar al carrito">
             <img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
           </button>
-          <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreSalta2">Ver ingredientes</button>
-          <div class="collapse mt-2" id="ingreSalta2">
+          <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreSalta5">Ver ingredientes</button>
+          <div class="collapse mt-2" id="ingreSalta5">
             <p class="small text-muted">Choclo rallado, cebolla, manteca, leche, queso, pimienta, chala.</p>
           </div>
         </div>
@@ -488,8 +455,8 @@
           data-bs-toggle="tooltip" data-bs-placement="top" title="Agregar al carrito">
             <img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
           </button>
-          <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreSalta2">Ver ingredientes</button>
-          <div class="collapse mt-2" id="ingreSalta2">
+          <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreSalta6">Ver ingredientes</button>
+          <div class="collapse mt-2" id="ingreSalta6">
             <p class="small text-muted">Maíz, papas, carne de llama o vaca, ají y piedras calientes.</p>
           </div>
         </div>
@@ -508,8 +475,8 @@
           data-bs-toggle="tooltip" data-bs-placement="top" title="Agregar al carrito">
             <img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
           </button>
-          <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreSalta2">Ver ingredientes</button>
-          <div class="collapse mt-2" id="ingreSalta2">
+          <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreSalta7">Ver ingredientes</button>
+          <div class="collapse mt-2" id="ingreSalta7">
             <p class="small text-muted">Arroz, carne, cebolla, condimentos, zanahoria, caldo, aceite.</p>
           </div>
         </div>
@@ -576,8 +543,8 @@
           data-bs-toggle="tooltip" data-bs-placement="top" title="Agregar al carrito">
           <img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
           </button>
-          <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreCorrientes2">Ver ingredientes</button>
-          <div class="collapse mt-2" id="ingreCorrientes2">
+          <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreCorrientes3">Ver ingredientes</button>
+          <div class="collapse mt-2" id="ingreCorrientes3">
             <p class="small text-muted">Filete de pacú, limon, ajo, perejil, aceite de oliva, sal y pimienta.</p>
           </div>
         </div>
@@ -595,8 +562,8 @@
           data-bs-toggle="tooltip" data-bs-placement="top" title="Agregar al carrito">
           <img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
           </button>
-          <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreCorrientes2">Ver ingredientes</button>
-          <div class="collapse mt-2" id="ingreCorrientes2">
+          <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreCorrientes4">Ver ingredientes</button>
+          <div class="collapse mt-2" id="ingreCorrientes4">
             <p class="small text-muted">Almidón de mandioca, queso semiduro, huevos, manteca, leche, sal.</p>
           </div>
         </div>
@@ -681,8 +648,8 @@
           data-bs-toggle="tooltip" data-bs-placement="top" title="Agregar al carrito">
           <img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
           </button>
-          <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreBsAs2">Ver ingredientes</button>
-          <div class="collapse mt-2" id="ingreBsAs2">
+          <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreBsAs4">Ver ingredientes</button>
+          <div class="collapse mt-2" id="ingreBsAs4">
             <p class="small text-muted">Chinchulines, riñones, vacío.</p>
           </div>
         </div>

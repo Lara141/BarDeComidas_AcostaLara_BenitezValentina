@@ -1,10 +1,9 @@
     <!-- Nueva barra de navegación con estilo Offcanvas -->
     <nav class="navbar " style=" background-color: #d0f0ff;">
-  <div class="container-fluid">
+    <div class="container-fluid">
     <!-- Logo -->
-   
-    <a class="nav-link active" aria-current="page" href="<?= base_url() ?>">
-      <img src="assets/img/logoBar.jpg" alt="" style="width: 40px; height: 40px; border-radius: 50%;">
+    <a class="nav-link active" aria-current="page" href="#">
+      <img src="assets/img/carrito.jpg" alt="" style="width: 40px; height: 40px; border-radius: 50%;">
     </a>
     
     <!-- Botón para abrir el offcanvas -->

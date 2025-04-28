@@ -188,7 +188,7 @@
             <p>Las entregas están sujetas a disponibilidad del personal, volumen de pedidos y ubicación. Si hay demoras imprevistas, nos comunicaremos con vos para informarte y reprogramar si es necesario.</p>
 
             <h5>4. Zonas de cobertura</h5>
-            <p>Cubrimos zonas específicas dentro de la ciudad. Podés verificar si tu domicilio está dentro del área de cobertura al momento de confirmar tu pedido.</p>
+            <p>Cubrimos zonas específicas dentro de la ciudad de Corrientes capital y de la zona centrica de la provincia de Chaco.</p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
