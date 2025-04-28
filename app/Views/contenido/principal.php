@@ -8,7 +8,7 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="assets/img/bienveBar.jpg" class="d-block w-100" alt="...">
+      <img src="assets/img/Bienvenidos.jpg" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
       <img src="assets/img/empanadass.jpg" class="d-block w-100" alt="...">
