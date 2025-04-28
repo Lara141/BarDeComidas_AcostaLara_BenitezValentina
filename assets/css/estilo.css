@@ -250,4 +250,122 @@ button:hover {
 main, section {
     margin-top: 90px; /* espacio para que no tape el header */
 }
+
+
+/*comercializacion*/
+/* Estilos generales */
+.promo-card {
+    border: 3px solid rgb(97, 192, 230);
+    border-radius: 20px;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .promo-header {
+    background-color: rgb(97, 192, 230);
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 0.3rem 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .promo-btn {
+    background-color: rgb(97, 192, 230);
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+  }
+
+  .promo-btn:hover {
+    background-color: rgb(80, 170, 210);
+  }
+
+  .promo-img {
+    height: 100px;
+    object-fit: contain;
+    margin: 10px 0;
+  }
+
+  /*contacto */
+  .color-fuente {
+    color:rgb(4, 188, 250); /* Código hexadecimal para celeste claro */
+  }
+  .color-titulo{
+      color: rgb(53, 157, 192);
+  }
+  
+  p{
+      color:rgb(3, 45, 59);
+  } 
+
+  /*principal*/
+  .promo-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #e91e63;
+  }
+  .promo-price {
+    font-size: 1.2rem;
+    color: #4caf50;
+  }
+  .card-img-top {
+    height: 160px;
+    object-fit: cover;
+  }
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  
+.nav-pills .nav-link {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+  transition: all 0.3s ease;
+}
+
+/* Hover: blanco con texto negro */
+.nav-pills .nav-link:hover {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+/* Botón activo (tab seleccionado) */
+.nav-pills .nav-link.active {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #000;
+}
+
+/* Hover sobre el activo: que también cambie */
+.nav-pills .nav-link.active:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+ .carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 15px;
+  }
+
  
+#carouselExampleIndicators {
+width: 100%;        
+
+}
+
+
+
+#carouselExampleIndicators .carousel-inner {
+max-height: 400px; /* Puedes ajustar la altura según lo que necesites */
+}
+
+#carouselExampleIndicators .carousel-item img {
+width: 100%; 
+height: auto; 
+}
