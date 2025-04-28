@@ -203,7 +203,7 @@ a:hover {
     gap: 8px;
 }
 
-/* Clases sueltas corregidas */
+
 button:hover {
     background-color: #718491; /* Azul brillante */
 }
@@ -224,7 +224,7 @@ button:hover {
 }
 
 .bg-pastel{
-    background-color: #fcfce6;
+    background-color: #f0f196;
 }
 
 .encabezado-top {
