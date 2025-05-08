@@ -31,7 +31,7 @@
           </div>
         </div>
         <div class="col-md-6 position-relative">
-          <label for="validationTooltip01" class="form-label color-fuente">Nombre</label>
+          <label for="validationTooltip01" class="form-label color-fuente">Localidad</label>
           <input type="text" name="nombre" class="form-control" id="validationTooltip01" value=" " required>
           <div class="valid-tooltip">
             Looks good!
@@ -39,7 +39,7 @@
         </div>
 
         <div class="col-md-6 position-relative">
-          <label for="validationTooltipTelefono" class="form-label color-fuente">Teléfono para contactar</label>
+          <label for="validationTooltipTelefono" class="form-label color-fuente">Correo</label>
           <input type="text" name="correo" class="form-control" id="validationTooltipoCorreo" value=" " required>
 
           <div class="valid-tooltip">
