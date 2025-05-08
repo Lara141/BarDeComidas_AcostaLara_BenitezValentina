@@ -33,30 +33,17 @@
           </div>
         </div>
         <div class="col-md-6 position-relative">
-          <label for="validationTooltipLocalidad" class="form-label color-fuente">Localidad</label>
-          <select class="form-select" id="validationTooltipLocalidad" required>
-            <option selected disabled value="">Elegir</option>
-            <option>Corrientes</option>
-            <option>San Luis</option>
-            <option>Resistencia</option>
-            <option>Barranqueras</option>
-          </select>
-          <div class="invalid-tooltip">
-            Por favor, selecciona una localidad válida.
+          <label for="validationTooltip01" class="form-label color-fuente">Nombre</label>
+          <input type="text" name="nombre" class="form-control" id="validationTooltip01" value=" " required>
+          <div class="valid-tooltip">
+            Looks good!
           </div>
         </div>
+
         <div class="col-md-6 position-relative">
           <label for="validationTooltipTelefono" class="form-label color-fuente">Teléfono para contactar</label>
-          <input type="numbers" name="numeros" class="form-control" id="validationTooltipTelefono" value=" " required>
-          <div>
-            <select class="form-select" id="validationTooltipTipoTelefono" required>
-              <option selected disabled value="">Teléfono Particular</option>
-              <option>Celular propio</option>
-            </select>
-            <div class="invalid-tooltip">
-              Por favor, selecciona un tipo de teléfono válido.
-            </div>
-          </div>
+          <input type="text" name="correo" class="form-control" id="validationTooltipoCorreo" value=" " required>
+
           <div class="valid-tooltip">
             Looks good!
           </div>

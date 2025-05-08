@@ -18,7 +18,7 @@
     <div class="col-md-3">
       <div class="promo-card">
         <div class="promo-header">TODOS LOS DÍAS</div>
-        <img src="assets/img/efectivo.jpg" alt="Efectivo" class="promo-img">
+        <img src="assets/img/efectivo.jpg" alt="Efectivo" class="promo-img ">
         <div class="text-info fw-bold mb-2">-5%</div>
         <button class="btn promo-btn mb-2" data-bs-toggle="modal" data-bs-target="#modalPromo2">Más información</button>
       </div>
