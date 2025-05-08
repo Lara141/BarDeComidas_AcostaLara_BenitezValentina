@@ -1,5 +1,3 @@
-
-
 <div class="container">
   <div class="row">
     <div class="col-md-6">
@@ -97,7 +95,8 @@
     <div class="col-md-12">
       <h2>Nuestra Ubicación</h2>
       <div class="map-responsive">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3369.1758447904986!2d-58.814632099999955!3d-27.47832729999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94456b6fd548d5e1%3A0x87590c858f7f62d8!2sAv.%20Chacabuco%20%26%20Av.%203%20de%20Abril%2C%20W3402%20Corrientes!5e1!3m2!1ses-419!2sar!4v1745872539290!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3369.1758447904986!2d-58.814632099999955!3d-27.47832729999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94456b6fd548d5e1%3A0x87590c858f7f62d8!2sAv.%20Chacabuco%20%26%20Av.%203%20de%20Abril%2C%20W3402%20Corrientes!5e1!3m2!1ses-419!2sar!4v1745872539290!5m2!1ses-419!2sar" 
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </div>
