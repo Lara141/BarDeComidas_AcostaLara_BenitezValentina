@@ -48,4 +48,22 @@ class Home extends BaseController
             . view('contenido/terminoUso')
             . view('plantillas/piePagina');
     }
+
+    public function inicioSesion()
+    {
+        $data['titulo'] = "Inicio de Sesion";
+        return view('plantillas/encabezado', $data)
+            . view('plantillas/barraNavegacion')
+            . view('contenido/inicioDeSesion')
+            . view('plantillas/piePagina');
+    }
+
+    public function registro()
+    {
+        $data['titulo'] = "Registro";
+        return view('plantillas/encabezado', $data)
+            . view('plantillas/barraNavegacion')
+            . view('contenido/registro')
+            . view('plantillas/piePagina');
+    }
 }
