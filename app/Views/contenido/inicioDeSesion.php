@@ -1,3 +1,12 @@
+<?php if (! empty($errors)): ?>
+    <div class="alert alert-danger" role="alert">
+        <ul>
+        <?php foreach ($errors as $error): ?>
+            <li><?= esc($error) ?></li>
+        <?php endforeach ?>
+        </ul>
+    </div>
+<?php endif ?>
 <section id="InicioDeSesion">
     <div style="max-width: 400px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 5px;">
         <h2 style="text-align: center;">Inicio de Sesión</h2>
