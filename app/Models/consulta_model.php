@@ -1,6 +1,6 @@
 <?php//vamos a crear tantos modelos como tablas tengamos en labase de datos
 
-namespace App\Models;
+namespace App/Models;
 
 use CodeIgniter\Model;
 
