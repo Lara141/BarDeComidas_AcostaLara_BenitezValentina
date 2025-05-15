@@ -15,7 +15,7 @@
             </div>
         </form>
         <p style="text-align: center; margin-top: 15px;">
-            ¿No tienes una cuenta? <a href="/registro.php">Regístrate aquí</a>
+            ¿No tienes una cuenta? <a href="<?= base_url('registro') ?>">Regístrate aquí</a>
         </p>
     </div>
 </section>
