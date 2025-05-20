@@ -1,4 +1,4 @@
-<?php//vamos a crear tantos modelos como tablas tengamos en labase de datos
+<?php //vamos a crear tantos modelos como tablas tengamos en labase de datos
 
 namespace App\Models;
 
@@ -12,7 +12,7 @@ class UserModel extends Model
     protected $useAutoIncrement = true;
 
     protected $returnType     = 'array';//tipo de dato que devuelve el modelo
-    protected $useTimestamps = false; //true si se quiere usar timestamps
+    //protected $useTimestamps = false; //true si se quiere usar timestamps
     protected $useSoftDeletes = true;//true si se quiere usar soft deletes
 
     protected $allowedFields = ['nombre_producto', 'categoria_producto', 'stock_producto', 'estado_producto'];//campos que se pueden insertar o actualizar en la base de datos (los mismos nombres que estan en la base de datos deben estar aca, excepto el que tiene la llavesita osea el id)

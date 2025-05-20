@@ -3,7 +3,7 @@ body {
     margin-top: 70px;
     margin: 20px;
     padding: 10px;
-    background-color: #ffffff; /* Azul pastel claro */
+    background-color: #bcf3fe; /* Azul pastel claro */
     font-family: Arial, sans-serif;
     color: #2C3E50; /* Azul oscuro para buen contraste */
     font-size: 16px;
@@ -55,7 +55,7 @@ body {
 }
 
 .navbar .dropdown-menu .dropdown-item:hover {
-    background-color: #ffffff; /* cambia el color del fondo de las opciones en el boton de menu */
+    background-color: #b4f7f7; /* cambia el color del fondo de las opciones en el boton de menu */
     color: #0f0e0e;
 }
 
@@ -87,14 +87,6 @@ body {
     max-width: 800px;
     text-align: center;
 }
-
-/* Título 
-.titulo {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #2C3E50;
-    margin-bottom: 0;
-}*/
 
 /* Botón */
 .boton {
@@ -263,7 +255,7 @@ main, section {
 
   .promo-header {
     background-color: rgb(97, 192, 230);
-    color: white;
+    color: rgb(244, 241, 249);
     font-weight: bold;
     border-radius: 20px;
     padding: 0.3rem 0;

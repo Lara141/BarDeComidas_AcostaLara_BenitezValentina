@@ -1,62 +1,65 @@
-    <!-- Nueva barra de navegación con estilo Offcanvas -->
-    <nav class="navbar " style=" background-color: #d0f0ff;">
-    <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg" style="background-color: #d0f0ff;">
+  <div class="container-fluid">
+    
     <!-- Logo -->
-    <a class="nav-link active" aria-current="page" href="#">
+    <a class="navbar-brand" href="#">
       <img src="assets/img/carrito.jpg" alt="" style="width: 40px; height: 40px; border-radius: 50%;">
     </a>
     
-    <!-- Botón para abrir el offcanvas -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-      aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+
+    <!-- Botón hamburguesa -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Offcanvas -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-      
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
+    <!-- Contenido colapsable -->
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
 
-      <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-        <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('inicioSesion') ?>">iniciar sesion</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('registro') ?>">registrar</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="<?= base_url() ?>">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('nosotros') ?>">Nosotros</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('comercializacion') ?>">Comercialización</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('contact') ?>">Contáctanos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('terminoUso') ?>">Términos y Uso</a>
-          </li>
-          <!-- Dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false" id="navbarDropdown">
-              Menú
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="https://rankea.com.ar/negocio/felix-pub-corrientes/menu-restaurante-mk/">Comida</a></li>
-              <li><a class="dropdown-item" href="https://www.gobar.com.ar/vinos">Bebida</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-    
+  <!-- Menú principal alineado a la izquierda -->
+  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="<?= base_url() ?>">Inicio</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="<?= base_url('nosotros') ?>">Nosotros</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="<?= base_url('comercializacion') ?>">Comercialización</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="<?= base_url('contact') ?>">Contáctanos</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="<?= base_url('terminoUso') ?>">Términos y Uso</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Menú
+      </a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="https://rankea.com.ar/negocio/felix-pub-corrientes/menu-restaurante-mk/">Comida</a></li>
+        <li><a class="dropdown-item" href="https://www.gobar.com.ar/vinos">Bebida</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <!-- Ícono de perfil alineado a la derecha -->
+  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt="Perfil" style="width: 35px; height: 35px; border-radius: 50%;">
+      </a>
+      <ul class="dropdown-menu dropdown-menu-end">
+        <li><a class="dropdown-item" href="<?= base_url('inicioSesion') ?>">Iniciar sesión</a></li>
+        <li><a class="dropdown-item" href="<?= base_url('registro') ?>">Registrarse</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="<?= base_url('logout') ?>">Cerrar sesión</a></li>
+      </ul>
+    </li>
+  </ul>
+
+</div>
+
   </div>
-</nav>
+</nav

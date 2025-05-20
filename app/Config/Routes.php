@@ -14,7 +14,12 @@ $routes->get('menuu', 'Home::menu');
 $routes->get('inicioSesion', 'Home::inicioSesion');
 $routes->get('registro', 'Home::registro');
 
+/*
 
+$routes->get('contact', 'Home::ver_contacto');
+$routes->post('consulta', 'Usuarios_controller::add_consulta');
 
+$routes->get('register', 'Usuarios_controller::registro');
+$routes->post('registro_usuario', 'Usuarios_controller::add_cliente');
 
-
+*/
