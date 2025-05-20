@@ -13,7 +13,9 @@ $routes->get('terminoUso', 'Home::terminos');
 $routes->get('menuu', 'Home::menu');
 $routes->get('inicioSesion', 'Home::inicioSesion');
 $routes->get('registro', 'Home::registro');
+$routes->post('consulta', 'Usuarios_controller::add_consulta');
 
+<<<<<<< HEAD
 /*
 
 $routes->get('contact', 'Home::ver_contacto');
@@ -23,3 +25,7 @@ $routes->get('register', 'Usuarios_controller::registro');
 $routes->post('registro_usuario', 'Usuarios_controller::add_cliente');
 
 */
+=======
+$routes->get('register', 'Usuarios_controller::registro');
+$routes->post('registro_usuario', 'Usuarios_controller::add_cliente');
+>>>>>>> ec13a799d4b599925b60f9705e5370fd478758e7

@@ -1,3 +1,4 @@
+
 <section id="InicioDeSesion">
   <div style="max-width: 400px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background-color:rgb(246, 246, 216);">
     <h2 style="text-align: center; color: #2C3E50;">Inicio de Sesión</h2>
