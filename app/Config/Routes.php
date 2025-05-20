@@ -13,8 +13,7 @@ $routes->get('terminoUso', 'Home::terminos');
 $routes->get('menuu', 'Home::menu');
 $routes->get('inicioSesion', 'Home::inicioSesion');
 $routes->get('registro', 'Home::registro');
+$routes->post('consulta', 'Usuarios_controller::add_consulta');
 
-
-
-
-
+$routes->get('register', 'Usuarios_controller::registro');
+$routes->post('registro_usuario', 'Usuarios_controller::add_cliente');
