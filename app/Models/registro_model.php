@@ -1,4 +1,4 @@
-<?php//vamos a crear tantos modelos como tablas tengamos en labase de datos
+<?php 
 
 namespace App\Models;
 
@@ -21,7 +21,6 @@ class UserModel extends Model
     protected bool $updateOnlyChanged = true;
 
     // Dates
-    protected $useTimestamps = false;
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
