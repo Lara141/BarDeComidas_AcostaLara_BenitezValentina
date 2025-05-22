@@ -55,7 +55,7 @@
             <a class="nav-link" href="<?= base_url('terminoUso') ?>">Agregar producto</a>
             </li>
            <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('terminoUso') ?>">Eliminar producto</a>
+            <a class="nav-link" href="<?= base_url('terminoUso') ?>">Eliminar producto</a><!--aqui seria mejor poner editar producto?, asi podria eliminar, cambiar la descripcion, ver y editar el stock del producto-->
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<?= base_url('terminoUso') ?>">Stock</a>
