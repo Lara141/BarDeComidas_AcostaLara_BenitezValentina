@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\consulta_model;
-use App\Models\Usuarios_model;
+use App\Models\persona_model;
 
 class Usuarios_controller extends BaseController
 {
