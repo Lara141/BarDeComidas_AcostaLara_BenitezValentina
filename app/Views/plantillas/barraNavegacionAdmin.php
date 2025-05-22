@@ -35,25 +35,25 @@
             <a class="nav-link active" aria-current="page" href="<?= base_url() ?>">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('nosotros') ?>">Editar Nosotros</a>
+            <a class="nav-link" href="<?= base_url('') ?>">Editar Nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('comercializacion') ?>">Editar Comercialización</a>
+            <a class="nav-link" href="<?= base_url('') ?>">Editar Comercialización</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('contact') ?>">Editar Contáctanos</a>
+            <a class="nav-link" href="<?= base_url('') ?>">Editar Contáctanos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('terminoUso') ?>">Editar Términos y Uso</a>
+            <a class="nav-link" href="<?= base_url('') ?>">Editar Términos y Uso</a>
           </li>
            <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('terminoUso') ?>">Agregar producto</a>
+            <a class="nav-link" href="<?= base_url('') ?>">Agregar producto</a>
             </li>
            <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('terminoUso') ?>">Eliminar producto</a><!--aqui seria mejor poner editar producto?, asi podria eliminar, cambiar la descripcion, ver y editar el stock del producto-->
+            <a class="nav-link" href="<?= base_url('') ?>">Eliminar producto</a><!--aqui seria mejor poner editar producto?, asi podria eliminar, cambiar la descripcion, ver y editar el stock del producto-->
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('terminoUso') ?>">Stock</a>
+            <a class="nav-link" href="<?= base_url('') ?>">Editar producto</a>
           </li>
           </li>
 
