@@ -49,7 +49,11 @@
         <p class="card-text">Masa cacera, salsa, queso cremoso, aceitunas.</p>
           </div>
           <button class="position-absolute border-0" style="bottom: 0; right: 0; background-color: transparent;" onmouseover="this.style.backgroundColor='transparent';" onmouseout="this.style.backgroundColor='transparent';">
-        <img src="assets/Img/carrito.jpg" alt="carrito" style="width: 30px; height: 30px;">
+        <!-- Ícono de carrito -->
+      <a href="#" class="nav-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
+      </a>
+
           </button>
         </div>
       </div>
@@ -64,7 +68,10 @@
             <p class="card-text">Cebolla caramelizada (morada-amarilla), muzzarella, aceitunas.</p>
           </div>
           <button class="position-absolute border-0" style="bottom: 0; right: 0; background-color: transparent;" onmouseover="this.style.backgroundColor='transparent';" onmouseout="this.style.backgroundColor='transparent';">
-        <img src="assets/Img/carrito.jpg" alt="carrito" style="width: 30px; height: 30px;">
+        <!-- Ícono de carrito -->
+      <a href="#" class="nav-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
+      </a>
           </button>
         </div>
       </div>
@@ -79,7 +86,10 @@
             <p class="card-text">Milanesa de carne (vaca-pollo), papas fritas con verdeo</p>
           </div>
           <button class="position-absolute border-0" style="bottom: 0; right: 0; background-color: transparent;" onmouseover="this.style.backgroundColor='transparent';" onmouseout="this.style.backgroundColor='transparent';">
-        <img src="assets/Img/carrito.jpg" alt="carrito" style="width: 30px; height: 30px;">
+         <!-- Ícono de carrito -->
+      <a href="#" class="nav-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
+      </a>
           </button>
         </div>
       </div>
@@ -94,7 +104,10 @@
             <p class="card-text">Medallon, queso, cebolla, tomate, lechuga. </p>
           </div>
           <button class="position-absolute border-0" style="bottom: 0; right: 0; background-color: transparent;" onmouseover="this.style.backgroundColor='transparent';" onmouseout="this.style.backgroundColor='transparent';">
-        <img src="assets/Img/carrito.jpg" alt="carrito" style="width: 30px; height: 30px;">
+        <!-- Ícono de carrito -->
+      <a href="#" class="nav-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
+      </a>
           </button>
         </div>
       </div>
@@ -109,7 +122,10 @@
             <p class="card-text">Triple medallon, queso cheddar, tomate, lechuga, pan brioche. </p>
           </div>
           <button class="position-absolute border-0" style="bottom: 0; right: 0; background-color: transparent;" onmouseover="this.style.backgroundColor='transparent';" onmouseout="this.style.backgroundColor='transparent';">
-        <img src="assets/Img/carrito.jpg" alt="carrito" style="width: 30px; height: 30px;">
+         <!-- Ícono de carrito -->
+      <a href="#" class="nav-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
+      </a>
           </button>
         </div>
       </div>
@@ -124,7 +140,10 @@
             <p class="card-text">Pan de miga, jamón, queso. </p>
           </div>
           <button class="position-absolute border-0" style="bottom: 0; right: 0; background-color: transparent;" onmouseover="this.style.backgroundColor='transparent';" onmouseout="this.style.backgroundColor='transparent';">
-        <img src="assets/Img/carrito.jpg" alt="carrito" style="width: 30px; height: 30px;">
+ <!-- Ícono de carrito -->
+      <a href="#" class="nav-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
+      </a>
           </button>
         </div>
       </div>
@@ -139,7 +158,10 @@
             <p class="card-text">Pan de miga, jamón, queso, huevo.</p>
           </div>
           <button class="position-absolute border-0" style="bottom: 0; right: 0; background-color: transparent;" onmouseover="this.style.backgroundColor='transparent';" onmouseout="this.style.backgroundColor='transparent';">
-        <img src="assets/Img/carrito.jpg" alt="carrito" style="width: 30px; height: 30px;">
+         <!-- Ícono de carrito -->
+      <a href="#" class="nav-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
+      </a>
           </button>
         </div>
       </div>
@@ -154,7 +176,10 @@
             <p class="card-text">Pan de miga, jamón, pollo, queso, palta, lechuga.</p>
           </div>
           <button class="position-absolute border-0" style="bottom: 0; right: 0; background-color: transparent;" onmouseover="this.style.backgroundColor='transparent';" onmouseout="this.style.backgroundColor='transparent';">
-        <img src="assets/Img/carrito.jpg" alt="carrito" style="width: 30px; height: 30px;">
+        <!-- Ícono de carrito -->
+      <a href="#" class="nav-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
+      </a>
           </button>
         </div>
       </div>
@@ -210,7 +235,10 @@
                 <p class="fw-bold">$9.500</p>
                 <button type="button" class="btn btn-light border position-absolute" style="bottom: 10px; right: 10px;"
                   data-bs-toggle="tooltip" data-bs-placement="top" title="Agregar al carrito">
-                  <img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
+                 <!-- Ícono de carrito -->
+      <a href="#" class="nav-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
+      </a>
                 </button>
                 <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreMendoza1">Ver ingredientes</button>
                 <div class="collapse mt-2" id="ingreMendoza1">
@@ -229,7 +257,10 @@
                 <p class="fw-bold">$20.000</p>
                 <button type="button" class="btn btn-light border position-absolute" style="bottom: 10px; right: 10px;"
                   data-bs-toggle="tooltip" data-bs-placement="top" title="Agregar al carrito">
-                  <img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
+                   <!-- Ícono de carrito -->
+      <a href="#" class="nav-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
+      </a>
                 </button>
                 <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreMendoza2">Ver ingredientes</button>
                 <div class="collapse mt-2" id="ingreMendoza2">
@@ -248,7 +279,10 @@
                 <p class="fw-bold">$15.000</p>
                 <button type="button" class="btn btn-light border position-absolute" style="bottom: 10px; right: 10px;"
                   data-bs-toggle="tooltip" data-bs-placement="top" title="Agregar al carrito">
-                  <img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
+                  <!-- Ícono de carrito -->
+      <a href="#" class="nav-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
+      </a>
                 </button>
                 <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreMendoza3">Ver ingredientes</button>
                 <div class="collapse mt-2" id="ingreMendoza3">
@@ -274,7 +308,10 @@
                 <p class="fw-bold">$6000</p>
                 <button type="button" class="btn btn-light border position-absolute" style="bottom: 10px; right: 10px;"
           data-bs-toggle="tooltip" data-bs-placement="top" title="Agregar al carrito">
-    <img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
+   <!-- Ícono de carrito -->
+      <a href="#" class="nav-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
+      </a>
   </button>
                 <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreCordoba1">Ver ingredientes</button>
                 <div class="collapse mt-2" id="ingreCordoba1">
@@ -294,7 +331,10 @@
                 <p class="fw-bold">$20000</p>
                 <button type="button" class="btn btn-light border position-absolute" style="bottom: 10px; right: 10px;"
           data-bs-toggle="tooltip" data-bs-placement="top" title="Agregar al carrito">
-    <img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
+   <!-- Ícono de carrito -->
+      <a href="#" class="nav-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
+      </a>
   </button>
                 <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreCordoba2">Ver ingredientes</button>
                 <div class="collapse mt-2" id="ingreCordoba2">
@@ -318,7 +358,10 @@
           <p class="fw-bold">$3500</p>
           <button type="button" class="btn btn-light border position-absolute" style="bottom: 10px; right: 10px;"
           data-bs-toggle="tooltip" data-bs-placement="top" title="Agregar al carrito">
-    <img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
+    <!-- Ícono de carrito -->
+      <a href="#" class="nav-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
+      </a>
   </button>
           <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreSalta3">Ver ingredientes</button>
           <div class="collapse mt-2" id="ingreSalta3">
@@ -338,7 +381,10 @@
           <p class="fw-bold">$4500</p>
           <button type="button" class="btn btn-light border position-absolute" style="bottom: 10px; right: 10px;"
           data-bs-toggle="tooltip" data-bs-placement="top" title="Agregar al carrito">
-            <img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
+             <!-- Ícono de carrito -->
+      <a href="#" class="nav-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
+      </a>
           </button>
           <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreSalta4">Ver ingredientes</button>
           <div class="collapse mt-2" id="ingreSalta4">
@@ -358,7 +404,10 @@
           <p class="fw-bold">$3000 c/u</p>
           <button type="button" class="btn btn-light border position-absolute" style="bottom: 10px; right: 10px;"
           data-bs-toggle="tooltip" data-bs-placement="top" title="Agregar al carrito">
-            <img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
+ <!-- Ícono de carrito -->
+      <a href="#" class="nav-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
+      </a>
           </button>
           <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreSalta5">Ver ingredientes</button>
           <div class="collapse mt-2" id="ingreSalta5">
@@ -378,7 +427,10 @@
           <p class="fw-bold">$6000</p>
           <button type="button" class="btn btn-light border position-absolute" style="bottom: 10px; right: 10px;"
           data-bs-toggle="tooltip" data-bs-placement="top" title="Agregar al carrito">
-            <img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
+            <!-- Ícono de carrito -->
+      <a href="#" class="nav-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
+      </a> <img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
           </button>
           <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreSalta6">Ver ingredientes</button>
           <div class="collapse mt-2" id="ingreSalta6">
@@ -398,7 +450,10 @@
           <p class="fw-bold">$6000</p>
           <button type="button" class="btn btn-light border position-absolute" style="bottom: 10px; right: 10px;"
           data-bs-toggle="tooltip" data-bs-placement="top" title="Agregar al carrito">
-            <img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
+             <!-- Ícono de carrito -->
+      <a href="#" class="nav-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
+      </a><img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
           </button>
           <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreSalta7">Ver ingredientes</button>
           <div class="collapse mt-2" id="ingreSalta7">
@@ -426,7 +481,10 @@
           <p class="fw-bold">$4000</p>
           <button type="button" class="btn btn-light border position-absolute" style="bottom: 10px; right: 10px;"
           data-bs-toggle="tooltip" data-bs-placement="top" title="Agregar al carrito">
-    <img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
+    <!-- Ícono de carrito -->
+      <a href="#" class="nav-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
+      </a>
   </button>
           <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreCorrientes1">Ver ingredientes</button>
           <div class="collapse mt-2" id="ingreCorrientes1">
@@ -446,7 +504,10 @@
           <p class="fw-bold">$5500</p>
           <button type="button" class="btn btn-light border position-absolute" style="bottom: 10px; right: 10px;"
           data-bs-toggle="tooltip" data-bs-placement="top" title="Agregar al carrito">
-          <img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
+           <!-- Ícono de carrito -->
+      <a href="#" class="nav-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
+      </a>
           </button>
           <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreCorrientes2">Ver ingredientes</button>
           <div class="collapse mt-2" id="ingreCorrientes2">
@@ -466,7 +527,10 @@
           <p class="fw-bold">$12000</p>
           <button type="button" class="btn btn-light border position-absolute" style="bottom: 10px; right: 10px;"
           data-bs-toggle="tooltip" data-bs-placement="top" title="Agregar al carrito">
-          <img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
+           <!-- Ícono de carrito -->
+      <a href="#" class="nav-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
+      </a>
           </button>
           <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreCorrientes3">Ver ingredientes</button>
           <div class="collapse mt-2" id="ingreCorrientes3">
@@ -485,7 +549,10 @@
           <p class="fw-bold">$5000</p>
           <button type="button" class="btn btn-light border position-absolute" style="bottom: 10px; right: 10px;"
           data-bs-toggle="tooltip" data-bs-placement="top" title="Agregar al carrito">
-          <img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
+          <!-- Ícono de carrito -->
+      <a href="#" class="nav-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
+      </a>
           </button>
           <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreCorrientes4">Ver ingredientes</button>
           <div class="collapse mt-2" id="ingreCorrientes4">
@@ -512,7 +579,10 @@
           <p class="fw-bold">$12000</p>
           <button type="button" class="btn btn-light border position-absolute" style="bottom: 10px; right: 10px;"
           data-bs-toggle="tooltip" data-bs-placement="top" title="Agregar al carrito">
-    <img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
+    <!-- Ícono de carrito -->
+      <a href="#" class="nav-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
+      </a>
   </button>
           <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreBsAs1">Ver ingredientes</button>
           <div class="collapse mt-2" id="ingreBsAs1">
@@ -532,7 +602,10 @@
           <p class="fw-bold">$5500</p>
           <button type="button" class="btn btn-light border position-absolute" style="bottom: 10px; right: 10px;"
           data-bs-toggle="tooltip" data-bs-placement="top" title="Agregar al carrito">
-          <img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
+           <!-- Ícono de carrito -->
+      <a href="#" class="nav-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
+      </a>
           </button>
           <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreBsAs2">Ver ingredientes</button>
           <div class="collapse mt-2" id="ingreBsAs2">
@@ -552,7 +625,10 @@
           <p class="fw-bold">$5000</p>
           <button type="button" class="btn btn-light border position-absolute" style="bottom: 10px; right: 10px;"
           data-bs-toggle="tooltip" data-bs-placement="top" title="Agregar al carrito">
-          <img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
+           <!-- Ícono de carrito -->
+      <a href="#" class="nav-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
+      </a>
           </button>
           <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreBsAs3">Ver ingredientes</button>
           <div class="collapse mt-2" id="ingreBsAs3">
@@ -571,7 +647,10 @@
           <p class="fw-bold">$15000</p>
           <button type="button" class="btn btn-light border position-absolute" style="bottom: 10px; right: 10px;"
           data-bs-toggle="tooltip" data-bs-placement="top" title="Agregar al carrito">
-          <img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
+          <!-- Ícono de carrito -->
+      <a href="#" class="nav-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
+      </a>
           </button>
           <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreBsAs4">Ver ingredientes</button>
           <div class="collapse mt-2" id="ingreBsAs4">

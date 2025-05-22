@@ -1,4 +1,13 @@
-   
+
+<style>
+  .navbar {
+    background-image: url('assets/img/');/*buscar imagen de bandera*/
+    background-size: cover;         /* Ajusta la imagen para cubrir todo el nav */
+    background-position: center;    /* Centra la imagen */
+    background-repeat: no-repeat;   /* No repite la imagen */
+  }
+</style>
+
 <nav class="navbar bg-body-tertiary">
   <div class="container-fluid justify-content-end">
 
