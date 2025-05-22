@@ -5,11 +5,6 @@
     <!-- Íconos alineados a la derecha -->
     <div class="d-flex align-items-center gap-3">
 
-      <!-- Ícono de búsqueda -->
-      <a href="#" class="nav-link">
-        <img src="https://cdn-icons-png.flaticon.com/512/54/54481.png" alt="Buscar" style="width: 24px; height: 24px;">
-      </a>
-
       <!-- Ícono de usuario -->
       <a class="nav-link" href="<?= base_url('inicioSesion') ?>">
         <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt="Perfil" style="width: 28px; height: 28px;">
