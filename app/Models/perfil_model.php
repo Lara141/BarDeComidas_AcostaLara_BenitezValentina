@@ -1,4 +1,8 @@
+<<<<<<< HEAD:app/Models/perfil_model.php
 <?php //vamos a crear tantos modelos como tablas tengamos en labase de datos
+=======
+<?php 
+>>>>>>> 1af7c5920f1e37d34f6c8cf01c49d0a1d273a91b:app/Models/registro_model.php
 
 namespace App\Models;
 
@@ -21,7 +25,6 @@ class UserModel extends Model
     protected bool $updateOnlyChanged = true;
 
     // Dates
-    protected $useTimestamps = false;
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
