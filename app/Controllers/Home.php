@@ -66,4 +66,23 @@ class Home extends BaseController
             . view('contenido/registro')
             . view('plantillas/piePagina');
     }
+
+    public function admin()
+    {
+        $data['titulo'] = "Administrador";
+         return view('plantillas/encabezado')
+            . view('plantillas/barraNavegacion')
+            . view('contenido/admin')
+            . view('plantillas/piePagina');
+    }
+
+    public function cliente()
+    {
+        $data['titulo'] = "Cliente";
+        return view('plantillas/encabezado')
+            . view('plantillas/barraNavegacion')
+            . view('contenido/cliente')
+            . view('plantillas/piePagina');
+    }
+
 }

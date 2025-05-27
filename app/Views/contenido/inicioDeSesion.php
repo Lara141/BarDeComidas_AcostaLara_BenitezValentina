@@ -10,28 +10,41 @@
     </ol>
   </nav>
 
+  <?php if (session()->getFlashdata('mensaje_exito')): ?>
+    <div class="alert alert-success">
+        <?= session()->getFlashdata('mensaje_exito') ?>
+    </div>
+<?php endif; ?>
+
   <h2 class="mb-4 fw-bold">Iniciar sesión</h2>
 
-  <form action="" method="POST" id="loginForm">
+  <form action="<?= base_url('verificar_login') ?>" method="POST" id="loginForm">
+
   <div class="mb-3">
     <label for="email" class="form-label text-uppercase small">Email</label>
-    <input type="email" class="form-control" id="email" name="email" required placeholder="ej.: tunombre@email.com">
+    <input type="email" class="form-control" id="correo" name="correo" placeholder="ej.: tunombre@email.com">
+    <?php if (isset($validation['correo'])): ?>
+      <div class="text-danger"><?= $validation['correo'] ?></div>
+    <?php endif; ?>
   </div>
 
   <div class="mb-2">
     <label for="password" class="form-label text-uppercase small">Contraseña</label>
     <div class="input-group">
-      <input type="password" class="form-control" id="password" name="password" required>
+      <input type="password" class="form-control" id="pass" name="pass">
       <span class="input-group-text"><i class="bi bi-eye-slash"></i></span>
     </div>
     <small id="error-login" class="text-danger"></small>
+    <?php if (isset($validation['pass'])): ?>
+  <div class="text-danger"><?= $validation['pass'] ?></div>
+<?php endif; ?>
   </div>
 
   <div class="mb-3 text-end">
     <a href="#" style="color: #007BFF; text-decoration: none;">¿Olvidaste tu contraseña?</a>
   </div>
 
-  <button type="submit" class="btn btn-dark w-100 py-2">INICIAR SESIÓN</button>
+  <button type="submit" class="btn btn-dark w-100 py-2" >INICIAR SESIÓN</button>
 
   <p class="text-center mt-3">
     ¿No tenés cuenta aún?
