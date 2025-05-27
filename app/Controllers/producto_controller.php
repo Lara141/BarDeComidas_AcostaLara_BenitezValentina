@@ -1,3 +1,5 @@
+<!-- en este archivo van todas las funciones de los productos (agreggar, eliminar, editar)-->
+
 <?php
 
 namespace App\Controllers;
