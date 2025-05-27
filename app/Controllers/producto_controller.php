@@ -23,7 +23,7 @@ $validation->setRules(
          'estado'=> 'required|max_length[8]',
          'stock' => 'required|valid_email',
          'categoria' => 'required_length[8]',
-         'imagen' => 'required_length[8]',
+         'imagen' => 'is_image[field_name]',
 
     ],
     [   // Errors
