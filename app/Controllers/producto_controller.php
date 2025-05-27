@@ -1,4 +1,4 @@
-<!-- en este archivo van todas las funciones de los productos (agreggar, eliminar, editar)-->
+<!-- en este archivo van todas las funciones de los productos (registrar producto, eliminar, editar)-->
 
 <?php
 
