@@ -1,4 +1,16 @@
+<<<<<<< HEAD
 <?php $session = session(); ?>
+=======
+
+<style>
+  .navbar {
+    background-image: url('assets/img/');/*buscar imagen de bandera*/
+    background-size: cover;         /* Ajusta la imagen para cubrir todo el nav */
+    background-position: center;    /* Centra la imagen */
+    background-repeat: no-repeat;   /* No repite la imagen */
+  }
+</style>
+>>>>>>> 6c353c995cfaaba698a826b03d90309e01b52527
 
 <nav class="navbar bg-body-tertiary">
   <div class="container-fluid justify-content-end">

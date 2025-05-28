@@ -1,3 +1,5 @@
+<!-- en este archivo van todas las funciones de los productos (registrar producto, eliminar, editar)-->
+
 <?php
 
 namespace App\Controllers;
@@ -8,7 +10,7 @@ use App\Models\producto_model;
 class Usuarios_controller extends BaseController
 {
 
-public function add_cliente(){
+public function add_producto(){
 
 $validation = \Config\Services::validation();
 $request = \Config\Services::request();
@@ -16,12 +18,12 @@ $request = \Config\Services::request();
 $validation->setRules(
     [
         'nombre' => 'required|max_length[150]',
-         'apellido' => 'required|max_length[150]',
-         'nacimiento' => 'required/date',
-         'dni'=> 'required|max_length[8]',
-         'correo' => 'required|valid_email',
-         'pass' => 'required_length[8]',
-         'repass' => 'required_length[8]',
+         'precio' => 'required|max_length[150]',
+         'descripcion' => 'required/date',
+         'estado'=> 'required|max_length[8]',
+         'stock' => 'required|valid_email',
+         'categoria' => 'required_length[8]',
+         'imagen' => 'is_image[field_name]',
 
     ],
     [   // Errors
@@ -29,33 +31,30 @@ $validation->setRules(
             'required' => 'El nombre es requerido',
         ],
 
-        'apellido' => [
-            'required' => 'El apellido es requerido',
+        'precio' => [
+            'required' => 'El precio es requerido',
         ],
 
-         'nacimiento' => [
-            'required' => 'la fecha de nacimiento es requerido',
+         'descripcion' => [
+            'required' => 'la descripcion es requerido',
         ],
 
-         'dni' => [
-            'required' => 'El dni es requerido',
+         'estado' => [
+            'required' => 'El estado es requerido',
         ],
 
-         'correo' => [
-            'required' => 'El correo electrónico es obligatorio',
-            'valid_email' => 'La dirección de correo debe ser válida'
+         'stock' => [
+            'required' => 'El stock es obligatorio',
                 ],
 
-          'pass'   => [
-            "required"      => 'repetir contrasaeña es obligatorio',
-            "min_length"    => 'repetir contraseña debe tener al menos 8 caracteres',
-            'matches' => 'Las contraseñas no coinciden',
+          'categoria'   => [
+            "required"      => 'elige una categoria',
                 
                 ],
             
-            'repass'   => [
-            "required"      => 'la contraseña es obligatoria',
-            "min_length"    => 'la contraseña debe tener al menos 8 caracteres',
+            'imagen'   => [
+            "required"      => 'seleccione una imagen',
+            "min_length"    => 'la contraseña debe tener al menos 8 caracteres',//aqui va otra validacion, que tiene que ver con el tamaño y el tipo de imagen, ademas de validar que el archivo es una imagen
                 ],
 
        
@@ -65,15 +64,16 @@ $validation->setRules(
 if ($validation->withRequest($request)->run() ){
 
      $data = [
-        'mensaje_nombre' => $request->getPost('nombre'),
-        'mensaje_correo' => $request->getPost('apellido'),
-        'mensaje_motivo' => $request->getPost('correo'),
-        'perfil_id' => 2,
-        'persona_estado' => 1,
-        'persona_password' => password_hash($request->getPost('pass'), PASSWORD_BCRYPT),
+        'nombre_producto' => $request->getPost('nombre'),
+        'precio_producto' => $request->getPost('precio'),
+        'descripcion_producto' => $request->getPost('descripcion'),
+        'estado_producto' => 2,
+        'stock_producto' => 1,
+        'categoria_producto' => password_hash($request->getPost('pass'), PASSWORD_BCRYPT),
+        'imagen_producto' => $request->getPost('imagen'),
             ];
 
-               $consulta = new Usuarios_model();
+               $consulta = new producto_model();
                $consulta->insert($data);
 
               return redirect()->route('contact')->with('mensaje_consulta', 'Su consulta se envió exitosamente!');

@@ -2,8 +2,12 @@
 
 namespace App\Controllers;
 
+<<<<<<< HEAD
 use App\Models\consulta_model;
 
+=======
+use App\Models\Usuarios_model;
+>>>>>>> 6c353c995cfaaba698a826b03d90309e01b52527
 class Usuarios_controller extends BaseController
 {
     public function add_cliente()
