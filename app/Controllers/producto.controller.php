@@ -4,7 +4,7 @@
 
 namespace App\Controllers;
 
-use App\Models\consulta_model;
+//use App\Models\consulta_model;
 use App\Models\producto_model;
 
 class Usuarios_controller extends BaseController

@@ -328,9 +328,9 @@ main, section {
 
 /* Botón activo (tab seleccionado) */
 .nav-pills .nav-link.active {
-  background-color: #000;
+  background-color: #a2dfa7;
   color: #fff;
-  border: 1px solid #000;
+  border: 1px solid #161414;
 }
 
 /* Hover sobre el activo: que también cambie */

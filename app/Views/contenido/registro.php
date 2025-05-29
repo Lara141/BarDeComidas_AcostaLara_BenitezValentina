@@ -1,3 +1,7 @@
+<h1 class= "display-4 text-center">Registrarse</h1>
+
+<form action="<?= base_url('registro_usuario') ?>" method="post">
+
 
 <div class="container my-5" style="max-width: 500px;">
   <div class="card p-4 shadow-sm bg-white rounded-4">
@@ -9,56 +13,73 @@
 
     <p class="mb-4">Todo lo que te gusta, al alcance de un clic. ¡Registrate ahora!</p>
 
-    <form action="registro.php" method="POST">
 
   <div class="mb-3">
     <label class="form-label fw-bold">Nombre</label>
-    <input type="text" name="nombre" class="form-control" placeholder="ej.: María Laura" required>
+      <input name="nombre" placeholder="ej.: Maria" value="<?= old('nombre') ?>">
+        <?php if (isset($validation['nombre'])): ?>
+        <div class="text-danger"><?= $validation['nombre'] ?></div>
+        <?php endif; ?>
   </div>
+
 
   <div class="mb-3">
     <label class="form-label fw-bold">Apellido</label>
-    <input type="text" name="apellido" class="form-control" placeholder="ej.: Perez" required>
+    <input name="apellido" placeholder="ej.: Benitez" value="<?= old('apellido') ?>">
+<?php if (isset($validation['apellido'])): ?>
+  <div class="text-danger"><?= $validation['apellido'] ?></div>
+<?php endif; ?>
+
   </div>
 
   <div class="mb-3">
     <label class="form-label fw-bold">Fecha de nacimiento</label>
-    <input type="text" name="fechaNac" class="form-control" placeholder="ej.: 12/07/05" pattern="\d{2}/\d{2}/\d{2}" title="Formato válido: dd/mm/aa" required>
+    <input  name="nacimiento" placeholder="ej.: 12/07/05" pattern="\d{2}/\d{2}/\d{2}" title="Formato válido: dd/mm/aa" value="<?= old('nacimiento') ?>">
+    <?php if (isset($validation['nacimiento'])): ?>
+  <div class="text-danger"><?= $validation['nacimiento'] ?></div>
+<?php endif; ?>
   </div>
 
   <div class="mb-3">
     <label class="form-label fw-bold">DNI</label>
-    <input type="text" name="dni" class="form-control" placeholder="ej.: 38123456" required>
+    <input  name="dni" placeholder="ej.: 38123456" value="<?= old('dni') ?>">
+  <?php if (isset($validation['dni'])): ?>
+  <div class="text-danger"><?= $validation['dni'] ?></div>
+<?php endif; ?>
   </div>
 
   <div class="mb-3">
     <label class="form-label fw-bold">Email</label>
-    <input type="email" name="email" class="form-control" placeholder="ej.: tunombre@email.com" required>
-  </div>
-
-  <div class="mb-3">
-    <label class="form-label fw-bold">Teléfono</label>
-    <input type="tel" name="telefono" class="form-control" placeholder="ej.: 1123445567" required>
+    <input type="email" name="correo" placeholder="ej.: tunombre@email.com" value="<?= old('correo') ?>">
+  <?php if (isset($validation['correo'])): ?>
+  <div class="text-danger"><?= $validation['correo'] ?></div>
+<?php endif; ?>
   </div>
 
   <div class="mb-3">
     <label class="form-label fw-bold">Contraseña</label>
     <div class="input-group">
-      <input type="password" name="password" class="form-control" required>
+      <input type="password" name="pass" class="form-control">
       <span class="input-group-text"><i class="bi bi-eye-slash"></i></span>
     </div>
+    <?php if (isset($validation['pass'])): ?>
+  <div class="text-danger"><?= $validation['pass'] ?></div>
+<?php endif; ?>
   </div>
 
   <div class="mb-4">
     <label class="form-label fw-bold">Confirmar contraseña</label>
     <div class="input-group">
-      <input type="password" name="passwordConfirm" class="form-control" required>
+      <input type="password" name="repass" class="form-control"> 
       <span class="input-group-text"><i class="bi bi-eye-slash"></i></span>
     </div>
+    <?php if (isset($validation['repass'])): ?>
+  <div class="text-danger"><?= $validation['repass'] ?></div>
+<?php endif; ?>
   </div>
 
   <button type="submit" class="btn btn-dark w-100 py-2">CREAR CUENTA</button>
-</form>
+<!--</form-->
 
 
     <p class="text-center mt-3">
