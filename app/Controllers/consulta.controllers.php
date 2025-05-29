@@ -1,8 +1,12 @@
 <?php
 
 namespace App\Controllers;
+<<<<<<< HEAD
 
 use App\Models\consulta_model;
+=======
+use App\Models\Usuarios_model;
+>>>>>>> bcd4d25e791e2a35f517ce23766dd7f14ce7392a
 
 class Usuarios_controller extends BaseController
 {

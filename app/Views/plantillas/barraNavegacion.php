@@ -52,6 +52,38 @@
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
     </div>
     <div class="offcanvas-body">
+<<<<<<< HEAD
+      <!-- Tu menú y buscador aquí como ya lo tenías -->
+      
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="<?= base_url() ?>">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?= base_url('nosotros') ?>">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?= base_url('comercializacion') ?>">Comercialización</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?= base_url('contact') ?>">Contáctanos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?= base_url('terminoUso') ?>">Términos y Uso</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?= base_url('agregar') ?>">agregar libro</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Menú
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="https://rankea.com.ar/negocio/felix-pub-corrientes/menu-restaurante-mk/">Comida</a></li>
+              <li><a class="dropdown-item" href="https://www.gobar.com.ar/vinos">Bebida</a></li>
+            </ul>
+          </li>
+=======
       <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="<?= base_url() ?>">Inicio</a>
@@ -68,6 +100,7 @@
         <li class="nav-item">
           <a class="nav-link" href="<?= base_url('terminoUso') ?>">Términos y Uso</a>
         </li>
+>>>>>>> 13defa8261cfbac8da81eb83c0193a340fe166c5
 
         <!-- Ítems adicionales para administrador -->
         <?php if ($session->get('perfil') == 1): ?>
