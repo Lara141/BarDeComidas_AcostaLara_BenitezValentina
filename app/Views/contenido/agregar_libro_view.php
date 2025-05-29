@@ -14,7 +14,7 @@
             <div class="alert alert-success">
                 <?=session('mensaje');?>
             </div>
-            <?php}?>
+            <?php }?>
 
             <?php echo form_open_multipart('insertar_libro')?>
             <div class="form-group">
@@ -31,7 +31,7 @@
                 <label for="categoria">Categoria</label>
                 <?php 
                 $lista['0']='Seleccione categoria';
-                foreach (4categorias as $row){
+                foreach ($categorias as $row){
                     $categoria_id=$row['categoria_id'];
                     $categoria_desc=$row['categoria_desc'];
                     $lista[$categoria_id]=$categoria_desc;

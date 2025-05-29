@@ -9,7 +9,7 @@ public function form_agregar_libro(){
     $categoria= new Categoria_Model();
     $data['categorias']= $categoria->findAll();
     $dara['titulo']= 'Agregar Libro ';
-    return view('plantillas/encabezado', $data).view('plantillas/barraNavegacion').view('Backend/Libros/agregar_libro_view');
+    return view('plantillas/encabezado', $data).view('plantillas/barraNavegacion').view('contenido/agregar_libro_view');
 }
 public function registrar_libro(){
 //procesa los datos del producto enviados por el formulario
@@ -18,14 +18,14 @@ $request= \Config\Services::request();
 
 $validation->setRules(
 [
-//Completar con las reglas de validacion
+//reglas de validacion
 'titulo'=>'required|max_length[255]',
 'autor'=>'required|max_length[255]',
 'descripcion'=>'required|text',
 'stock'=>'required|int',
 'precio'=>'required|decimal',
-'imagen'=>'uploaded[imagen]|max_size[imagen, 4096]| is_image[imagen]'
-'categoria'=>'is_not_unique[libro_categoria.categoria_id]',
+'imagen'=>'uploaded[imagen]|max_size[imagen, 4096]| is_image[imagen]',
+'categoria' => 'is_not_unique[libro_categoria.categoria_id]',
 'estado'=>'required|int',
 ],
 [//errors
