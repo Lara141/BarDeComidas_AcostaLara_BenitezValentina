@@ -66,4 +66,6 @@ class Home extends BaseController
             . view('contenido/registro')
             . view('plantillas/piePagina');
     }
+
+    
 }

@@ -60,6 +60,9 @@
           <li class="nav-item">
             <a class="nav-link" href="<?= base_url('terminoUso') ?>">Términos y Uso</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?= base_url('agregar') ?>">agregar libro</a>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Menú
