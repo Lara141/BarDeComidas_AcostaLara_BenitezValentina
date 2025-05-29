@@ -19,12 +19,12 @@
             <?php echo form_open_multipart('insertar_libro')?>
             <div class="form-group">
                 <label for="titulo">Tirtulo del libro</label>
-                <?php echo form_imput(['name'=> 'titulo', 'id' => 'titulo', 'class' => 'form-control','placeholder'=>'Ingrese titulo del libro', 'value'=>set_value('titulo')]);?>
+                <?php echo form_input(['name'=> 'titulo', 'id' => 'titulo', 'class' => 'form-control','placeholder'=>'Ingrese titulo del libro', 'value'=>set_value('titulo')]);?>
             </div>
             <!--Agregar los controles que faltan-->
                <div class="form-group">
                 <label for="imagen">Imagen</label>
-                <?php echo form_imput(['name'=> 'imagen', 'id' => 'imagen', 'type' => 'file','value'=>set_value('imagen')]);?>
+                <?php echo form_input(['name'=> 'imagen', 'id' => 'imagen', 'type' => 'file','value'=>set_value('imagen')]);?>
             </div>
 
                <div class="form-group">
