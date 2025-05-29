@@ -1,16 +1,14 @@
-<<<<<<< HEAD
-<?php $session = session(); ?>
-=======
 
-<style>
+<!-- style>
   .navbar {
     background-image: url('assets/img/');/*buscar imagen de bandera*/
     background-size: cover;         /* Ajusta la imagen para cubrir todo el nav */
     background-position: center;    /* Centra la imagen */
     background-repeat: no-repeat;   /* No repite la imagen */
   }
-</style>
->>>>>>> 6c353c995cfaaba698a826b03d90309e01b52527
+</style-->
+
+<?php $session = session(); ?>
 
 <nav class="navbar bg-body-tertiary">
   <div class="container-fluid justify-content-end">
@@ -35,10 +33,10 @@
       <?php elseif ($session->get('perfil') == 1): ?>
         <!-- Administrador -->
         <span class="nav-link"><?= esc($session->get('nombre')) ?></span>
-        <a class="nav-link" href="<?= base_url('/gestionarLibros') ?>">Gestionar</a>
+        <a class="nav-link" href="<?= base_url('/agregar_libro') ?>">Gestionar</a>
         <a class="nav-link" href="<?= base_url('/salir') ?>">Salir</a>
       <?php endif; ?>
-
+      
       <!-- Botón hamburguesa -->
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
