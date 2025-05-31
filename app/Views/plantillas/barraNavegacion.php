@@ -17,26 +17,20 @@
     <div class="d-flex align-items-center gap-3">
 
       <?php if (!$session->get('logueado')): ?>
-        <!-- Ícono de usuario - Visitante -->
+        <!-- VISITANTE -->
         <a class="nav-link" href="<?= base_url('inicioSesion') ?>">
           <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt="Perfil" style="width: 28px; height: 28px;">
         </a>
 
       <?php elseif ($session->get('perfil') == 2): ?>
-        <!-- Cliente -->
-         <a class="nav-link" href="<?= base_url('/carrito') ?>">
+        <!-- CLIENTE REGISTRADO -->
+        <a class="nav-link" href="<?= base_url('/carrito') ?>">
           <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
         </a>
         <span class="nav-link"><?= esc($session->get('nombre')) ?></span>
         <a class="nav-link" href="<?= base_url('/salir') ?>">Salir</a>
-
-      <?php elseif ($session->get('perfil') == 1): ?>
-        <!-- Administrador -->
-        <span class="nav-link"><?= esc($session->get('nombre')) ?></span>
-        <a class="nav-link" href="<?= base_url('/agregar_libro') ?>">Gestionar</a>
-        <a class="nav-link" href="<?= base_url('/salir') ?>">Salir</a>
       <?php endif; ?>
-      
+
       <!-- Botón hamburguesa -->
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -52,38 +46,6 @@
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
     </div>
     <div class="offcanvas-body">
-<<<<<<< HEAD
-      <!-- Tu menú y buscador aquí como ya lo tenías -->
-      
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="<?= base_url() ?>">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('nosotros') ?>">Nosotros</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('comercializacion') ?>">Comercialización</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('contact') ?>">Contáctanos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('terminoUso') ?>">Términos y Uso</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('agregar') ?>">agregar libro</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Menú
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="https://rankea.com.ar/negocio/felix-pub-corrientes/menu-restaurante-mk/">Comida</a></li>
-              <li><a class="dropdown-item" href="https://www.gobar.com.ar/vinos">Bebida</a></li>
-            </ul>
-          </li>
-=======
       <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="<?= base_url() ?>">Inicio</a>
@@ -95,12 +57,11 @@
           <a class="nav-link" href="<?= base_url('comercializacion') ?>">Comercialización</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?= base_url('contact') ?>">Contáctanos</a>
+          <a class="nav-link" href="<?= base_url('contacto') ?>">Contáctanos</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="<?= base_url('terminoUso') ?>">Términos y Uso</a>
         </li>
->>>>>>> 13defa8261cfbac8da81eb83c0193a340fe166c5
 
         <!-- Ítems adicionales para administrador -->
         <?php if ($session->get('perfil') == 1): ?>

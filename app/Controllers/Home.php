@@ -5,6 +5,7 @@ namespace App\Controllers;
 class Home extends BaseController
 {
     public function index(){
+
         $data['titulo'] = "Inicio";
         return view('plantillas/encabezado', $data)
             . view('plantillas/barraNavegacion')
@@ -19,15 +20,6 @@ class Home extends BaseController
         return view('plantillas/encabezado', $data)
             . view('plantillas/barraNavegacion')
             . view('contenido/nosotros')
-            . view('plantillas/piePagina');
-    }
-
-    public function contacto()
-    {
-        $data['titulo'] = "Contacto";
-        return view('plantillas/encabezado', $data)
-            . view('plantillas/barraNavegacion')
-            . view('contenido/contacto_view')
             . view('plantillas/piePagina');
     }
 
@@ -49,15 +41,6 @@ class Home extends BaseController
             . view('plantillas/piePagina');
     }
 
-    public function inicioSesion()
-    {
-        $data['titulo'] = "Inicio de Sesion";
-        return view('plantillas/encabezado', $data)
-            . view('plantillas/barraNavegacion')
-            . view('contenido/inicioDeSesion')
-            . view('plantillas/piePagina');
-    }
-
     public function registro()
     {
         $data['titulo'] = "Registro";
@@ -66,23 +49,4 @@ class Home extends BaseController
             . view('contenido/registro')
             . view('plantillas/piePagina');
     }
-
-    public function admin()
-    {
-        $data['titulo'] = "Administrador";
-         return view('plantillas/encabezado')
-            . view('plantillas/barraNavegacion')
-            . view('contenido/admin')
-            . view('plantillas/piePagina');
-    }
-
-    public function cliente()
-    {
-        $data['titulo'] = "Cliente";
-        return view('plantillas/encabezado')
-            . view('plantillas/barraNavegacion')
-            . view('contenido/cliente')
-            . view('plantillas/piePagina');
-    }
-
 }

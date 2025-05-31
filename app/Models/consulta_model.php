@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class UserModel extends Model
+class consulta_model extends Model
 {
     protected $table      = 'consulta';// nombre de la tabla en la base de datos
     protected $primaryKey = 'id_consulta';
@@ -15,7 +15,7 @@ class UserModel extends Model
     //protected $useTimestamps = false; true si se quiere usar timestamps
     protected $useSoftDeletes = true;//true si se quiere usar soft deletes
 
-    protected $allowedFields = ['nombre_consulta', 'apellido_consulta', 'provincia_consulta', 'localidad_consulta', 'telefono_consulta', 'mensaje_consulta'];//campos que se pueden insertar o actualizar en la base de datos (los mismos nombres que estan en la base de datos deben estar aca, excepto el que tiene la llavesita osea el id)
+    protected $allowedFields = ['nombre_consulta', 'apellido_consulta', 'provincia_consulta', 'localidad_consulta', 'correo_consulta', 'mensaje_consulta']; //campos que se pueden insertar o actualizar en la base de datos (los mismos nombres que estan en la base de datos deben estar aca, excepto el que tiene la llavesita osea el id)
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;

@@ -6,7 +6,7 @@
       <div class="footer-col">
         <p><strong>Ayuda</strong></p>
         <ul>
-          <li><a href="<?= base_url('contact') ?>">Contacto</a></li>
+          <li><a href="<?= base_url('contacto') ?>">Contacto</a></li>
           <li><a href="<?= base_url('comercializacion') ?>">Comercialización</a></li>
         </ul>
 

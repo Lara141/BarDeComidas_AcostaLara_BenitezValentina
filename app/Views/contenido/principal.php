@@ -8,7 +8,7 @@
     </div>
     <div class="carousel-inner" style="height: 500px;">
       <div class="carousel-item active">
-        <img src="assets/img/bienvenidos.jpg" class="d-block w-100" alt="Bienvenidos" style="height: 500px; object-fit: cover;">
+        <img src="assets/img/bienvv.jpg" class="d-block w-100" alt="Bienvenidos" style="height: 500px; object-fit: cover;">
       </div>
       <div class="carousel-item">
         <img src="assets/img/prom_com.jpg" class="d-block w-100" alt="Promociones generales" style="height: 500px; object-fit: cover;">
