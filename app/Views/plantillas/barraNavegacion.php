@@ -1,16 +1,14 @@
-<<<<<<< HEAD
-<?php $session = session(); ?>
-=======
 
-<style>
+<!-- style>
   .navbar {
     background-image: url('assets/img/');/*buscar imagen de bandera*/
     background-size: cover;         /* Ajusta la imagen para cubrir todo el nav */
     background-position: center;    /* Centra la imagen */
     background-repeat: no-repeat;   /* No repite la imagen */
   }
-</style>
->>>>>>> 6c353c995cfaaba698a826b03d90309e01b52527
+</style-->
+
+<?php $session = session(); ?>
 
 <nav class="navbar bg-body-tertiary">
   <div class="container-fluid justify-content-end">
@@ -19,23 +17,17 @@
     <div class="d-flex align-items-center gap-3">
 
       <?php if (!$session->get('logueado')): ?>
-        <!-- Ícono de usuario - Visitante -->
+        <!-- VISITANTE -->
         <a class="nav-link" href="<?= base_url('inicioSesion') ?>">
           <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt="Perfil" style="width: 28px; height: 28px;">
         </a>
 
       <?php elseif ($session->get('perfil') == 2): ?>
-        <!-- Cliente -->
-         <a class="nav-link" href="<?= base_url('/carrito') ?>">
+        <!-- CLIENTE REGISTRADO -->
+        <a class="nav-link" href="<?= base_url('/carrito') ?>">
           <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
         </a>
         <span class="nav-link"><?= esc($session->get('nombre')) ?></span>
-        <a class="nav-link" href="<?= base_url('/salir') ?>">Salir</a>
-
-      <?php elseif ($session->get('perfil') == 1): ?>
-        <!-- Administrador -->
-        <span class="nav-link"><?= esc($session->get('nombre')) ?></span>
-        <a class="nav-link" href="<?= base_url('/gestionarLibros') ?>">Gestionar</a>
         <a class="nav-link" href="<?= base_url('/salir') ?>">Salir</a>
       <?php endif; ?>
 
@@ -54,6 +46,7 @@
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
     </div>
     <div class="offcanvas-body">
+<<<<<<< HEAD
       <!-- Tu menú y buscador aquí como ya lo tenías -->
       
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
@@ -84,6 +77,8 @@
               <li><a class="dropdown-item" href="https://www.gobar.com.ar/vinos">Bebida</a></li>
             </ul>
           </li>
+=======
+>>>>>>> 5dcf08a9f3b3828339315dfc40ee815ca5994314
       <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="<?= base_url() ?>">Inicio</a>
@@ -95,7 +90,7 @@
           <a class="nav-link" href="<?= base_url('comercializacion') ?>">Comercialización</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?= base_url('contact') ?>">Contáctanos</a>
+          <a class="nav-link" href="<?= base_url('contacto') ?>">Contáctanos</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="<?= base_url('terminoUso') ?>">Términos y Uso</a>

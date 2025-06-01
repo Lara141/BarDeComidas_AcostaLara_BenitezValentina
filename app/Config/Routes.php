@@ -5,23 +5,28 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
+
 $routes->get('/', 'Home::index');
 $routes->get('nosotros', 'Home::somos');
-$routes->get('contact', 'Home::contacto');
+
 $routes->get('comercializacion', 'Home::comercio');
 $routes->get('terminoUso', 'Home::terminos');
-$routes->get('menuu', 'Home::menu');
-$routes->get('inicioSesion', 'Home::inicioSesion');
-$routes->get('registro', 'Home::registro');
-$routes->post('consulta', 'Usuarios_controller::add_consulta');
+$routes->get('menuu', 'Home::menu'); //Preguntar a lara xq tenemos esto
 
-$routes->get('register', 'Usuarios_controller::registro');
+$routes->get('inicioSesion', 'Sesion_controller::login');
+$routes->post('verificar_login', 'Sesion_controller::verificar_login');
+$routes->get('registro', 'Home::registro'); // o Sesion_controller::registro preguntar a lara si lo movemos
+
+$routes->get('admin', 'Sesion_controller::admin');
+$routes->get('cliente', 'Sesion_controller::cliente');
+$routes->get('salir', 'Sesion_controller::salir');
+
 $routes->post('registro_usuario', 'Usuarios_controller::add_cliente');
 
-$routes->get('agregar', 'libro_controller::form_agregar_libro');
-$routes->post('insertar_libro', 'libro_controller::registrar_libro');
-$routes->post('verificar_login', 'Usuarios_controller::login');
+$routes->get('contacto', 'Consulta_controller::consulta');
+$routes->post('consulta', 'Consulta_controller::add_consulta');
 
-$routes->get('/admin', 'Home::admin');
-$routes->get('/cliente', 'Home::cliente');
-$routes->get('salir', 'Usuarios_controller::salir');
+// Libros (si tenés CRUD de libros)
+$routes->get('agregar_libro', 'libro_controller::form_agregar_libro');
+$routes->post('insertar_libro', 'libro_controller::registrar_libro');
+

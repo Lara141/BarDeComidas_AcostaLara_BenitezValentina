@@ -15,12 +15,12 @@
 <!-- Encabezado -->
 <header style="height: 27px;">
   <div class="container-header d-flex flex-column align-items-center"  >
-  <a class="nav-link active" aria-current="page" href="<?= base_url() ?>"><img src="assets/img/titulo.png" alt="Logo del Bar" style="width: 120px; height: auto;">
+  <a class="nav-link active" aria-current="page" href="#"><img src="assets/img/titulo.png" alt="Logo del Bar" style="width: 120px; height: auto;">
   </a>
 
   </div>
 </header>
 
 <section class="mt-5 pt-5">
-  <p class="text-center fw-bold">Bienvenidos a nuestro Bar!</p>
+  <p class="text-center fw-bold">Bienvenid@ administrador/a</p>
 </section>

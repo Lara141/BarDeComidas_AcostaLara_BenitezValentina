@@ -1,8 +1,8 @@
-<!-- en este archivo van todas las funciones de los productos (registrar producto, eliminar, editar)-->
-
 <?php
 
 namespace App\Controllers;
+//en este archivo van todas las funciones de los productos (registrar producto, eliminar, editar)
+
 
 //use App\Models\consulta_model;
 use App\Models\producto_model;
