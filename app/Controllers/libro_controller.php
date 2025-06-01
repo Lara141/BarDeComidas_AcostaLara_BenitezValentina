@@ -21,12 +21,12 @@ $validation->setRules(
 //reglas de validacion
 'titulo'=>'required|max_length[255]',
 'autor'=>'required|max_length[255]',
-'descripcion'=>'required|text',
-'stock'=>'required|int',
+'descripcion'=>'required|max_length[1000]',
+'stock'=>'required|integer',
 'precio'=>'required|decimal',
-'imagen'=>'uploaded[imagen]|max_size[imagen, 4096]| is_image[imagen]',
-'categoria' => 'is_not_unique[libro_categoria.categoria_id]',
-'estado'=>'required|int',
+'imagen'=>'uploaded[imagen]|max_size[imagen, 4096]|ext_in[imagen,jpg,jpeg,png,gif]',
+'categoria' => 'required',//'is_not_unique[libro_categoria.categoria_id]',
+'estado'=>'required|integer',
 ],
 [//errors
 //completar los mensajes
@@ -48,7 +48,7 @@ $validation->setRules(
 
 'imagen'=>[
     'uploaded'=> 'Debe seleccionar una imagen',
-    'is_image'=> 'debe ser una imagen valida',
+   'ext_in'=> 'debe ser una imagen valida',
 
 ],
 'categoria'=>[
@@ -80,17 +80,17 @@ if($validation->withRequest($request)->run()){
         'libro_estado'=> 1,
     ];
 
-    $libro= new Libro_model();
+    $libro= new libro_model();
     $libro->insert($data);
     return redirect()->route('agregar')->with('mensaje', 'el producto se registro correctamente!');
 
 }else{
     $categoria=new Categoria_model();
-    $data['validation']= $validation_>getErrors();
+    $data['validation']= $validation->getErrors();
     $data['categorias']=$categoria->findAll();
     $data['titulo']='agregar libro';
 
-    return view('plantillas/encabezado',$data).view('Backend/barraNavegacionAdmin').view('Backend/Libros/agregar_libro_view');
+    return view('plantillas/encabezado',$data).view('plantillas/barraNavegacion').view('contenido/agregar_libro_view');
 
 }
 
