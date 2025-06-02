@@ -26,7 +26,8 @@ $routes->post('registro_usuario', 'Usuarios_controller::add_cliente');
 $routes->get('contacto', 'Consulta_controller::consulta');
 $routes->post('consulta', 'Consulta_controller::add_consulta');
 
-// Libros (si tenés CRUD de libros)
-$routes->get('agregar_libro', 'libro_controller::form_agregar_libro');
-$routes->post('insertar_libro', 'libro_controller::registrar_libro');
+// productos
+
+$routes->get('agregar_producto', 'producto_controller::form_agregar_producto');
+$routes->post('insertar_producto', 'producto_controller::registrar_producto');
 

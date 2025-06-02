@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class UserModel extends Model
+class producto_model extends Model
 {
     protected $table      = 'producto';// nombre de la tabla en la base de datos
     protected $primaryKey = 'id_producto';
@@ -15,7 +15,7 @@ class UserModel extends Model
     //protected $useTimestamps = false; //true si se quiere usar timestamps
     protected $useSoftDeletes = true;//true si se quiere usar soft deletes
 
-    protected $allowedFields = ['nombre_producto', 'categoria_producto', 'stock_producto', 'estado_producto'];//campos que se pueden insertar o actualizar en la base de datos (los mismos nombres que estan en la base de datos deben estar aca, excepto el que tiene la llavesita osea el id)
+    protected $allowedFields = ['nombre_producto', 'precio_producto', 'descripcion_producto', 'estado_producto', 'stock_producto', 'categoria_id', 'imagen_producto'];//campos que se pueden insertar o actualizar en la base de datos (los mismos nombres que estan en la base de datos deben estar aca, excepto el que tiene la llavesita osea el id)
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
