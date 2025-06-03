@@ -38,7 +38,7 @@ if($row['estado_producto'] == 1)
      <td>
         <a class="btn btn-danger" href="<?php echo base_url('producto_controller/activar_producto/'.$row['id_producto']);?>">Activar</a>
      </td>
-     <?php}?>
+     <?php } ?>
     </tr>
     <?php } ?>
   </tbody>
