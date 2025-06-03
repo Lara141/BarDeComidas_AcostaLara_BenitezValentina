@@ -10,23 +10,24 @@
       <h3 class="color-titulo">Dejanos tus datos</h3>
       <p >Para que un encargado pueda responder sus preguntas, por favor déjenos sus datos y sus dudas. Muchas gracias.</p>
       
+      <?php $validation = session('validation'); ?>
       <form action="<?= base_url('consulta') ?>" method="post" class="row g-3 needs-validation" id="miFormulario" novalidate>
 
   <!-- Nombre -->
   <div class="col-md-6 position-relative">
     <label for="validationTooltipNombre" class="form-label color-fuente">Nombre</label>
-    <input type="text" name="nombre" class="form-control" id="validationTooltipNombre" placeholder="ej.: María" value="<?= old('nombre') ?>" required>
-    <?php if (isset($validation['nombre'])): ?>
-      <div class="text-danger"><?= $validation['nombre'] ?></div>
+    <input type="text" name="nombre" class="form-control" id="validationTooltipNombre" placeholder="ej.: María" value="<?= old('nombre') ?>">
+    <?php if ($validation && $validation->hasError('nombre')): ?>
+      <div class="text-danger"><?= $validation->getError('nombre') ?></div>
     <?php endif; ?>
   </div>
 
   <!-- Apellido -->
   <div class="col-md-6 position-relative">
     <label for="validationTooltipApellido" class="form-label color-fuente">Apellido</label>
-    <input type="text" name="apellido" class="form-control" id="validationTooltipApellido" placeholder="ej.: Gómez" value="<?= old('apellido') ?>" required>
-    <?php if (isset($validation['apellido'])): ?>
-      <div class="text-danger"><?= $validation['apellido'] ?></div>
+    <input type="text" name="apellido" class="form-control" id="validationTooltipApellido" placeholder="ej.: Gómez" value="<?= old('apellido') ?>">
+    <?php if ($validation && $validation->hasError('apellido')): ?>
+      <div class="text-danger"><?= $validation->getError('apellido') ?></div>
     <?php endif; ?>
   </div>
 
@@ -38,26 +39,26 @@
       <option <?= old('provincia') == 'Corrientes' ? 'selected' : '' ?>>Corrientes</option>
       <option <?= old('provincia') == 'Chaco' ? 'selected' : '' ?>>Chaco</option>
     </select>
-    <?php if (isset($validation['provincia'])): ?>
-      <div class="text-danger"><?= $validation['provincia'] ?></div>
+    <?php if ($validation && $validation->hasError('provincia')): ?>
+      <div class="text-danger"><?= $validation->getError('provincia') ?></div>
     <?php endif; ?>
   </div>
 
   <!-- Localidad -->
   <div class="col-md-6 position-relative">
     <label for="validationTooltipLocalidad" class="form-label color-fuente">Localidad</label>
-    <input type="text" name="localidad" class="form-control" id="validationTooltipLocalidad" placeholder="ej.: Resistencia" value="<?= old('localidad') ?>" required>
-    <?php if (isset($validation['localidad'])): ?>
-      <div class="text-danger"><?= $validation['localidad'] ?></div>
+    <input type="text" name="localidad" class="form-control" id="validationTooltipLocalidad" placeholder="ej.: Resistencia" value="<?= old('localidad') ?>">
+    <?php if ($validation && $validation->hasError('localidad')): ?>
+      <div class="text-danger"><?= $validation->getError('localidad') ?></div>
     <?php endif; ?>
   </div>
 
   <!-- Correo -->
   <div class="col-md-6 position-relative">
     <label for="validationTooltipCorreo" class="form-label color-fuente">Correo</label>
-    <input type="email" name="correo" class="form-control" id="validationTooltipCorreo" placeholder="ej.: ejemplo@gmail.com" value="<?= old('correo') ?>" required>
-    <?php if (isset($validation['correo'])): ?>
-      <div class="text-danger"><?= $validation['correo'] ?></div>
+    <input type="email" name="correo" class="form-control" id="validationTooltipCorreo" placeholder="ej.: ejemplo@gmail.com" value="<?= old('correo') ?>">
+    <?php if ($validation && $validation->hasError('correo')): ?>
+      <div class="text-danger"><?= $validation->getError('correo') ?></div>
     <?php endif; ?>
   </div>
 
@@ -65,8 +66,8 @@
   <div class="col-md-12 position-relative">
     <label for="validationTooltipMensaje" class="form-label color-fuente">Mensaje</label>
     <textarea name="mensaje" class="form-control" id="validationTooltipMensaje" rows="4" required><?= old('mensaje') ?></textarea>
-    <?php if (isset($validation['mensaje'])): ?>
-      <div class="text-danger"><?= $validation['mensaje'] ?></div>
+    <?php if ($validation && $validation->hasError('mensaje')): ?>
+      <div class="text-danger"><?= $validation->getError('mensaje') ?></div>
     <?php endif; ?>
   </div>
 

@@ -23,9 +23,9 @@ class Consulta_controller extends BaseController
                 'nombre' => ['required' => 'El nombre es requerido'],
                 'apellido' => ['required' => 'El apellido es requerido'],
                 'provincia' => ['required' => 'Es necesario que seleccione su provincia'],
-                'localidad' => ['required' => 'La localidad es requerida'],
+                'localidad' => ['required' => 'La localidad es requerida, ingrese una'],
                 'correo' => [
-                    'required' => 'El correo es obligatorio',
+                    'required' => 'Ingrese correo, es obligatorio',
                     'valid_email' => 'Debe ser un correo válido'
                 ],
     
@@ -54,11 +54,13 @@ class Consulta_controller extends BaseController
             return redirect()->route('contacto')->with('mensaje_consulta', '¡Tu consulta fue enviada con éxito!');
         } else {
             $data['titulo'] = 'Consulta';
-            $data['validation'] = $validation->getErrors();
+            return redirect()->back()->withInput()->with('validation', $validation);
+            
+            /**$data['validation'] = $validation->getErrors();
             return view('plantillas/encabezado', $data)
                 . view('plantillas/barraNavegacion')
                 . view('contenido/contacto')
-                . view('plantillas/piePagina');
+                . view('plantillas/piePagina');**/
         }
     }
 
