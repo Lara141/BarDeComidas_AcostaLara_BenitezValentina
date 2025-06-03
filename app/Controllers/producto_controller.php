@@ -99,6 +99,11 @@ function gestionar_producto(){
     $data['producto']= producto_model->join('producto_categoria','producto_categoria.categoria_id=producto.producto_categoria')->findAll();
     $data['titulo']='listar productos';
 
-    return view('administrador/encabezado_admin',$data).view('administrador/barraNav_admin
+    return view('administrador/encabezado_admin',$data).view('administrador/barraNav_admin').view('administrador/listar_productos');
 }
+
+function editar_producto($id=null){
+    $produc
+}
+
 }
