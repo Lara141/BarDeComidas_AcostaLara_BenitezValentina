@@ -62,15 +62,16 @@
         <li class="nav-item">
           <a class="nav-link" href="<?= base_url('terminoUso') ?>">Términos y Uso</a>
         </li>
+       
 
         <!-- Ítems adicionales para administrador -->
         <?php if ($session->get('perfil') == 1): ?>
           <li class="nav-item">
             <a class="nav-link" href="<?= base_url('/listarVentas') ?>">Listar ventas</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('/registrarLibro') ?>">Registrar libro</a>
-          </li>
+           <li class="nav-item">
+          <a class="nav-link" href="<?= base_url('agregar_producto') ?>">agregar producto</a>
+        </li>
         <?php endif; ?>
 
         <!-- Ítems adicionales para cliente -->

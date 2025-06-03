@@ -38,6 +38,9 @@
         <li class="nav-item">
           <a class="nav-link" href="<?= base_url('/registrarLibro') ?>">Registrar libro</a>
         </li>
+         <li class="nav-item">
+          <a class="nav-link" href="<?= base_url('agregar_producto') ?>">Registrar producto</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="<?= base_url('/agregar_libro') ?>">Gestionar libros</a>
         </li>

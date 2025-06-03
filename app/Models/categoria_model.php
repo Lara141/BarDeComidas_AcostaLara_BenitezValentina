@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class Categoria_Model extends Model
 {
-    protected $table      = 'libro_categoria';// nombre de la tabla en la base de datos
+    protected $table      = 'categoria_producto';// nombre de la tabla en la base de datos
     protected $primaryKey = 'categoria_id';
 
     protected $useAutoIncrement = true;
@@ -43,4 +43,6 @@ class Categoria_Model extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+
+    
 }
