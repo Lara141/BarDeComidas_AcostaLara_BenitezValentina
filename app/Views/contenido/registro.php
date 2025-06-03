@@ -12,13 +12,13 @@
     </div>
 
     <p class="mb-4">Todo lo que te gusta, al alcance de un clic. ¡Registrate ahora!</p>
-
+    <?php $validation = session('validation'); ?>
 
   <div class="mb-3">
     <label class="form-label fw-bold">Nombre</label>
       <input name="nombre" placeholder="ej.: Maria" value="<?= old('nombre') ?>">
-        <?php if (isset($validation['nombre'])): ?>
-        <div class="text-danger"><?= $validation['nombre'] ?></div>
+        <?php if ($validation && $validation->hasError('nombre')): ?>
+        <div class="text-danger"><?= $validation->getError('nombre') ?></div>
         <?php endif; ?>
   </div>
 
@@ -26,8 +26,8 @@
   <div class="mb-3">
     <label class="form-label fw-bold">Apellido</label>
     <input name="apellido" placeholder="ej.: Benitez" value="<?= old('apellido') ?>">
-<?php if (isset($validation['apellido'])): ?>
-  <div class="text-danger"><?= $validation['apellido'] ?></div>
+<?php if ($validation && $validation->hasError('apellido')): ?>
+  <div class="text-danger"><?= $validation->getError('apellido') ?></div>
 <?php endif; ?>
 
   </div>
@@ -35,24 +35,24 @@
   <div class="mb-3">
     <label class="form-label fw-bold">Fecha de nacimiento</label>
     <input  name="nacimiento" placeholder="ej.: 12/07/05" pattern="\d{2}/\d{2}/\d{2}" title="Formato válido: dd/mm/aa" value="<?= old('nacimiento') ?>">
-    <?php if (isset($validation['nacimiento'])): ?>
-  <div class="text-danger"><?= $validation['nacimiento'] ?></div>
+    <?php if ($validation && $validation->hasError('nacimiento')): ?>
+  <div class="text-danger"><?= $validation->getError('nacimiento') ?></div>
 <?php endif; ?>
   </div>
 
   <div class="mb-3">
     <label class="form-label fw-bold">DNI</label>
     <input  name="dni" placeholder="ej.: 38123456" value="<?= old('dni') ?>">
-  <?php if (isset($validation['dni'])): ?>
-  <div class="text-danger"><?= $validation['dni'] ?></div>
+  <?php if ($validation && $validation->hasError('dni')): ?>
+  <div class="text-danger"><?= $validation->getError('dni') ?></div>
 <?php endif; ?>
   </div>
 
   <div class="mb-3">
     <label class="form-label fw-bold">Email</label>
     <input type="email" name="correo" placeholder="ej.: tunombre@email.com" value="<?= old('correo') ?>">
-  <?php if (isset($validation['correo'])): ?>
-  <div class="text-danger"><?= $validation['correo'] ?></div>
+  <?php if ($validation && $validation->hasError('correo')): ?>
+  <div class="text-danger"><?= $validation-getError('correo') ?></div>
 <?php endif; ?>
   </div>
 
@@ -62,8 +62,8 @@
       <input type="password" name="pass" class="form-control">
       <span class="input-group-text"><i class="bi bi-eye-slash"></i></span>
     </div>
-    <?php if (isset($validation['pass'])): ?>
-  <div class="text-danger"><?= $validation['pass'] ?></div>
+    <?php if ($validation && $validation->hasError('pass')): ?>
+  <div class="text-danger"><?= $validation->getError('pass') ?></div>
 <?php endif; ?>
   </div>
 
@@ -73,8 +73,8 @@
       <input type="password" name="repass" class="form-control"> 
       <span class="input-group-text"><i class="bi bi-eye-slash"></i></span>
     </div>
-    <?php if (isset($validation['repass'])): ?>
-  <div class="text-danger"><?= $validation['repass'] ?></div>
+    <?php if ($validation && $validation->hasError('repass')): ?>
+  <div class="text-danger"><?= $validation->getError('repass') ?></div>
 <?php endif; ?>
   </div>
 

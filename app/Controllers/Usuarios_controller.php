@@ -70,11 +70,12 @@ class Usuarios_controller extends BaseController
 
         } else {
             $data['titulo'] = 'Registro';
-            $data['validation'] = $validation->getErrors();
+             return redirect()->back()->withInput()->with('validation', $validation);
+            /**$data['validation'] = $validation->getErrors();
             return view('plantillas/encabezado', $data)
                 . view('plantillas/barraNavegacion')
                 . view('contenido/registro')
-                . view('plantillas/piePagina.php');
+                . view('plantillas/piePagina.php');**/
         }
     }
 
