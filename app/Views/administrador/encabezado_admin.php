@@ -15,8 +15,8 @@
 <!-- Encabezado -->
 <header style="height: 27px;">
   <div class="container-header d-flex flex-column align-items-center"  >
-  <a class="nav-link active" aria-current="page" href="#"><img src="assets/img/titulo.png" alt="Logo del Bar" style="width: 120px; height: auto;">
-  </a>
+  <a class="nav-link active" aria-current="page" href="#"><img src="assets/img/Adm.jpg" alt="Logo del Bar" style="width: 120px; height: auto;">  
+</a>
 
   </div>
 </header>

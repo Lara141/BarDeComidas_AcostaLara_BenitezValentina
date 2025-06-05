@@ -1,30 +1,31 @@
 
-<div style="margin: 20px; max-width: 500px; max-height: 500px; margin-left: auto; margin-right: auto;">
-  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+<div class="galeria-circular">
+  <div class="imagen-con-texto">
+    <img src="assets/img/FotoBar.jpeg" alt="Foto Bar">
+    <div class="texto-sobre-imagen">
+      <a>Ambiente y atención aseguradas! </a>
     </div>
-    <div class="carousel-inner" style="height: 500px;">
-      <div class="carousel-item active">
-        <img src="assets/img/bienvv.jpg" class="d-block w-100" alt="Bienvenidos" style="height: 500px; object-fit: cover;">
-      </div>
-      <div class="carousel-item">
-        <img src="assets/img/prom_com.jpg" class="d-block w-100" alt="Promociones generales" style="height: 500px; object-fit: cover;">
-      </div>
-      <div class="carousel-item">
-        <img src="assets/img/bar_carrus.jpg" class="d-block w-100" alt="Promociones por zona" style="height: 500px; object-fit: cover;">
-      </div>
+  </div>
+
+  <div class="imagen-con-texto">
+    <img src="assets/img/terrasa2.jpg" alt="Terraza">
+    <div class="texto-sobre-imagen">
+      <a>Disfruta de cada bocado al aire libre</a>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Anterior</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Siguiente</span>
-    </button>
+  </div>
+
+  <div class="imagen-con-texto">
+    <img src="assets/img/bebidas2.jpg" alt="Bebidas">
+    <div class="texto-sobre-imagen">
+      <a href="https://www.gobar.com.ar/vinos">Ver Bebidas</a>
+    </div>
+  </div>
+
+  <div class="imagen-con-texto">
+    <img src="assets/img/cumple.jpg" alt="Promociones">
+    <div class="texto-sobre-imagen">
+      <a href="<?= base_url('contacto') ?>">Contactanos para festejar tu cumpleaños!</a>
+    </div>
   </div>
 </div>
 

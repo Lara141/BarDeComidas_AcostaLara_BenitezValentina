@@ -19,8 +19,7 @@
       <?php if (!$session->get('logueado')): ?>
         <!-- VISITANTE -->
         <a class="nav-link" href="<?= base_url('inicioSesion') ?>">
-          <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt="Perfil" style="width: 28px; height: 28px;">
-        Ver carrito</a>
+          <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt="Perfil" style="width: 28px; height: 28px;"></a>
 
       <?php elseif ($session->get('perfil') == 2): ?>
         <!-- CLIENTE REGISTRADO -->
