@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 DEBUG - 2025-06-03 12:58:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-06-03 12:58:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-06-03 12:58:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
@@ -14,11 +15,110 @@ Stack trace:
 #7 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\app\Controllers\Usuarios_controller.php(67): CodeIgniter\Model->insert(Array)
 #8 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\CodeIgniter.php(933): App\Controllers\Usuarios_controller->add_cliente()
 #9 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+=======
+DEBUG - 2025-06-03 12:42:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 12:42:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 12:42:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 12:42:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-03 12:43:03 --> ParseError: syntax error, unexpected string content "administrador/barraNav_admin"
+[Method: GET, Route: agregar_producto]
+in APPPATH\Controllers\producto_controller.php on line 102.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\BarDeComidas_AcostaLara_BenitezValentina\\app\\Controllers\\producto_controller.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\producto_controller')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\producto_controller')
+ 4 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\producto_controller', true)
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-06-03 12:44:53 --> mysqli_sql_exception: Table 'bd_acosta_benitez.categoria_producto' doesn't exist in C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\app\Controllers\producto_controller.php(10): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\CodeIgniter.php(933): App\Controllers\producto_controller->form_agregar_producto()
+#8 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\producto_controller))
+#9 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-06-03 12:44:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'bd_acosta_benitez.categoria_producto' doesn't exist
+[Method: GET, Route: agregar_producto]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `categoria_producto`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\producto_controller.php(10): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\producto_controller->form_agregar_producto()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\producto_controller))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-03 12:44:53 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'bd_acosta_benitez.categoria_producto' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `categoria_producto`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `categoria_producto`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `categoria_producto`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\producto_controller.php(10): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\producto_controller->form_agregar_producto()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\producto_controller))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-03 12:44:53 --> [Caused by] mysqli_sql_exception: Table 'bd_acosta_benitez.categoria_producto' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `categoria_producto`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `categoria_producto`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `categoria_producto`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `categoria_producto`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\producto_controller.php(10): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\producto_controller->form_agregar_producto()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\producto_controller))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-03 12:56:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 13:08:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-03 13:09:27 --> mysqli_sql_exception: Unknown column 'nombre_producto' in 'field list' in C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\app\Controllers\producto_controller.php(80): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\CodeIgniter.php(933): App\Controllers\producto_controller->registrar_producto()
+#9 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\producto_controller))
+>>>>>>> 6cdeee01a8b6eafffc539f23eb69beb33619326e
 #10 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #11 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
 #12 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 #13 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 #14 {main}
+<<<<<<< HEAD
 CRITICAL - 2025-06-03 12:59:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'PRIMARY'
 [Method: POST, Route: registro_usuario]
 in SYSTEMPATH\Database\BaseConnection.php on line 692.
@@ -29,10 +129,23 @@ in SYSTEMPATH\Database\BaseConnection.php on line 692.
  5 APPPATH\Controllers\Usuarios_controller.php(67): CodeIgniter\Model->insert([...])
  6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuarios_controller->add_cliente()
  7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+=======
+CRITICAL - 2025-06-03 13:09:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'nombre_producto' in 'field list'
+[Method: POST, Route: insertar_producto]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `producto` (`nombre_producto`, `precio_producto`, `descripcion_producto`, `estado_producto`, `stock_producto`, `categoria_id`, `imagen_producto`) VALUES (:nombre_producto:, :precio_producto:, :descripcion_producto:, :estado_producto:, :stock_producto:, :categoria_id:, :imagen_producto:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\producto_controller.php(80): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\producto_controller->registrar_producto()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\producto_controller))
+>>>>>>> 6cdeee01a8b6eafffc539f23eb69beb33619326e
  8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 CRITICAL - 2025-06-03 12:59:05 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'PRIMARY'
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
  1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `persona` (`nombre_persona`, `apellido_persona`, `nacimiento_persona`, `dni_persona`, `correo_persona`, `contraseña_persona`, `id_perfil`, `id_estado_persona`) VALUES (\'Itati\', \'Soto\', \'14/10/02\', \'46788090\', \'diamelaacosta2004@gmail.com\', \'$2y$10$.34Apf0VQf0Wg8.Uad36t.IrbFGbq03tWLBvYv6HUUZaMyBWl920C\', 2, 1)')
@@ -44,10 +157,24 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
  7 APPPATH\Controllers\Usuarios_controller.php(67): CodeIgniter\Model->insert([...])
  8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuarios_controller->add_cliente()
  9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+=======
+CRITICAL - 2025-06-03 13:09:27 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'nombre_producto' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `producto` (`nombre_producto`, `precio_producto`, `descripcion_producto`, `estado_producto`, `stock_producto`, `categoria_id`, `imagen_producto`) VALUES (\'Rosa monte\', \'10.000\', \'Muy rico\', 1, \'10\', \'1\', \'1748956167_b879bdc99e04a5e12e72.jpg\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `producto` (`nombre_producto`, `precio_producto`, `descripcion_producto`, `estado_producto`, `stock_producto`, `categoria_id`, `imagen_producto`) VALUES (\'Rosa monte\', \'10.000\', \'Muy rico\', 1, \'10\', \'1\', \'1748956167_b879bdc99e04a5e12e72.jpg\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `producto` (`nombre_producto`, `precio_producto`, `descripcion_producto`, `estado_producto`, `stock_producto`, `categoria_id`, `imagen_producto`) VALUES (:nombre_producto:, :precio_producto:, :descripcion_producto:, :estado_producto:, :stock_producto:, :categoria_id:, :imagen_producto:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\producto_controller.php(80): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\producto_controller->registrar_producto()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\producto_controller))
+>>>>>>> 6cdeee01a8b6eafffc539f23eb69beb33619326e
 10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
 12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 CRITICAL - 2025-06-03 12:59:05 --> [Caused by] mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY'
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
  1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `persona` (`nombre_persona`, `apellido_persona`, `nacimiento_persona`, `dni_persona`, `correo_persona`, `contraseña_persona`, `id_perfil`, `id_estado_persona`) VALUES (\'Itati\', \'Soto\', \'14/10/02\', \'46788090\', \'diamelaacosta2004@gmail.com\', \'$2y$10$.34Apf0VQf0Wg8.Uad36t.IrbFGbq03tWLBvYv6HUUZaMyBWl920C\', 2, 1)', 0)
@@ -60,10 +187,25 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
  8 APPPATH\Controllers\Usuarios_controller.php(67): CodeIgniter\Model->insert([...])
  9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuarios_controller->add_cliente()
 10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+=======
+CRITICAL - 2025-06-03 13:09:27 --> [Caused by] mysqli_sql_exception: Unknown column 'nombre_producto' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `producto` (`nombre_producto`, `precio_producto`, `descripcion_producto`, `estado_producto`, `stock_producto`, `categoria_id`, `imagen_producto`) VALUES (\'Rosa monte\', \'10.000\', \'Muy rico\', 1, \'10\', \'1\', \'1748956167_b879bdc99e04a5e12e72.jpg\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `producto` (`nombre_producto`, `precio_producto`, `descripcion_producto`, `estado_producto`, `stock_producto`, `categoria_id`, `imagen_producto`) VALUES (\'Rosa monte\', \'10.000\', \'Muy rico\', 1, \'10\', \'1\', \'1748956167_b879bdc99e04a5e12e72.jpg\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `producto` (`nombre_producto`, `precio_producto`, `descripcion_producto`, `estado_producto`, `stock_producto`, `categoria_id`, `imagen_producto`) VALUES (\'Rosa monte\', \'10.000\', \'Muy rico\', 1, \'10\', \'1\', \'1748956167_b879bdc99e04a5e12e72.jpg\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `producto` (`nombre_producto`, `precio_producto`, `descripcion_producto`, `estado_producto`, `stock_producto`, `categoria_id`, `imagen_producto`) VALUES (:nombre_producto:, :precio_producto:, :descripcion_producto:, :estado_producto:, :stock_producto:, :categoria_id:, :imagen_producto:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\producto_controller.php(80): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\producto_controller->registrar_producto()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\producto_controller))
+>>>>>>> 6cdeee01a8b6eafffc539f23eb69beb33619326e
 11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
 13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 DEBUG - 2025-06-03 13:18:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-06-03 13:18:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-06-03 13:18:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
@@ -85,11 +227,26 @@ Stack trace:
 #7 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\app\Controllers\Usuarios_controller.php(67): CodeIgniter\Model->insert(Array)
 #8 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\CodeIgniter.php(933): App\Controllers\Usuarios_controller->add_cliente()
 #9 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+=======
+ERROR - 2025-06-03 13:12:55 --> mysqli_sql_exception: Unknown column 'categoria_id' in 'field list' in C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\app\Controllers\producto_controller.php(80): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\CodeIgniter.php(933): App\Controllers\producto_controller->registrar_producto()
+#9 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\producto_controller))
+>>>>>>> 6cdeee01a8b6eafffc539f23eb69beb33619326e
 #10 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #11 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
 #12 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 #13 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 #14 {main}
+<<<<<<< HEAD
 CRITICAL - 2025-06-03 13:27:59 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'PRIMARY'
 [Method: POST, Route: registro_usuario]
 in SYSTEMPATH\Database\BaseConnection.php on line 692.
@@ -100,10 +257,23 @@ in SYSTEMPATH\Database\BaseConnection.php on line 692.
  5 APPPATH\Controllers\Usuarios_controller.php(67): CodeIgniter\Model->insert([...])
  6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuarios_controller->add_cliente()
  7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+=======
+CRITICAL - 2025-06-03 13:12:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'categoria_id' in 'field list'
+[Method: POST, Route: insertar_producto]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `producto` (`nombre_producto`, `precio_producto`, `descripcion_producto`, `estado_producto`, `stock_producto`, `categoria_id`, `imagen_producto`) VALUES (:nombre_producto:, :precio_producto:, :descripcion_producto:, :estado_producto:, :stock_producto:, :categoria_id:, :imagen_producto:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\producto_controller.php(80): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\producto_controller->registrar_producto()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\producto_controller))
+>>>>>>> 6cdeee01a8b6eafffc539f23eb69beb33619326e
  8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 CRITICAL - 2025-06-03 13:27:59 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'PRIMARY'
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
  1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `persona` (`nombre_persona`, `apellido_persona`, `nacimiento_persona`, `dni_persona`, `correo_persona`, `contraseña_persona`, `id_perfil`, `id_estado_persona`) VALUES (\'Arrollado\', \'Soto\', \'14/10/02\', \'46788099\', \'axiajsuhsu@gmail.com\', \'$2y$10$gL5whGXE.Tk1jSPZRQ2y5.Wht4rzEo3.FbMlRAe8oLAZYUt/QW8t.\', 2, 1)')
@@ -115,10 +285,24 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
  7 APPPATH\Controllers\Usuarios_controller.php(67): CodeIgniter\Model->insert([...])
  8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuarios_controller->add_cliente()
  9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+=======
+CRITICAL - 2025-06-03 13:12:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'categoria_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `producto` (`nombre_producto`, `precio_producto`, `descripcion_producto`, `estado_producto`, `stock_producto`, `categoria_id`, `imagen_producto`) VALUES (\'Rosa monte\', \'10.000\', \'Muy rico\', 1, \'10\', \'1\', \'1748956375_4bdb8206db5a4943b788.jpg\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `producto` (`nombre_producto`, `precio_producto`, `descripcion_producto`, `estado_producto`, `stock_producto`, `categoria_id`, `imagen_producto`) VALUES (\'Rosa monte\', \'10.000\', \'Muy rico\', 1, \'10\', \'1\', \'1748956375_4bdb8206db5a4943b788.jpg\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `producto` (`nombre_producto`, `precio_producto`, `descripcion_producto`, `estado_producto`, `stock_producto`, `categoria_id`, `imagen_producto`) VALUES (:nombre_producto:, :precio_producto:, :descripcion_producto:, :estado_producto:, :stock_producto:, :categoria_id:, :imagen_producto:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\producto_controller.php(80): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\producto_controller->registrar_producto()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\producto_controller))
+>>>>>>> 6cdeee01a8b6eafffc539f23eb69beb33619326e
 10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
 12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 CRITICAL - 2025-06-03 13:27:59 --> [Caused by] mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY'
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
  1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `persona` (`nombre_persona`, `apellido_persona`, `nacimiento_persona`, `dni_persona`, `correo_persona`, `contraseña_persona`, `id_perfil`, `id_estado_persona`) VALUES (\'Arrollado\', \'Soto\', \'14/10/02\', \'46788099\', \'axiajsuhsu@gmail.com\', \'$2y$10$gL5whGXE.Tk1jSPZRQ2y5.Wht4rzEo3.FbMlRAe8oLAZYUt/QW8t.\', 2, 1)', 0)
@@ -131,10 +315,25 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
  8 APPPATH\Controllers\Usuarios_controller.php(67): CodeIgniter\Model->insert([...])
  9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuarios_controller->add_cliente()
 10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+=======
+CRITICAL - 2025-06-03 13:12:55 --> [Caused by] mysqli_sql_exception: Unknown column 'categoria_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `producto` (`nombre_producto`, `precio_producto`, `descripcion_producto`, `estado_producto`, `stock_producto`, `categoria_id`, `imagen_producto`) VALUES (\'Rosa monte\', \'10.000\', \'Muy rico\', 1, \'10\', \'1\', \'1748956375_4bdb8206db5a4943b788.jpg\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `producto` (`nombre_producto`, `precio_producto`, `descripcion_producto`, `estado_producto`, `stock_producto`, `categoria_id`, `imagen_producto`) VALUES (\'Rosa monte\', \'10.000\', \'Muy rico\', 1, \'10\', \'1\', \'1748956375_4bdb8206db5a4943b788.jpg\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `producto` (`nombre_producto`, `precio_producto`, `descripcion_producto`, `estado_producto`, `stock_producto`, `categoria_id`, `imagen_producto`) VALUES (\'Rosa monte\', \'10.000\', \'Muy rico\', 1, \'10\', \'1\', \'1748956375_4bdb8206db5a4943b788.jpg\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `producto` (`nombre_producto`, `precio_producto`, `descripcion_producto`, `estado_producto`, `stock_producto`, `categoria_id`, `imagen_producto`) VALUES (:nombre_producto:, :precio_producto:, :descripcion_producto:, :estado_producto:, :stock_producto:, :categoria_id:, :imagen_producto:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\producto_controller.php(80): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\producto_controller->registrar_producto()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\producto_controller))
+>>>>>>> 6cdeee01a8b6eafffc539f23eb69beb33619326e
 11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
 13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 ERROR - 2025-06-03 13:29:44 --> mysqli_sql_exception: Duplicate entry '2' for key 'id_perfil' in C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\MySQLi\Connection.php:327
 Stack trace:
 #0 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
@@ -147,11 +346,30 @@ Stack trace:
 #7 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\app\Controllers\Usuarios_controller.php(67): CodeIgniter\Model->insert(Array)
 #8 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\CodeIgniter.php(933): App\Controllers\Usuarios_controller->add_cliente()
 #9 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+=======
+DEBUG - 2025-06-03 13:13:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 13:13:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 13:15:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 13:16:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-03 13:17:21 --> mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\app\Controllers\producto_controller.php(80): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\CodeIgniter.php(933): App\Controllers\producto_controller->registrar_producto()
+#9 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\producto_controller))
+>>>>>>> 6cdeee01a8b6eafffc539f23eb69beb33619326e
 #10 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #11 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
 #12 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 #13 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 #14 {main}
+<<<<<<< HEAD
 CRITICAL - 2025-06-03 13:29:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '2' for key 'id_perfil'
 [Method: POST, Route: registro_usuario]
 in SYSTEMPATH\Database\BaseConnection.php on line 692.
@@ -162,10 +380,23 @@ in SYSTEMPATH\Database\BaseConnection.php on line 692.
  5 APPPATH\Controllers\Usuarios_controller.php(67): CodeIgniter\Model->insert([...])
  6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuarios_controller->add_cliente()
  7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+=======
+CRITICAL - 2025-06-03 13:17:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'PRIMARY'
+[Method: POST, Route: insertar_producto]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `producto` (`nombre_producto`, `precio_producto`, `descripcion_producto`, `estado_producto`, `stock_producto`, `categoria_id`, `imagen_producto`) VALUES (:nombre_producto:, :precio_producto:, :descripcion_producto:, :estado_producto:, :stock_producto:, :categoria_id:, :imagen_producto:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\producto_controller.php(80): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\producto_controller->registrar_producto()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\producto_controller))
+>>>>>>> 6cdeee01a8b6eafffc539f23eb69beb33619326e
  8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 CRITICAL - 2025-06-03 13:29:44 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '2' for key 'id_perfil'
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
  1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `persona` (`nombre_persona`, `apellido_persona`, `nacimiento_persona`, `dni_persona`, `correo_persona`, `contraseña_persona`, `id_perfil`, `id_estado_persona`) VALUES (\'Arrollado\', \'Soto\', \'14/10/02\', \'46788099\', \'axiajsuhsu@gmail.com\', \'$2y$10$fYcbHKAVexUCNU0XaRs.aOiNpqRQgdCgJoyUluzegR2wvXnhoWyuG\', 2, 1)')
@@ -177,10 +408,24 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
  7 APPPATH\Controllers\Usuarios_controller.php(67): CodeIgniter\Model->insert([...])
  8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuarios_controller->add_cliente()
  9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+=======
+CRITICAL - 2025-06-03 13:17:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `producto` (`nombre_producto`, `precio_producto`, `descripcion_producto`, `estado_producto`, `stock_producto`, `categoria_id`, `imagen_producto`) VALUES (\'Vino tinto\', \'10.000\', \'Delicioso\', 1, \'10\', \'2\', \'1748956641_3ddb1d57798d4f05251c.jpg\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `producto` (`nombre_producto`, `precio_producto`, `descripcion_producto`, `estado_producto`, `stock_producto`, `categoria_id`, `imagen_producto`) VALUES (\'Vino tinto\', \'10.000\', \'Delicioso\', 1, \'10\', \'2\', \'1748956641_3ddb1d57798d4f05251c.jpg\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `producto` (`nombre_producto`, `precio_producto`, `descripcion_producto`, `estado_producto`, `stock_producto`, `categoria_id`, `imagen_producto`) VALUES (:nombre_producto:, :precio_producto:, :descripcion_producto:, :estado_producto:, :stock_producto:, :categoria_id:, :imagen_producto:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\producto_controller.php(80): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\producto_controller->registrar_producto()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\producto_controller))
+>>>>>>> 6cdeee01a8b6eafffc539f23eb69beb33619326e
 10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
 12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 CRITICAL - 2025-06-03 13:29:44 --> [Caused by] mysqli_sql_exception: Duplicate entry '2' for key 'id_perfil'
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
  1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `persona` (`nombre_persona`, `apellido_persona`, `nacimiento_persona`, `dni_persona`, `correo_persona`, `contraseña_persona`, `id_perfil`, `id_estado_persona`) VALUES (\'Arrollado\', \'Soto\', \'14/10/02\', \'46788099\', \'axiajsuhsu@gmail.com\', \'$2y$10$fYcbHKAVexUCNU0XaRs.aOiNpqRQgdCgJoyUluzegR2wvXnhoWyuG\', 2, 1)', 0)
@@ -193,10 +438,25 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
  8 APPPATH\Controllers\Usuarios_controller.php(67): CodeIgniter\Model->insert([...])
  9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuarios_controller->add_cliente()
 10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+=======
+CRITICAL - 2025-06-03 13:17:21 --> [Caused by] mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `producto` (`nombre_producto`, `precio_producto`, `descripcion_producto`, `estado_producto`, `stock_producto`, `categoria_id`, `imagen_producto`) VALUES (\'Vino tinto\', \'10.000\', \'Delicioso\', 1, \'10\', \'2\', \'1748956641_3ddb1d57798d4f05251c.jpg\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `producto` (`nombre_producto`, `precio_producto`, `descripcion_producto`, `estado_producto`, `stock_producto`, `categoria_id`, `imagen_producto`) VALUES (\'Vino tinto\', \'10.000\', \'Delicioso\', 1, \'10\', \'2\', \'1748956641_3ddb1d57798d4f05251c.jpg\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `producto` (`nombre_producto`, `precio_producto`, `descripcion_producto`, `estado_producto`, `stock_producto`, `categoria_id`, `imagen_producto`) VALUES (\'Vino tinto\', \'10.000\', \'Delicioso\', 1, \'10\', \'2\', \'1748956641_3ddb1d57798d4f05251c.jpg\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `producto` (`nombre_producto`, `precio_producto`, `descripcion_producto`, `estado_producto`, `stock_producto`, `categoria_id`, `imagen_producto`) VALUES (:nombre_producto:, :precio_producto:, :descripcion_producto:, :estado_producto:, :stock_producto:, :categoria_id:, :imagen_producto:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\producto_controller.php(80): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\producto_controller->registrar_producto()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\producto_controller))
+>>>>>>> 6cdeee01a8b6eafffc539f23eb69beb33619326e
 11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
 13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 ERROR - 2025-06-03 13:31:05 --> mysqli_sql_exception: Duplicate entry '2' for key 'id_perfil' in C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\MySQLi\Connection.php:327
 Stack trace:
 #0 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
@@ -408,3 +668,60 @@ DEBUG - 2025-06-03 14:34:45 --> Session: Class initialized using 'CodeIgniter\Se
 DEBUG - 2025-06-03 14:34:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-06-03 14:40:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-06-03 14:40:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+=======
+DEBUG - 2025-06-03 13:17:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 13:17:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 13:20:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 13:20:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 13:22:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 13:22:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 13:22:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 13:22:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 13:22:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 13:28:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 13:31:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 13:31:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 13:31:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 13:31:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 13:33:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 13:33:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 13:33:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 13:33:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 13:36:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 13:36:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 13:36:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 13:38:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 13:39:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 13:39:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 13:54:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 13:54:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 13:57:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 13:57:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 13:57:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 13:57:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 13:58:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 13:58:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 13:58:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 13:58:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 14:09:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 14:09:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 14:09:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 14:10:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 14:10:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 14:11:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 14:11:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 14:11:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 14:11:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 14:11:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 14:11:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 14:11:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 14:11:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 14:12:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 14:13:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 14:13:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 14:13:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 14:34:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 14:34:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 14:34:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 14:34:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+>>>>>>> 6cdeee01a8b6eafffc539f23eb69beb33619326e

@@ -92,18 +92,13 @@ class producto_controller extends BaseController{
 
 }
 
-function gestionar_producto(){
-    $producto_model= new peoducto_model();
-    $categoria=new Categoria_Model();
+//function gestionar_producto(){
+  //  $producto_model= new peoducto_model();
+   // $categoria=new Categoria_Model();
 
-    $data['producto']= producto_model->join('producto_categoria','producto_categoria.categoria_id=producto.producto_categoria')->findAll();
-    $data['titulo']='listar productos';
+    //$data['producto']= producto_model->join('producto_categoria','producto_categoria.categoria_id=producto.producto_categoria')->findAll();
+    //$data['titulo']='listar productos';
 
-    return view('administrador/encabezado_admin',$data).view('administrador/barraNav_admin').view('administrador/listar_productos');
-}
-
-function editar_producto($id=null){
-    $produc
-}
-
+    //return view('administrador/encabezado_admin',$data).view('administrador/barraNav_admin
+//}
 }

@@ -19,8 +19,7 @@
       <?php if (!$session->get('logueado')): ?>
         <!-- VISITANTE -->
         <a class="nav-link" href="<?= base_url('inicioSesion') ?>">
-          <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt="Perfil" style="width: 28px; height: 28px;">
-        </a>
+          <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt="Perfil" style="width: 28px; height: 28px;"></a>
 
       <?php elseif ($session->get('perfil') == 2): ?>
         <!-- CLIENTE REGISTRADO -->
@@ -63,19 +62,14 @@
           <a class="nav-link" href="<?= base_url('terminoUso') ?>">Términos y Uso</a>
         </li>
        
-
-        <!-- Ítems adicionales para administrador -->
-        <?php if ($session->get('perfil') == 1): ?>
-          <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('/listarVentas') ?>">Listar ventas</a>
-          </li>
-           <li class="nav-item">
-          <a class="nav-link" href="<?= base_url('agregar_producto') ?>">agregar producto</a>
-        </li>
-        <?php endif; ?>
-
         <!-- Ítems adicionales para cliente -->
         <?php if ($session->get('perfil') == 2): ?>
+          <li class="nav-item">
+            <a class="nav-link" href="<?= base_url('/catalogo_producto') ?>">Catálogo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?= base_url('/ver_carrito') ?>">Ver carrito</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="<?= base_url('/miCuenta') ?>">Mi cuenta</a>
           </li>
