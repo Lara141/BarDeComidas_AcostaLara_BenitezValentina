@@ -21,6 +21,34 @@
   </div>
 </header>
 
+
 <section class="mt-5 pt-5">
-  <p class="text-center fw-bold">Bienvenidos a nuestro Bar!</p>
+  <div id="bienvenidaCarrusel" class="carousel slide mx-auto" data-bs-ride="carousel" style="max-width: 600px;">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="d-flex flex-column align-items-center">
+          <h2 class="fw-bold text-primary">¡Bienvenidos a nuestro Bar!</h2>
+          </div>
+      </div>
+      <div class="carousel-item">
+        <div class="d-flex flex-column align-items-center">
+          <h2 class="fw-bold text-success">Ambiente Familiar</h2>
+          </div>
+      </div>
+      <div class="carousel-item">
+        <div class="d-flex flex-column align-items-center">
+          <h2 class="fw-bold text-warning">¡Promociones todos los días!</h2>
+          </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#bienvenidaCarrusel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#bienvenidaCarrusel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
+  </div>
 </section>
+
