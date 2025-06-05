@@ -101,4 +101,3 @@ class producto_controller extends BaseController{
 
     //return view('administrador/encabezado_admin',$data).view('administrador/barraNav_admin
 //}
-}
