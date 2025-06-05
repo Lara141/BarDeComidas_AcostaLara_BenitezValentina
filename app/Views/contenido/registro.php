@@ -1,4 +1,3 @@
-<h1 class= "display-4 text-center">Registrarse</h1>
 
 <form action="<?= base_url('registro_usuario') ?>" method="post">
 

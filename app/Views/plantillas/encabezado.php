@@ -21,24 +21,33 @@
   </div>
 </header>
 
-
 <section class="mt-5 pt-5">
   <div id="bienvenidaCarrusel" class="carousel slide mx-auto" data-bs-ride="carousel" style="max-width: 600px;">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <div class="d-flex flex-column align-items-center">
-          <h2 class="fw-bold text-primary">¡Bienvenidos a nuestro Bar!</h2>
-          </div>
+          <h2 class="fw-bold" style="color:rgb(13, 58, 106);">¡Bienvenidos!</h2> <!-- Azul -->
+        </div>
       </div>
       <div class="carousel-item">
         <div class="d-flex flex-column align-items-center">
-          <h2 class="fw-bold text-success">Ambiente Familiar</h2>
-          </div>
+          <h2 class="fw-bold" style="color:rgb(14, 67, 125);">Una experiencia inolvidable</h2> <!-- Amarillo -->
+        </div>
       </div>
       <div class="carousel-item">
         <div class="d-flex flex-column align-items-center">
-          <h2 class="fw-bold text-warning">¡Promociones todos los días!</h2>
-          </div>
+          <h2 class="fw-bold" style="color:rgb(14, 67, 125);">Sabores que enamoran</h2> <!-- Amarillo -->
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="d-flex flex-column align-items-center">
+          <h2 class="fw-bold" style="color:rgb(14, 67, 125);">Ambiente Familiar</h2> <!-- Amarillo -->
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="d-flex flex-column align-items-center">
+          <h2 class="fw-bold" style="color:rgb(17, 63, 112);">¡Promociones todos los días!</h2> <!-- Blanco -->
+        </div>
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#bienvenidaCarrusel" data-bs-slide="prev">
@@ -51,4 +60,3 @@
     </button>
   </div>
 </section>
-

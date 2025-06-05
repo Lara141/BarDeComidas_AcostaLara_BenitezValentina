@@ -430,7 +430,7 @@
             <!-- Ícono de carrito -->
       <a href="#" class="nav-link">
         <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
-      </a> <img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
+      </a> 
           </button>
           <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreSalta6">Ver ingredientes</button>
           <div class="collapse mt-2" id="ingreSalta6">
@@ -453,8 +453,8 @@
              <!-- Ícono de carrito -->
       <a href="#" class="nav-link">
         <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
-      </a><img src="assets/Img/carrito.jpg" alt="Carrito" style="width: 30px; height: 30px;">
-          </button>
+      </a>
+    </button>
           <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreSalta7">Ver ingredientes</button>
           <div class="collapse mt-2" id="ingreSalta7">
             <p class="small text-muted">Arroz, carne, cebolla, condimentos, zanahoria, caldo, aceite.</p>

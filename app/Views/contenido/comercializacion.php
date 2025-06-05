@@ -118,9 +118,6 @@
          </div>
        </div>
        
-
-
-
     <!-- Sección de Medios de Entrega -->
     <h2 class="text-info fw-bold mb-2">MEDIOS DE ENTREGA</h2>
 
@@ -128,7 +125,7 @@
     <div class="col-md-3">
       <div class="promo-card rounded-circle overflow-hidden" style="width: 200px; height: 200px;">
         <a data-bs-toggle="modal" data-bs-target="#modalEntrega1">
-          <img src="assets/img/rlocal.jpg" alt="Retiro en Local" class="promo-img w-100 h-auto">
+          <img src="assets/img/rlocal.jpg" alt="Retiro en Local" class="promo-img w-100 h-100 object-fit-cover">
         </a>
       </div>
     </div>
@@ -137,10 +134,11 @@
     <div class="col-md-3">
       <div class="promo-card rounded-circle overflow-hidden" style="width: 200px; height: 200px;">
         <a data-bs-toggle="modal" data-bs-target="#modalEntrega2">
-          <img src="assets/img/delivery.jpg" alt="Delivery" class="promo-img w-100 h-auto">
+          <img src="assets/img/delivery.jpg" alt="Delivery" class="promo-img w-100 h-100 object-fit-cover">
         </a>
       </div>
     </div>
+
   </div>
 </div>
 
