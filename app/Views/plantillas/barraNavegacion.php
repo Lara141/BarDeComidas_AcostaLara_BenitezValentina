@@ -68,6 +68,9 @@
             <a class="nav-link" href="<?= base_url('/catalogo_producto') ?>">Catálogo</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="<?= base_url('/ver_carrito') ?>">Ver carrito</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="<?= base_url('/miCuenta') ?>">Mi cuenta</a>
           </li>
         <?php endif; ?>
