@@ -23,7 +23,7 @@ class Sesion_controller extends BaseController
         $modelo = new \App\Models\UserModel();
         $usuario = $modelo->where('correo_persona', $correo)->first();
 
-        if ($usuario && password_verify($pass, $usuario['contraseña_persona'])) {
+        if ($usuario && password_verify($pass, $usuario['contrasenia_persona'])) {
             $session->set([
                 'id_usuario' => $usuario['id_persona'],
                 'nombre'     => $usuario['nombre_persona'],

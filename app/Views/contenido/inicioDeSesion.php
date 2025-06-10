@@ -18,7 +18,7 @@
 
   <h2 class="mb-4 fw-bold">Iniciar sesión</h2>
 
-  <form action="<?= base_url('verificar_login') ?>" method="POST" id="loginForm">
+  <form action="verificar_login" method="POST" id="loginForm">
 
   <div class="mb-3">
     <label for="email" class="form-label text-uppercase small">Email</label>
