@@ -72,4 +72,6 @@ class Consulta_controller extends BaseController
             . view('contenido/contacto')
             . view('plantillas/piePagina');
     }
+
+    
 }
