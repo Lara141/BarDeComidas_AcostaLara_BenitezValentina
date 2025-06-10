@@ -45,5 +45,11 @@ $routes->get('productos', 'producto_controller::listar_producto');
 $routes->get('ver_carrito', 'Carrito_controller::ver_carrito');
 $routes->post('add_cart', 'Carrito_controller: :agregar_carrito');
 
+<<<<<<< HEAD
 //consultas
 $routes->get('listar_consulta', 'Consulta_controller::listar_consultas');
+=======
+$routes->get('eliminar_item/(:any)', 'Carrito_controller::borrar/$1');
+$routes->get('vaciar_carrito/(:any)', 'Carrito_controller::borrar/$1');
+
+>>>>>>> 532b3235bb3baf0efb3d2d5e5873d1bdb439d674

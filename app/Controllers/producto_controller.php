@@ -184,6 +184,7 @@ $request=\Config\Services::request();
 
 }
 
+
 function listar_productos(){
     $producto_model= new producto_model();
     $data['productos']= $producto_model->where('estado_producto', 1)->where('stock_producto>', 0)->join('categoria_producto', 'categoria_producto.categoria_id=producto.categoria_id')->findAll();
@@ -191,6 +192,7 @@ function listar_productos(){
     return view('plantillas/encabezado', $data).view('plantilla/barraNavegacion').view('contenido/catalogo_producto');
 }
 
+<<<<<<< HEAD
 public function listar_consultas()
 {
     $consultaModel = new \App\Models\consulta_model();
@@ -203,3 +205,23 @@ public function listar_consultas()
 }
 
 }
+=======
+public function eliminar_producto($id=null){
+    //se actualiza el estado del producto
+    $data=array('estado_producto'=>'0');
+    $producto= new producto_model();
+    $producto->update($id, $data);
+    return redirect()-> route('gestionar');
+
+}
+
+public function activar_producto($id=null){
+    //se actualiza el estado del producto
+    $data=array('estado_producto'=>'1');
+    $producto= new producto_model();
+    $producto->update($id, $data);
+    return redirect()-> route('gestionar');
+}
+
+}
+>>>>>>> 532b3235bb3baf0efb3d2d5e5873d1bdb439d674
