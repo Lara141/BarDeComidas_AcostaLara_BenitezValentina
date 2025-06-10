@@ -44,3 +44,6 @@ $routes->get('productos', 'producto_controller::listar_producto');
 //carrito
 $routes->get('ver_carrito', 'Carrito_controller::ver_carrito');
 $routes->post('add_cart', 'Carrito_controller: :agregar_carrito');
+
+//consultas
+$routes->get('listar_consulta', 'Consulta_controller::listar_consultas');

@@ -191,4 +191,15 @@ function listar_productos(){
     return view('plantillas/encabezado', $data).view('plantilla/barraNavegacion').view('contenido/catalogo_producto');
 }
 
+public function listar_consultas()
+{
+    $consultaModel = new \App\Models\consulta_model();
+    $data['consultas'] = $consultaModel->findAll();
+    $data['titulo'] = 'Listado de Consultas';
+
+    return view('administrador/encabezado_admin', $data)
+        . view('administrador/barraNav_admin')
+        . view('administrador/listar_consulta', $data);
+}
+
 }
