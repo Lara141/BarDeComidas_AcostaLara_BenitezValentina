@@ -44,3 +44,7 @@ $routes->get('productos', 'producto_controller::listar_producto');
 //carrito
 $routes->get('ver_carrito', 'Carrito_controller::ver_carrito');
 $routes->post('add_cart', 'Carrito_controller: :agregar_carrito');
+
+$routes->get('eliminar_item/(:any)', 'Carrito_controller::borrar/$1');
+$routes->get('vaciar_carrito/(:any)', 'Carrito_controller::borrar/$1');
+
