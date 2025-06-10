@@ -1,12 +1,4 @@
 
-<!-- style>
-  .navbar {
-    background-image: url('assets/img/');/*buscar imagen de bandera*/
-    background-size: cover;         /* Ajusta la imagen para cubrir todo el nav */
-    background-position: center;    /* Centra la imagen */
-    background-repeat: no-repeat;   /* No repite la imagen */
-  }
-</style-->
 
 <?php $session = session(); ?>
 
@@ -62,6 +54,16 @@
           <a class="nav-link" href="<?= base_url('terminoUso') ?>">Términos y Uso</a>
         </li>
        
+        <!-- Ítems adicionales para visitante -->
+        <?php if (!$session->get('logueado')): ?>
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('inicioSesion') ?>">Iniciar sesión</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('registro') ?>">Registrarse</a>
+            </li>
+        <?php endif; ?>
+
         <!-- Ítems adicionales para cliente -->
         <?php if ($session->get('perfil') == 2): ?>
           <li class="nav-item">
