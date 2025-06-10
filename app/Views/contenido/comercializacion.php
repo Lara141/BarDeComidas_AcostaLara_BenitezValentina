@@ -28,7 +28,7 @@
     <div class="col-md-3">
       <div class="promo-card">
         <div class="promo-header">LUNES Y MIÉRCOLES</div>
-        <img src="assets/img/naranjax.jpg" alt="Naranja X" class="promo-img">
+        <img src="assets/img/nx.png" alt="Naranja X" class="promo-img">
         <div class="text-info fw-bold mb-2">EN Z</div>
         <button class="btn promo-btn mb-2" data-bs-toggle="modal" data-bs-target="#modalPromo3">Más información</button>
       </div>
@@ -56,7 +56,7 @@
     <!-- Tarjeta 3 -->
     <div class="col-md-3">
       <div class="promo-card">
-        <img src="assets/img/naranjax.jpg" alt="Naranja X" class="promo-img">
+        <img src="assets/img/nx.png" alt="Naranja X" class="promo-img">
         <button class="btn promo-btn mb-2" data-bs-toggle="modal" data-bs-target="#modalPago3">Más información</button>
       </div>
     </div>
@@ -125,7 +125,7 @@
     <div class="col-md-3">
       <div class="promo-card rounded-circle overflow-hidden" style="width: 200px; height: 200px;">
         <a data-bs-toggle="modal" data-bs-target="#modalEntrega1">
-          <img src="assets/img/rlocal.jpg" alt="Retiro en Local" class="promo-img w-100 h-100 object-fit-cover">
+          <img src="assets/img/rlocal.png" alt="Retiro en Local" class="promo-img w-100 h-100 object-fit-cover">
         </a>
       </div>
     </div>
@@ -134,7 +134,7 @@
     <div class="col-md-3">
       <div class="promo-card rounded-circle overflow-hidden" style="width: 200px; height: 200px;">
         <a data-bs-toggle="modal" data-bs-target="#modalEntrega2">
-          <img src="assets/img/delivery.jpg" alt="Delivery" class="promo-img w-100 h-100 object-fit-cover">
+          <img src="assets/img/delivery.png" alt="Delivery" class="promo-img w-100 h-100 object-fit-cover">
         </a>
       </div>
     </div>

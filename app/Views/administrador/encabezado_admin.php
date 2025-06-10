@@ -15,12 +15,15 @@
 <!-- Encabezado -->
 <header style="height: 27px;">
   <div class="container-header d-flex flex-column align-items-center"  >
-  <a class="nav-link active" aria-current="page" href="#"><img src="assets/img/Adm.jpg" alt="Logo del Bar" style="width: 120px; height: auto;">  
+  <a class="nav-link active" aria-current="page" href="#"><img src="assets/img/Adm.png" alt="Logo del Bar" style="width: 120px; height: auto;">  
 </a>
 
   </div>
 </header>
 
 <section class="mt-5 pt-5">
-  <p class="text-center fw-bold">Bienvenid@ administrador/a</p>
+  <div class="text-center">
+    <h2 class="fw-bold text-dark"><i class="fa-solid fa-user-shield"></i> Panel de Administración</h2>
+
+  </div>
 </section>

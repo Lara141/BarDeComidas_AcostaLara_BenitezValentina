@@ -58,7 +58,7 @@ class Usuarios_controller extends BaseController
                 'nacimiento_persona' => $request->getPost('nacimiento'),
                 'dni_persona'        => $request->getPost('dni'),
                 'correo_persona'     => $request->getPost('correo'),
-                'contraseña_persona' => password_hash($request->getPost('pass'), PASSWORD_BCRYPT),
+                'contrasenia_persona' => password_hash($request->getPost('pass'), PASSWORD_BCRYPT),
                 'id_perfil'          => 2,
                 'id_estado_persona'  => 1,
             ];

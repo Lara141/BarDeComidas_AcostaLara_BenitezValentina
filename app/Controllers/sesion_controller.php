@@ -23,7 +23,7 @@ class Sesion_controller extends BaseController
         $modelo = new \App\Models\UserModel();
         $usuario = $modelo->where('correo_persona', $correo)->first();
 
-        if ($usuario && password_verify($pass, $usuario['contraseña_persona'])) {
+        if ($usuario && password_verify($pass, $usuario['contrasenia_persona'])) {
             $session->set([
                 'id_usuario' => $usuario['id_persona'],
                 'nombre'     => $usuario['nombre_persona'],
@@ -36,7 +36,7 @@ class Sesion_controller extends BaseController
             if ($usuario['id_perfil'] == 1) {
                 return redirect()->to('/admin');
             } elseif ($usuario['id_perfil'] == 2) {
-                return redirect()->to('/cliente');
+                return redirect()->to('/');
             } else {
                 return redirect()->to('/');
             }

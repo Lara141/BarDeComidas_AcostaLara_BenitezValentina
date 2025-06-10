@@ -3,7 +3,7 @@ namespace App\Controllers;
 use App\Models\producto_model;
 use App\Models\Categoria_Model;
 
-class producto_controller extends BaseController{
+class producto_controller extends BaseController {
 
     public function form_agregar_producto(){
         $categoria= new Categoria_Model();
@@ -62,7 +62,7 @@ class producto_controller extends BaseController{
     if($validation->withRequest($request)->run()){
     $img=$this->request->getFile('imagen');
     $nombre_aleatorio = $img->getRandomName();
-    $img->move(ROOTPATH.'public/asset/upload', $nombre_aleatorio);
+    $img->move(ROOTPATH.'asset/upload', $nombre_aleatorio);
 
     $data =[
 
@@ -81,23 +81,28 @@ class producto_controller extends BaseController{
     return redirect()->route('agregar_producto')->with('mensaje', 'el producto se registro correctamente!');
 
     }else{
-    $categoria=new Categoria_model();
-    $data['validation']= $validation->getErrors();
-    $data['categorias']=$categoria->findAll();
-    $data['titulo']='agregar producto';
+        $categoria=new Categoria_model();
+        $data['validation']= $validation->getErrors();
+        $data['categorias']=$categoria->findAll();
+        $data['titulo']='agregar producto';
 
-    return view('administrador/encabezado_admin',$data).view('administrador/barraNav_admin').view('administrador/agregar_producto');
-
+        return view('administrador/encabezado_admin',$data).view('administrador/barraNav_admin').view('administrador/agregar_producto');
     }
 
+ }
+
+    function gestionar_producto(){
+        $producto_model = new producto_model();
+        $categoria = new Categoria_Model();
+
+        $data['producto'] = $producto_model->join(
+            'categoria_producto',
+            'categoria_producto.categoria_id = producto.categoria_id'
+        )->findAll();
+        $data['titulo'] = 'listar productos';
+
+        return view('administrador/encabezado_admin', $data)
+            .view('administrador/barraNav_admin')
+            .view('administrador/listar_producto');
+    }
 }
-
-//function gestionar_producto(){
-  //  $producto_model= new peoducto_model();
-   // $categoria=new Categoria_Model();
-
-    //$data['producto']= producto_model->join('producto_categoria','producto_categoria.categoria_id=producto.producto_categoria')->findAll();
-    //$data['titulo']='listar productos';
-
-    //return view('administrador/encabezado_admin',$data).view('administrador/barraNav_admin
-//}
