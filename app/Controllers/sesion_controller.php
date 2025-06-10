@@ -36,7 +36,7 @@ class Sesion_controller extends BaseController
             if ($usuario['id_perfil'] == 1) {
                 return redirect()->to('/admin');
             } elseif ($usuario['id_perfil'] == 2) {
-                return redirect()->to('/cliente');
+                return redirect()->to('/');
             } else {
                 return redirect()->to('/');
             }

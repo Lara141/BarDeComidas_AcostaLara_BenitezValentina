@@ -3,7 +3,7 @@ namespace App\Controllers;
 use App\Models\producto_model;
 use App\Models\Categoria_Model;
 
-class producto_controller extends BaseController{
+class producto_controller extends BaseController {
 
     public function form_agregar_producto(){
         $categoria= new Categoria_Model();
@@ -62,7 +62,7 @@ class producto_controller extends BaseController{
     if($validation->withRequest($request)->run()){
     $img=$this->request->getFile('imagen');
     $nombre_aleatorio = $img->getRandomName();
-    $img->move(ROOTPATH.'public/asset/upload', $nombre_aleatorio);
+    $img->move(ROOTPATH.'asset/upload', $nombre_aleatorio);
 
     $data =[
 
@@ -81,16 +81,15 @@ class producto_controller extends BaseController{
     return redirect()->route('agregar_producto')->with('mensaje', 'el producto se registro correctamente!');
 
     }else{
-    $categoria=new Categoria_model();
-    $data['validation']= $validation->getErrors();
-    $data['categorias']=$categoria->findAll();
-    $data['titulo']='agregar producto';
+        $categoria=new Categoria_model();
+        $data['validation']= $validation->getErrors();
+        $data['categorias']=$categoria->findAll();
+        $data['titulo']='agregar producto';
 
-    return view('administrador/encabezado_admin',$data).view('administrador/barraNav_admin').view('administrador/agregar_producto');
-
+        return view('administrador/encabezado_admin',$data).view('administrador/barraNav_admin').view('administrador/agregar_producto');
     }
 
-}
+ }
 
 function gestionar_producto(){
    $producto_model= new peoducto_model();

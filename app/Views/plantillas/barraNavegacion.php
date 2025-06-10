@@ -23,7 +23,7 @@
 
       <?php elseif ($session->get('perfil') == 2): ?>
         <!-- CLIENTE REGISTRADO -->
-        <a class="nav-link" href="<?= base_url('/carrito') ?>">
+        <a class="nav-link" href="<?= base_url('/ver_carrito') ?>">
           <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
         </a>
         <span class="nav-link"><?= esc($session->get('nombre')) ?></span>

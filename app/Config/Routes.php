@@ -18,7 +18,7 @@ $routes->post('verificar_login', 'Sesion_controller::verificar_login');
 $routes->get('registro', 'Home::registro'); // o Sesion_controller::registro preguntar a lara si lo movemos
 
 $routes->get('admin', 'Sesion_controller::admin');
-$routes->get('cliente', 'Sesion_controller::cliente');
+//$routes->get('cliente', 'Sesion_controller::cliente');
 $routes->get('salir', 'Sesion_controller::salir');
 
 $routes->post('registro_usuario', 'Usuarios_controller::add_cliente');
@@ -38,3 +38,7 @@ $routes->post('actualizar', 'producto_controller:actualizar_producto');
 
 $routes->get('eliminar/(:num)', 'producto_controller::eliminar_producto/$1');
 $routes->get('activar/(:num)', 'producto_controller::activar_producto/$1');
+
+//carrito
+$routes->get('ver_carrito', 'Carrito_controller::ver_carrito');
+$routes->post('add_cart', 'Carrito_controller: :agregar_carrito');

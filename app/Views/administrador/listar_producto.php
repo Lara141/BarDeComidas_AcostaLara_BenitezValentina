@@ -1,47 +1,59 @@
-<h1 class="text-center">Listado de productos</h1>
-<div class="container">
-    <tablev id="mytable" class="table table-bordered border-info-subtle">
-  
-    <thead class="table-info">
-      <th scope="col">Nombre</th>
-      <th scope="col">Precio</th>
-      <th scope="col">Descripcion</th>
-      <th scope="col">Estado</th>
-      <th scope="col">Stock</th>
-      <th scope="col">Categoria</th>
-      <th scope="col">Imagen</th>
-      <th scope="col">Activar/Eliminar</th>
-    </thead>
-  
-  <tbody>
-    <?php foreach($producto as $row){?>
-    <tr>
-      <td><?php echo $row['nombre_producto'];?></td>
-        <td><?php echo $row['precio_producto'];?></td>
-        <td><?php echo $row['descripcion_producto'];?></td>
-        <td><?php echo $row['estado_producto'];?></td>
-        <td><?php echo $row['stock_producto'];?></td>
-        <td><?php echo $row['categoria_desc'];?></td>
-        <td><img src="<?php echo base_url('public/assets/uploads/'.$row['imagen_producto']);?>" alt="Imagen del producto" width="100"></td>
-<td>
-    <a class="btn btn-success" href="<?php echo base_url('producto_controller/editar_producto/'.$row['id_producto']);?>">Editar</a>
-</td>
+<div class="text-center mb-4">
+  <span class="fw-bold text-white px-4 py-2 rounded" style="background-color:rgb(49, 144, 163); display: inline-block; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+    Listado de productos
+  </span>
+</div>
 
-<?php
-if($row['estado_producto'] == 1)
-{?>
-<td>
-    <a class="btn btn-danger" href="<?php echo base_url('producto_controller/eliminar_producto/'.$row['id_producto']);?>">Eliminar</a>
-</td>
-<?php } else {
-     ?>
-     <td>
-        <a class="btn btn-danger" href="<?php echo base_url('producto_controller/activar_producto/'.$row['id_producto']);?>">Activar</a>
-     </td>
-     <?php } ?>
-    </tr>
-    <?php } ?>
-  </tbody>
-</table>
-
+<div class="container my-5" style="max-width: 1000px;">
+  <div class="table-responsive shadow rounded-4">
+    <table id="mytable" class="table table-bordered border-info-subtle align-middle mb-0">
+      <thead class="table-info text-center">
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">Precio</th>
+          <th scope="col">Descripción</th>
+          <th scope="col">Estado</th>
+          <th scope="col">Stock</th>
+          <th scope="col">Categoría</th>
+          <th scope="col">Imagen</th>
+          <th scope="col">Editar</th>
+          <th scope="col">Activar/Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php foreach($producto as $row){?>
+          <tr>
+            <td><?php echo $row['nombre_producto'];?></td>
+            <td>$<?php echo $row['precio_producto'];?></td>
+            <td><?php echo $row['descripcion_producto'];?></td>
+            <td><?php echo $row['estado_producto'] == 1 ? 'Activo' : 'Inactivo'; ?></td>
+            <td><?php echo $row['stock_producto'];?></td>
+            <td><?php echo $row['categoria_desc'];?></td>
+            <td>
+              <img src="<?php echo base_url('assets/upload/'.$row['imagen_producto']);?>" 
+                   alt="Imagen del producto" 
+                   class="img-thumbnail rounded" 
+                   style="max-width: 100px;">
+            </td>
+            <td>
+              <a class="btn btn-sm btn-success" href="<?php echo base_url('producto_controller/editar_producto/'.$row['id_producto']);?>">
+                Editar
+              </a>
+            </td>
+            <td>
+              <?php if($row['estado_producto'] == 1) { ?>
+                <a class="btn btn-sm btn-danger" href="<?php echo base_url('producto_controller/eliminar_producto/'.$row['id_producto']);?>">
+                  Eliminar
+                </a>
+              <?php } else { ?>
+                <a class="btn btn-sm btn-primary" href="<?php echo base_url('producto_controller/activar_producto/'.$row['id_producto']);?>">
+                  Activar
+                </a>
+              <?php } ?>
+            </td>
+          </tr>
+        <?php } ?>
+      </tbody>
+    </table>
+  </div>
 </div>

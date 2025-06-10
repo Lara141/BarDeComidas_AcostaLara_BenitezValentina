@@ -39,10 +39,10 @@
   <div class="text-danger"><?= $validation['pass'] ?></div>
 <?php endif; ?>
   </div>
-
+<!--
   <div class="mb-3 text-end">
     <a href="#" style="color: #007BFF; text-decoration: none;">¿Olvidaste tu contraseña?</a>
-  </div>
+  </div-->
 
   <button type="submit" class="btn btn-dark w-100 py-2" >INICIAR SESIÓN</button>
 

@@ -30,7 +30,7 @@
           <a class="nav-link" href="<?= base_url('/listarVentas') ?>">Ver consultas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?= base_url('/listarProductos') ?>">Listar productos</a>
+          <a class="nav-link" href="<?= base_url('/gestionar') ?>">Listar productos</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="<?= base_url('/listarVentas') ?>">Listar ventas</a>
