@@ -41,12 +41,8 @@ class Autoload extends AutoloadConfig
      */
     public $psr4 = [
         APP_NAMESPACE => APPPATH,
-<<<<<<< HEAD
+        'Config'      => APPPATH . 'Config',
         'CodelgniterCart' => ROOTPATH.'Cart/src',
-=======
-        'Config' => APPPATH.'Config',
-        'CodeIgniterCart' => ROOTPATH.'Cart/src',
->>>>>>> 510c92b23c567a9732f04c7adb88cc7629e34d76
     ];
 
     /**
