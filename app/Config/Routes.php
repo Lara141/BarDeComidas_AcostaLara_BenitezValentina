@@ -38,6 +38,8 @@ $routes->post('actualizar', 'producto_controller:actualizar_producto');
 
 $routes->get('eliminar/(:num)', 'producto_controller::eliminar_producto/$1');
 $routes->get('activar/(:num)', 'producto_controller::activar_producto/$1');
+//catalogo
+$routes->get('productos', 'producto_controller::listar_producto');
 
 //carrito
 $routes->get('ver_carrito', 'Carrito_controller::ver_carrito');
