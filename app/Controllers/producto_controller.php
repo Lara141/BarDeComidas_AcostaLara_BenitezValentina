@@ -62,7 +62,7 @@ class producto_controller extends BaseController {
     if($validation->withRequest($request)->run()){
     $img=$this->request->getFile('imagen');
     $nombre_aleatorio = $img->getRandomName();
-    $img->move(ROOTPATH.'asset/upload', $nombre_aleatorio);
+    $img->move(ROOTPATH.'assets/upload/', $nombre_aleatorio);
 
     $data =[
 
@@ -92,10 +92,10 @@ class producto_controller extends BaseController {
  }
 
 function gestionar_producto(){
-   $producto_model= new peoducto_model();
+   $producto_model= new producto_model();
    $categoria=new Categoria_Model();
 
-    $data['producto']= producto_model->join('producto_categoria','producto_categoria.categoria_id=producto.producto_categoria')->findAll();
+    $data['producto']= $producto_model->join('categoria_producto','categoria_producto.categoria_id=producto.categoria_id')->findAll();
     $data['titulo']='listar productos';
 
     return view('administrador/encabezado_admin',$data).view('administrador/barraNav_admin').view('administrador/listar_producto');
@@ -186,7 +186,7 @@ $request=\Config\Services::request();
 
 function listar_productos(){
     $producto_model= new producto_model();
-    $data['productos']= $producto_model->where('estado_producto', 1)->where('stock_producto>', 0)->join('categoria_id', 'categoria_id.categoria_id=producto.categoria_id')->findAll();
+    $data['productos']= $producto_model->where('estado_producto', 1)->where('stock_producto>', 0)->join('categoria_producto', 'categoria_producto.categoria_id=producto.categoria_id')->findAll();
     $data['titulo']='catalogo de productos';
     return view('plantillas/encabezado', $data).view('plantilla/barraNavegacion').view('contenido/catalogo_producto');
 }
