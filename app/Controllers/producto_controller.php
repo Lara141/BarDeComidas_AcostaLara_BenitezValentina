@@ -91,18 +91,30 @@ class producto_controller extends BaseController {
 
  }
 
-    function gestionar_producto(){
-        $producto_model = new producto_model();
-        $categoria = new Categoria_Model();
+function gestionar_producto(){
+   $producto_model= new peoducto_model();
+   $categoria=new Categoria_Model();
 
-        $data['producto'] = $producto_model->join(
-            'categoria_producto',
-            'categoria_producto.categoria_id = producto.categoria_id'
-        )->findAll();
-        $data['titulo'] = 'listar productos';
+    $data['producto']= producto_model->join('producto_categoria','producto_categoria.categoria_id=producto.producto_categoria')->findAll();
+    $data['titulo']='listar productos';
 
-        return view('administrador/encabezado_admin', $data)
-            .view('administrador/barraNav_admin')
-            .view('administrador/listar_producto');
-    }
+    return view('administrador/encabezado_admin',$data).view('administrador/barraNav_admin').view('administrador/listar_producto');
+}
+
+function editar_producto($id=null){
+    $producto_model= new producto_model();
+    $categoria= new Categoria_model();
+    $data['cateogrias']=$categoria->findAll();
+    $data['producto']=$producto_model->where('producto_id', $id)->first();
+    $data['titulo']='edicion de producto';
+
+    return view('administrador/encabezado_admin', $data).view('administrador/barraNav_admin').view('administrador/editar_producto');
+}
+
+function actualizar_producto(){
+$request=\Config\Services::request();
+//validar los datos
+
+}
+
 }
