@@ -15,8 +15,9 @@
                                 <th>#</th>
                                 <th>Nombre</th>
                                 <th>Email</th>
+                                 <th>Provinica</th>
+                                <th>Localidad</th>
                                 <th>Mensaje</th>
-                                <th>Fecha</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -28,8 +29,10 @@
                                         <?= esc($consulta['apellido_consulta'] ?? '') ?>
                                     </td>
                                     <td><?= esc($consulta['correo_consulta'] ?? '') ?></td>
+                                    <td><?= esc($consulta['provincia_consulta'] ?? '') ?></td>
+                                    <td><?= esc($consulta['localidad_consulta'] ?? '') ?></td>
                                     <td><?= esc($consulta['mensaje_consulta'] ?? '') ?></td>
-                                    <td class="text-center"><?= esc($consulta['fecha_consulta'] ?? '') ?></td>
+                                    <!--td class="text-center"><?= esc($consulta['fecha_consulta'] ?? '') ?></td-->
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>

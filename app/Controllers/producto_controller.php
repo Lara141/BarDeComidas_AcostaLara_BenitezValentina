@@ -192,20 +192,6 @@ function listar_productos(){
     return view('plantillas/encabezado', $data).view('plantilla/barraNavegacion').view('contenido/catalogo_producto');
 }
 
-<<<<<<< HEAD
-public function listar_consultas()
-{
-    $consultaModel = new \App\Models\consulta_model();
-    $data['consultas'] = $consultaModel->findAll();
-    $data['titulo'] = 'Listado de Consultas';
-
-    return view('administrador/encabezado_admin', $data)
-        . view('administrador/barraNav_admin')
-        . view('administrador/listar_consulta', $data);
-}
-
-}
-=======
 public function eliminar_producto($id=null){
     //se actualiza el estado del producto
     $data=array('estado_producto'=>'0');
@@ -223,5 +209,5 @@ public function activar_producto($id=null){
     return redirect()-> route('gestionar');
 }
 
+
 }
->>>>>>> 532b3235bb3baf0efb3d2d5e5873d1bdb439d674
