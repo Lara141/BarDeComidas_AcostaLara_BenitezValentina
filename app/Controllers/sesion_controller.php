@@ -9,8 +9,13 @@ class Sesion_controller extends BaseController
         $data['titulo'] = 'Iniciar Sesión';
         return view('plantillas/encabezado', $data)
             . view('plantillas/barraNavegacion')
+<<<<<<< HEAD
             . view('contenido/inicioDeSesion');
             //. view('plantillas/piePagina');
+=======
+            . view('contenido/inicioDeSesion')
+            . view('plantillas/piePagina');
+>>>>>>> f31a14ba6ea5589a1c2043d74a6884046395f4c5
     }
 
     public function verificar_login()
@@ -36,7 +41,7 @@ class Sesion_controller extends BaseController
             if ($usuario['id_perfil'] == 1) {
                 return redirect()->to('/admin');
             } elseif ($usuario['id_perfil'] == 2) {
-                return redirect()->to('/');
+                return redirect()->to('/cliente');
             } else {
                 return redirect()->to('/');
             }
@@ -62,14 +67,14 @@ class Sesion_controller extends BaseController
         $data['titulo'] = "Cliente";
         return view('plantillas/encabezado', $data)
             . view('plantillas/barraNavegacion')
-            . view('contenido/cliente')
+            . view('contenido/principal')
             . view('plantillas/piePagina');
     }
 
     public function salir()
     {
         session()->destroy();
-        return redirect()->to('/inicioSesion');
+        return redirect()->to('/inicioDeSesion');
     }
 
     public function mi_cuenta() {
