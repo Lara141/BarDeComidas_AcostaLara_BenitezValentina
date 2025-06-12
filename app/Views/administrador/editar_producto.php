@@ -25,16 +25,15 @@
 <div class="form-group">
     <label for="categoria">Categoria</label>
     <?php
-    $lista['0']='seleccione categoria';
-    foreach($categorias as $row){
-        $producto[$row['categoria_id']]=$row['categoria_desc'];
-
+    $lista = ['' => 'Seleccione una categoría'];
+    foreach($categoria as $row){
+        $lista[$row['categoria_id']] = $row['categoria_desc'];
     }
-    $sel=$producto['producto_categoria'];
-    echo form_dropdown('categoria', $lista, $sel, 'class="form-control"');?>
-
-
+    $sel = $producto['categoria_id']; // Asegúrate que este campo exista en tu array $producto
+    echo form_dropdown('categoria', $lista, $sel, 'class="form-control"');
+    ?>
 </div>
+
 <?php echo form_hidden('id', $producto['producto_id']);?>
 <div class="form-group">
     <?php echo form_submit('Modificar', 'Modificar', "class='btn btn-success'");?>

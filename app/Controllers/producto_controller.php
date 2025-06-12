@@ -104,7 +104,7 @@ function gestionar_producto(){
 function editar_producto($id=null){
     $producto_model= new producto_model();
     $categoria= new Categoria_model();
-    $data['cateogrias']=$categoria->findAll();
+    $data['categorias']=$categoria->findAll();
     $data['producto']=$producto_model->where('id_producto', $id)->first();
     $data['titulo']='edicion de producto';
 
