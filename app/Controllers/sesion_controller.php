@@ -9,7 +9,7 @@ class Sesion_controller extends BaseController
         $data['titulo'] = 'Iniciar Sesión';
         return view('plantillas/encabezado', $data)
             . view('plantillas/barraNavegacion')
-            . view('contenido/inicioAnimacion')
+            . view('contenido/inicioDeSesion')
             . view('plantillas/piePagina');
     }
 
@@ -36,7 +36,7 @@ class Sesion_controller extends BaseController
             if ($usuario['id_perfil'] == 1) {
                 return redirect()->to('/admin');
             } elseif ($usuario['id_perfil'] == 2) {
-                return redirect()->to('/');
+                return redirect()->to('/cliente');
             } else {
                 return redirect()->to('/');
             }
@@ -62,13 +62,13 @@ class Sesion_controller extends BaseController
         $data['titulo'] = "Cliente";
         return view('plantillas/encabezado', $data)
             . view('plantillas/barraNavegacion')
-            . view('contenido/cliente')
+            . view('contenido/principal')
             . view('plantillas/piePagina');
     }
 
     public function salir()
     {
         session()->destroy();
-        return redirect()->to('/inicioSesion');
+        return redirect()->to('/inicioDeSesion');
     }
 }

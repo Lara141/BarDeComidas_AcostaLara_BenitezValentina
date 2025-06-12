@@ -13,7 +13,7 @@ $routes->get('comercializacion', 'Home::comercio');
 $routes->get('terminoUso', 'Home::terminos');
 $routes->get('menuu', 'Home::menu'); //Preguntar a lara xq tenemos esto
 
-$routes->get('inicioSesion', 'Sesion_controller::login');
+$routes->get('inicioDeSesion', 'Sesion_controller::login');
 $routes->post('verificar_login', 'Sesion_controller::verificar_login');
 $routes->get('registro', 'Home::registro'); // o Sesion_controller::registro preguntar a lara si lo movemos
 
