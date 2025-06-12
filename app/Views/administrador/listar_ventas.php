@@ -1,0 +1,1 @@
+//aca lista tus ventas y agregar la descripcion a traves de un boton pero que despliegue una tarjeta o algo asi que muestre la descripcion.

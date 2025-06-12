@@ -9,8 +9,8 @@ class Sesion_controller extends BaseController
         $data['titulo'] = 'Iniciar Sesión';
         return view('plantillas/encabezado', $data)
             . view('plantillas/barraNavegacion')
-            . view('contenido/inicioAnimacion')
-            . view('plantillas/piePagina');
+            . view('contenido/inicioDeSesion');
+            //. view('plantillas/piePagina');
     }
 
     public function verificar_login()
@@ -45,7 +45,7 @@ class Sesion_controller extends BaseController
             $data['error'] = 'Correo o contraseña incorrectos';
             return view('plantillas/encabezado', $data)
                 . view('plantillas/barraNavegacion')
-                . view('contenido/inicioDeSesion')
+                . view('contenido/inicoAnimado')
                 . view('plantillas/piePagina');
         }
     }
