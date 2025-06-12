@@ -105,7 +105,7 @@ function editar_producto($id=null){
     $producto_model= new producto_model();
     $categoria= new Categoria_model();
     $data['cateogrias']=$categoria->findAll();
-    $data['producto']=$producto_model->where('producto_id', $id)->first();
+    $data['producto']=$producto_model->where('id_producto', $id)->first();
     $data['titulo']='edicion de producto';
 
     return view('administrador/encabezado_admin', $data).view('administrador/barraNav_admin').view('administrador/editar_producto');

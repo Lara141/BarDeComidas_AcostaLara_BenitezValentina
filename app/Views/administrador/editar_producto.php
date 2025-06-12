@@ -1,3 +1,4 @@
+<?php helper('form'); ?>
 <h1 class="text-center">Edicion de productos</h1>
 <div class="container">
     <div class="w-50 mx-auto">

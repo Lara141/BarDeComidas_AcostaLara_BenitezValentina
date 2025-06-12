@@ -36,18 +36,18 @@
                    style="max-width: 100px;">
             </td>
             <td>
-              <a class="btn btn-sm btn-success" href="<?php echo base_url('producto_controller/editar_producto/'.$row['id_producto']);?>">
-                Editar
+              <a class="btn btn-sm btn-success" href="<?php echo base_url('editar/'.$row['id_producto']);?>">
+               Editar
               </a>
             </td>
             <td>
               <?php if($row['estado_producto'] == 1) { ?>
-                <a class="btn btn-sm btn-danger" href="<?php echo base_url('producto_controller/eliminar_producto/'.$row['id_producto']);?>">
-                  Eliminar
+               <a class="btn btn-sm btn-danger" href="<?php echo base_url('eliminar/'.$row['id_producto']);?>">
+                Eliminar
                 </a>
               <?php } else { ?>
-                <a class="btn btn-sm btn-primary" href="<?php echo base_url('producto_controller/activar_producto/'.$row['id_producto']);?>">
-                  Activar
+                <a class="btn btn-sm btn-primary" href="<?php echo base_url('activar/'.$row['id_producto']);?>">
+                Activar
                 </a>
               <?php } ?>
             </td>
