@@ -22,6 +22,7 @@ $routes->get('admin', 'Sesion_controller::admin');
 $routes->get('salir', 'Sesion_controller::salir');
 
 $routes->post('registro_usuario', 'Usuarios_controller::add_cliente');
+$routes->get('mi_Cuenta', 'Sesion_controller::mi_cuenta');
 
 $routes->get('contacto', 'Consulta_controller::consulta');
 $routes->post('consulta', 'Consulta_controller::add_consulta');
@@ -50,3 +51,5 @@ $routes->get('listar_consulta', 'Consulta_controller::listar_consultas');
 
 
 $routes->get('catalogo_producto', 'producto_controller::listar_productos');
+
+$routes->get('ventas', 'Carrito_controller::guardar_venta');

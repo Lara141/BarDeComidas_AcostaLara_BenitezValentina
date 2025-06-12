@@ -71,4 +71,22 @@ class Sesion_controller extends BaseController
         session()->destroy();
         return redirect()->to('/inicioSesion');
     }
+
+    public function mi_cuenta() {
+    $usuario_id = session('id_usuario'); // o el campo de sesión que uses
+
+    // Modelo de usuario
+    $usuarioModel = new \App\Models\UserModel();
+    $data['usuario'] = $usuarioModel->find($usuario_id);
+
+    // Modelo de compras o pedidos
+    //$compraModel = new \App\Models\Compra_model(); 
+    //$data['compras'] = $compraModel->where('usuario_id', $usuario_id)->orderBy('fecha', 'DESC')->findAll();
+
+    $data['titulo'] = 'Mi cuenta';
+    return view('plantillas/encabezado', $data)
+         . view('plantillas/barraNavegacion')
+         . view('contenido/mi_cuenta', $data);
+}
+
 }
