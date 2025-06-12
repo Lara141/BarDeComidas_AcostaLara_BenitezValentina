@@ -209,4 +209,5 @@ public function activar_producto($id=null){
     return redirect()-> route('gestionar');
 }
 
+
 }

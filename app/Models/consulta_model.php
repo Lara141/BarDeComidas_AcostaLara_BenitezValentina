@@ -13,7 +13,7 @@ class consulta_model extends Model
 
     protected $returnType     = 'array';//tipo de dato que devuelve el modelo
     //protected $useTimestamps = false; true si se quiere usar timestamps
-    protected $useSoftDeletes = true;//true si se quiere usar soft deletes
+    protected $useSoftDeletes = false;//true si se quiere usar soft deletes
 
     protected $allowedFields = ['nombre_consulta', 'apellido_consulta', 'provincia_consulta', 'localidad_consulta', 'correo_consulta', 'mensaje_consulta']; //campos que se pueden insertar o actualizar en la base de datos (los mismos nombres que estan en la base de datos deben estar aca, excepto el que tiene la llavesita osea el id)
 

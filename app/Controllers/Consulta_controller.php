@@ -73,5 +73,14 @@ class Consulta_controller extends BaseController
             . view('plantillas/piePagina');
     }
 
-    
+    public function listar_consultas()
+    {
+        $consulta = new consulta_model();
+        $data['consultas'] = $consulta->findAll();
+        $data['titulo'] = 'Consultas';
+
+        return view('administrador/encabezado_admin', $data)
+            . view('administrador/barraNav_admin')
+            . view('administrador/listar_consulta');
+    }
 }
