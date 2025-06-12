@@ -9,7 +9,7 @@ class Sesion_controller extends BaseController
         $data['titulo'] = 'Iniciar Sesión';
         return view('plantillas/encabezado', $data)
             . view('plantillas/barraNavegacion')
-            . view('contenido/inicioDeSesion')
+            . view('contenido/inicioAnimacion')
             . view('plantillas/piePagina');
     }
 
