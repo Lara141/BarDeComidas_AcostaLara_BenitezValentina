@@ -37,17 +37,30 @@
             </td>
             <td>
               <a class="btn btn-sm btn-success" href="<?php echo base_url('editar/'.$row['id_producto']);?>">
+<<<<<<< HEAD
+                Editar
+=======
                Editar
+>>>>>>> 88553ba12d30c9cba8d332a51de0d73dfe392beb
               </a>
             </td>
             <td>
               <?php if($row['estado_producto'] == 1) { ?>
+<<<<<<< HEAD
+                <a class="btn btn-sm btn-danger" href="<?php echo base_url('eliminar/'.$row['id_producto']);?>">
+                  Eliminar
+                </a>
+              <?php } else { ?>
+                <a class="btn btn-sm btn-primary" href="<?php echo base_url('activar/'.$row['id_producto']);?>">
+                  Activar
+=======
                <a class="btn btn-sm btn-danger" href="<?php echo base_url('eliminar/'.$row['id_producto']);?>">
                 Eliminar
                 </a>
               <?php } else { ?>
                 <a class="btn btn-sm btn-primary" href="<?php echo base_url('activar/'.$row['id_producto']);?>">
                 Activar
+>>>>>>> 88553ba12d30c9cba8d332a51de0d73dfe392beb
                 </a>
               <?php } ?>
             </td>

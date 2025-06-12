@@ -73,7 +73,7 @@
             <a class="nav-link" href="<?= base_url('/ver_carrito') ?>">Ver carrito</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('/miCuenta') ?>">Mi cuenta</a>
+            <a class="nav-link" href="<?= base_url('/mi_Cuenta') ?>">Mi cuenta</a>
           </li>
         <?php endif; ?>
 
