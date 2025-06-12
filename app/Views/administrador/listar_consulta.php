@@ -1,5 +1,4 @@
 
-<!-- // filepath: app/Views/administrador/listar_consulta.php -->
 
 <div class="container my-5" style="max-width: 900px;">
     <div class="card shadow rounded-4">

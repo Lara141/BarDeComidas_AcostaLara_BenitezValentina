@@ -8,7 +8,9 @@
 
     <!-- Íconos alineados a la derecha -->
     <div class="d-flex align-items-center gap-3">
-      <span class="nav-link"><?= esc($session->get('nombre')) ?></span>
+      <span class="navbar-text fw-semibold">
+        Administrador: <span><?= esc($session->get('nombre')) ?></span>
+      </span>
       <a class="nav-link" href="<?= base_url('/salir') ?>">Salir</a>
 
       <!-- Botón hamburguesa -->

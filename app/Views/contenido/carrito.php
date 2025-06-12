@@ -2,7 +2,7 @@
 
 <h1 class="text-center">Carrito de compras</h1>
 
-<a href="productos" class="btn btn-success" role="button">Continuar comprando</a>
+<a href="catalogo_producto" class="btn btn-success" role="button">Continuar comprando</a>
 
 <?php if(!$cart || $cart->contents() == NULL) { ?>
     <h2 class="text-center">No hay productos en el carrito</h2>
