@@ -31,6 +31,7 @@ class Carrito_controller extends BaseController
             'price' => $request->getPost('precio'),
             'qty' => 1
         );
+
         $cart->insert($data);
     
         return redirect()->route('ver_carrito')->with('mensaje', 'Producto agregado al carrito');

@@ -1,6 +1,4 @@
 
-<!-- // filepath: app/Views/administrador/gestionar_producto.php -->
-
 <div class="container my-5" style="max-width: 1100px;">
     <div class="card shadow rounded-4">
         <div class="card-body">

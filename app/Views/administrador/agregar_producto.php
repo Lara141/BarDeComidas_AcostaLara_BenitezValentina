@@ -32,6 +32,7 @@
             <div class="mb-3">
                 <label for="precio" class="form-label">Precio</label>
                 <?= form_input(['name' => 'precio', 'id' => 'precio', 'class' => 'form-control', 'placeholder' => 'Ingrese precio del producto', 'value' => set_value('precio')]) ?>
+                
             </div>
 
             <div class="mb-3">

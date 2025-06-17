@@ -188,7 +188,7 @@ function listar_productos(){
     $producto_model= new producto_model();
     $data['productos']= $producto_model->where('estado_producto', 1)->where('stock_producto>', 0)->join('categoria_producto', 'categoria_producto.categoria_id=producto.categoria_id')->findAll();
     $data['titulo']='catalogo de productos';
-    return view('plantillas/encabezado', $data).view('plantillas/barraNavegacion').view('contenido/catalogo_producto');
+    return view('plantillas/encabezado', $data).view('plantillas/barraNavegacion').view('contenido/catalogo_producto', $data);
 }
 
 public function eliminar_producto($id=null){
