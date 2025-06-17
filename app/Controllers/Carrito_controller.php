@@ -31,6 +31,7 @@ class Carrito_controller extends BaseController
             'price' => $request->getPost('precio'),
             'qty' => 1
         );
+
         $cart->insert($data);
     
         return redirect()->route('ver_carrito')->with('mensaje', 'Producto agregado al carrito');
@@ -95,7 +96,7 @@ $builder->join('ventas', 'ventas.id_venta = detalle_venta.id_venta');
 $builder->orderBy('ventas.fecha_venta', 'DESC');
 $query = $builder->get();
 $data['producto'] = $query->getResultArray();
-return view('administrador/encabezado_admin', $data).view('administrador/barraNav_admin');//.view('contenido/catalogo_producto', $data);
+return view('administrador/encabezado_admin', $data).view('administrador/barraNav_admin').view('administrador/listar_ventas');//.view('contenido/catalogo_producto', $data);
     
 
 }
