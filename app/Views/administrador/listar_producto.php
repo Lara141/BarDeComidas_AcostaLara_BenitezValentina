@@ -1,8 +1,8 @@
-<div class="text-center mb-4">
-  <span class="fw-bold text-white px-4 py-2 rounded" style="background-color:rgb(49, 144, 163); display: inline-block; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<!--div class="text-center mb-5">
+  <div class="d-inline-block px-5 py-3 rounded-pill shadow" style="background: linear-gradient(90deg, #3190A3, #42B8C9); color: white; font-size: 1.5rem; font-weight: bold; letter-spacing: 1px;">
     Listado de productos
-  </span>
-</div>
+  </div>
+</div-->
 
 <div class="container my-5" style="max-width: 1000px;">
   <div class="table-responsive shadow rounded-4">
@@ -37,30 +37,17 @@
             </td>
             <td>
               <a class="btn btn-sm btn-success" href="<?php echo base_url('editar/'.$row['id_producto']);?>">
-<<<<<<< HEAD
                 Editar
-=======
-               Editar
->>>>>>> 88553ba12d30c9cba8d332a51de0d73dfe392beb
               </a>
             </td>
             <td>
               <?php if($row['estado_producto'] == 1) { ?>
-<<<<<<< HEAD
-                <a class="btn btn-sm btn-danger" href="<?php echo base_url('eliminar/'.$row['id_producto']);?>">
-                  Eliminar
-                </a>
-              <?php } else { ?>
-                <a class="btn btn-sm btn-primary" href="<?php echo base_url('activar/'.$row['id_producto']);?>">
-                  Activar
-=======
                <a class="btn btn-sm btn-danger" href="<?php echo base_url('eliminar/'.$row['id_producto']);?>">
                 Eliminar
                 </a>
               <?php } else { ?>
                 <a class="btn btn-sm btn-primary" href="<?php echo base_url('activar/'.$row['id_producto']);?>">
                 Activar
->>>>>>> 88553ba12d30c9cba8d332a51de0d73dfe392beb
                 </a>
               <?php } ?>
             </td>

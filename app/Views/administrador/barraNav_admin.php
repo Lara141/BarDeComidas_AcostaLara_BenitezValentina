@@ -41,7 +41,7 @@
           <a class="nav-link" href="<?= base_url('agregar_producto') ?>">Registrar producto</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?= base_url('/gestionar_producto') ?>">Gestionar productos</a>
+          <a class="nav-link" href="<?= base_url('/producto') ?>">Gestionar productos</a>
         </li>
       </ul>
     </div>

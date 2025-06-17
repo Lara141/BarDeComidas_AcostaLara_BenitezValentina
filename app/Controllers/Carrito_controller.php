@@ -2,8 +2,11 @@
 
 namespace App\Controllers;
 
-use App\Models\Libro_model;
+use App\Models\Producto_model;
 use App\Models\Categoria_Model;
+use App\Models\Venta_Model;
+use App\Models\Detalle_Venta_Model;
+
 
 class Carrito_controller extends BaseController
 {
@@ -14,14 +17,13 @@ class Carrito_controller extends BaseController
 
         return view('plantillas/encabezado', $data)
             . view('plantillas/barraNavegacion')
-            . view('contenido/carrito')
+            . view('contenido/carrito', ['cart' => $cart])
             . view('plantillas/piePagina');
     }
 
-
     public function agregar_carrito()
     {
-        $cart=\Config\Services::cart();
+        $cart = \Config\Services::cart();
         $request = \Config\Services::request();
         $data = array(
             'id' => $request->getPost('id'),
@@ -30,57 +32,55 @@ class Carrito_controller extends BaseController
             'qty' => 1
         );
         $cart->insert($data);
-         //mensaje de que se agrego al carrito
-        return redirect()->route('ver_carrito');
+    
+        return redirect()->route('ver_carrito')->with('mensaje', 'Producto agregado al carrito');
     }
 
      public function guardar_venta()
     {
-        $cart=\Config\Services::cart();
-        $venta=new Venta_Model();
-        $detalle=new Detalle_Venta_Model();
-        $productos=new producto_Model;
-        
-        $cart1=$cart->conts();
+        $cart = \Config\Services::cart();
+        $venta = new Venta_Model();
+        $detalle = new Detalle_Venta_Model();
+        $productos = new Producto_model();
 
-        foreach($cart1 as $item){
+        $cartItems = $cart->contents();
+
+        // Verificar stock
+        foreach ($cartItems as $item) {
             $producto = $productos->where('id_producto', $item['id'])->first();
-            if($producto['producto_stock']<$item['qty']){
-                //mensaje de producto sin stock
+            if ($producto['stock_producto'] < $item['qty']) {
                 return redirect()->route('ver_carrito')->with('mensaje', 'No hay suficiente stock para el producto: ' . $item['name']);
-                
-
             }
         }
 
-        $data = array('id_persona' => session('id'),
-                      'fecha_venta' => date('Y-m-d H:i:s'),
-                      'total_venta' => $cart->total(),
-                      'estado_venta' => 1);
+        // Insertar venta
+        $data = [
+            'id_persona'    => session('id_usuario'),
+            'fecha_venta'   => date('Y-m-d H:i:s'),
+            'total_venta'   => $cart->total(),
+            'estado_venta'  => 1
+        ];
         $venta_id = $venta->insert($data);
-        $cart1=$cart->contents();
-        foreach($cart1 as $item){
-            $detalle_data = array(
-                'venta_id' => $venta_id,
-                'producto_id' => $item['id'],
-                'cantidad' => $item['qty'],
-                'precio' => $item['price']
-            );
-            $producto=$productos->where('id_producto', $item['id'])->first();
-            $data=[
-                'producto_stock'=> $producto['producto_stock'] - $item['qty'],
+
+        // Insertar detalle de venta y actualizar stock
+        foreach ($cartItems as $item) {
+            $detalle_data = [
+                'id_venta'     => $venta_id,
+                'id_producto'  => $item['id'],
+                'cantidad'     => $item['qty'],
+                'precio_unitario'       => $item['price'],
+                'subtotal'         => $item['qty'] * $item['price'],
+                'activo'           => 1
             ];
             $detalle->insert($detalle_data);
 
-            // Actualizar el stock del producto
-            $productos->update($item['id'], $data);
-            //insertar deatlle de venta
-            $detalle->insert($detalle_venta);
+            $producto = $productos->where('id_producto', $item['id'])->first();
+            $nuevo_stock = $producto['producto_stock'] - $item['qty'];
+            $productos->update($item['id'], ['stock_producto' => $nuevo_stock]);
         }
 
-        //mesnaje de agradecimiento por la compra
         $cart->destroy();
-        return redirect()->route('ver_carrito')->with('mensaje', 'Gracias por su compra! Su venta ha sido registrada correctamente.');
+        return redirect()->route('ver_carrito')->with('mensaje', '¡Gracias por su compra! Su venta ha sido registrada correctamente.');
     }
 
     

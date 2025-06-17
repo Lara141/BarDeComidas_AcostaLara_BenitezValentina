@@ -22,7 +22,9 @@ $routes->get('cliente', 'Sesion_controller::cliente');
 $routes->get('salir', 'Sesion_controller::salir');
 
 $routes->post('registro_usuario', 'Usuarios_controller::add_cliente');
-$routes->get('mi_Cuenta', 'Sesion_controller::mi_cuenta');
+$routes->get('mi_cuenta', 'Sesion_controller::mi_cuenta');
+$routes->post('actualizar_mi_cuenta', 'Sesion_controller::actualizar_mi_cuenta');
+
 
 $routes->get('contacto', 'Consulta_controller::consulta');
 $routes->post('consulta', 'Consulta_controller::add_consulta');
@@ -35,7 +37,8 @@ $routes->post('insertar_producto', 'producto_controller::registrar_producto');
 //listar producto
 $routes->get('gestionar', 'producto_controller::gestionar_producto');
 $routes->get('editar/(:num)', 'producto_controller::editar_producto/$1');
-$routes->post('actualizar', 'producto_controller:actualizar_producto');
+$routes->post('actualizar', 'producto_controller::actualizar_producto');
+
 
 $routes->get('eliminar/(:num)', 'producto_controller::eliminar_producto/$1');
 $routes->get('activar/(:num)', 'producto_controller::activar_producto/$1');
@@ -44,7 +47,8 @@ $routes->get('productos', 'producto_controller::listar_producto');
 
 //carrito
 $routes->get('ver_carrito', 'Carrito_controller::ver_carrito');
-$routes->post('add_cart', 'Carrito_controller: :agregar_carrito');
+$routes->post('add_cart', 'Carrito_controller::agregar_carrito');
+$routes->get('ventas', 'Carrito_controller::guardar_venta');
 
 //consultas
 $routes->get('listar_consulta', 'Consulta_controller::listar_consultas');

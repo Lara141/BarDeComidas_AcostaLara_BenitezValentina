@@ -3,6 +3,7 @@ namespace App\Controllers;
 use App\Models\producto_model;
 use App\Models\Categoria_Model;
 
+
 class producto_controller extends BaseController {
 
     public function form_agregar_producto(){
@@ -10,7 +11,13 @@ class producto_controller extends BaseController {
         $categoria= new Categoria_Model();
         $data['categorias']= $categoria->findAll();
         $data['titulo']= 'Agregar producto ';
-        return view('administrador/encabezado_admin', $data).view('administrador/barraNav_admin').view('administrador/editar_producto');
+        $data['producto'] = [
+        'nombre_producto' => '',
+        'stock_producto' => '',
+        'imagen_producto' => '',
+        'categoria_id' => ''
+    ];
+        return view('administrador/encabezado_admin', $data).view('administrador/barraNav_admin', $data).view('administrador/agregar_producto', $data);
     }
     public function registrar_producto(){
     //procesa los datos del producto enviados por el formulario
@@ -104,16 +111,12 @@ function gestionar_producto(){
 
 function editar_producto($id=null){
     $producto_model= new producto_model();
-<<<<<<< HEAD
     $categoria = new Categoria_model();
-=======
-    $categoria= new Categoria_model();
->>>>>>> 88553ba12d30c9cba8d332a51de0d73dfe392beb
     $data['categorias']=$categoria->findAll();
     $data['producto']=$producto_model->where('id_producto', $id)->first();
     $data['titulo']='edicion de producto';
 
-    return view('administrador/encabezado_admin', $data).view('administrador/barraNav_admin').view('administrador/editar_producto');
+    return view('administrador/encabezado_admin', $data).view('administrador/barraNav_admin').view('administrador/editar_producto', $data);
 }
 
 public function actualizar_producto()

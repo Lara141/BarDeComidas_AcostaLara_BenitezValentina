@@ -10,7 +10,7 @@
 
       <?php if (!$session->get('logueado')): ?>
         <!-- VISITANTE -->
-        <a class="nav-link" href="<?= base_url('inicioSesion') ?>">
+        <a class="nav-link" href="<?= base_url('inicioDeSesion') ?>">
           <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt="Perfil" style="width: 28px; height: 28px;"></a>
 
       <?php elseif ($session->get('perfil') == 2): ?>
@@ -18,7 +18,7 @@
         <a class="nav-link" href="<?= base_url('/ver_carrito') ?>">
           <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
         </a>
-        <span class="nav-link"><?= esc($session->get('nombre')) ?></span>
+        <span class="nav-link"> <?= esc($session->get('nombre')) ?></span>
         <a class="nav-link" href="<?= base_url('/salir') ?>">Salir</a>
       <?php endif; ?>
 
@@ -56,6 +56,9 @@
        
         <!-- Ítems adicionales para visitante -->
         <?php if (!$session->get('logueado')): ?>
+          <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('/catalogo_producto') ?>">Catálogo</a>
+          </li>
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url('inicioDeSesion') ?>">Iniciar sesión</a>
             </li>
@@ -67,13 +70,13 @@
         <!-- Ítems adicionales para cliente -->
         <?php if ($session->get('perfil') == 2): ?>
           <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('/catalogo_producto') ?>">Catálogo</a>
+                <a class="nav-link" href="<?= base_url('/catalogo_producto') ?>">Catálogo</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<?= base_url('/ver_carrito') ?>">Ver carrito</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('/mi_Cuenta') ?>">Mi cuenta</a>
+            <a class="nav-link" href="<?= base_url('/mi_cuenta') ?>">Mi cuenta</a>
           </li>
         <?php endif; ?>
 
