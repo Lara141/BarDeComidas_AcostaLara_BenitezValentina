@@ -9,13 +9,8 @@ class Sesion_controller extends BaseController
         $data['titulo'] = 'Iniciar Sesión';
         return view('plantillas/encabezado', $data)
             . view('plantillas/barraNavegacion')
-<<<<<<< HEAD
-            . view('contenido/inicioDeSesion');
-            //. view('plantillas/piePagina');
-=======
             . view('contenido/inicioDeSesion')
             . view('plantillas/piePagina');
->>>>>>> f31a14ba6ea5589a1c2043d74a6884046395f4c5
     }
 
     public function verificar_login()
@@ -50,7 +45,7 @@ class Sesion_controller extends BaseController
             $data['error'] = 'Correo o contraseña incorrectos';
             return view('plantillas/encabezado', $data)
                 . view('plantillas/barraNavegacion')
-                . view('contenido/inicoAnimado')
+                . view('contenido/inicioDeSesion')
                 . view('plantillas/piePagina');
         }
     }
@@ -64,7 +59,7 @@ class Sesion_controller extends BaseController
 
     public function cliente()
     {
-        $data['titulo'] = "Cliente";
+        $data['titulo'] = "cliente";
         return view('plantillas/encabezado', $data)
             . view('plantillas/barraNavegacion')
             . view('contenido/principal')
@@ -77,12 +72,14 @@ class Sesion_controller extends BaseController
         return redirect()->to('/inicioDeSesion');
     }
 
-    public function mi_cuenta() {
+    public function mi_cuenta() 
+    {
     $usuario_id = session('id_usuario'); // o el campo de sesión que uses
 
     // Modelo de usuario
     $usuarioModel = new \App\Models\UserModel();
     $data['usuario'] = $usuarioModel->find($usuario_id);
+    $data['titulo'] = 'Mi cuenta';
 
     // Modelo de compras o pedidos
     //$compraModel = new \App\Models\Compra_model(); 
@@ -92,6 +89,27 @@ class Sesion_controller extends BaseController
     return view('plantillas/encabezado', $data)
          . view('plantillas/barraNavegacion')
          . view('contenido/mi_cuenta', $data);
-}
+    }
+
+    public function actualizar_mi_cuenta()
+    {
+        $usuario_id = session('id_usuario');
+        $request = \Config\Services::request();
+
+        $usuarioModel = new \App\Models\UserModel();
+
+        $datosActualizados = [
+            'nombre_persona' => $request->getPost('nombre'),
+            'apellido_persona' => $request->getPost('apellido'),
+            'nacimiento_persona' => $request->getPost('nacimiento'),
+            'dni_persona' => $request->getPost('dni'),
+            'correo_persona' => $request->getPost('correo')
+        ];
+
+        $usuarioModel->update($usuario_id, $datosActualizados);
+
+        return redirect()->to('/mi_cuenta')->with('mensaje', 'Datos actualizados correctamente.');
+    }
+
 
 }

@@ -17,7 +17,7 @@
 
 <div class="form-group">
     <label for="imagen">Imagen</label>
-  <img src="  <?php echo base_url('public/assets/upload/'.$producto['imagen_producto']);?>" alt="" height="100" width="100"/>
+  <img src="  <?php echo base_url('assets/upload/'.$producto['imagen_producto']);?>" alt="" height="100" width="100"/>
   <?php echo form_input(['name'=> 'imagen', 'id'=> 'imagen', 'type'=>'filr']);?>
 
 </div>
@@ -34,7 +34,9 @@
     ?>
 </div>
 
-<?php echo form_hidden('id', $producto['id_producto']);?>
+<?php if (!empty($producto['id_producto'])): ?>
+    <?php echo form_hidden('id', $producto['id_producto']); ?>
+<?php endif; ?>
 <div class="form-group">
     <?php echo form_submit('Modificar', 'Modificar', "class='btn btn-success'");?>
 

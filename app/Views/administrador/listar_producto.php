@@ -1,8 +1,8 @@
-<div class="text-center mb-4">
-  <span class="fw-bold text-white px-4 py-2 rounded" style="background-color:rgb(49, 144, 163); display: inline-block; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<!--div class="text-center mb-5">
+  <div class="d-inline-block px-5 py-3 rounded-pill shadow" style="background: linear-gradient(90deg, #3190A3, #42B8C9); color: white; font-size: 1.5rem; font-weight: bold; letter-spacing: 1px;">
     Listado de productos
-  </span>
-</div>
+  </div>
+</div-->
 
 <div class="container my-5" style="max-width: 1000px;">
   <div class="table-responsive shadow rounded-4">

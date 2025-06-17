@@ -18,11 +18,13 @@ $routes->post('verificar_login', 'Sesion_controller::verificar_login');
 $routes->get('registro', 'Home::registro'); // o Sesion_controller::registro preguntar a lara si lo movemos
 
 $routes->get('admin', 'Sesion_controller::admin');
-//$routes->get('cliente', 'Sesion_controller::cliente');
+$routes->get('cliente', 'Sesion_controller::cliente');
 $routes->get('salir', 'Sesion_controller::salir');
 
 $routes->post('registro_usuario', 'Usuarios_controller::add_cliente');
-$routes->get('mi_Cuenta', 'Sesion_controller::mi_cuenta');
+$routes->get('mi_cuenta', 'Sesion_controller::mi_cuenta');
+$routes->post('actualizar_mi_cuenta', 'Sesion_controller::actualizar_mi_cuenta');
+
 
 $routes->get('contacto', 'Consulta_controller::consulta');
 $routes->post('consulta', 'Consulta_controller::add_consulta');
@@ -44,7 +46,8 @@ $routes->get('productos', 'producto_controller::listar_producto');
 
 //carrito
 $routes->get('ver_carrito', 'Carrito_controller::ver_carrito');
-$routes->post('add_cart', 'Carrito_controller: :agregar_carrito');
+$routes->post('add_cart', 'Carrito_controller::agregar_carrito');
+$routes->get('ventas', 'Carrito_controller::guardar_venta');
 
 //consultas
 $routes->get('listar_consulta', 'Consulta_controller::listar_consultas');

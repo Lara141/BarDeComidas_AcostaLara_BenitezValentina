@@ -420,29 +420,6 @@
 
     <div class="col">
       <div class="card h-100">
-        <img src="assets/Img/calapurca.avif" class="card-img-top" alt="Calapurca">
-        <div class="card-body">
-          <h5 class="card-title">Calapurca</h5>
-          <p class="card-text">Sopa espesa andina.</p>
-          <p class="fw-bold">$6000</p>
-          <button type="button" class="btn btn-light border position-absolute" style="bottom: 10px; right: 10px;"
-          data-bs-toggle="tooltip" data-bs-placement="top" title="Agregar al carrito">
-            <!-- Ícono de carrito -->
-      <a href="#" class="nav-link">
-        <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
-      </a> 
-          </button>
-          <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#ingreSalta6">Ver ingredientes</button>
-          <div class="collapse mt-2" id="ingreSalta6">
-            <p class="small text-muted">Maíz, papas, carne de llama o vaca, ají y piedras calientes.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="col">
-      <div class="card h-100">
         <img src="assets/Img/guiso.jpg" class="card-img-top" alt="Guiso">
         <div class="card-body">
           <h5 class="card-title">Guiso de Arroz</h5>

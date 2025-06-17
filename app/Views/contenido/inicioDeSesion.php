@@ -1,14 +1,6 @@
 <style>
    /*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-
 
 .container {
     position: relative;
@@ -17,8 +9,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-     margin-top: 200px; /* <-- Agrega esta línea para separar de la barra */
-     margin-bottom: 200px; /* <-- Agrega esta línea para separar de la barra */
+     margin-top: 200px; 
+     margin-bottom: 200px; 
     }
 
 .container span {
@@ -152,10 +144,6 @@ h2 {
 }
 </style>
 
-
-
-
-
     <div class="container">
         <div class="login-box">
 
@@ -163,15 +151,19 @@ h2 {
            <form action="<?= base_url('verificar_login') ?>" method="post">
                 <div class="input-box">
                    <input type="email" class="form-control" id="correo" name="correo" placeholder="ej.: tunombre@email.com">
-    <?php if (isset($validation['correo'])): ?>
-      <div class="text-danger"><?= $validation['correo'] ?></div>
-    <?php endif; ?>
-    <label>Email</label>
+                      <?php if (isset($validation['correo'])): ?>
+                        <div class="text-danger"><?= $validation['correo'] ?></div>
+                      <?php endif; ?>
+                      <label>Email</label>
                 </div>
+
                 <div class="input-box">
-                     <input type="password" name="pass" required placeholder=" ">
-   
-                    <label >Password</label>
+                   <input type="password" class="form-control" id="pass" name="pass" placeholder="Contraseña">
+                    <small id="error-login" class="text-danger"></small> 
+                   <?php if (isset($validation['pass'])): ?>
+              <div class="text-danger"><?= $validation['pass'] ?></div>
+            <?php endif; ?>
+            <label >Password</label>
                 </div>
                 <div class="forgot-pass">
                     <a href="#">Olvidaste tu contraseña?</a>
