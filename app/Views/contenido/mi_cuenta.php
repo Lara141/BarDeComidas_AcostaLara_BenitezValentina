@@ -1,7 +1,11 @@
 <?php helper('form'); ?>
 
-<div class="container my-5" style="max-width: 1000px;">
-  <h2 class="mb-4 text-center">Mi cuenta</h2>
+<div class="container my-5" style="max-width: 800px;">
+  
+<div class="text-center mb-4">
+  <h2 class="fw-bold text-dark">Mi cuenta</h2>
+  <hr class="mx-auto" style="width: 150px; border-top: 3px solid #17a2b8;">
+</div>
 
   <?php if(session('mensaje')): ?>
     <div class="alert alert-success text-center">
@@ -9,8 +13,27 @@
     </div>
   <?php endif; ?>
 
+  <!-- Vista SOLO LECTURA -->
   <div class="card shadow-sm mb-4">
-    <div class="card-header bg-info text-white fw-bold">Editar mis datos personales</div>
+    <div class="card-header bg-info text-white fw-bold">Mis datos personales</div>
+    <div class="card-body">
+      <p><strong>Nombre:</strong> <?= esc($usuario['nombre_persona']) ?></p>
+      <p><strong>Apellido:</strong> <?= esc($usuario['apellido_persona']) ?></p>
+      <p><strong>Fecha de nacimiento:</strong> <?= esc($usuario['nacimiento_persona']) ?></p>
+      <p><strong>DNI:</strong> <?= esc($usuario['dni_persona']) ?></p>
+      <p><strong>Correo:</strong> <?= esc($usuario['correo_persona']) ?></p>
+
+      <div class="text-center mt-4">
+        <button class="btn btn-primary" onclick="document.getElementById('form-edicion').classList.toggle('d-none')">
+          Editar mis datos
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FORMULARIO EDICIÓN OCULTO -->
+  <div id="form-edicion" class="card shadow-sm d-none">
+    <div class="card-header bg-secondary text-white fw-bold">Editar mis datos</div>
     <div class="card-body">
       <?= form_open('actualizar_mi_cuenta') ?>
 
@@ -47,3 +70,4 @@
     </div>
   </div>
 </div>
+

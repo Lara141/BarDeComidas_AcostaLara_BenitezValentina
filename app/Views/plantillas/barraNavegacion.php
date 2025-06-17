@@ -56,6 +56,9 @@
        
         <!-- Ítems adicionales para visitante -->
         <?php if (!$session->get('logueado')): ?>
+          <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('/catalogo_producto') ?>">Catálogo</a>
+          </li>
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url('inicioDeSesion') ?>">Iniciar sesión</a>
             </li>
@@ -67,7 +70,7 @@
         <!-- Ítems adicionales para cliente -->
         <?php if ($session->get('perfil') == 2): ?>
           <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('/catalogo_producto') ?>">Catálogo</a>
+                <a class="nav-link" href="<?= base_url('/catalogo_producto') ?>">Catálogo</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<?= base_url('/ver_carrito') ?>">Ver carrito</a>

@@ -26,9 +26,9 @@
                                     <input type="number" name="qty" value="1" min="1" max="<?= $row['stock_producto'] ?>" class="form-control text-center" style="width: 80px;">
                                 </div>
 
-                                <a href="#" class="nav-link">
+                                <button type="submit" class="btn btn-link p-0 border-0 bg-transparent">
                                     <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
-                                </a>
+                                </button>
                             <?= form_close(); ?>
                         <?php else: ?>
                             <p class="text-muted">Iniciá sesión para comprar</p>
