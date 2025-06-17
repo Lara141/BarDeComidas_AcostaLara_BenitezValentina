@@ -184,11 +184,11 @@ public function actualizar_producto()
 }
 
 
-function listar_productos(){
-    $producto_model= new producto_model();
-    $data['productos']= $producto_model->where('estado_producto', 1)->where('stock_producto>', 0)->join('categoria_producto', 'categoria_producto.categoria_id=producto.categoria_id')->findAll();
-    $data['titulo']='catalogo de productos';
-    return view('plantillas/encabezado', $data).view('plantillas/barraNavegacion').view('contenido/catalogo_producto');
+public function listar_productos() {
+    $producto_model = new producto_model();
+    $data['productos'] = $producto_model->where('estado_producto', 1)->where('stock_producto >', 0)->join('categoria_producto', 'categoria_producto.categoria_id=producto.categoria_id')->findAll();
+    $data['titulo'] = 'Catálogo de productos';
+    return view('administrador/encabezado_admin', $data).view('administrador/barraNav_admin').view('contenido/catalogo_producto', $data); 
 }
 
 public function eliminar_producto($id=null){
