@@ -115,7 +115,10 @@ function editar_producto($id=null){
     $data['categorias']=$categoria->findAll();
     $data['producto']=$producto_model->where('id_producto', $id)->first();
     $data['titulo']='edicion de producto';
-
+     if (!$data['producto']) {
+        
+        return redirect()->route('gestionar')->with('mensaje', 'El producto no existe.');
+    }
     return view('administrador/encabezado_admin', $data).view('administrador/barraNav_admin').view('administrador/editar_producto', $data);
 }
 

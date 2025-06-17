@@ -69,7 +69,7 @@ class Sesion_controller extends BaseController
     public function salir()
     {
         session()->destroy();
-        return redirect()->to('/inicioDeSesion');
+        return redirect()->to('/inicioSesion');
     }
 
     public function mi_cuenta() 
