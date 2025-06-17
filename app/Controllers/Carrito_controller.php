@@ -17,10 +17,9 @@ class Carrito_controller extends BaseController
 
         return view('plantillas/encabezado', $data)
             . view('plantillas/barraNavegacion')
-            . view('contenido/carrito')
+            . view('contenido/carrito', ['cart' => $cart])
             . view('plantillas/piePagina');
     }
-
 
     public function agregar_carrito()
     {
@@ -33,9 +32,8 @@ class Carrito_controller extends BaseController
             'qty' => 1
         );
         $cart->insert($data);
-         //mensaje de que se agrego al carrito
-        //return redirect()->route('ver_carrito');
-        return redirect()->to(base_url('ver_carrito'))->with('mensaje', 'Producto agregado al carrito');
+    
+        return redirect()->route('ver_carrito')->with('mensaje', 'Producto agregado al carrito');
     }
 
      public function guardar_venta()
