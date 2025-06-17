@@ -57,7 +57,7 @@
         <!-- Ítems adicionales para visitante -->
         <?php if (!$session->get('logueado')): ?>
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('inicioSesion') ?>">Iniciar sesión</a>
+                <a class="nav-link" href="<?= base_url('inicioDeSesion') ?>">Iniciar sesión</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url('registro') ?>">Registrarse</a>
