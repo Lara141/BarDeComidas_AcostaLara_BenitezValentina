@@ -42,7 +42,7 @@ class Carrito_controller extends BaseController
         $cart = \Config\Services::cart();
         $venta = new Venta_Model();
         $detalle = new Detalle_Venta_Model();
-        $productos = new Producto_model();
+        $productos = new producto_model();
 
         $cartItems = $cart->contents();
 
@@ -76,14 +76,28 @@ class Carrito_controller extends BaseController
             $detalle->insert($detalle_data);
 
             $producto = $productos->where('id_producto', $item['id'])->first();
-            $nuevo_stock = $producto['producto_stock'] - $item['qty'];
+            $nuevo_stock = $producto['stock_producto'] - $item['qty'];
             $productos->update($item['id'], ['stock_producto' => $nuevo_stock]);
         }
 
         $cart->destroy();
         return redirect()->route('ver_carrito')->with('mensaje', '¡Gracias por su compra! Su venta ha sido registrada correctamente.');
     }
+    public function listar_ventas()
+    {
+        $db = \Config\Database::connect();
+        $data['titulo'] = 'lista de ventas';
 
+$builder = $db->table('detalle_venta');
+$builder->select('producto.*, categoria_producto.categoria_desc, detalle_venta.cantidad, ventas.fecha_venta');
+$builder->join('producto', 'producto.id_producto = detalle_venta.id_producto');
+$builder->join('categoria_producto', 'categoria_producto.categoria_id = producto.categoria_id');
+$builder->join('ventas', 'ventas.id_venta = detalle_venta.id_venta');
+$builder->orderBy('ventas.fecha_venta', 'DESC');
+$query = $builder->get();
+$data['producto'] = $query->getResultArray();
+return view('administrador/encabezado_admin', $data).view('administrador/barraNav_admin');//.view('contenido/catalogo_producto', $data);
     
 
+}
 }

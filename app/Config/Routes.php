@@ -13,7 +13,7 @@ $routes->get('comercializacion', 'Home::comercio');
 $routes->get('terminoUso', 'Home::terminos');
 $routes->get('menuu', 'Home::menu'); //Preguntar a lara xq tenemos esto
 
-$routes->get('inicioDeSesion', 'Sesion_controller::login');
+$routes->get('inicioSesion', 'Sesion_controller::login');
 $routes->post('verificar_login', 'Sesion_controller::verificar_login');
 $routes->get('registro', 'Home::registro'); // o Sesion_controller::registro preguntar a lara si lo movemos
 
@@ -39,10 +39,11 @@ $routes->get('gestionar', 'producto_controller::gestionar_producto');
 $routes->get('editar/(:num)', 'producto_controller::editar_producto/$1');
 $routes->post('actualizar', 'producto_controller::actualizar_producto');
 
+
 $routes->get('eliminar/(:num)', 'producto_controller::eliminar_producto/$1');
 $routes->get('activar/(:num)', 'producto_controller::activar_producto/$1');
 //catalogo
-$routes->get('productos', 'producto_controller::listar_producto');
+$routes->get('productos', 'producto_controller::listar_productos');
 
 //carrito
 $routes->get('ver_carrito', 'Carrito_controller::ver_carrito');
@@ -54,5 +55,4 @@ $routes->get('listar_consulta', 'Consulta_controller::listar_consultas');
 
 
 $routes->get('catalogo_producto', 'producto_controller::listar_productos');
-
-$routes->get('ventas', 'Carrito_controller::guardar_venta');
+$routes->get('listarVentas', 'Carrito_controller::listar_ventas');

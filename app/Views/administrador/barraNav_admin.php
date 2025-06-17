@@ -32,7 +32,11 @@
           <a class="nav-link" href="<?= base_url('/listar_consulta') ?>">Ver consultas</a>
         </li>
         <li class="nav-item">
+<<<<<<< HEAD
           <a class="nav-link" href="<?= base_url('/catalogo_producto') ?>">Listar productos</a>
+=======
+          <a class="nav-link" href="<?= base_url('/productos') ?>">Listar productos</a>
+>>>>>>> 8ac272a493c8b6c798c7f73fa035c02198626bf0
         </li>
         <li class="nav-item">
           <a class="nav-link" href="<?= base_url('/listarVentas') ?>">Listar ventas</a>
@@ -41,7 +45,11 @@
           <a class="nav-link" href="<?= base_url('agregar_producto') ?>">Registrar producto</a>
         </li>
         <li class="nav-item">
+<<<<<<< HEAD
           <a class="nav-link" href="<?= base_url('/gestionar') ?>">Gestionar productos</a>
+=======
+          <a class="nav-link" href="<?= base_url('gestionar') ?>">Gestionar productos</a>
+>>>>>>> 8ac272a493c8b6c798c7f73fa035c02198626bf0
         </li>
       </ul>
     </div>

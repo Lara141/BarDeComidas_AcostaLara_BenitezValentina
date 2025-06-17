@@ -1,59 +1,79 @@
-<!--div class="text-center mb-5">
-  <div class="d-inline-block px-5 py-3 rounded-pill shadow" style="background: linear-gradient(90deg, #3190A3, #42B8C9); color: white; font-size: 1.5rem; font-weight: bold; letter-spacing: 1px;">
-    Listado de productos
-  </div>
-</div-->
 
-<div class="container my-5" style="max-width: 1000px;">
-  <div class="table-responsive shadow rounded-4">
-    <table id="mytable" class="table table-bordered border-info-subtle align-middle mb-0">
-      <thead class="table-info text-center">
-        <tr>
-          <th scope="col">Nombre</th>
-          <th scope="col">Precio</th>
-          <th scope="col">Descripción</th>
-          <th scope="col">Estado</th>
-          <th scope="col">Stock</th>
-          <th scope="col">Categoría</th>
-          <th scope="col">Imagen</th>
-          <th scope="col">Editar</th>
-          <th scope="col">Activar/Eliminar</th>
-        </tr>
-      </thead>
-      <tbody>
-        <?php foreach($producto as $row){?>
-          <tr>
-            <td><?php echo $row['nombre_producto'];?></td>
-            <td>$<?php echo $row['precio_producto'];?></td>
-            <td><?php echo $row['descripcion_producto'];?></td>
-            <td><?php echo $row['estado_producto'] == 1 ? 'Activo' : 'Inactivo'; ?></td>
-            <td><?php echo $row['stock_producto'];?></td>
-            <td><?php echo $row['categoria_desc'];?></td>
-            <td>
-              <img src="<?php echo base_url('assets/upload/'.$row['imagen_producto']);?>" 
-                   alt="Imagen del producto" 
-                   class="img-thumbnail rounded" 
-                   style="max-width: 100px;">
-            </td>
-            <td>
-              <a class="btn btn-sm btn-success" href="<?php echo base_url('editar/'.$row['id_producto']);?>">
-                Editar
-              </a>
-            </td>
-            <td>
-              <?php if($row['estado_producto'] == 1) { ?>
-               <a class="btn btn-sm btn-danger" href="<?php echo base_url('eliminar/'.$row['id_producto']);?>">
-                Eliminar
-                </a>
-              <?php } else { ?>
-                <a class="btn btn-sm btn-primary" href="<?php echo base_url('activar/'.$row['id_producto']);?>">
-                Activar
-                </a>
-              <?php } ?>
-            </td>
-          </tr>
-        <?php } ?>
-      </tbody>
-    </table>
-  </div>
+<!-- // filepath: app/Views/administrador/gestionar_producto.php -->
+
+<div class="container my-5" style="max-width: 1100px;">
+    <div class="card shadow rounded-4">
+        <div class="card-body">
+            <h2 class="text-center mb-4 fw-bold text-primary">
+                <i class="fa-solid fa-boxes-stacked"></i> Gestión de productos
+            </h2>
+            <?php if (session()->getFlashdata('mensaje')): ?>
+                <div class="alert alert-success text-center">
+                    <?= session()->getFlashdata('mensaje') ?>
+                </div>
+            <?php endif; ?>
+            <?php if (isset($producto) && count($producto) > 0): ?>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover align-middle">
+                        <thead class="table-info text-center">
+                            <tr>
+                                <th>#</th>
+                                <th>Nombre</th>
+                                <th>Precio</th>
+                                <th>Descripción</th>
+                                <th>Estado</th>
+                                <th>Stock</th>
+                                <th>Categoría</th>
+                                <th>Imagen</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($producto as $i => $row): ?>
+                                <tr>
+                                    <td class="text-center"><?= $i + 1 ?></td>
+                                    <td><?= esc($row['nombre_producto']) ?></td>
+                                    <td>$<?= number_format($row['precio_producto'], 2, ',', '.') ?></td>
+                                    <td><?= esc($row['descripcion_producto']) ?></td>
+                                    <td class="text-center">
+                                        <?php if ($row['estado_producto'] == 1): ?>
+                                            <span class="badge bg-success">Activo</span>
+                                        <?php else: ?>
+                                            <span class="badge bg-danger">Inactivo</span>
+                                        <?php endif; ?>
+                                    </td>
+                                    <td class="text-center"><?= $row['stock_producto'] ?></td>
+                                    <td><?= esc($row['categoria_desc'] ?? $row['categoria_nombre'] ?? '') ?></td>
+                                    <td>
+                                        <img src="<?= base_url('asset/upload/'.$row['imagen_producto']) ?>"
+                                             alt="Imagen del producto"
+                                             class="img-thumbnail rounded"
+                                             style="max-width: 80px;">
+                                    </td>
+                                    <td class="text-center">
+                                        <a class="btn btn-sm btn-primary mb-1" href="<?= base_url('editar/'.$row['id_producto']) ?>">
+                                            Editar
+                                        </a>
+                                        <?php if ($row['estado_producto'] == 1): ?>
+                                            <a class="btn btn-sm btn-danger mb-1" href="<?= base_url('eliminar/'.$row['id_producto']) ?>">
+                                                Eliminar
+                                            </a>
+                                        <?php else: ?>
+                                            <a class="btn btn-sm btn-success mb-1" href="<?= base_url('activar/'.$row['id_producto']) ?>">
+                                                Activar
+                                            </a>
+                                        <?php endif; ?>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
+            <?php else: ?>
+                <div class="alert alert-info text-center">
+                    No hay productos registrados.
+                </div>
+            <?php endif; ?>
+        </div>
+    </div>
 </div>

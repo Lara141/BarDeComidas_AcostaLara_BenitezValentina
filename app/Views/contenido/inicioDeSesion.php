@@ -1,6 +1,15 @@
 <style>
    /*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+
 
 .container {
     position: relative;
@@ -151,7 +160,8 @@ h2 {
            <form action="<?= base_url('verificar_login') ?>" method="post">
                 <div class="input-box">
                    <input type="email" class="form-control" id="correo" name="correo" placeholder="ej.: tunombre@email.com">
-                      <?php if (isset($validation['correo'])): ?>
+                   <small id="error-login" class="text-danger"></small>   
+                   <?php if (isset($validation['correo'])): ?>
                         <div class="text-danger"><?= $validation['correo'] ?></div>
                       <?php endif; ?>
                       <label>Email</label>
