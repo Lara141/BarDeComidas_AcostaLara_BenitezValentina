@@ -45,7 +45,7 @@
                                     <td class="text-center"><?= $row['stock_producto'] ?></td>
                                     <td><?= esc($row['categoria_desc'] ?? $row['categoria_nombre'] ?? '') ?></td>
                                     <td>
-                                        <img src="<?= base_url('asset/upload/'.$row['imagen_producto']) ?>"
+                                        <img src="<?= base_url('assets/upload/'.$row['imagen_producto']) ?>"
                                              alt="Imagen del producto"
                                              class="img-thumbnail rounded"
                                              style="max-width: 80px;">
