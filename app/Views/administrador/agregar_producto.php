@@ -54,7 +54,7 @@
                 <label for="estado" class="form-label">Estado</label>
                 <?= form_input(['name' => 'estado', 'id' => 'estado', 'class' => 'form-control', 'placeholder' => 'Ingrese estado del producto', 'value' => set_value('estado')]) ?>
             </div>
-
+ 
             <div class="mb-3">
                 <label for="stock" class="form-label">Stock</label>
                 <?= form_input(['name' => 'stock', 'id' => 'stock', 'class' => 'form-control', 'placeholder' => 'Ingrese stock del producto', 'value' => set_value('stock')]) ?>

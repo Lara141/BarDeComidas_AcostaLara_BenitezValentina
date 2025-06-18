@@ -8,7 +8,7 @@
             <?php if (session()->getFlashdata('mensaje')): ?>
                 <div class="alert alert-success text-center">
                     <?= session()->getFlashdata('mensaje') ?>
-                </div>
+                </div> 
             <?php endif; ?>
             <?php if (isset($producto) && count($producto) > 0): ?>
                 <div class="table-responsive">
@@ -18,6 +18,8 @@
                                 <th>#</th>
                                 <th>Nombre</th>
                                 <th>Precio</th>
+                                <th>Descuento</th>
+                                <th>Provincia</th>
                                 <th>Descripción</th>
                                 <th>Estado</th>
                                 <th>Stock</th>
@@ -32,6 +34,16 @@
                                     <td class="text-center"><?= $i + 1 ?></td>
                                     <td><?= esc($row['nombre_producto']) ?></td>
                                     <td>$<?= number_format($row['precio_producto'], 2, ',', '.') ?></td>
+                                    <td>
+                                        <?php if (isset($row['descuento_producto'])): ?>
+                                            <?= esc($row['descuento_producto']) ?>%
+                                        <?php else: ?>
+                                            0%
+                                        <?php endif; ?>
+                                    </td>
+                                    <td>
+                                        <?= esc($row['provincia_producto'] ?? '') ?>
+                                    </td>
                                     <td><?= esc($row['descripcion_producto']) ?></td>
                                     <td class="text-center">
                                         <?php if ($row['estado_producto'] == 1): ?>
@@ -48,19 +60,20 @@
                                              class="img-thumbnail rounded"
                                              style="max-width: 80px;">
                                     </td>
-                                    <td class="text-center">
-                                        <a class="btn btn-sm btn-primary mb-1" href="<?= base_url('editar/'.$row['id_producto']) ?>">
-                                            Editar
-                                        </a>
-                                        <?php if ($row['estado_producto'] == 1): ?>
-                                            <a class="btn btn-sm btn-danger mb-1" href="<?= base_url('eliminar/'.$row['id_producto']) ?>">
-                                                Eliminar
-                                            </a>
-                                        <?php else: ?>
-                                            <a class="btn btn-sm btn-success mb-1" href="<?= base_url('activar/'.$row['id_producto']) ?>">
-                                                Activar
-                                            </a>
-                                        <?php endif; ?>
+                                  <td class="text-center">
+    <div class="d-flex gap-1 justify-content-center">
+        <a class="btn btn-sm btn-primary" href="<?= base_url('editar/'.$row['id_producto']) ?>">
+            Editar
+        </a>
+        <?php if ($row['estado_producto'] == 1): ?>
+            <a class="btn btn-sm btn-danger" href="<?= base_url('eliminar/'.$row['id_producto']) ?>">
+                Eliminar
+            </a>
+        <?php else: ?>
+            <a class="btn btn-sm btn-success" href="<?= base_url('activar/'.$row['id_producto']) ?>">
+                Activar
+            </a>
+        <?php endif; ?>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
