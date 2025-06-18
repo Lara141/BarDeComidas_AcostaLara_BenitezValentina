@@ -178,7 +178,9 @@ h2 {
                 <div class="forgot-pass">
                     <a href="#">Olvidaste tu contraseña?</a>
                 </div>
-                <button type="submit" class="btn" >Iniciar</button>
+                <button type="submit" class="btn"  >
+                    Iniciar
+                </button>
                 <div class="signup-link">
                     <a  class="nav-link" href="<?= base_url('registro') ?>">Registrarse</a>
                 </div>
