@@ -44,7 +44,7 @@ body {
 
 /* Menú desplegable */
 .navbar .dropdown-menu {
-    background-color: #c4e6f7; /* Azul muy claro */
+    background-color: #ffffff;
     border-radius: 5px;
     padding: 10px 0;
 }
@@ -55,26 +55,8 @@ body {
 }
 
 .navbar .dropdown-menu .dropdown-item:hover {
-    background-color: #b4f7f7; /* cambia el color del fondo de las opciones en el boton de menu */
+    background-color: #befcfc; /* cambia el color del fondo de las opciones en el boton de menu */
     color: #0f0e0e;
-}
-
-/* Formulario de búsqueda */
-.navbar .form-control {
-    width: 200px;
-    border-radius: 20px;
-}
-
-.navbar .btn-outline-success {
-    border-radius: 20px;
-    padding: 6px 20px;
-    color: #2C3E50;
-    border: 2px solid #2C3E50;
-}
-
-.navbar .btn-outline-success:hover {
-    background-color: #2C3E50;
-    color: white;
 }
 
 /* Contenedor principal */

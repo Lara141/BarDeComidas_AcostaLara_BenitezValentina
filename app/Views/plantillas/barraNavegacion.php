@@ -4,15 +4,17 @@
 <nav class="navbar bg-body-tertiary">
   <div class="container-fluid justify-content-end">
 
-    <!-- Íconos alineados a la derecha -->
+    <!-- esto hace que los iconos esten alineados a la derecha -->
     <div class="d-flex align-items-center gap-3">
 
       <?php if (!$session->get('logueado')): ?>
-        <!-- VISITANTE -->
+
+        <!--Usuario no registrado-->
         <a class="nav-link" href="<?= base_url('inicioSesion') ?>">
           <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt="Perfil" style="width: 28px; height: 28px;"></a>
 
       <?php elseif ($session->get('perfil') == 2): ?>
+
         <!-- CLIENTE REGISTRADO -->
         <a class="nav-link" href="<?= base_url('/ver_carrito') ?>">
           <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
@@ -83,11 +85,12 @@
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Menú
           </a>
-          <ul class="dropdown-menu dropdown-menu-dark">
+          <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="<?= base_url('comida') ?>">Comida</a></li>
             <li><a class="dropdown-item" href="<?= base_url('bebida') ?>">Bebida</a></li>
           </ul>
         </li>
+        
       </ul>
     </div>
   </div>
