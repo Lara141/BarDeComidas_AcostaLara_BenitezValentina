@@ -1,4 +1,58 @@
 <?php helper('form'); ?>
+<!-- Botón de filtrar alineado a la derecha -->
+<div class="d-flex justify-content-end mb-4">
+  <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#infoModal">
+    Filtrar
+  </button>
+</div>
+
+<!-- Modal Bootstrap -->
+<div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title fw-bold" id="infoModalLabel">Filtros</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <h6 class="fw-semibold mb-2">Provincias</h6>
+        <div class="d-flex flex-wrap gap-2 justify-content-center mb-3">
+          <a href="<?= site_url('filtrar_bebidas?provincia=Buenos Aires'); ?>" class="btn btn-outline-primary">Buenos Aires</a>
+          <a href="<?= site_url('filtrar_bebidas?provincia=Catamarca'); ?>" class="btn btn-outline-primary">Catamarca</a>
+          <a href="<?= site_url('filtrar_bebidas?provincia=Chaco'); ?>" class="btn btn-outline-primary">Chaco</a>
+          <a href="<?= site_url('filtrar_bebidas?provincia=Chubut'); ?>" class="btn btn-outline-primary">Chubut</a>
+          <a href="<?= site_url('filtrar_bebidas?provincia=Córdoba'); ?>" class="btn btn-outline-primary">Córdoba</a>
+          <a href="<?= site_url('filtrar_bebidas?provincia=Corrientes'); ?>" class="btn btn-outline-primary">Corrientes</a>
+          <a href="<?= site_url('filtrar_bebidas?provincia=Entre Ríos'); ?>" class="btn btn-outline-primary">Entre Ríos</a>
+          <a href="<?= site_url('filtrar_bebidas?provincia=Formosa'); ?>" class="btn btn-outline-primary">Formosa</a>
+          <a href="<?= site_url('filtrar_bebidas?provincia=Jujuy'); ?>" class="btn btn-outline-primary">Jujuy</a>
+          <a href="<?= site_url('filtrar_bebidas?provincia=La Pampa'); ?>" class="btn btn-outline-primary">La Pampa</a>
+          <a href="<?= site_url('filtrar_bebidas?provincia=La Rioja'); ?>" class="btn btn-outline-primary">La Rioja</a>
+          <a href="<?= site_url('filtrar_bebidas?provincia=Mendoza'); ?>" class="btn btn-outline-primary">Mendoza</a>
+          <a href="<?= site_url('filtrar_bebidas?provincia=Misiones'); ?>" class="btn btn-outline-primary">Misiones</a>
+          <a href="<?= site_url('filtrar_bebidas?provincia=Neuquén'); ?>" class="btn btn-outline-primary">Neuquén</a>
+          <a href="<?= site_url('filtrar_bebidas?provincia=Río Negro'); ?>" class="btn btn-outline-primary">Río Negro</a>
+          <a href="<?= site_url('filtrar_bebidas?provincia=Salta'); ?>" class="btn btn-outline-primary">Salta</a>
+          <a href="<?= site_url('filtrar_bebidas?provincia=San Juan'); ?>" class="btn btn-outline-primary">San Juan</a>
+          <a href="<?= site_url('filtrar_bebidas?provincia=San Luis'); ?>" class="btn btn-outline-primary">San Luis</a>
+          <a href="<?= site_url('filtrar_bebidas?provincia=Santa Cruz'); ?>" class="btn btn-outline-primary">Santa Cruz</a>
+          <a href="<?= site_url('filtrar_bebidas?provincia=Santa Fe'); ?>" class="btn btn-outline-primary">Santa Fe</a>
+          <a href="<?= site_url('filtrar_bebidas?provincia=Santiago del Estero'); ?>" class="btn btn-outline-primary">Santiago del Estero</a>
+          <a href="<?= site_url('filtrar_bebidas?provincia=Tierra del Fuego'); ?>" class="btn btn-outline-primary">Tierra del Fuego</a>
+          <a href="<?= site_url('filtrar_bebidas?provincia=Tucumán'); ?>" class="btn btn-outline-primary">Tucumán</a>
+        </div>
+        <h6 class="fw-semibold mb-2">Promociones</h6>
+        <div class="d-flex flex-wrap gap-2 justify-content-center mb-3">
+          <a href="<?= site_url('filtrar_bebidas?promo=1'); ?>" class="btn btn-outline-success">Solo promociones</a>
+        </div>
+        <div class="d-flex flex-wrap gap-2 justify-content-center">
+          <a href="<?= site_url('filtrar_bebidas'); ?>" class="btn btn-secondary">Aplicar filtro</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <h2 class="mb-4 fw-bold text-secondary border-bottom pb-2">Bebidas</h2>
       <div class="row row-cols-1 g-4">
         <?php foreach ($productos as $row): ?>
