@@ -46,6 +46,10 @@ $routes->get('activar/(:num)', 'producto_controller::activar_producto/$1');
 $routes->get('productos', 'producto_controller::listar_productos');
 $routes->get('comida', 'producto_controller::menu_comida');
 $routes->get('bebida', 'producto_controller::menu_bebida');
+//filtros
+$routes->get('menu_filtrado_comida', 'producto_controller::menu_filtro_comida');
+$routes->get('menu_filtrado_bebida', 'producto_controller::menu_filtro_bebida');
+
 //carrito
 $routes->get('ver_carrito', 'Carrito_controller::ver_carrito');
 $routes->post('agregar_carrito', 'Carrito_controller::agregar_carrito');

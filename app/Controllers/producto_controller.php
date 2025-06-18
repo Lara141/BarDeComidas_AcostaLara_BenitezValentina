@@ -254,13 +254,36 @@ public function menu_promociones() {
          . view('contenido/menu_promociones', $data);
 }
 
-public function menu_provincial($provincia = null) {
+public function menu_filtro_bebida()
+{
     $producto_model = new producto_model();
+    $provincia = $this->request->getGet('provincia'); // <-- Cambia esto
+
     $builder = $producto_model->where('estado_producto', 1)
         ->where('stock_producto >', 0)
         ->join('categoria_producto', 'categoria_producto.categoria_id=producto.categoria_id');
 
-    if ($provincia !== null) {
+    if (!empty($provincia)) {
+        $builder->where('provincia_producto', $provincia);
+    }
+
+    $data['productos'] = $builder->findAll();
+    $data['titulo'] = 'Bebidas por Provincia';
+    return view('plantillas/encabezado', $data)
+         . view('plantillas/barraNavegacion')
+         . view('contenido/menu_filtrado_bebida', $data);
+}
+
+public function menu_filtro_comida()
+{
+    $producto_model = new producto_model();
+    $provincia = $this->request->getGet('provincia'); // <-- Cambia esto
+
+    $builder = $producto_model->where('estado_producto', 1)
+        ->where('stock_producto >', 0)
+        ->join('categoria_producto', 'categoria_producto.categoria_id=producto.categoria_id');
+
+    if (!empty($provincia)) {
         $builder->where('provincia_producto', $provincia);
     }
 
@@ -268,7 +291,7 @@ public function menu_provincial($provincia = null) {
     $data['titulo'] = 'Comidas por Provincia';
     return view('plantillas/encabezado', $data)
          . view('plantillas/barraNavegacion')
-         . view('contenido/menu_provincia', $data);
+         . view('contenido/menu_filtrado_comida', $data);
 }
 
 }

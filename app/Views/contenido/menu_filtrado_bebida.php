@@ -77,6 +77,7 @@
   <div class="row g-4">
     <?php foreach ($productos as $row): ?>
       <?php if (strtolower($row['categoria_desc']) === 'bebida'): ?>
+         <?php if (strtolower($row['provincia_producto']) === strtolower($provinciaSeleccionada) || empty($provinciaSeleccionada)): ?>
         <div class="col-12 col-sm-6 col-lg-4">
           <div class="card h-100 shadow-sm border-0 rounded-4 w-100">
             <img src="<?= base_url('assets/upload/' . $row['imagen_producto']); ?>"
@@ -123,7 +124,7 @@
           </div>
         </div>
       <?php endif; ?>
-      
+      <?php endif; ?>
     <?php endforeach; ?>
   </div>
 </div>
