@@ -218,9 +218,26 @@ public function listar_productos() {
 
 public function catalogo_productos() {
     $producto_model = new producto_model();
-    $data['productos'] = $producto_model->where('estado_producto', 1)->where('stock_producto >', 0)->join('categoria_producto', 'categoria_producto.categoria_id=producto.categoria_id')->findAll();
-    $data['titulo'] = 'Catalogo de productos';
-    return view('plantillas/encabezado', $data).view('plantillas/barraNavegacion').view('contenido/catalogo_producto', $data); 
+    $provincia = $this->request->getGet('provincia');
+    $solo_promociones = $this->request->getGet('solo_promociones');
+
+    $builder = $producto_model
+        ->where('estado_producto', 1)
+        ->where('stock_producto >', 0)
+        ->join('categoria_producto', 'categoria_producto.categoria_id=producto.categoria_id');
+
+    if (!empty($provincia)) {
+        $builder->where('provincia_producto', $provincia);
+    }
+    if ($solo_promociones !== null) {
+        $builder->where('descuento_producto >', 0);
+    }
+
+    $data['productos'] = $builder->findAll();
+    $data['titulo'] = 'Catálogo de productos';
+    return view('plantillas/encabezado', $data)
+         . view('plantillas/barraNavegacion')
+         . view('contenido/catalogo_producto', $data); 
 }
 
 public function menu_comida() {
@@ -255,20 +272,6 @@ public function activar_producto($id=null){
     return redirect()-> route('gestionar');
 }
 
-public function menu_promociones() {
-    $producto_model = new producto_model();
-    $data['productos'] = $producto_model
-        ->where('estado_producto', 1)
-        ->where('stock_producto >', 0)
-        ->where('descuento_producto >', 0)
-        ->join('categoria_producto', 'categoria_producto.categoria_id=producto.categoria_id')
-        ->findAll();
-
-    $data['titulo'] = 'Promociones';
-    return view('plantillas/encabezado', $data)
-         . view('plantillas/barraNavegacion')
-         . view('contenido/menu_promociones', $data);
-}
 
 public function menu_filtro_bebida()
 {
