@@ -30,161 +30,68 @@
 </div>
 
 
-
-<!-- Cards de promos -->
+<!-- promos -->
 <section class="mb-5">
   <div class="container">
     <h4 class="text-uppercase fw-bold text-center mb-4">
-    <i class="fa-solid fa-burger fa-beat"></i>  
-      Promociones de comidas Rápidas</h4>
-    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
+     <i class="fa-solid fa-burger fa-beat"></i>  
+      Promociones </h4>
+    <div class="row g-4">
       
-      <!--  pizza cacera -->
-      <div class="col">
-        <div class="card h-100 shadow-sm position-relative">
-          <img src="assets/Img/pizzaCacera.jpg" class="card-img-top" alt="Pizza">
-          <div class="card-body">
-        <p class="promo-title">Pizza Cacera</p>
-        <p class="promo-price">$10500</p>
-        <p class="card-text">Masa cacera, salsa, queso cremoso, aceitunas.</p>
+      <?php foreach ($productos as $row): ?>
+        <?php if (
+          strtolower($row['categoria_desc']) === 'comida' &&
+          !empty($row['descuento_producto']) &&
+          $row['descuento_producto'] > 0
+        ): ?>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 shadow-sm border-0 rounded-4 w-100">
+              <img src="<?= base_url('assets/upload/' . $row['imagen_producto']); ?>"
+                   class="card-img-top rounded-top-4 img-fluid"
+                   alt="Imagen del producto"
+                   style="height: 150px; object-fit: contain;">
+
+              <div class="card-body text-center p-2">
+                <h5 class="card-title fw-bold"><?= esc($row['nombre_producto']); ?></h5>
+                <p class="card-text text-muted small"><?= esc($row['descripcion_producto']); ?></p>
+                <?php
+                  $precioOriginal = $row['precio_producto'];
+                  $descuento = $row['descuento_producto'];
+                  $precioFinal = $precioOriginal - ($precioOriginal * $descuento / 100);
+                ?>
+                <p class="text-muted text-decoration-line-through mb-1">
+                  $<?= number_format($precioOriginal, 2, ',', '.'); ?>
+                </p>
+                <p class="text-success fw-bold fs-5 mb-1">
+                  $<?= number_format($precioFinal, 2, ',', '.'); ?>
+                </p>
+                <p class="text-danger fw-bold small mb-2">Descuento: <?= $descuento; ?>%</p>
+
+                <?php if (!empty($row['provincia_producto'])): ?>
+                  <p class="small fst-italic">Comida típica de: <?= esc($row['provincia_producto']); ?></p>
+                <?php endif; ?>
+
+                <p class="mb-1"><strong>Stock:</strong> <?= esc($row['stock_producto']); ?></p>
+
+                <?php if (session('logueado')): ?>
+                  <?= form_open('agregar_carrito'); ?>
+                    <?= form_hidden('id', $row['id_producto']); ?>
+                    <?= form_hidden('titulo', $row['nombre_producto']); ?>
+                    <?= form_hidden('precio', $row['precio_producto']); ?>
+                    <?= form_hidden('descuento', $row['descuento_producto']); ?>
+                    <?= form_hidden('provincia', $row['provincia_producto']); ?>
+                    <input type="hidden" name="qty" value="1">
+                    <button type="submit" class="btn btn-link p-0 border-0 bg-transparent">
+                      <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png"
+                           alt="Carrito" style="width: 26px; height: 26px;">
+                    </button>
+                  <?= form_close(); ?>
+                <?php endif; ?>
+              </div>
+            </div>
           </div>
-          <button class="position-absolute border-0" style="bottom: 0; right: 0; background-color: transparent;" onmouseover="this.style.backgroundColor='transparent';" onmouseout="this.style.backgroundColor='transparent';">
-        <!-- Ícono de carrito -->
-      <a href="#" class="nav-link">
-        <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
-      </a>
-
-          </button>
-        </div>
-      </div>
-
-      <!-- Fugazzeta -->
-      <div class="col">
-        <div class="card h-100 shadow-sm">
-          <img src="assets/Img/fugazeta.jpg" class="card-img-top" alt="Fugazeta">
-          <div class="card-body">
-            <p class="promo-title">Pizza Fugazzeta</p>
-            <p class="promo-price">$12000</p>
-            <p class="card-text">Cebolla caramelizada (morada-amarilla), muzzarella, aceitunas.</p>
-          </div>
-          <button class="position-absolute border-0" style="bottom: 0; right: 0; background-color: transparent;" onmouseover="this.style.backgroundColor='transparent';" onmouseout="this.style.backgroundColor='transparent';">
-        <!-- Ícono de carrito -->
-      <a href="#" class="nav-link">
-        <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
-      </a>
-          </button>
-        </div>
-      </div>
-
-      <!-- combo Milanesa -->
-      <div class="col">
-        <div class="card h-100 shadow-sm">
-          <img src="assets/Img/mila.jpg" class="card-img-top" alt="Milanesa">
-          <div class="card-body">
-            <p class="promo-title">Combo: Milanesa+Papas</p>
-            <p class="promo-price">$15000</p>
-            <p class="card-text">Milanesa de carne (vaca-pollo), papas fritas con verdeo</p>
-          </div>
-          <button class="position-absolute border-0" style="bottom: 0; right: 0; background-color: transparent;" onmouseover="this.style.backgroundColor='transparent';" onmouseout="this.style.backgroundColor='transparent';">
-         <!-- Ícono de carrito -->
-      <a href="#" class="nav-link">
-        <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
-      </a>
-          </button>
-        </div>
-      </div>
-
-      <!--  Hamburguesa-->
-      <div class="col">
-        <div class="card h-100 shadow-sm">
-          <img src="assets/Img/hambur.jpg" class="card-img-top" alt="Hamburguesa">
-          <div class="card-body">
-            <p class="promo-title">Hamburguesa</p>
-            <p class="promo-price">$9800</p>
-            <p class="card-text">Medallon, queso, cebolla, tomate, lechuga. </p>
-          </div>
-          <button class="position-absolute border-0" style="bottom: 0; right: 0; background-color: transparent;" onmouseover="this.style.backgroundColor='transparent';" onmouseout="this.style.backgroundColor='transparent';">
-        <!-- Ícono de carrito -->
-      <a href="#" class="nav-link">
-        <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
-      </a>
-          </button>
-        </div>
-      </div>
-
-      <!--  Hamburguesa triple-->
-      <div class="col">
-        <div class="card h-100 shadow-sm">
-          <img src="assets/Img/hamTriple.jpg" class="card-img-top" alt="Hamburguesa">
-          <div class="card-body">
-            <p class="promo-title">Hamburguesa Triple</p>
-            <p class="promo-price">$16000</p>
-            <p class="card-text">Triple medallon, queso cheddar, tomate, lechuga, pan brioche. </p>
-          </div>
-          <button class="position-absolute border-0" style="bottom: 0; right: 0; background-color: transparent;" onmouseover="this.style.backgroundColor='transparent';" onmouseout="this.style.backgroundColor='transparent';">
-         <!-- Ícono de carrito -->
-      <a href="#" class="nav-link">
-        <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
-      </a>
-          </button>
-        </div>
-      </div>
-
-      <!-- Sandwich de miga-->
-      <div class="col">
-        <div class="card h-100 shadow-sm">
-          <img src="assets/Img/migaNormal.jpg" class="card-img-top" alt="SandwichMiga">
-          <div class="card-body">
-            <p class="promo-title">Sandwich de Miga</p>
-            <p class="promo-price">$1000 c/u</p>
-            <p class="card-text">Pan de miga, jamón, queso. </p>
-          </div>
-          <button class="position-absolute border-0" style="bottom: 0; right: 0; background-color: transparent;" onmouseover="this.style.backgroundColor='transparent';" onmouseout="this.style.backgroundColor='transparent';">
- <!-- Ícono de carrito -->
-      <a href="#" class="nav-link">
-        <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
-      </a>
-          </button>
-        </div>
-      </div>
-
-      <!--  sanwich de miga con huevo-->
-      <div class="col">
-        <div class="card h-100 shadow-sm">
-          <img src="assets/Img/migaHuevo.jpg" class="card-img-top" alt="Hamburguesa">
-          <div class="card-body">
-            <p class="promo-title">Sandwich de Miga con Huevo</p>
-            <p class="promo-price">$1800 c/u</p>
-            <p class="card-text">Pan de miga, jamón, queso, huevo.</p>
-          </div>
-          <button class="position-absolute border-0" style="bottom: 0; right: 0; background-color: transparent;" onmouseover="this.style.backgroundColor='transparent';" onmouseout="this.style.backgroundColor='transparent';">
-         <!-- Ícono de carrito -->
-      <a href="#" class="nav-link">
-        <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
-      </a>
-          </button>
-        </div>
-      </div>
-
-      <!--  sanwich de miga con lechuga-->
-      <div class="col">
-        <div class="card h-100 shadow-sm">
-          <img src="assets/Img/migaLechuga.jpg" class="card-img-top" alt="Hamburguesa">
-          <div class="card-body">
-            <p class="promo-title">Sandwich de Miga Cargado</p>
-            <p class="promo-price">$2300 c/u</p>
-            <p class="card-text">Pan de miga, jamón, pollo, queso, palta, lechuga.</p>
-          </div>
-          <button class="position-absolute border-0" style="bottom: 0; right: 0; background-color: transparent;" onmouseover="this.style.backgroundColor='transparent';" onmouseout="this.style.backgroundColor='transparent';">
-        <!-- Ícono de carrito -->
-      <a href="#" class="nav-link">
-        <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
-      </a>
-          </button>
-        </div>
-      </div>
-
-
+        <?php endif; ?>
+      <?php endforeach; ?>
     </div>
   </div>
 </section>

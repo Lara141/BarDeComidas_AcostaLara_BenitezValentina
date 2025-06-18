@@ -1,4 +1,82 @@
 <?php helper('form'); ?>
+
+<!-- Botón de filtro estilo PedidosYa alineado a la derecha -->
+<div class="d-flex justify-content-end mb-4">
+  <button type="button"
+          class="btn btn-light border rounded-pill shadow-sm d-flex align-items-center px-3 py-2"
+          data-bs-toggle="modal"
+          data-bs-target="#filtrosPedidosYaModal"
+          style="gap: 8px;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16">
+      <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .4.8l-4.6 6.1V13a1 1 0 0 1-2 0V7.9L1.6 1.8A.5.5 0 0 1 1.5 1.5z"/>
+    </svg>
+    <span class="fw-semibold">Filtros</span>
+  </button>
+</div>
+
+<!-- Modal de filtros -->
+<div class="modal fade" id="filtrosPedidosYaModal" tabindex="-1" aria-labelledby="filtrosPedidosYaModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content rounded-4">
+      
+<form method="get" action="<?= site_url('catalogo_producto'); ?>">
+        <div class="modal-header border-0 pb-0 position-relative">
+          <h4 class="modal-title fw-bold" id="filtrosPedidosYaModalLabel">Filtros</h4>
+          <a href="<?= site_url('catalogo_producto'); ?>"
+            class="btn btn-light border rounded-pill position-absolute end-0 top-0 mt-2 me-5"
+            style="z-index:2; font-size: 0.95rem;">
+            Reestablecer
+          </a>
+          <button type="button" class="btn-close ms-2" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body pt-2">
+          <h6 class="fw-semibold mb-3">Provincias</h6>
+          <div class="d-flex flex-wrap gap-2 mb-4">
+            <?php
+              $provincias = [
+                "Buenos Aires", "Catamarca", "Chaco", "Chubut", "Córdoba", "Corrientes", "Entre Ríos", "Formosa",
+                "Jujuy", "La Pampa", "La Rioja", "Mendoza", "Misiones", "Neuquén", "Río Negro", "Salta", "San Juan",
+                "San Luis", "Santa Cruz", "Santa Fe", "Santiago del Estero", "Tierra del Fuego", "Tucumán"
+              ];
+              $provinciaSeleccionada = $_GET['provincia'] ?? '';
+              foreach ($provincias as $prov) {
+                $active = ($provinciaSeleccionada === $prov) ? 'btn-primary text-white' : 'btn-outline-primary';
+                echo '<button type="button" name="btn-provincia" value="'.$prov.'" class="btn '.$active.' rounded-pill px-3 btn-provincia">'.$prov.'</button>';
+              }
+            ?>
+            <input type="hidden" name="provincia" id="provinciaSeleccionada" value="<?= esc($provinciaSeleccionada) ?>">
+          </div>
+          <!-- Filtro de promociones -->
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" name="solo_promociones" id="soloPromociones"
+              <?= isset($_GET['solo_promociones']) ? 'checked' : '' ?>>
+            <label class="form-check-label" for="soloPromociones">
+              Solo promociones
+            </label>
+          </div>
+        </div>
+        <div class="modal-footer border-0 pt-0 justify-content-center">
+          <button type="submit" class="btn btn-primary rounded-pill px-5">Aplicar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  // JS para seleccionar provincia y marcar el botón
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.btn-provincia').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('provinciaSeleccionada').value = this.value;
+        document.querySelectorAll('.btn-provincia').forEach(b => b.classList.remove('btn-primary', 'text-white'));
+        this.classList.add('btn-primary', 'text-white');
+      });
+    });
+  });
+</script>
+
 <div class="container mt-5">
   <div class="row">
 
