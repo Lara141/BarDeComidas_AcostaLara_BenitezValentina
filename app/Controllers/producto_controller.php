@@ -104,9 +104,9 @@ function gestionar_producto(){
    $categoria=new Categoria_Model();
 
     $data['producto']= $producto_model->join('categoria_producto','categoria_producto.categoria_id=producto.categoria_id')->findAll();
-    $data['titulo']='listar productos';
+    $data['titulo']='Gestionar productos';
 
-    return view('administrador/encabezado_admin',$data).view('administrador/barraNav_admin').view('administrador/listar_producto');
+    return view('administrador/encabezado_admin',$data).view('administrador/barraNav_admin').view('administrador/gestionar_producto');
 }
 
 function editar_producto($id=null){
@@ -190,9 +190,32 @@ public function actualizar_producto()
 public function listar_productos() {
     $producto_model = new producto_model();
     $data['productos'] = $producto_model->where('estado_producto', 1)->where('stock_producto >', 0)->join('categoria_producto', 'categoria_producto.categoria_id=producto.categoria_id')->findAll();
-    $data['titulo'] = 'Catálogo de productos';
-    return view('administrador/encabezado_admin', $data).view('administrador/barraNav_admin').view('contenido/catalogo_producto', $data); 
+    $data['titulo'] = 'Lista de productos';
+    return view('administrador/encabezado_admin', $data).view('administrador/barraNav_admin').view('administrador/listar_producto', $data); 
 }
+
+
+public function catalogo_productos() {
+    $producto_model = new producto_model();
+    $data['productos'] = $producto_model->where('estado_producto', 1)->where('stock_producto >', 0)->join('categoria_producto', 'categoria_producto.categoria_id=producto.categoria_id')->findAll();
+    $data['titulo'] = 'Catalogo de productos';
+    return view('plantillas/encabezado', $data).view('plantillas/barraNavegacion').view('contenido/catalogo_producto', $data); 
+}
+
+public function menu_comida() {
+    $producto_model = new producto_model();
+    $data['productos'] = $producto_model->where('estado_producto', 1)->where('stock_producto >', 0)->join('categoria_producto', 'categoria_producto.categoria_id=producto.categoria_id')->findAll();
+    $data['titulo'] = 'Catalogo de productos';
+    return view('plantillas/encabezado', $data).view('plantillas/barraNavegacion').view('contenido/menu_comida', $data); 
+}
+
+public function menu_bebida() {
+    $producto_model = new producto_model();
+    $data['productos'] = $producto_model->where('estado_producto', 1)->where('stock_producto >', 0)->join('categoria_producto', 'categoria_producto.categoria_id=producto.categoria_id')->findAll();
+    $data['titulo'] = 'Catalogo de productos';
+    return view('plantillas/encabezado', $data).view('plantillas/barraNavegacion').view('contenido/menu_bebida', $data); 
+}
+
 
 public function eliminar_producto($id=null){
     //se actualiza el estado del producto

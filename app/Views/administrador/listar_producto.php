@@ -1,79 +1,54 @@
+<?php helper('form'); ?>
 
-<!-- // filepath: app/Views/administrador/gestionar_producto.php -->
+<div class="container mt-5">
+    <h1 class="display-5 text-center mb-5 fw-bold text-info">Lista de Productos</h1>
 
-<div class="container my-5" style="max-width: 1100px;">
-    <div class="card shadow rounded-4">
-        <div class="card-body">
-            <h2 class="text-center mb-4 fw-bold text-primary">
-                <i class="fa-solid fa-boxes-stacked"></i> Gestión de productos
-            </h2>
-            <?php if (session()->getFlashdata('mensaje')): ?>
-                <div class="alert alert-success text-center">
-                    <?= session()->getFlashdata('mensaje') ?>
-                </div>
-            <?php endif; ?>
-            <?php if (isset($producto) && count($producto) > 0): ?>
-                <div class="table-responsive">
-                    <table class="table table-bordered table-hover align-middle">
-                        <thead class="table-info text-center">
-                            <tr>
-                                <th>#</th>
-                                <th>Nombre</th>
-                                <th>Precio</th>
-                                <th>Descripción</th>
-                                <th>Estado</th>
-                                <th>Stock</th>
-                                <th>Categoría</th>
-                                <th>Imagen</th>
-                                <th>Acciones</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php foreach ($producto as $i => $row): ?>
-                                <tr>
-                                    <td class="text-center"><?= $i + 1 ?></td>
-                                    <td><?= esc($row['nombre_producto']) ?></td>
-                                    <td>$<?= number_format($row['precio_producto'], 2, ',', '.') ?></td>
-                                    <td><?= esc($row['descripcion_producto']) ?></td>
-                                    <td class="text-center">
-                                        <?php if ($row['estado_producto'] == 1): ?>
-                                            <span class="badge bg-success">Activo</span>
-                                        <?php else: ?>
-                                            <span class="badge bg-danger">Inactivo</span>
-                                        <?php endif; ?>
-                                    </td>
-                                    <td class="text-center"><?= $row['stock_producto'] ?></td>
-                                    <td><?= esc($row['categoria_desc'] ?? $row['categoria_nombre'] ?? '') ?></td>
-                                    <td>
-                                        <img src="<?= base_url('assets/upload/'.$row['imagen_producto']) ?>"
-                                             alt="Imagen del producto"
-                                             class="img-thumbnail rounded"
-                                             style="max-width: 80px;">
-                                    </td>
-                                    <td class="text-center">
-                                        <a class="btn btn-sm btn-primary mb-1" href="<?= base_url('editar/'.$row['id_producto']) ?>">
-                                            Editar
-                                        </a>
-                                        <?php if ($row['estado_producto'] == 1): ?>
-                                            <a class="btn btn-sm btn-danger mb-1" href="<?= base_url('eliminar/'.$row['id_producto']) ?>">
-                                                Eliminar
-                                            </a>
-                                        <?php else: ?>
-                                            <a class="btn btn-sm btn-success mb-1" href="<?= base_url('activar/'.$row['id_producto']) ?>">
-                                                Activar
-                                            </a>
-                                        <?php endif; ?>
-                                    </td>
-                                </tr>
-                            <?php endforeach; ?>
-                        </tbody>
-                    </table>
-                </div>
-            <?php else: ?>
-                <div class="alert alert-info text-center">
-                    No hay productos registrados.
-                </div>
-            <?php endif; ?>
+    <?php
+    $categorias = ['comida' => 'Comidas', 'bebida' => 'Bebidas'];
+
+    foreach ($categorias as $clave => $tituloCategoria):
+        $productosFiltrados = array_filter($productos, fn($p) => strtolower($p['categoria_desc']) === $clave);
+        if (count($productosFiltrados) > 0):
+    ?>
+        <div class="mb-5">
+            <h2 class="mb-4 fw-bold text-secondary border-bottom pb-2"><?= $tituloCategoria ?></h2>
+
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <?php foreach ($productosFiltrados as $row): ?>
+                    <div class="col">
+                        <div class="card h-100 shadow-sm border-0 rounded-4">
+                            <img src="<?= base_url('assets/upload/' . $row['imagen_producto']); ?>" class="card-img-top rounded-top-4" alt="Imagen del producto" style="height: 220px; object-fit: cover;">
+
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold"><?= esc($row['nombre_producto']); ?></h5>
+                                <p class="card-text text-muted small"><?= esc($row['descripcion_producto']); ?></p>
+                                <p class="text-success fw-bold fs-5">$<?= number_format($row['precio_producto'], 2, ',', '.'); ?></p>
+                                <p class="mb-1"><strong>Categoría:</strong> <?= esc($row['categoria_desc']); ?></p>
+                                <p><strong>Stock:</strong> <?= esc($row['stock_producto']); ?></p>
+
+                                <?php if (session('logueado')): ?>
+                                    <?= form_open('add_cart'); ?>
+                                        <?= form_hidden('id', $row['id_producto']); ?>
+                                        <?= form_hidden('titulo', $row['nombre_producto']); ?>
+                                        <?= form_hidden('precio', $row['precio_producto']); ?>
+                                        <div class="d-flex justify-content-center mb-3">
+                                            <input type="number" name="qty" value="1" min="1" max="<?= $row['stock_producto'] ?>" class="form-control text-center" style="width: 80px;">
+                                        </div>
+                                        <button type="submit" class="btn btn-link p-0 border-0 bg-transparent">
+                                            <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
+                                        </button>
+                                    <?= form_close(); ?>
+                                <?php else: ?>
+                                    <p class="text-muted">Iniciá sesión para comprar</p>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
         </div>
-    </div>
+    <?php
+        endif;
+    endforeach;
+    ?>
 </div>

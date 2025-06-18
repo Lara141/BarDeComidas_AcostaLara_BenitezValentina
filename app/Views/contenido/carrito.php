@@ -3,6 +3,12 @@
 <div class="container mt-4">
     <h1 class="text-center mb-4">Carrito de Compras</h1>
 
+    <?php if (session()->getFlashdata('mensaje')): ?>
+        <div class="alert alert-info text-center">
+            <?= session()->getFlashdata('mensaje') ?>
+        </div>
+    <?php endif; ?>
+
     <div class="mb-3 text-center">
         <a href="<?= base_url('catalogo_producto') ?>" class="btn btn-outline-primary">
             Seguir comprando
@@ -52,7 +58,7 @@
         </div>
 
         <div class="d-flex justify-content-between">
-            <a href="<?= base_url('vaciar_carrito/all') ?>" class="btn btn-outline-danger">
+            <<a href="<?= base_url('vaciar_carrito') ?>" class="btn btn-outline-danger">
                 Vaciar carrito
             </a>
             <a href="<?= base_url('ventas') ?>" class="btn btn-success">

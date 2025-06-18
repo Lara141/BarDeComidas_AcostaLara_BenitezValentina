@@ -49,15 +49,15 @@
                                              style="max-width: 80px;">
                                     </td>
                                     <td class="text-center">
-                                        <a class="btn btn-sm btn-primary mb-1" href="<?= base_url('editar/'.$row['producto_id']) ?>">
+                                        <a class="btn btn-sm btn-primary mb-1" href="<?= base_url('editar/'.$row['id_producto']) ?>">
                                             Editar
                                         </a>
                                         <?php if ($row['estado_producto'] == 1): ?>
-                                            <a class="btn btn-sm btn-danger mb-1" href="<?= base_url('eliminar/'.$row['producto_id']) ?>">
+                                            <a class="btn btn-sm btn-danger mb-1" href="<?= base_url('eliminar/'.$row['id_producto']) ?>">
                                                 Eliminar
                                             </a>
                                         <?php else: ?>
-                                            <a class="btn btn-sm btn-success mb-1" href="<?= base_url('activar/'.$row['producto_id']) ?>">
+                                            <a class="btn btn-sm btn-success mb-1" href="<?= base_url('activar/'.$row['id_producto']) ?>">
                                                 Activar
                                             </a>
                                         <?php endif; ?>
