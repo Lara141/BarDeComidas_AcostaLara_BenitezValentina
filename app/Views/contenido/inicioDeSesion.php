@@ -179,7 +179,7 @@ h2 {
                     <a href="#">Olvidaste tu contraseña?</a>
                 </div>
                 <button type="submit" class="btn"  >
-                     <a  class="nav-link" href="<?= base_url('cliente') ?>">Iniciar</a>
+                    Iniciar
                 </button>
                 <div class="signup-link">
                     <a  class="nav-link" href="<?= base_url('registro') ?>">Registrarse</a>
