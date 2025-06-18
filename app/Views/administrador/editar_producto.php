@@ -34,7 +34,7 @@
             <label for="stock">Stock</label>
             <?= form_input(['name' => 'stock', 'id' => 'stock_producto', 'class' => 'form-control', 'value' => $producto['stock_producto'] ?? '']) ?>
         </div>
-
+ 
         <div class="mb-3">
             <label for="descuento">Descuento (%)</label>
             <?= form_input(['name' => 'descuento', 'id' => 'descuento', 'class' => 'form-control', 'placeholder' => 'Ej: 15', 'value' => $producto['descuento_producto'] ?? '']) ?>
