@@ -34,6 +34,16 @@
                 <?= form_input(['name' => 'precio', 'id' => 'precio', 'class' => 'form-control', 'placeholder' => 'Ingrese precio del producto', 'value' => set_value('precio')]) ?>
                 
             </div>
+            
+            <div class="mb-3">
+                <label for="descuento" class="form-label">Descuento (%)</label>
+                <?= form_input(['name' => 'descuento', 'id' => 'descuento', 'type' => 'number', 'class' => 'form-control', 'placeholder' => 'Ingrese porcentaje de descuento (opcional)', 'value' => set_value('descuento')]) ?>
+            </div>
+
+            <div class="mb-3">
+                <label for="provincia" class="form-label">Provincia</label>
+                <?= form_input(['name' => 'provincia', 'id' => 'provincia', 'class' => 'form-control', 'placeholder' => 'Ingrese provincia (opcional)', 'value' => set_value('provincia')]) ?>
+            </div>
 
             <div class="mb-3">
                 <label for="descripcion" class="form-label">Descripción</label>

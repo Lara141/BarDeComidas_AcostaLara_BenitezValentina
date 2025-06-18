@@ -19,6 +19,7 @@ class producto_controller extends BaseController {
     ];
         return view('administrador/encabezado_admin', $data).view('administrador/barraNav_admin', $data).view('administrador/agregar_producto', $data);
     }
+
     public function registrar_producto(){
     //procesa los datos del producto enviados por el formulario
     $validation= \Config\Services::validation();
@@ -80,6 +81,8 @@ class producto_controller extends BaseController {
         'estado_producto'=> 1,
         'stock_producto'=> $request->getPost('stock'),
         'categoria_id'=> $request->getPost('categoria'),
+        'descuento_producto' => $request->getPost('descuento'),
+        'provincia_producto' => $request->getPost('provincia'),
         'imagen_producto'=> $nombre_aleatorio, 
         
     ];
@@ -174,6 +177,8 @@ public function actualizar_producto()
     $data = [
         'nombre_producto'    => $request->getPost('nombre'),
         'precio_producto'    => $request->getPost('precio'),
+        'descuento_producto'    => $request->getPost('descuento'),
+        'provincia_producto'    => $request->getPost('provincia'),
         'descripcion_producto' => $request->getPost('descripcion'),
         'estado_producto'    => 1,
         'stock_producto'     => $request->getPost('stock'),
@@ -233,4 +238,37 @@ public function activar_producto($id=null){
     $producto->update($id, $data);
     return redirect()-> route('gestionar');
 }
+
+public function menu_promociones() {
+    $producto_model = new producto_model();
+    $data['productos'] = $producto_model
+        ->where('estado_producto', 1)
+        ->where('stock_producto >', 0)
+        ->where('descuento_producto >', 0)
+        ->join('categoria_producto', 'categoria_producto.categoria_id=producto.categoria_id')
+        ->findAll();
+
+    $data['titulo'] = 'Promociones';
+    return view('plantillas/encabezado', $data)
+         . view('plantillas/barraNavegacion')
+         . view('contenido/menu_promociones', $data);
+}
+
+public function menu_provincial($provincia = null) {
+    $producto_model = new producto_model();
+    $builder = $producto_model->where('estado_producto', 1)
+        ->where('stock_producto >', 0)
+        ->join('categoria_producto', 'categoria_producto.categoria_id=producto.categoria_id');
+
+    if ($provincia !== null) {
+        $builder->where('provincia_producto', $provincia);
+    }
+
+    $data['productos'] = $builder->findAll();
+    $data['titulo'] = 'Comidas por Provincia';
+    return view('plantillas/encabezado', $data)
+         . view('plantillas/barraNavegacion')
+         . view('contenido/menu_provincia', $data);
+}
+
 }

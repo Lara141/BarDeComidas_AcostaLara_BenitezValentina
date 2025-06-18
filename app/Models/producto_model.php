@@ -15,7 +15,7 @@ class producto_model extends Model
     //protected $useTimestamps = false; //true si se quiere usar timestamps
     protected $useSoftDeletes = false;//true si se quiere usar soft deletes
 
-    protected $allowedFields = ['nombre_producto', 'precio_producto', 'descripcion_producto', 'estado_producto', 'stock_producto', 'categoria_id', 'imagen_producto'];//campos que se pueden insertar o actualizar en la base de datos (los mismos nombres que estan en la base de datos deben estar aca, excepto el que tiene la llavesita osea el id)
+    protected $allowedFields = ['nombre_producto', 'precio_producto', 'descuento_producto', 'provincia_producto', 'descripcion_producto', 'estado_producto', 'stock_producto', 'categoria_id', 'imagen_producto'];//campos que se pueden insertar o actualizar en la base de datos (los mismos nombres que estan en la base de datos deben estar aca, excepto el que tiene la llavesita osea el id)
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;

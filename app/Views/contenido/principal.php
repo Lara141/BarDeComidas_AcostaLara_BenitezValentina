@@ -17,7 +17,7 @@
   <div class="imagen-con-texto">
     <img src="assets/img/bebidas2.jpg" alt="Bebidas">
     <div class="texto-sobre-imagen">
-      <a href="https://www.gobar.com.ar/vinos">Ver Bebidas</a>
+      <a href="<?= base_url('bebida') ?>">Ver Bebidas</a>
     </div>
   </div>
 

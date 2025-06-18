@@ -22,7 +22,31 @@
                             <div class="card-body text-center">
                                 <h5 class="card-title fw-bold"><?= esc($row['nombre_producto']); ?></h5>
                                 <p class="card-text text-muted small"><?= esc($row['descripcion_producto']); ?></p>
-                                <p class="text-success fw-bold fs-5">$<?= number_format($row['precio_producto'], 2, ',', '.'); ?></p>
+                                <?php if (!empty($row['descuento_producto']) && $row['descuento_producto'] > 0): ?>
+                                <?php 
+                                    $precioOriginal = $row['precio_producto'];
+                                    $descuento = $row['descuento_producto'];
+                                    $precioFinal = $precioOriginal - ($precioOriginal * $descuento / 100);
+                                ?>
+                                <p class="text-muted text-decoration-line-through mb-1">
+                                    $<?= number_format($precioOriginal, 2, ',', '.'); ?>
+                                </p>
+                                <p class="text-success fw-bold fs-5 mb-1">
+                                    $<?= number_format($precioFinal, 2, ',', '.'); ?>
+                                </p>
+                                <p class="text-danger fw-bold small mb-2">Descuento: <?= $descuento; ?>%</p>
+                            <?php else: ?>
+                                <p class="text-success fw-bold fs-5 mb-2">
+                                    $<?= number_format($row['precio_producto'], 2, ',', '.'); ?>
+                                </p>
+                            <?php endif; ?>
+                            <?php if (!empty($row['descuento_producto']) && $row['descuento_producto'] > 0): ?>
+                                                <?php endif; ?>
+
+                                <?php if (!empty($row['provincia_producto'])): ?>
+                                    <p class="small fst-italic">Comida tipica de: <?= esc($row['provincia_producto']); ?></p>
+                                <?php endif; ?>
+
                                 <p class="mb-1"><strong>Categoría:</strong> <?= esc($row['categoria_desc']); ?></p>
                                 <p><strong>Stock:</strong> <?= esc($row['stock_producto']); ?></p>
 
@@ -31,12 +55,11 @@
                                         <?= form_hidden('id', $row['id_producto']); ?>
                                         <?= form_hidden('titulo', $row['nombre_producto']); ?>
                                         <?= form_hidden('precio', $row['precio_producto']); ?>
+                                        <?= form_hidden('descuento', $row['descuento_producto']); ?>
+                                        <?= form_hidden('provincia', $row['provincia_producto']); ?>
                                         <div class="d-flex justify-content-center mb-3">
                                             <input type="number" name="qty" value="1" min="1" max="<?= $row['stock_producto'] ?>" class="form-control text-center" style="width: 80px;">
-                                        </div>
-                                        <button type="submit" class="btn btn-link p-0 border-0 bg-transparent">
-                                            <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
-                                        </button>
+                                </div>
                                     <?= form_close(); ?>
                                 <?php else: ?>
                                     <p class="text-muted">Iniciá sesión para comprar</p>
