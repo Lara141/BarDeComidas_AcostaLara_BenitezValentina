@@ -1,5 +1,4 @@
 
-
 <?php $session = session(); ?>
 
 <nav class="navbar bg-body-tertiary">
@@ -84,9 +83,9 @@
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Menú
           </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="https://rankea.com.ar/negocio/felix-pub-corrientes/menu-restaurante-mk/">Comida</a></li>
-            <li><a class="dropdown-item" href="https://www.gobar.com.ar/vinos">Bebida</a></li>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="<?= base_url('comida') ?>">Comida</a></li>
+            <li><a class="dropdown-item" href="<?= base_url('bebida') ?>">Bebida</a></li>
           </ul>
         </li>
       </ul>

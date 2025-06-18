@@ -44,15 +44,23 @@ $routes->get('eliminar/(:num)', 'producto_controller::eliminar_producto/$1');
 $routes->get('activar/(:num)', 'producto_controller::activar_producto/$1');
 //catalogo
 $routes->get('productos', 'producto_controller::listar_productos');
-
+$routes->get('comida', 'producto_controller::menu_comida');
+$routes->get('bebida', 'producto_controller::menu_bebida');
 //carrito
 $routes->get('ver_carrito', 'Carrito_controller::ver_carrito');
-$routes->post('add_cart', 'Carrito_controller::agregar_carrito');
+$routes->post('agregar_carrito', 'Carrito_controller::agregar_carrito');
 $routes->get('ventas', 'Carrito_controller::guardar_venta');
+$routes->get('eliminar_item/(:any)', 'Carrito_controller::eliminar_item/$1');
+$routes->get('vaciar_carrito', 'Carrito_controller::vaciar_carrito');
+$routes->get('eliminar_venta/(:num)', 'Carrito_controller::eliminar_venta/$1');
+
 
 //consultas
 $routes->get('listar_consulta', 'Consulta_controller::listar_consultas');
 
 
-$routes->get('catalogo_producto', 'producto_controller::listar_productos');
-$routes->get('listarVentas', 'Carrito_controller::listar_ventas');
+$routes->get('listar_producto', 'producto_controller::listar_productos');
+$routes->get('catalogo_producto', 'producto_controller::catalogo_productos');
+$routes->get('listar_ventas', 'Carrito_controller::listar_ventas');
+//$routes->get('detalle_venta/(:num)', 'Carrito_controller::detalle_venta/$1');
+$routes->get('api/detalle_venta/(:num)', 'Carrito_controller::api_detalle_venta/$1');

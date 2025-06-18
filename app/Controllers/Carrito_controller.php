@@ -31,7 +31,7 @@ class Carrito_controller extends BaseController
             'price' => $request->getPost('precio'),
             'qty' => 1
         );
-
+        
         $cart->insert($data);
     
         return redirect()->route('ver_carrito')->with('mensaje', 'Producto agregado al carrito');
@@ -86,18 +86,61 @@ class Carrito_controller extends BaseController
     public function listar_ventas()
     {
         $db = \Config\Database::connect();
-        $data['titulo'] = 'lista de ventas';
+        $builder = $db->table('ventas');
+        $builder->select('ventas.id_venta, persona.nombre_persona, ventas.fecha_venta, ventas.total_venta, COUNT(detalle_venta.id_detalle_venta) as cantidad_productos');
+        $builder->join('persona', 'persona.id_persona = ventas.id_persona');
+        $builder->join('detalle_venta', 'detalle_venta.id_venta = ventas.id_venta');
+        $builder->groupBy('ventas.id_venta');
+        $builder->orderBy('ventas.fecha_venta', 'DESC');
+        $query = $builder->get();
 
-$builder = $db->table('detalle_venta');
-$builder->select('producto.*, categoria_producto.categoria_desc, detalle_venta.cantidad, ventas.fecha_venta');
-$builder->join('producto', 'producto.id_producto = detalle_venta.id_producto');
-$builder->join('categoria_producto', 'categoria_producto.categoria_id = producto.categoria_id');
-$builder->join('ventas', 'ventas.id_venta = detalle_venta.id_venta');
-$builder->orderBy('ventas.fecha_venta', 'DESC');
-$query = $builder->get();
-$data['producto'] = $query->getResultArray();
-return view('administrador/encabezado_admin', $data).view('administrador/barraNav_admin').view('administrador/listar_ventas');//.view('contenido/catalogo_producto', $data);
-    
+        $data['ventas'] = $query->getResultArray();
+        $data['titulo'] = 'Lista de Ventas';
 
-}
+        return view('administrador/encabezado_admin', $data). view('administrador/barraNav_admin').view('administrador/listar_ventas', $data);
+    }
+
+
+
+        public function eliminar_item($rowid)
+        {
+            $cart = \Config\Services::cart();
+            $cart->remove($rowid);
+            return redirect()->route('ver_carrito')->with('mensaje', 'Producto eliminado del carrito');
+        }
+
+        public function vaciar_carrito()
+        {
+            $cart = \Config\Services::cart();
+            $cart->destroy();
+            return redirect()->route('ver_carrito')->with('mensaje', 'Carrito vaciado correctamente');
+        }
+
+        public function eliminar_venta($id_venta)
+            {
+                $ventaModel = new Venta_Model();
+                $detalleModel = new Detalle_Venta_Model();
+
+                // Eliminamos primero los detalles relacionados
+                $detalleModel->where('id_venta', $id_venta)->delete();
+
+                // Luego eliminamos la venta principal
+                $ventaModel->delete($id_venta);
+
+                return redirect()->to(base_url('listar_ventas'))->with('mensaje', 'Venta eliminada correctamente');
+            }
+
+            public function api_detalle_venta($id_venta)
+            {
+                $db = \Config\Database::connect();
+                $builder = $db->table('detalle_venta');
+                $builder->select('producto.nombre_producto, detalle_venta.cantidad, detalle_venta.precio_unitario, detalle_venta.subtotal');
+                $builder->join('producto', 'producto.id_producto = detalle_venta.id_producto');
+                $builder->where('detalle_venta.id_venta', $id_venta);
+                $query = $builder->get();
+
+                return $this->response->setJSON($query->getResultArray());
+            }
+
+
 }
