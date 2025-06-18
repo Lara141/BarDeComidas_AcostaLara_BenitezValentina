@@ -74,16 +74,16 @@ class Sesion_controller extends BaseController
 
     public function mi_cuenta() 
     {
-    $usuario_id = session('id_usuario'); // o el campo de sesión que uses
+    $usuario_id = session('id_usuario'); 
 
     // Modelo de usuario
     $usuarioModel = new \App\Models\UserModel();
     $data['usuario'] = $usuarioModel->find($usuario_id);
     $data['titulo'] = 'Mi cuenta';
+    
 
-    // Modelo de compras o pedidos
-    //$compraModel = new \App\Models\Compra_model(); 
-    //$data['compras'] = $compraModel->where('usuario_id', $usuario_id)->orderBy('fecha', 'DESC')->findAll();
+    $ventaModel = new \App\Models\Venta_Model();
+    $data['compras'] = $ventaModel->where('id_persona', $usuario_id)->orderBy('fecha_venta', 'DESC')->findAll();
 
     $data['titulo'] = 'Mi cuenta';
     return view('plantillas/encabezado', $data)
@@ -93,22 +93,66 @@ class Sesion_controller extends BaseController
 
     public function actualizar_mi_cuenta()
     {
-        $usuario_id = session('id_usuario');
-        $request = \Config\Services::request();
+        helper(['form']);
 
-        $usuarioModel = new \App\Models\UserModel();
-
-        $datosActualizados = [
-            'nombre_persona' => $request->getPost('nombre'),
-            'apellido_persona' => $request->getPost('apellido'),
-            'nacimiento_persona' => $request->getPost('nacimiento'),
-            'dni_persona' => $request->getPost('dni'),
-            'correo_persona' => $request->getPost('correo')
+        $reglas = [
+            'nombre'    => 'required|max_length[150]',
+            'apellido'  => 'required|max_length[150]',
+            'nacimiento'=> 'required',
+            'dni'       => 'required|max_length[8]',
+            'correo'    => 'required|valid_email',
+            'pass'      => 'permit_empty|min_length[8]',
+            'repass'    => 'permit_empty|matches[pass]',
         ];
 
-        $usuarioModel->update($usuario_id, $datosActualizados);
+        $mensajes = [
+            'nombre' => [
+                'required' => 'Ingrese nombre, es requerido',
+            ],
+            'apellido' => [
+                'required' => 'Ingrese apellido, es requerido',
+            ],
+            'nacimiento' => [
+                'required' => 'La fecha de nacimiento es requerida',
+            ],
+            'dni' => [
+                'required' => 'El DNI es obligatorio',
+            ],
+            'correo' => [
+                'required' => 'Ingrese correo electrónico, es obligatorio',
+                'valid_email' => 'La dirección de correo debe ser válida',
+            ],
+            'pass' => [
+                'min_length' => 'La contraseña debe tener al menos 8 caracteres',
+            ],
+            'repass' => [
+                'matches' => 'Las contraseñas no coinciden',
+            ],
+        ];
 
-        return redirect()->to('/mi_cuenta')->with('mensaje', 'Datos actualizados correctamente.');
+        if (!$this->validate($reglas, $mensajes)) {
+            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
+        }
+
+        $usuarioModel = new \App\Models\Usermodel();
+        $session = session();
+
+        $datos = [
+            'nombre_persona'     => $this->request->getPost('nombre'),
+            'apellido_persona'   => $this->request->getPost('apellido'),
+            'nacimiento_persona' => $this->request->getPost('nacimiento'),
+            'dni_persona'        => $this->request->getPost('dni'),
+            'correo_persona'     => $this->request->getPost('correo'),
+        ];
+
+        // Si el usuario ingresó una nueva contraseña válida, la guardamos hasheada
+        if ($this->request->getPost('pass')) {
+            $datos['pass_persona'] = password_hash($this->request->getPost('pass'), PASSWORD_DEFAULT);
+        }
+
+        $usuarioModel->update($session->get('id_usuario'), $datos);
+
+        return redirect()->back()->with('mensaje', 'Tus datos se actualizaron correctamente.');
     }
 
 
