@@ -36,16 +36,15 @@ class producto_controller extends BaseController {
         'categoria' => 'required',
         'imagen'=>'uploaded[imagen]|max_size[imagen, 4096]|ext_in[imagen,jpg,jpeg,png,gif]',
     ],
-    [//errors
-       //completar los mensajes
+    [//errors personalizados
         'nombre' => [
-            'required' => 'El nombew es requerido',
+            'required' => 'El nombre es requerido',
         ],
         'precio' => [
-            'required' => 'El precio es requerido',
+            'required' => 'El precio es sumamente requerido',
         ],
         'descripcion' => [
-            'required' => 'la descripcion es requerido',
+            'required' => 'la descripcion es requerida',
         ],
         'estado' => [
             'required' => 'El estado es requerido',
@@ -135,22 +134,39 @@ public function actualizar_producto()
     $id = $request->getPost('id');
     $producto = $producto_model->where('id_producto', $id)->first();
 
-    // Reglas de validación
     $rules = [
-        'nombre'      => 'required|max_length[255]',
-        'precio'      => 'required|decimal',
-        'descripcion' => 'required|max_length[1000]',
-        'stock'       => 'required|integer',
-        'categoria'   => 'required',
+    'nombre'      => 'required|max_length[255]',
+    'precio'      => 'required|decimal',
+    'descripcion' => 'required|max_length[1000]',
+    'stock'       => 'required|integer',
+    'categoria'   => 'required',
     ];
-
-    // Solo valida la imagen si se sube una nueva
-    $img = $this->request->getFile('imagen');
+    
+     $img = $this->request->getFile('imagen');
     if ($img && $img->isValid() && !$img->hasMoved()) {
         $rules['imagen'] = 'uploaded[imagen]|max_size[imagen,4096]|ext_in[imagen,jpg,jpeg,png,gif]';
     }
 
-    $validation->setRules($rules);
+    $mensajes = [
+        'nombre' => ['required' => 'El nombre es requerido'],
+        'precio' => [
+            'required' => 'El precio es requerido',
+            'decimal' => 'Debe ser un número con decimales'
+        ],
+        'descripcion' => ['required' => 'La descripción es requerida'],
+        'stock' => [
+            'required' => 'El stock es requerido',
+            'integer' => 'Debe ser un número entero'
+        ],
+        'categoria' => ['required' => 'Debe seleccionar una categoría'],
+        'imagen' => [
+            'uploaded' => 'Debe seleccionar una imagen',
+            'ext_in' => 'Debe ser una imagen válida (jpg, jpeg, png, gif)',
+            'max_size' => 'La imagen no debe superar los 4MB'
+        ]
+    ];
+
+    $validation->setRules($rules, $mensajes);
 
     if (!$validation->withRequest($request)->run()) {
         // Si falla la validación, vuelve a la vista con errores
