@@ -1,4 +1,4 @@
-
+<?php helper('form'); ?>
 <div class="galeria-circular">
   <div class="imagen-con-texto">
     <img src="assets/img/FotoBar.jpeg" alt="Foto Bar">

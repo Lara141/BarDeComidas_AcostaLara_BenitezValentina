@@ -297,4 +297,20 @@ public function menu_filtro_comida()
          . view('contenido/menu_filtrado_comida', $data);
 }
 
+public function principal()
+{
+    $producto_model = new \App\Models\producto_model();
+
+    $data['productos'] = $producto_model
+        ->where('estado_producto', 1)
+        ->where('stock_producto >', 0)
+        ->join('categoria_producto', 'categoria_producto.categoria_id=producto.categoria_id')
+        ->findAll();
+
+    $data['titulo'] = 'Inicio';
+
+    return view('plantillas/encabezado', $data)
+         . view('plantillas/barraNavegacion')
+         . view('contenido/principal', $data);
+}
 }
