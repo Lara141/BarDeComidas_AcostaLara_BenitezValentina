@@ -313,13 +313,32 @@ public function menu_filtro_comida()
          . view('contenido/menu_filtrado_comida', $data);
 }
 
+
+
 public function principal()
 {
     $producto_model = new \App\Models\producto_model();
+    $provincia = $this->request->getGet('provincia');
 
-    $data['productos'] = $producto_model
+    // Productos filtrados por provincia (para la sección de comidas)
+    $builder = $producto_model
+        ->select('producto.*, categoria_producto.categoria_desc')
         ->where('estado_producto', 1)
         ->where('stock_producto >', 0)
+        ->join('categoria_producto', 'categoria_producto.categoria_id=producto.categoria_id');
+
+    if (!empty($provincia)) {
+        $builder->where('provincia_producto', $provincia);
+    }
+
+    $data['productos'] = $builder->findAll();
+
+    // Todas las promociones (sin filtrar por provincia)
+    $data['promociones'] = $producto_model
+        ->select('producto.*, categoria_producto.categoria_desc')
+        ->where('estado_producto', 1)
+        ->where('stock_producto >', 0)
+        ->where('descuento_producto >', 0)
         ->join('categoria_producto', 'categoria_producto.categoria_id=producto.categoria_id')
         ->findAll();
 

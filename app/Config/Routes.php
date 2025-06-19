@@ -6,7 +6,7 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 
-//$routes->get('/', 'Home::index');
+$routes->get('/', 'Home::index');
 $routes->get('nosotros', 'Home::somos');
 
 $routes->get('comercializacion', 'Home::comercio');
@@ -74,4 +74,4 @@ $routes->get('catalogo_producto', 'producto_controller::catalogo_productos');
 //$routes->get('detalle_venta/(:num)', 'Carrito_controller::detalle_venta/$1');
 //$routes->get('api/detalle_venta/(:num)', 'Carrito_controller::api_detalle_venta/$1');
 
-$routes->get('/', 'producto_controller::principal');
+$routes->get('principal', 'producto_controller::principal');
