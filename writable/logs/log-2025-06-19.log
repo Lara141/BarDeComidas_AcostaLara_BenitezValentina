@@ -2213,6 +2213,341 @@ in APPPATH\Views\contenido\principal.php on line 48.
 10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 <<<<<<< HEAD
+DEBUG - 2025-06-19 14:15:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-19 14:15:46 --> ErrorException: Undefined variable $promociones
+[Method: GET, Route: cliente]
+in APPPATH\Views\contenido\principal.php on line 42.
+ 1 APPPATH\Views\contenido\principal.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $promociones', 'C:\\xampp\\htdocs\\BarDeComidas_AcostaLara_BenitezValentina\\app\\Views\\contenido\\principal.php', 42)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\BarDeComidas_AcostaLara_BenitezValentina\\app\\Views\\contenido\\principal.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('contenido/principal', [], true)
+ 5 APPPATH\Controllers\sesion_controller.php(67): view('contenido/principal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Sesion_controller->cliente()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sesion_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-19 14:23:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:23:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-19 14:23:26 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "plantillas/footer.php"
+[Method: GET, Route: principal]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('plantillas/footer.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('plantillas/footer', [], true)
+ 3 APPPATH\Controllers\producto_controller.php(351): view('plantillas/footer', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\producto_controller->principal()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\producto_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-19 14:23:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:24:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:24:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:25:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:25:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:25:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:25:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:25:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:25:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:25:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-19 14:25:25 --> ErrorException: Undefined variable $promociones
+[Method: GET, Route: /]
+in APPPATH\Views\contenido\principal.php on line 41.
+ 1 APPPATH\Views\contenido\principal.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $promociones', 'C:\\xampp\\htdocs\\BarDeComidas_AcostaLara_BenitezValentina\\app\\Views\\contenido\\principal.php', 41)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\BarDeComidas_AcostaLara_BenitezValentina\\app\\Views\\contenido\\principal.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('contenido/principal', [], true)
+ 5 APPPATH\Controllers\Home.php(13): view('contenido/principal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-19 14:26:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:26:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:26:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-19 14:26:47 --> ErrorException: Undefined variable $promociones
+[Method: GET, Route: /]
+in APPPATH\Views\contenido\principal.php on line 41.
+ 1 APPPATH\Views\contenido\principal.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $promociones', 'C:\\xampp\\htdocs\\BarDeComidas_AcostaLara_BenitezValentina\\app\\Views\\contenido\\principal.php', 41)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\BarDeComidas_AcostaLara_BenitezValentina\\app\\Views\\contenido\\principal.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('contenido/principal', [], true)
+ 5 APPPATH\Controllers\Home.php(13): view('contenido/principal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-19 14:28:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:28:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:28:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:28:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:28:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:28:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:29:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:29:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:29:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:29:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:29:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:29:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:30:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:30:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:31:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:31:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:31:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:31:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:31:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:31:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:31:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:32:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:32:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:32:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:32:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:32:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:32:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:32:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-19 14:32:51 --> Cart Class Initialized
+DEBUG - 2025-06-19 14:32:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-19 14:32:51 --> Cart Class Initialized
+DEBUG - 2025-06-19 14:33:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-19 14:33:09 --> Cart Class Initialized
+ERROR - 2025-06-19 14:33:09 --> mysqli_sql_exception: Unknown column 'metodo_entrega' in 'field list' in C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `ve...', 0)
+#1 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ve...')
+#2 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ve...')
+#3 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ve...', Array, false)
+#4 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\app\Controllers\Ventas_controller.php(45): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\CodeIgniter.php(933): App\Controllers\Ventas_controller->guardar_venta()
+#9 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+#10 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-06-19 14:33:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'metodo_entrega' in 'field list'
+[Method: POST, Route: guardar_venta]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ventas` (`id_persona`, `fecha_venta`, `total_venta`, `metodo_entrega`, `direccion_entrega`) VALUES (:id_persona:, :fecha_venta:, :total_venta:, :metodo_entrega:, :direccion_entrega:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Ventas_controller.php(45): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->guardar_venta()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-19 14:33:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'metodo_entrega' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ventas` (`id_persona`, `fecha_venta`, `total_venta`, `metodo_entrega`, `direccion_entrega`) VALUES (\'9\', \'2025-06-19 14:33:09\', 8000, \'envio\', \'av. maipu\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ventas` (`id_persona`, `fecha_venta`, `total_venta`, `metodo_entrega`, `direccion_entrega`) VALUES (\'9\', \'2025-06-19 14:33:09\', 8000, \'envio\', \'av. maipu\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ventas` (`id_persona`, `fecha_venta`, `total_venta`, `metodo_entrega`, `direccion_entrega`) VALUES (:id_persona:, :fecha_venta:, :total_venta:, :metodo_entrega:, :direccion_entrega:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Ventas_controller.php(45): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->guardar_venta()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-19 14:33:09 --> [Caused by] mysqli_sql_exception: Unknown column 'metodo_entrega' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `ventas` (`id_persona`, `fecha_venta`, `total_venta`, `metodo_entrega`, `direccion_entrega`) VALUES (\'9\', \'2025-06-19 14:33:09\', 8000, \'envio\', \'av. maipu\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ventas` (`id_persona`, `fecha_venta`, `total_venta`, `metodo_entrega`, `direccion_entrega`) VALUES (\'9\', \'2025-06-19 14:33:09\', 8000, \'envio\', \'av. maipu\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ventas` (`id_persona`, `fecha_venta`, `total_venta`, `metodo_entrega`, `direccion_entrega`) VALUES (\'9\', \'2025-06-19 14:33:09\', 8000, \'envio\', \'av. maipu\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ventas` (`id_persona`, `fecha_venta`, `total_venta`, `metodo_entrega`, `direccion_entrega`) VALUES (:id_persona:, :fecha_venta:, :total_venta:, :metodo_entrega:, :direccion_entrega:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Ventas_controller.php(45): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->guardar_venta()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-19 14:33:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-19 14:33:29 --> Cart Class Initialized
+ERROR - 2025-06-19 14:33:29 --> mysqli_sql_exception: Unknown column 'metodo_entrega' in 'field list' in C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `ve...', 0)
+#1 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ve...')
+#2 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ve...')
+#3 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ve...', Array, false)
+#4 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\app\Controllers\Ventas_controller.php(45): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\CodeIgniter.php(933): App\Controllers\Ventas_controller->guardar_venta()
+#9 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+#10 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-06-19 14:33:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'metodo_entrega' in 'field list'
+[Method: POST, Route: guardar_venta]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ventas` (`id_persona`, `fecha_venta`, `total_venta`, `metodo_entrega`, `direccion_entrega`) VALUES (:id_persona:, :fecha_venta:, :total_venta:, :metodo_entrega:, :direccion_entrega:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Ventas_controller.php(45): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->guardar_venta()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-19 14:33:29 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'metodo_entrega' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ventas` (`id_persona`, `fecha_venta`, `total_venta`, `metodo_entrega`, `direccion_entrega`) VALUES (\'9\', \'2025-06-19 14:33:29\', 8000, \'envio\', \'av. maipu\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ventas` (`id_persona`, `fecha_venta`, `total_venta`, `metodo_entrega`, `direccion_entrega`) VALUES (\'9\', \'2025-06-19 14:33:29\', 8000, \'envio\', \'av. maipu\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ventas` (`id_persona`, `fecha_venta`, `total_venta`, `metodo_entrega`, `direccion_entrega`) VALUES (:id_persona:, :fecha_venta:, :total_venta:, :metodo_entrega:, :direccion_entrega:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Ventas_controller.php(45): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->guardar_venta()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-19 14:33:29 --> [Caused by] mysqli_sql_exception: Unknown column 'metodo_entrega' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `ventas` (`id_persona`, `fecha_venta`, `total_venta`, `metodo_entrega`, `direccion_entrega`) VALUES (\'9\', \'2025-06-19 14:33:29\', 8000, \'envio\', \'av. maipu\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ventas` (`id_persona`, `fecha_venta`, `total_venta`, `metodo_entrega`, `direccion_entrega`) VALUES (\'9\', \'2025-06-19 14:33:29\', 8000, \'envio\', \'av. maipu\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ventas` (`id_persona`, `fecha_venta`, `total_venta`, `metodo_entrega`, `direccion_entrega`) VALUES (\'9\', \'2025-06-19 14:33:29\', 8000, \'envio\', \'av. maipu\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ventas` (`id_persona`, `fecha_venta`, `total_venta`, `metodo_entrega`, `direccion_entrega`) VALUES (:id_persona:, :fecha_venta:, :total_venta:, :metodo_entrega:, :direccion_entrega:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Ventas_controller.php(45): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->guardar_venta()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-19 14:33:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-19 14:33:42 --> Cart Class Initialized
+ERROR - 2025-06-19 14:33:42 --> mysqli_sql_exception: Unknown column 'metodo_entrega' in 'field list' in C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `ve...', 0)
+#1 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ve...')
+#2 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ve...')
+#3 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ve...', Array, false)
+#4 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\app\Controllers\Ventas_controller.php(45): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\CodeIgniter.php(933): App\Controllers\Ventas_controller->guardar_venta()
+#9 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+#10 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-06-19 14:33:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'metodo_entrega' in 'field list'
+[Method: POST, Route: guardar_venta]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ventas` (`id_persona`, `fecha_venta`, `total_venta`, `metodo_entrega`, `direccion_entrega`) VALUES (:id_persona:, :fecha_venta:, :total_venta:, :metodo_entrega:, :direccion_entrega:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Ventas_controller.php(45): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->guardar_venta()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-19 14:33:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'metodo_entrega' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ventas` (`id_persona`, `fecha_venta`, `total_venta`, `metodo_entrega`, `direccion_entrega`) VALUES (\'9\', \'2025-06-19 14:33:42\', 8000, \'retiro\', \'Retiro en el local\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ventas` (`id_persona`, `fecha_venta`, `total_venta`, `metodo_entrega`, `direccion_entrega`) VALUES (\'9\', \'2025-06-19 14:33:42\', 8000, \'retiro\', \'Retiro en el local\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ventas` (`id_persona`, `fecha_venta`, `total_venta`, `metodo_entrega`, `direccion_entrega`) VALUES (:id_persona:, :fecha_venta:, :total_venta:, :metodo_entrega:, :direccion_entrega:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Ventas_controller.php(45): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->guardar_venta()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-19 14:33:42 --> [Caused by] mysqli_sql_exception: Unknown column 'metodo_entrega' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `ventas` (`id_persona`, `fecha_venta`, `total_venta`, `metodo_entrega`, `direccion_entrega`) VALUES (\'9\', \'2025-06-19 14:33:42\', 8000, \'retiro\', \'Retiro en el local\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ventas` (`id_persona`, `fecha_venta`, `total_venta`, `metodo_entrega`, `direccion_entrega`) VALUES (\'9\', \'2025-06-19 14:33:42\', 8000, \'retiro\', \'Retiro en el local\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ventas` (`id_persona`, `fecha_venta`, `total_venta`, `metodo_entrega`, `direccion_entrega`) VALUES (\'9\', \'2025-06-19 14:33:42\', 8000, \'retiro\', \'Retiro en el local\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ventas` (`id_persona`, `fecha_venta`, `total_venta`, `metodo_entrega`, `direccion_entrega`) VALUES (:id_persona:, :fecha_venta:, :total_venta:, :metodo_entrega:, :direccion_entrega:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Ventas_controller.php(45): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->guardar_venta()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-19 14:33:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-19 14:33:48 --> Cart Class Initialized
+DEBUG - 2025-06-19 14:33:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-19 14:33:48 --> Cart Class Initialized
+DEBUG - 2025-06-19 14:33:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:33:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:34:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 14:34:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:16:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:17:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:17:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:17:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:17:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:17:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:17:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:17:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:17:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:17:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:17:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:17:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-19 15:17:54 --> Cart Class Initialized
+DEBUG - 2025-06-19 15:17:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-19 15:17:54 --> Cart Class Initialized
+DEBUG - 2025-06-19 15:18:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-19 15:18:06 --> Cart Class Initialized
+DEBUG - 2025-06-19 15:18:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-19 15:18:07 --> Cart Class Initialized
+DEBUG - 2025-06-19 15:26:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-19 15:26:24 --> Cart Class Initialized
+DEBUG - 2025-06-19 15:26:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:26:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:26:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:26:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:26:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:26:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:26:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:26:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:26:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:27:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:27:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+=======
+<<<<<<< HEAD
 DEBUG - 2025-06-19 15:00:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 =======
 >>>>>>> 8ea1864feb1f821df4e1522829965c79703d14c6
@@ -2225,6 +2560,16 @@ in APPPATH\Config\Routes.php on line 9.
  4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
+>>>>>>> edfd0c527b345d398bfd1e21c8bd382e72fa5871
+DEBUG - 2025-06-19 15:32:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:33:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:33:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:35:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:35:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:35:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:35:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+=======
 DEBUG - 2025-06-19 15:22:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 CRITICAL - 2025-06-19 15:22:52 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "plantillas/footer.php"
 [Method: GET, Route: /]
@@ -2239,6 +2584,7 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 DEBUG - 2025-06-19 15:23:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+<<<<<<< HEAD
 DEBUG - 2025-06-19 15:31:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-06-19 15:32:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-06-19 15:32:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
@@ -2293,12 +2639,20 @@ CRITICAL - 2025-06-19 15:46:10 --> ErrorException: Undefined variable $producto_
 [Method: GET, Route: cliente]
 in APPPATH\Controllers\sesion_controller.php on line 81.
  1 APPPATH\Controllers\sesion_controller.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $producto_model', 'C:\\xampp\\htdocs\\BarDeComidas_AcostaLara_BenitezValentina\\app\\Controllers\\sesion_controller.php', 81)
+=======
+>>>>>>> 8e1facce541aac721ff58332d149df20a4b0738f
+CRITICAL - 2025-06-19 15:42:34 --> ErrorException: Undefined variable $producto_model
+[Method: GET, Route: cliente]
+in APPPATH\Controllers\sesion_controller.php on line 79.
+ 1 APPPATH\Controllers\sesion_controller.php(79): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $producto_model', 'C:\\xampp\\htdocs\\BarDeComidas_AcostaLara_BenitezValentina\\app\\Controllers\\sesion_controller.php', 79)
+>>>>>>> 305321f78b41a8f796806c94e0540ca1d711969a
  2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Sesion_controller->cliente()
  3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sesion_controller))
  4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
  6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 DEBUG - 2025-06-19 15:46:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-06-19 15:46:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-06-19 15:46:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
@@ -2311,6 +2665,37 @@ DEBUG - 2025-06-19 15:49:01 --> Session: Class initialized using 'CodeIgniter\Se
 CRITICAL - 2025-06-19 15:51:00 --> ParseError: syntax error, unexpected token "<"
 [Method: GET, Route: /]
 in APPPATH\Controllers\Home.php on line 11.
+=======
+CRITICAL - 2025-06-19 15:43:20 --> ErrorException: Undefined variable $producto_model
+[Method: GET, Route: cliente]
+in APPPATH\Controllers\sesion_controller.php on line 78.
+ 1 APPPATH\Controllers\sesion_controller.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $producto_model', 'C:\\xampp\\htdocs\\BarDeComidas_AcostaLara_BenitezValentina\\app\\Controllers\\sesion_controller.php', 78)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Sesion_controller->cliente()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sesion_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-19 15:43:59 --> ErrorException: Undefined variable $productoModel
+[Method: GET, Route: cliente]
+in APPPATH\Controllers\sesion_controller.php on line 90.
+ 1 APPPATH\Controllers\sesion_controller.php(90): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $productoModel', 'C:\\xampp\\htdocs\\BarDeComidas_AcostaLara_BenitezValentina\\app\\Controllers\\sesion_controller.php', 90)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Sesion_controller->cliente()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sesion_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-19 15:44:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:44:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:44:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:44:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:44:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:44:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-19 15:45:02 --> ParseError: syntax error, unexpected variable "$data", expecting "function" or "const"
+[Method: GET, Route: principal]
+in APPPATH\Controllers\Home.php on line 44.
+>>>>>>> 305321f78b41a8f796806c94e0540ca1d711969a
  1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\BarDeComidas_AcostaLara_BenitezValentina\\app\\Controllers\\Home.php')
  2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
  3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
@@ -2320,6 +2705,7 @@ in APPPATH\Controllers\Home.php on line 11.
  7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 DEBUG - 2025-06-19 15:52:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-06-19 15:52:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-06-19 15:52:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
@@ -2363,11 +2749,122 @@ WARNING - 2025-06-19 16:06:37 --> [DEPRECATED] Optional parameter $type declared
  3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('contenido/mi_cuenta', [], true)
  4 APPPATH\Controllers\sesion_controller.php(109): view('contenido/mi_cuenta', [...])
  5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Sesion_controller->mi_cuenta()
+=======
+CRITICAL - 2025-06-19 15:45:46 --> ParseError: syntax error, unexpected variable "$data", expecting "function" or "const"
+[Method: GET, Route: principal]
+in APPPATH\Controllers\Home.php on line 44.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\BarDeComidas_AcostaLara_BenitezValentina\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-19 15:46:09 --> ParseError: syntax error, unexpected variable "$data", expecting "function" or "const"
+[Method: GET, Route: principal]
+in APPPATH\Controllers\Home.php on line 44.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\BarDeComidas_AcostaLara_BenitezValentina\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-19 15:47:21 --> ParseError: syntax error, unexpected variable "$data", expecting "function" or "const"
+[Method: GET, Route: principal]
+in APPPATH\Controllers\Home.php on line 44.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\BarDeComidas_AcostaLara_BenitezValentina\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-19 15:48:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-19 15:48:12 --> ErrorException: Undefined variable $promociones
+[Method: GET, Route: principal]
+in APPPATH\Views\contenido\principal.php on line 41.
+ 1 APPPATH\Views\contenido\principal.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $promociones', 'C:\\xampp\\htdocs\\BarDeComidas_AcostaLara_BenitezValentina\\app\\Views\\contenido\\principal.php', 41)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\BarDeComidas_AcostaLara_BenitezValentina\\app\\Views\\contenido\\principal.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('contenido/principal', [], true)
+ 5 APPPATH\Controllers\Home.php(22): view('contenido/principal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->principal()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-19 15:50:25 --> ParseError: syntax error, unexpected identifier "p", expecting "function" or "const"
+[Method: GET, Route: principal]
+in APPPATH\Controllers\Home.php on line 7.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\BarDeComidas_AcostaLara_BenitezValentina\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-19 15:50:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-19 15:50:36 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "plantillas/footer.php"
+[Method: GET, Route: principal]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('plantillas/footer.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('plantillas/footer', [], true)
+ 3 APPPATH\Controllers\Home.php(41): view('plantillas/footer', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->principal()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-19 15:50:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:51:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:51:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:51:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:51:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:51:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:51:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-19 15:52:32 --> ParseError: syntax error, unexpected token "public", expecting end of file
+[Method: GET, Route: cliente]
+in APPPATH\Controllers\sesion_controller.php on line 110.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\BarDeComidas_AcostaLara_BenitezValentina\\app\\Controllers\\Sesion_controller.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Sesion_controller')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Sesion_controller')
+ 4 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\Sesion_controller', true)
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-19 15:53:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:53:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:53:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:57:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 15:57:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-19 15:58:47 --> Error: Undefined constant "principal"
+[Method: GET, Route: inicioSesion]
+in APPPATH\Views\plantillas\encabezado.php on line 19.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('plantillas/encabezado', [], true)
+ 4 APPPATH\Controllers\sesion_controller.php(10): view('plantillas/encabezado', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Sesion_controller->login()
+>>>>>>> 305321f78b41a8f796806c94e0540ca1d711969a
  6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sesion_controller))
  7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
  9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 DEBUG - 2025-06-19 16:07:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-06-19 16:07:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-06-19 16:08:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
@@ -2541,3 +3038,59 @@ AND `provincia_producto` = :provincia_producto:', [...], false)
 11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
 12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+=======
+DEBUG - 2025-06-19 16:00:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 16:00:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 16:00:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 16:00:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 16:00:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 16:01:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 16:01:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 16:01:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 16:01:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 16:03:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 16:34:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 16:35:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 16:35:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 16:35:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 16:40:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 16:40:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 16:40:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 16:40:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 16:40:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 16:40:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 16:40:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 16:45:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 16:45:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 16:45:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 16:45:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 16:45:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 16:46:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 16:46:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 16:46:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 16:46:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 16:46:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 16:46:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 16:46:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 16:50:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-19 16:50:30 --> ParseError: syntax error, unexpected token "<", expecting "elseif" or "else" or "endif"
+[Method: GET, Route: principal]
+in APPPATH\Views\contenido\principal.php on line 188.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('contenido/principal', [], true)
+ 3 APPPATH\Controllers\Home.php(41): view('contenido/principal', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->principal()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-19 16:53:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 16:53:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 16:53:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 16:53:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 16:53:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 16:53:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 16:54:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 16:54:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+>>>>>>> 305321f78b41a8f796806c94e0540ca1d711969a

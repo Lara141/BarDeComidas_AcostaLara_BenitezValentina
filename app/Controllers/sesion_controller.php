@@ -68,6 +68,7 @@ public function verificar_login()
             . view('administrador/barraNav_admin');
     }
 
+<<<<<<< HEAD
     public function cliente()
     { 
         $productoModel = new \App\Models\producto_model();
@@ -82,7 +83,42 @@ public function verificar_login()
             . view('plantillas/barraNavegacion')
             . view('contenido/principal', $data)
             . view('plantillas/piePagina');
+=======
+  public function cliente()
+{
+    $producto_model = new \App\Models\producto_model();
+$provincia = $this->request->getGet('provincia') ?? 'Mendoza';
+
+
+    // Productos filtrados por provincia (para la sección de comidas)
+    $builder = $producto_model
+        ->select('producto.*, categoria_producto.categoria_desc')
+        ->where('estado_producto', 1)
+        ->where('stock_producto >', 0)
+        ->join('categoria_producto', 'categoria_producto.categoria_id=producto.categoria_id');
+
+    if (!empty($provincia)) {
+        $builder->where('provincia_producto', $provincia);
+>>>>>>> 305321f78b41a8f796806c94e0540ca1d711969a
     }
+
+    $data['productos'] = $builder->findAll();
+
+     // Promociones activas
+    $data['promociones'] = $producto_model->where('estado_producto', 1)
+        ->where('stock_producto >', 0)
+        ->where('descuento_producto >', 0)
+        ->join('categoria_producto', 'categoria_producto.categoria_id = producto.categoria_id')
+        ->findAll();
+
+    $data['titulo'] = "cliente";
+
+    return view('plantillas/encabezado', $data)
+        . view('plantillas/barraNavegacion', $data)
+        . view('contenido/principal', $data)
+        . view('plantillas/piePagina', $data);
+}
+
 
     public function salir()
     {
