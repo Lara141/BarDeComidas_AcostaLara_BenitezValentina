@@ -348,6 +348,6 @@ public function principal()
     return view('plantillas/encabezado', $data)
          . view('plantillas/barraNavegacion', $data)
          . view('contenido/principal', $data)
-         . view('plantillas/footer', $data);
+         . view('plantillas/piePagina', $data);
 }
 }

@@ -4,16 +4,7 @@ namespace App\Controllers;
 
 class Home extends BaseController
 {
-    public function index(){
-        $productoModel = new \App\Models\Producto_model();
-        $data['productos'] = $productoModel->findAll(); 
-        $data['titulo'] = "Inicio";
-        return view('plantillas/encabezado', $data)
-            . view('plantillas/barraNavegacion', $data)
-            . view('contenido/principal', $data)
-            . view('plantillas/piePagina', $data);
-            
-    }
+   
 
     public function somos()
     {

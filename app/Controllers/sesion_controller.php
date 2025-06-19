@@ -57,16 +57,31 @@ class Sesion_controller extends BaseController
             . view('administrador/barraNav_admin');
     }
 
-    public function cliente()
-    {
-        $productoModel = new \App\Models\producto_model();
-        $data['productos'] = $productoModel->findAll();
-        $data['titulo'] = "cliente";
-        return view('plantillas/encabezado', $data)
-            . view('plantillas/barraNavegacion')
-            . view('contenido/principal', $data)
-            . view('plantillas/piePagina');
-    }
+  public function cliente()
+{
+    $productoModel = new \App\Models\producto_model();
+
+    // Productos generales
+    $data['productos'] = $productoModel->where('estado_producto', 1)
+        ->where('stock_producto >', 0)
+        ->join('categoria_producto', 'categoria_producto.categoria_id = producto.categoria_id')
+        ->findAll();
+
+    // Promociones activas
+    $data['promociones'] = $productoModel->where('estado_producto', 1)
+        ->where('stock_producto >', 0)
+        ->where('descuento_producto >', 0)
+        ->join('categoria_producto', 'categoria_producto.categoria_id = producto.categoria_id')
+        ->findAll();
+
+    $data['titulo'] = "cliente";
+
+    return view('plantillas/encabezado', $data)
+        . view('plantillas/barraNavegacion', $data)
+        . view('contenido/principal', $data)
+        . view('plantillas/piePagina', $data);
+}
+
 
     public function salir()
     {

@@ -4,7 +4,7 @@
   <div class="container-fluid justify-content-between">
 
     <!-- Marca / Título -->
-    <a class="navbar-brand" href="<?= base_url('/') ?>">Sabor Argentino</a>
+    <a class="navbar-brand" href="<?= base_url('admin') ?>">Sabor Argentino</a>
 
     <!-- Íconos alineados a la derecha -->
     <div class="d-flex align-items-center gap-3">
