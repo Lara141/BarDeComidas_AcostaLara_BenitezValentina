@@ -175,9 +175,6 @@ h2 {
                     <?php endif; ?>
             <label >Password</label>
                 </div>
-                <div class="forgot-pass">
-                    <a href="#">Olvidaste tu contraseña?</a>
-                </div>
                 <button type="submit" class="btn"  >
                     Iniciar
                 </button>

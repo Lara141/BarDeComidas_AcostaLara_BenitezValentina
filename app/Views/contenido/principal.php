@@ -128,7 +128,7 @@
       $hayComidas = true;
   ?>
     <div class="col-12 col-sm-6 col-lg-4">
-      <!-- ...tarjeta del producto... -->
+      
     <div class="card h-100 shadow-sm border-0 rounded-4 w-100">
       <img src="<?= base_url('assets/upload/' . $row['imagen_producto']); ?>"
            class="card-img-top rounded-top-4 img-fluid"

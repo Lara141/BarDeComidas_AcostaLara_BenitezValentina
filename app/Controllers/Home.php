@@ -4,23 +4,21 @@ namespace App\Controllers;
 
 class Home extends BaseController
 {
-    public function principal()
-    {
-        $producto_model = new \App\Models\producto_model();
+    
+public function principal()
+{
+    $producto_model = new \App\Models\producto_model();
+    $provincia = $this->request->getGet('provincia');
 
-        $data['productos'] = $producto_model
+    // Productos filtrados por provincia (para la sección de comidas)
+    $builder = $producto_model
         ->select('producto.*, categoria_producto.categoria_desc')
         ->where('estado_producto', 1)
         ->where('stock_producto >', 0)
-        ->join('categoria_producto', 'categoria_producto.categoria_id=producto.categoria_id')
-        ->findAll();
+        ->join('categoria_producto', 'categoria_producto.categoria_id=producto.categoria_id');
 
-        $data['titulo'] = 'Inicio';
-
-        return view('plantillas/encabezado', $data)
-            . view('plantillas/barraNavegacion')
-            . view('contenido/principal', $data)
-            . view('plantillas/piePagina', $data);
+    if (!empty($provincia)) {
+        $builder->where('provincia_producto', $provincia);
     }
 
     $data['productos'] = $builder->findAll();
@@ -42,6 +40,7 @@ class Home extends BaseController
          . view('contenido/principal', $data)
          . view('plantillas/piePagina', $data);
 }
+
     public function somos()
     {
         $data['titulo'] = "Somos";

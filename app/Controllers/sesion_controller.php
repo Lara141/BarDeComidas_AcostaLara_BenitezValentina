@@ -70,16 +70,24 @@ public function verificar_login()
 
   public function cliente()
 {
-    $productoModel = new \App\Models\producto_model();
+    $producto_model = new \App\Models\producto_model();
+$provincia = $this->request->getGet('provincia');
 
-    // Productos generales
-    $data['productos'] = $productoModel->where('estado_producto', 1)
+    // Productos filtrados por provincia (para la sección de comidas)
+    $builder = $producto_model
+        ->select('producto.*, categoria_producto.categoria_desc')
+        ->where('estado_producto', 1)
         ->where('stock_producto >', 0)
-        ->join('categoria_producto', 'categoria_producto.categoria_id = producto.categoria_id')
-        ->findAll();
+        ->join('categoria_producto', 'categoria_producto.categoria_id=producto.categoria_id');
 
-    // Promociones activas
-    $data['promociones'] = $productoModel->where('estado_producto', 1)
+    if (!empty($provincia)) {
+        $builder->where('provincia_producto', $provincia);
+    }
+
+    $data['productos'] = $builder->findAll();
+
+     // Promociones activas
+    $data['promociones'] = $producto_model->where('estado_producto', 1)
         ->where('stock_producto >', 0)
         ->where('descuento_producto >', 0)
         ->join('categoria_producto', 'categoria_producto.categoria_id = producto.categoria_id')
