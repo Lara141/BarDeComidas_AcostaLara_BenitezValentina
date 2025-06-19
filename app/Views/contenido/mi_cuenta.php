@@ -105,6 +105,7 @@
               <th>Fecha</th>
               <th>Total</th>
               <th>Estado</th>
+              <th>Detalle</th>
             </tr>
           </thead>
           <tbody>
@@ -120,8 +121,53 @@
                     <span class="badge bg-secondary">Cancelada</span>
                   <?php endif; ?>
                 </td>
+                <td>
+                  <button type="button" class="btn btn-sm btn-outline-info" data-bs-toggle="modal" data-bs-target="#detalleModal<?= $i ?>">
+                    Ver detalle
+                  </button>
+                </td>
               </tr>
             <?php endforeach; ?>
+            <?php foreach ($compras as $i => $compra): ?>
+            <!-- Modal de Detalle de Compra -->
+            <div class="modal fade" id="detalleModal<?= $i ?>" tabindex="-1" aria-labelledby="detalleModalLabel<?= $i ?>" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                  <div class="modal-header bg-info text-white">
+                    <h5 class="modal-title" id="detalleModalLabel<?= $i ?>">Detalle de compra del <?= date('d/m/Y', strtotime($compra['fecha_venta'])) ?></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                  </div>
+                  <div class="modal-body">
+                    <?php if (!empty($compra['detalles'])): ?>
+                      <table class="table table-sm table-striped">
+                        <thead>
+                          <tr>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Precio Unitario</th>
+                            <th>Subtotal</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <?php foreach ($compra['detalles'] as $detalle): ?>
+                            <tr>
+                              <td><?= esc($detalle['nombre_producto']) ?></td>
+                              <td><?= esc($detalle['cantidad']) ?></td>
+                              <td>$<?= number_format($detalle['precio_unitario'], 2, ',', '.') ?></td>
+                              <td>$<?= number_format($detalle['subtotal'], 2, ',', '.') ?></td>
+                            </tr>
+                          <?php endforeach; ?>
+                        </tbody>
+                      </table>
+                    <?php else: ?>
+                      <p class="text-muted">No hay detalles disponibles para esta compra.</p>
+                    <?php endif; ?>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <?php endforeach; ?>
+
           </tbody>
         </table>
       </div>
