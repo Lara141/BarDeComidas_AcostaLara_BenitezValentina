@@ -77,21 +77,36 @@ class Ventas_controller extends BaseController
         $query = $builder->get();
 
         $data['ventas'] = $query->getResultArray();
+
+        // Traer los detalles de cada venta
+        $detalleBuilder = $db->table('detalle_venta');
+        $detalleBuilder->select('detalle_venta.id_venta, producto.nombre_producto, detalle_venta.cantidad, detalle_venta.precio_unitario, detalle_venta.subtotal');
+        $detalleBuilder->join('producto', 'producto.id_producto = detalle_venta.id_producto');
+        $detalleQuery = $detalleBuilder->get();
+
+        // Organizar los detalles por ID de venta
+        $detallesRaw = $detalleQuery->getResultArray();
+        $detallesPorVenta = [];
+
+        foreach ($detallesRaw as $detalle) {
+            $idVenta = $detalle['id_venta'];
+            if (!isset($detallesPorVenta[$idVenta])) {
+                $detallesPorVenta[$idVenta] = [];
+            }
+            $detallesPorVenta[$idVenta][] = $detalle;
+        }
+
+        $data['detallesPorVenta'] = $detallesPorVenta;
         $data['titulo'] = 'Lista de Ventas';
-
-        return view('administrador/encabezado_admin', $data). view('administrador/barraNav_admin').view('administrador/listar_ventas', $data);
-    }
-
-    public function listar_detalle_ventas($id=NUL)
-    {
-        $venta = new Venta_model();
-        $detalle_venta=new detalle_venta_model;
 
         return view('administrador/encabezado_admin', $data)
             . view('administrador/barraNav_admin')
-            . view('administrador/listar_ventas');
-
+            . view('administrador/listar_ventas', $data);
     }
+
+
+  
+
     public function eliminar_venta($id_venta)
     {
         $ventaModel = new Venta_Model();

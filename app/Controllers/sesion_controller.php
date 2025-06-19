@@ -12,7 +12,7 @@ class Sesion_controller extends BaseController
             . view('contenido/inicioDeSesion')
             . view('plantillas/piePagina');
     }
-
+    
 public function verificar_login()
 {
     $session = session();
@@ -68,22 +68,6 @@ public function verificar_login()
             . view('administrador/barraNav_admin');
     }
 
-<<<<<<< HEAD
-    public function cliente()
-    { 
-        $productoModel = new \App\Models\producto_model();
-        $data['productos'] = $productoModel->where('estado_producto', 1)->join('categoria_producto', 'categoria_producto.categoria_id=producto.categoria_id')->findAll();
-        $data['promociones']=$productoModel->where('estado_producto', 1)
-            ->where('stock_producto >', 0)
-            ->join('categoria_producto', 'categoria_producto.categoria_id=producto.categoria_id')
-            ->findAll();
-            
-        $data['titulo'] = "cliente";
-        return view('plantillas/encabezado', $data)
-            . view('plantillas/barraNavegacion')
-            . view('contenido/principal', $data)
-            . view('plantillas/piePagina');
-=======
   public function cliente()
 {
     $producto_model = new \App\Models\producto_model();
@@ -99,7 +83,6 @@ $provincia = $this->request->getGet('provincia') ?? 'Mendoza';
 
     if (!empty($provincia)) {
         $builder->where('provincia_producto', $provincia);
->>>>>>> 305321f78b41a8f796806c94e0540ca1d711969a
     }
 
     $data['productos'] = $builder->findAll();
@@ -134,16 +117,30 @@ $provincia = $this->request->getGet('provincia') ?? 'Mendoza';
         $usuarioModel = new \App\Models\UserModel();
         $data['usuario'] = $usuarioModel->find($usuario_id);
         $data['titulo'] = 'Mi cuenta';
-    
 
         $ventaModel = new \App\Models\Venta_Model();
-        $data['compras'] = $ventaModel->where('id_persona', $usuario_id)->orderBy('fecha_venta', 'DESC')->findAll();
+        $detalleModel = new \App\Models\Detalle_Venta_Model();
 
-        $data['titulo'] = 'Mi cuenta';
+        $compras = $ventaModel->where('id_persona', $usuario_id)
+                            ->orderBy('fecha_venta', 'DESC')
+                            ->findAll();
+
+        foreach ($compras as &$compra) {
+            $builder = $detalleModel->builder();
+            $builder->select('producto.nombre_producto, detalle_venta.cantidad, detalle_venta.precio_unitario, (detalle_venta.cantidad * detalle_venta.precio_unitario) as subtotal');
+            $builder->join('producto', 'producto.id_producto = detalle_venta.id_producto');
+            $builder->where('id_venta', $compra['id_venta']);
+            $compra['detalles'] = $builder->get()->getResultArray();
+        }
+
+        $data['compras'] = $compras;
+
         return view('plantillas/encabezado', $data)
             . view('plantillas/barraNavegacion')
-            . view('contenido/mi_cuenta', $data);
+            . view('contenido/mi_cuenta', $data)
+            .view('plantillas/piePagina');
     }
+
 
     public function actualizar_mi_cuenta()
     {
