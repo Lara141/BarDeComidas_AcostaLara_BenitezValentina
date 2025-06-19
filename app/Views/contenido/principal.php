@@ -38,6 +38,7 @@
      <i class="fa-solid fa-burger fa-beat"></i>  
       Promociones </h4>
     <div class="row g-4">
+      
       <?php foreach ($promociones as $row): ?>
         <div class="col-12 col-sm-6 col-lg-4">
           <div class="card h-100 shadow-sm border-0 rounded-4 w-100">

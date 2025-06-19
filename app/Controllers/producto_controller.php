@@ -333,8 +333,9 @@ public function principal()
 
     $data['productos'] = $builder->findAll();
 
-    // Todas las promociones (sin filtrar por provincia)
-    $data['promociones'] = $producto_model
+    // --- Usá un nuevo modelo para evitar acumulación de condiciones ---
+    $producto_model2 = new \App\Models\producto_model();
+    $data['promociones'] = $producto_model2
         ->select('producto.*, categoria_producto.categoria_desc')
         ->where('estado_producto', 1)
         ->where('stock_producto >', 0)
@@ -345,7 +346,8 @@ public function principal()
     $data['titulo'] = 'Inicio';
 
     return view('plantillas/encabezado', $data)
-         . view('plantillas/barraNavegacion')
-         . view('contenido/principal', $data);
+         . view('plantillas/barraNavegacion', $data)
+         . view('contenido/principal', $data)
+         . view('plantillas/footer', $data);
 }
 }
