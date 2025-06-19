@@ -1,4 +1,3 @@
-
 <?php helper('form'); ?>
 
 <!-- Botón de filtro estilo PedidosYa alineado a la derecha -->
@@ -15,40 +14,36 @@
   </button>
 </div>
 
-<!-- Modal estilo PedidosYa -->
+<!-- Modal de filtros -->
 <div class="modal fade" id="filtrosPedidosYaModal" tabindex="-1" aria-labelledby="filtrosPedidosYaModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content rounded-4">
-      <form method="get" action="<?= site_url('menu_filtrado_bebida'); ?>">
+      <form method="get" action="<?= site_url('menu_filtrado'); ?>">
+        <!-- Categoría oculta para saber que es bebida -->
+        <input type="hidden" name="categoria" value="bebida">
+
         <div class="modal-header border-0 pb-0 position-relative">
           <h4 class="modal-title fw-bold" id="filtrosPedidosYaModalLabel">Filtros</h4>
-          <!-- Botón Reestablecer en la esquina superior derecha -->
-          <a href="<?= site_url('bebida'); ?>"
+
+          <!-- Botón Reestablecer -->
+          <a href="<?= site_url('menu_bebida'); ?>"
             class="btn btn-light border rounded-pill position-absolute end-0 top-0 mt-2 me-5"
             style="z-index:2; font-size: 0.95rem;">
             Reestablecer
           </a>
           <button type="button" class="btn-close ms-2" data-bs-dismiss="modal" aria-label="Cerrar"></button>
         </div>
+
         <div class="modal-body pt-2">
-          <h6 class="fw-semibold mb-3">Provincias</h6>
-          <div class="d-flex flex-wrap gap-2 mb-4">
-            <?php
-              $provincias = [
-                "Buenos Aires", "Catamarca", "Chaco", "Chubut", "Córdoba", "Corrientes", "Entre Ríos", "Formosa",
-                "Jujuy", "La Pampa", "La Rioja", "Mendoza", "Misiones", "Neuquén", "Río Negro", "Salta", "San Juan",
-                "San Luis", "Santa Cruz", "Santa Fe", "Santiago del Estero", "Tierra del Fuego", "Tucumán"
-              ];
-              $provinciaSeleccionada = $_GET['provincia'] ?? '';
-              foreach ($provincias as $prov) {
-                $active = ($provinciaSeleccionada === $prov) ? 'btn-primary text-white' : 'btn-outline-primary';
-                echo '<button type="button" name="btn-provincia" value="'.$prov.'" class="btn '.$active.' rounded-pill px-3 btn-provincia">'.$prov.'</button>';
-              }
-            ?>
-            <input type="hidden" name="provincia" id="provinciaSeleccionada" value="<?= esc($provinciaSeleccionada) ?>">
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" name="solo_promociones" id="soloPromociones"
+              <?= isset($_GET['solo_promociones']) ? 'checked' : '' ?>>
+            <label class="form-check-label" for="soloPromociones">
+              Solo promociones
+            </label>
           </div>
-          <!-- Puedes agregar más filtros aquí -->
         </div>
+
         <div class="modal-footer border-0 pt-0 justify-content-center">
           <button type="submit" class="btn btn-primary rounded-pill px-5">Aplicar</button>
         </div>
@@ -56,20 +51,6 @@
     </div>
   </div>
 </div>
-
-<script>
-  // JS para seleccionar provincia y marcar el botón
-  document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.btn-provincia').forEach(btn => {
-      btn.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.getElementById('provinciaSeleccionada').value = this.value;
-        document.querySelectorAll('.btn-provincia').forEach(b => b.classList.remove('btn-primary', 'text-white'));
-        this.classList.add('btn-primary', 'text-white');
-      });
-    });
-  });
-</script>
 
 <!-- Catálogo de bebidas -->
 <div class="container-fluid mt-5">
@@ -86,6 +67,7 @@
             <div class="card-body text-center p-2">
               <h5 class="card-title fw-bold"><?= esc($row['nombre_producto']); ?></h5>
               <p class="card-text text-muted small"><?= esc($row['descripcion_producto']); ?></p>
+
               <?php if (!empty($row['descuento_producto']) && $row['descuento_producto'] > 0): ?>
                 <?php
                   $precioOriginal = $row['precio_producto'];
@@ -104,7 +86,9 @@
                   $<?= number_format($row['precio_producto'], 2, ',', '.'); ?>
                 </p>
               <?php endif; ?>
+
               <p class="mb-1"><strong>Stock:</strong> <?= esc($row['stock_producto']); ?></p>
+
               <?php if (session('logueado')): ?>
                 <?= form_open('agregar_carrito'); ?>
                   <?= form_hidden('id', $row['id_producto']); ?>
@@ -123,7 +107,6 @@
           </div>
         </div>
       <?php endif; ?>
-      
     <?php endforeach; ?>
   </div>
 </div>

@@ -161,18 +161,18 @@ h2 {
                 <div class="input-box">
                    <input type="email" class="form-control" id="correo" name="correo" placeholder="ej.: tunombre@email.com">
                    <small id="error-login" class="text-danger"></small>   
-                   <?php if (isset($validation['correo'])): ?>
-                        <div class="text-danger"><?= $validation['correo'] ?></div>
-                      <?php endif; ?>
+                   <?php if (!empty($error_correo)): ?>
+                        <div class="alert alert-danger text-center"><?= $error_correo ?></div>
+                    <?php endif; ?>
                       <label>Email</label>
                 </div>
 
                 <div class="input-box">
                    <input type="password" class="form-control" id="pass" name="pass" placeholder="Contraseña">
                     <small id="error-login" class="text-danger"></small> 
-                   <?php if (isset($validation['pass'])): ?>
-              <div class="text-danger"><?= $validation['pass'] ?></div>
-            <?php endif; ?>
+                   <?php if (!empty($error_contras)): ?>
+                        <div class="alert alert-danger text-center"><?= $error_contras ?></div>
+                    <?php endif; ?>
             <label >Password</label>
                 </div>
                 <div class="forgot-pass">
