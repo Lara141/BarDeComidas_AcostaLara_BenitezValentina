@@ -9,6 +9,9 @@ public function principal()
 {
     $producto_model = new \App\Models\producto_model();
     $provincia = $this->request->getGet('provincia');
+    if (empty($provincia)) {
+        $provincia = 'Mendoza';
+    }
 
     // Productos filtrados por provincia (para la sección de comidas)
     $builder = $producto_model

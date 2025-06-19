@@ -124,7 +124,9 @@
   $hayComidas = false;
   foreach ($productos as $row):
     $categoria = strtolower(trim($row['categoria_desc'] ?? ''));
-    if ($categoria === 'comida'):
+    $provBD = strtolower(str_replace(' ', '', $row['provincia_producto']));
+    $provSlug = strtolower(str_replace(' ', '', $slug));
+    if ($provBD === $provSlug && $categoria === 'comida'):
       $hayComidas = true;
   ?>
     <div class="col-12 col-sm-6 col-lg-4">
@@ -185,3 +187,4 @@
     <div class="alert alert-info text-center">No hay comidas registradas para <?= esc($_GET['provincia'] ?? $provincias[array_key_first($provincias)]); ?>.</div>
   <?php endif; ?>
 </div>
+  </section>

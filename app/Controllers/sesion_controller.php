@@ -69,9 +69,14 @@ public function verificar_login()
     }
 
     public function cliente()
-    {
+    { 
         $productoModel = new \App\Models\producto_model();
-        $data['productos'] = $productoModel->findAll();
+        $data['productos'] = $productoModel->where('estado_producto', 1)->join('categoria_producto', 'categoria_producto.categoria_id=producto.categoria_id')->findAll();
+        $data['promociones']=$productoModel->where('estado_producto', 1)
+            ->where('stock_producto >', 0)
+            ->join('categoria_producto', 'categoria_producto.categoria_id=producto.categoria_id')
+            ->findAll();
+            
         $data['titulo'] = "cliente";
         return view('plantillas/encabezado', $data)
             . view('plantillas/barraNavegacion')
