@@ -122,10 +122,12 @@
 <div class="row row-cols-1 row-cols-md-3 g-4">
   <?php
   $hayComidas = false;
-  foreach ($productos as $row):
-    $categoria = strtolower(trim($row['categoria_desc'] ?? ''));
-    if ($categoria === 'comida'):
-      $hayComidas = true;
+ $provinciaSeleccionada = $_GET['provincia'] ?? 'Mendoza';
+foreach ($productos as $row):
+  $categoria = strtolower(trim($row['categoria_desc'] ?? ''));
+  $provincia = trim($row['provincia_producto'] ?? '');
+  if ($categoria === 'comida' && strcasecmp($provincia, $provinciaSeleccionada) === 0):
+ $hayComidas = true;
   ?>
     <div class="col-12 col-sm-6 col-lg-4">
       
@@ -182,7 +184,8 @@
   endforeach;
   if (!$hayComidas):
   ?>
-    <div class="alert alert-info text-center">No hay comidas registradas para <?= esc($_GET['provincia'] ?? $provincias[array_key_first($provincias)]); ?>.</div>
+    <div class="alert alert-info text-center">No hay comidas registradas para <?= esc($provinciaSeleccionada); ?>
+</div>
   <?php endif; ?>
 </div>
   </section>

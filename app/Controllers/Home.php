@@ -8,7 +8,8 @@ class Home extends BaseController
 public function principal()
 {
     $producto_model = new \App\Models\producto_model();
-    $provincia = $this->request->getGet('provincia');
+ $provincia = $this->request->getGet('provincia') ?? 'Mendoza';
+
 
     // Productos filtrados por provincia (para la sección de comidas)
     $builder = $producto_model

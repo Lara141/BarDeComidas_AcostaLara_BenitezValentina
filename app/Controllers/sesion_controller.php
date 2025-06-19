@@ -71,7 +71,8 @@ public function verificar_login()
   public function cliente()
 {
     $producto_model = new \App\Models\producto_model();
-$provincia = $this->request->getGet('provincia');
+$provincia = $this->request->getGet('provincia') ?? 'Mendoza';
+
 
     // Productos filtrados por provincia (para la sección de comidas)
     $builder = $producto_model
