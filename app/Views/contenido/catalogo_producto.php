@@ -75,6 +75,14 @@
       });
     });
   });
+  // Al hacer submit, asegurarse de que el valor del input hidden es el correcto
+document.querySelector('form').addEventListener('submit', function() {
+  const seleccionada = document.querySelector('.btn-provincia.btn-primary');
+  if (seleccionada) {
+    document.getElementById('provinciaSeleccionada').value = seleccionada.value;
+  }
+});
+
 </script>
 
 <div class="container mt-5">
@@ -205,4 +213,10 @@
     </div>
 
   </div>
+  <?php if (empty($productos)): ?>
+  <div class="alert alert-warning text-center mt-4">
+    No se encontraron productos que coincidan con los filtros seleccionados.
+  </div>
+<?php endif; ?>
+
 </div>

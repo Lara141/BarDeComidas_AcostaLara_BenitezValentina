@@ -270,7 +270,6 @@ public function activar_producto($id=null){
     $producto->update($id, $data);
     return redirect()-> route('gestionar');
 }
-
 public function menu_filtrado()
 {
     $productoModel = new \App\Models\Producto_model();
@@ -308,6 +307,5 @@ public function menu_filtrado()
         return view('plantillas/encabezado').view('plantillas/barraNavegacion').view('contenido/menu_filtrado_comida', $data).view('plantillas/piePagina');
     }
 }
-
 
 }
