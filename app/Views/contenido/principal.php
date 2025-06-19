@@ -70,7 +70,7 @@
             <p class="small fst-italic">Provincia: <?= esc($row['provincia_producto']); ?></p>
           <?php endif; ?>
 
-          <p class="mb-1"><strong>Categoría:</strong> <?= esc($row['categoria_desc']); ?></p>
+          <p class="mb-1"><strong>Categoría:</strong> <?= esc($row['categoria_id']); ?></p>
           <p class="mb-1"><strong>Stock:</strong> <?= esc($row['stock_producto']); ?></p>
 
           <?php if (session('logueado')): ?>

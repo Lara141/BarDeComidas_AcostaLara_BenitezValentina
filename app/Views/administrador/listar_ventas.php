@@ -20,8 +20,10 @@
                                 <th>Cliente</th>
                                 <th>Fecha</th>
                                 <th>Total</th>
-                                <th>Cantidad de productos</th>
-                                <th>Acciones</th>
+                                <th>Cant. de productos</th>
+                                <th>Envio/Retiro</th>
+                                <th>Dirección</th>
+                                <th>Ver detalle</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -32,6 +34,8 @@
                                     <td><?= date('d/m/Y H:i', strtotime($venta['fecha_venta'])) ?></td>
                                     <td>$<?= number_format($venta['total_venta'], 2, ',', '.') ?></td>
                                     <td><?= $venta['cantidad_productos'] ?></td>
+                                    <td><?= esc($venta['metodo_entrega']) ?></td>
+                                    <td><?= esc($venta['direccion_entrega']) ?></td>
                                     <td>
                                         <button 
                                             type="button" 

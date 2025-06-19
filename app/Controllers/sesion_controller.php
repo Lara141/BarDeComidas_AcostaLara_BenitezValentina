@@ -59,10 +59,12 @@ class Sesion_controller extends BaseController
 
     public function cliente()
     {
+        $productoModel = new \App\Models\producto_model();
+        $data['productos'] = $productoModel->findAll();
         $data['titulo'] = "cliente";
         return view('plantillas/encabezado', $data)
             . view('plantillas/barraNavegacion')
-            . view('contenido/principal')
+            . view('contenido/principal', $data)
             . view('plantillas/piePagina');
     }
 
