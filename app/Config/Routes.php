@@ -6,7 +6,11 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 
+<<<<<<< HEAD
 $routes->get('/', 'Home::principal');
+=======
+$routes->get('/', 'Home::index');
+>>>>>>> 8ea1864feb1f821df4e1522829965c79703d14c6
 $routes->get('nosotros', 'Home::somos');
 $routes->get('comercializacion', 'Home::comercio');
 $routes->get('terminoUso', 'Home::terminos');
@@ -63,3 +67,17 @@ $routes->get('listar_ventas', 'Ventas_controller::listar_ventas');
 $routes->get('api/detalle_venta/(:num)', 'Ventas_controller::api_detalle_venta/$1');
 $routes->get('eliminar_venta/(:num)', 'Ventas_controller::eliminar_venta/$1');
 
+<<<<<<< HEAD
+=======
+//consultas
+$routes->get('listar_consulta', 'Consulta_controller::listar_consultas');
+
+
+$routes->get('listar_producto', 'producto_controller::listar_productos');
+$routes->get('catalogo_producto', 'producto_controller::catalogo_productos');
+//$routes->get('listar_ventas', 'Carrito_controller::listar_ventas');
+//$routes->get('detalle_venta/(:num)', 'Carrito_controller::detalle_venta/$1');
+//$routes->get('api/detalle_venta/(:num)', 'Carrito_controller::api_detalle_venta/$1');
+
+$routes->get('principal', 'producto_controller::principal');
+>>>>>>> 8ea1864feb1f821df4e1522829965c79703d14c6
