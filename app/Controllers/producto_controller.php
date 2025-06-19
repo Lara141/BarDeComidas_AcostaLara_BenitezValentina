@@ -242,18 +242,17 @@ public function catalogo_productos() {
 
 public function menu_comida() {
     $producto_model = new producto_model();
-    $data['productos'] = $producto_model->where('estado_producto', 1)->where('stock_producto >', 0)->join('categoria_producto', 'categoria_producto.categoria_id=producto.categoria_id')->findAll();
+    $data['productos'] = $producto_model->where('estado_producto', 1)->where('stock_producto >', 0)->join('categoria_producto', 'categoria_producto.categoria_id=producto.categoria_id')->where('LOWER(categoria_producto.categoria_desc)', 'comida')->findAll();
     $data['titulo'] = 'Catalogo de productos';
     return view('plantillas/encabezado', $data).view('plantillas/barraNavegacion').view('contenido/menu_comida', $data); 
 }
 
 public function menu_bebida() {
     $producto_model = new producto_model();
-    $data['productos'] = $producto_model->where('estado_producto', 1)->where('stock_producto >', 0)->join('categoria_producto', 'categoria_producto.categoria_id=producto.categoria_id')->findAll();
+    $data['productos'] = $producto_model->where('estado_producto', 1)->where('stock_producto >', 0)->join('categoria_producto', 'categoria_producto.categoria_id=producto.categoria_id')->where('LOWER(categoria_producto.categoria_desc)', 'bebida')->findAll();
     $data['titulo'] = 'Catalogo de productos';
     return view('plantillas/encabezado', $data).view('plantillas/barraNavegacion').view('contenido/menu_bebida', $data); 
 }
-
 
 public function eliminar_producto($id=null){
     //se actualiza el estado del producto
@@ -272,47 +271,43 @@ public function activar_producto($id=null){
     return redirect()-> route('gestionar');
 }
 
-
-public function menu_filtro_bebida()
+public function menu_filtrado()
 {
-    $producto_model = new producto_model();
-    $provincia = $this->request->getGet('provincia'); // <-- Cambia esto
+    $productoModel = new \App\Models\Producto_model();
 
-    $builder = $producto_model->where('estado_producto', 1)
-        ->where('stock_producto >', 0)
-        ->join('categoria_producto', 'categoria_producto.categoria_id=producto.categoria_id');
+    $categoria = $this->request->getGet('categoria'); 
+    $provincia = $this->request->getGet('provincia');
+    $soloPromos = $this->request->getGet('solo_promociones');
 
-    if (!empty($provincia)) {
-        $builder->where('provincia_producto', $provincia);
+    $builder = $productoModel->builder();
+    $builder->select('*');
+    $builder->join('categoria_producto', 'producto.categoria_id = categoria_producto.categoria_id');
+
+    // Filtrar por categoría
+    if ($categoria) {
+        $builder->where('LOWER(categoria_producto.categoria_desc)', strtolower($categoria));
     }
 
-    $data['productos'] = $builder->findAll();
-    $data['titulo'] = 'Bebidas por Provincia';
-    return view('plantillas/encabezado', $data)
-         . view('plantillas/barraNavegacion')
-         . view('contenido/menu_filtrado_bebida', $data);
-}
-
-public function menu_filtro_comida()
-{
-    $producto_model = new producto_model();
-    $provincia = $this->request->getGet('provincia'); // <-- Cambia esto
-
-    $builder = $producto_model->where('estado_producto', 1)
-        ->where('stock_producto >', 0)
-        ->join('categoria_producto', 'categoria_producto.categoria_id=producto.categoria_id');
-
-    if (!empty($provincia)) {
-        $builder->where('provincia_producto', $provincia);
+    // Si es comida, filtra por provincia si se eligió
+    if (strtolower($categoria) === 'comida' && $provincia) {
+        $builder->where('producto.provincia_producto', $provincia);
     }
 
-    $data['productos'] = $builder->findAll();
-    $data['titulo'] = 'Comidas por Provincia';
-    return view('plantillas/encabezado', $data)
-         . view('plantillas/barraNavegacion')
-         . view('contenido/menu_filtrado_comida', $data);
-}
+    // Solo promociones (para ambos)
+    if ($soloPromos) {
+        $builder->where('producto.descuento_producto >', 0);
+    }
 
+    $query = $builder->get();
+    $data['productos'] = $query->getResultArray();
+
+    // Elige la vista según la categoría
+    if (strtolower($categoria) === 'bebida') {
+        return view('plantillas/encabezado').view('plantillas/barraNavegacion').view('contenido/menu_filtrado_bebida', $data).view('plantillas/piePagina');
+    } else {
+        return view('plantillas/encabezado').view('plantillas/barraNavegacion').view('contenido/menu_filtrado_comida', $data).view('plantillas/piePagina');
+    }
+}
 
 
 }

@@ -54,22 +54,22 @@ class Carrito_controller extends BaseController
 
         $cart->insert($data);
 
-        return redirect()->route('ver_carrito')->with('mensaje', 'Producto agregado al carrito con descuento aplicado');
+        return redirect()->route('ver_carrito')->with('mensaje', 'Producto agregado al carrito correctamente');
     }
 
 
-        public function eliminar_item($rowid)
-        {
-            $cart = \Config\Services::cart();
-            $cart->remove($rowid);
-            return redirect()->route('ver_carrito')->with('mensaje', 'Producto eliminado del carrito');
-        }
+    public function eliminar_item($rowid)
+    {
+        $cart = \Config\Services::cart();
+        $cart->remove($rowid);
+        return redirect()->route('ver_carrito')->with('mensaje', 'Producto eliminado del carrito');
+    }
 
-        public function vaciar_carrito()
-        {
-            $cart = \Config\Services::cart();
-            $cart->destroy();
-            return redirect()->route('ver_carrito')->with('mensaje', 'Carrito vaciado correctamente');
-        }
+    public function vaciar_carrito()
+    {
+        $cart = \Config\Services::cart();
+        $cart->destroy();
+        return redirect()->route('ver_carrito')->with('mensaje', 'Carrito vaciado correctamente');
+    }
 
 }

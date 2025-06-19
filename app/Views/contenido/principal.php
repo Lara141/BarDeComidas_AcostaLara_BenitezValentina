@@ -1,11 +1,10 @@
 <?php helper('form'); ?>
 
-
 <div class="galeria-circular">
   <div class="imagen-con-texto">
     <img src="assets/img/FotoBar.jpeg" alt="Foto Bar">
     <div class="texto-sobre-imagen">
-      <a>Ambiente y atención aseguradas! </a>
+      <a>Ambiente y atención aseguradas!</a>
     </div>
   </div>
 
@@ -35,9 +34,10 @@
 <section class="mb-5">
   <div class="container">
     <h4 class="text-uppercase fw-bold text-center mb-4">
-     <i class="fa-solid fa-burger fa-beat"></i>  
-      Promociones </h4>
+      <i class="fa-solid fa-burger fa-beat"></i> Promociones
+    </h4>
     <div class="row g-4">
+      
       <?php foreach ($promociones as $row): ?>
         <div class="col-12 col-sm-6 col-lg-4">
           <div class="card h-100 shadow-sm border-0 rounded-4 w-100">
@@ -87,9 +87,7 @@
   </div>
 </section>
 
-
-
-<!--Comidas por provincias-->
+<!-- Comidas por Provincia -->
 <section class="mb-5 py-5 bg-pastel">
   <div class="container">
     <h4 class="text-uppercase fw-bold text-center mb-4">
@@ -187,3 +185,4 @@
     <div class="alert alert-info text-center">No hay comidas registradas para <?= esc($_GET['provincia'] ?? $provincias[array_key_first($provincias)]); ?>.</div>
   <?php endif; ?>
 </div>
+  </section>

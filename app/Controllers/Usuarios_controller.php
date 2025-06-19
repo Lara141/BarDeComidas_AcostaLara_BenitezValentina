@@ -71,7 +71,10 @@ class Usuarios_controller extends BaseController
         } else {
             $data['titulo'] = 'Registro';
              return redirect()->back()->withInput()->with('validation', $validation);
+<<<<<<< HEAD
+=======
            
+>>>>>>> 8ea1864feb1f821df4e1522829965c79703d14c6
         }
     }
 

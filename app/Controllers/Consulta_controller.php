@@ -55,12 +55,6 @@ class Consulta_controller extends BaseController
         } else {
             $data['titulo'] = 'Consulta';
             return redirect()->back()->withInput()->with('validation', $validation);
-            
-            /**$data['validation'] = $validation->getErrors();
-            return view('plantillas/encabezado', $data)
-                . view('plantillas/barraNavegacion')
-                . view('contenido/contacto')
-                . view('plantillas/piePagina');**/
         }
     }
 
