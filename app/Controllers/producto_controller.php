@@ -309,9 +309,6 @@ public function menu_filtrado()
     }
 }
 
-<<<<<<< HEAD
-
-=======
 
 
 public function principal()
@@ -349,5 +346,4 @@ public function principal()
          . view('contenido/principal', $data)
          . view('plantillas/footer', $data);
 }
->>>>>>> 8ea1864feb1f821df4e1522829965c79703d14c6
 }
