@@ -53,11 +53,16 @@ $routes->get('menu_filtrado_bebida', 'producto_controller::menu_filtro_bebida');
 //carrito
 $routes->get('ver_carrito', 'Carrito_controller::ver_carrito');
 $routes->post('agregar_carrito', 'Carrito_controller::agregar_carrito');
-$routes->get('ventas', 'Carrito_controller::guardar_venta');
+//$routes->get('ventas', 'Carrito_controller::guardar_venta');
 $routes->get('eliminar_item/(:any)', 'Carrito_controller::eliminar_item/$1');
 $routes->get('vaciar_carrito', 'Carrito_controller::vaciar_carrito');
-$routes->get('eliminar_venta/(:num)', 'Carrito_controller::eliminar_venta/$1');
 
+//ventas
+$routes->get('ventas', 'Ventas_controller::guardar_venta');
+$routes->post('guardar_venta', 'Ventas_controller::guardar_venta');
+$routes->get('listar_ventas', 'Ventas_controller::listar_ventas');
+$routes->get('api/detalle_venta/(:num)', 'Ventas_controller::api_detalle_venta/$1');
+$routes->get('eliminar_venta/(:num)', 'Ventas_controller::eliminar_venta/$1');
 
 //consultas
 $routes->get('listar_consulta', 'Consulta_controller::listar_consultas');
@@ -65,8 +70,8 @@ $routes->get('listar_consulta', 'Consulta_controller::listar_consultas');
 
 $routes->get('listar_producto', 'producto_controller::listar_productos');
 $routes->get('catalogo_producto', 'producto_controller::catalogo_productos');
-$routes->get('listar_ventas', 'Carrito_controller::listar_ventas');
+//$routes->get('listar_ventas', 'Carrito_controller::listar_ventas');
 //$routes->get('detalle_venta/(:num)', 'Carrito_controller::detalle_venta/$1');
-$routes->get('api/detalle_venta/(:num)', 'Carrito_controller::api_detalle_venta/$1');
+//$routes->get('api/detalle_venta/(:num)', 'Carrito_controller::api_detalle_venta/$1');
 
 $routes->get('/', 'producto_controller::principal');

@@ -121,7 +121,7 @@ function editar_producto($id=null){
         
         return redirect()->route('gestionar')->with('mensaje', 'El producto no existe.');
     }
-    return view('administrador/encabezado_admin', $data).view('administrador/barraNav_admin').view('administrador/editar_producto', $data);
+    return view('administrador/encabezado_admin', $data).view('administrador/barraNav_admin', $data).view('administrador/editar_producto', $data);
 }
 
 public function actualizar_producto()

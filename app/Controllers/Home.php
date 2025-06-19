@@ -9,9 +9,9 @@ class Home extends BaseController
         $data['productos'] = $productoModel->findAll(); 
         $data['titulo'] = "Inicio";
         return view('plantillas/encabezado', $data)
-            . view('plantillas/barraNavegacion')
+            . view('plantillas/barraNavegacion', $data)
             . view('contenido/principal', $data)
-            . view('plantillas/piePagina');
+            . view('plantillas/piePagina', $data);
             
     }
 
