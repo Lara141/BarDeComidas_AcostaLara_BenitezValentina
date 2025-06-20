@@ -14,7 +14,7 @@
                                 <th>#</th>
                                 <th>Nombre</th>
                                 <th>Email</th>
-                                 <th>Provinica</th>
+                                 <th>Provincia</th>
                                 <th>Localidad</th>
                                 <th>Mensaje</th>
                                 <th>Estado</th>

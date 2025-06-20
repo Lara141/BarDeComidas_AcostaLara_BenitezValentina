@@ -1,6 +1,6 @@
 <?php helper('form'); ?>
 
-<!-- Botón de filtro estilo PedidosYa alineado a la derecha -->
+<!-- Botón de filtro  alineado a la derecha -->
 <div class="d-flex justify-content-end mb-4">
   <button type="button"
           class="btn btn-light border rounded-pill shadow-sm d-flex align-items-center px-3 py-2"
@@ -34,9 +34,7 @@
           <div class="d-flex flex-wrap gap-2 mb-4">
             <?php
               $provincias = [
-                "Buenos Aires", "Catamarca", "Chaco", "Chubut", "Córdoba", "Corrientes", "Entre Ríos", "Formosa",
-                "Jujuy", "La Pampa", "La Rioja", "Mendoza", "Misiones", "Neuquén", "Río Negro", "Salta", "San Juan",
-                "San Luis", "Santa Cruz", "Santa Fe", "Santiago del Estero", "Tierra del Fuego", "Tucumán"
+                "Buenos Aires", "Corrientes", "Cordoba",  "Mendoza",  "Salta"
               ];
               $provinciaSeleccionada = $_GET['provincia'] ?? '';
               foreach ($provincias as $prov) {

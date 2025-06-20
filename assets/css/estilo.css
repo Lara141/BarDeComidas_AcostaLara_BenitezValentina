@@ -163,25 +163,7 @@ a:hover {
     color: #3498db;
 }
 
-/* Carrusel 
-.carousel-caption {
-    color: #000 !important;
-    text-shadow: none !important;
-}
 
-.social-media a {
-    text-decoration: none;
-    font-size: 18px;
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-}
-
-
-button:hover {
-    background-color: #718491; /* Azul brillante 
-}
-*/
 .social-icons li a {
     font-size: 1.8rem; 
     color: #fff; /* color predeterminado (blanco) */
@@ -419,4 +401,5 @@ form .input-group-text {
 .texto-sobre-imagen a:hover {
   text-decoration: underline;
 }
+
 
