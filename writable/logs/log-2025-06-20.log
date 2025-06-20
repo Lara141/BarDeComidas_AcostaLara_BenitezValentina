@@ -1,0 +1,171 @@
+DEBUG - 2025-06-20 00:00:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-20 00:00:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-20 00:03:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-20 00:03:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-20 00:03:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-20 00:03:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-20 00:03:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-20 00:03:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-20 00:04:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-20 00:04:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-20 00:06:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-20 00:06:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-20 00:06:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-20 00:06:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-20 00:06:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-20 00:07:46 --> ErrorException: Undefined variable $data
+[Method: GET, Route: listar_ventas]
+in APPPATH\Controllers\Ventas_controller.php on line 96.
+ 1 APPPATH\Controllers\Ventas_controller.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\BarDeComidas_AcostaLara_BenitezValentina\\app\\Controllers\\Ventas_controller.php', 96)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->listar_ventas()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-20 00:08:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-20 00:08:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-20 00:08:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-20 00:08:13 --> ErrorException: Undefined array key "cantidad_productos"
+[Method: GET, Route: listar_ventas]
+in APPPATH\Views\administrador\listar_ventas.php on line 63.
+ 1 APPPATH\Views\administrador\listar_ventas.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cantidad_productos"', 'C:\\xampp\\htdocs\\BarDeComidas_AcostaLara_BenitezValentina\\app\\Views\\administrador\\listar_ventas.php', 63)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\BarDeComidas_AcostaLara_BenitezValentina\\app\\Views\\administrador\\listar_ventas.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('administrador/listar_ventas', [], true)
+ 5 APPPATH\Controllers\Ventas_controller.php(98): view('administrador/listar_ventas', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->listar_ventas()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-20 00:09:57 --> Error: Class "App\Models\VentasModel" not found
+[Method: GET, Route: listar_ventas]
+in APPPATH\Controllers\Ventas_controller.php on line 79.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->listar_ventas()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-20 00:10:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-20 00:10:21 --> ErrorException: Undefined array key "nombre_persona"
+[Method: GET, Route: listar_ventas]
+in APPPATH\Views\administrador\listar_ventas.php on line 60.
+ 1 APPPATH\Views\administrador\listar_ventas.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_persona"', 'C:\\xampp\\htdocs\\BarDeComidas_AcostaLara_BenitezValentina\\app\\Views\\administrador\\listar_ventas.php', 60)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\BarDeComidas_AcostaLara_BenitezValentina\\app\\Views\\administrador\\listar_ventas.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('administrador/listar_ventas', [], true)
+ 5 APPPATH\Controllers\Ventas_controller.php(96): view('administrador/listar_ventas', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->listar_ventas()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-20 00:12:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-20 00:12:57 --> ErrorException: Undefined array key "cantidad_productos"
+[Method: GET, Route: listar_ventas]
+in APPPATH\Views\administrador\listar_ventas.php on line 63.
+ 1 APPPATH\Views\administrador\listar_ventas.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cantidad_productos"', 'C:\\xampp\\htdocs\\BarDeComidas_AcostaLara_BenitezValentina\\app\\Views\\administrador\\listar_ventas.php', 63)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\BarDeComidas_AcostaLara_BenitezValentina\\app\\Views\\administrador\\listar_ventas.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('administrador/listar_ventas', [], true)
+ 5 APPPATH\Controllers\Ventas_controller.php(98): view('administrador/listar_ventas', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->listar_ventas()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-06-20 00:15:19 --> mysqli_sql_exception: Unknown column 'detalle_venta.id_producto' in 'on clause' in C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `ventas`...', 0)
+#1 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ventas`...')
+#2 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ventas`...')
+#3 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `ventas`...', Array, false)
+#4 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\app\Controllers\Ventas_controller.php(95): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\CodeIgniter.php(933): App\Controllers\Ventas_controller->listar_ventas()
+#6 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+#7 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\BarDeComidas_AcostaLara_BenitezValentina\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-06-20 00:15:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'detalle_venta.id_producto' in 'on clause'
+[Method: GET, Route: listar_ventas]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `ventas`.*, `persona`.`nombre_persona` AS `nombre_persona`
+FROM `ventas`
+JOIN `persona` ON `persona`.`id_persona` = `ventas`.`id_persona`
+JOIN `producto` ON `producto`.`id_producto` = `detalle_venta`.`id_producto`
+WHERE `fecha_venta` >= :fecha_venta:
+AND `fecha_venta` <= :fecha_venta.1:', [...], false)
+ 2 APPPATH\Controllers\Ventas_controller.php(95): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->listar_ventas()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-20 00:15:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'detalle_venta.id_producto' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ventas`.*, `persona`.`nombre_persona` AS `nombre_persona`
+FROM `ventas`
+JOIN `persona` ON `persona`.`id_persona` = `ventas`.`id_persona`
+JOIN `producto` ON `producto`.`id_producto` = `detalle_venta`.`id_producto`
+WHERE `fecha_venta` >= \'2025-06-18\'
+AND `fecha_venta` <= \'2025-06-19\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ventas`.*, `persona`.`nombre_persona` AS `nombre_persona`
+FROM `ventas`
+JOIN `persona` ON `persona`.`id_persona` = `ventas`.`id_persona`
+JOIN `producto` ON `producto`.`id_producto` = `detalle_venta`.`id_producto`
+WHERE `fecha_venta` >= \'2025-06-18\'
+AND `fecha_venta` <= \'2025-06-19\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `ventas`.*, `persona`.`nombre_persona` AS `nombre_persona`
+FROM `ventas`
+JOIN `persona` ON `persona`.`id_persona` = `ventas`.`id_persona`
+JOIN `producto` ON `producto`.`id_producto` = `detalle_venta`.`id_producto`
+WHERE `fecha_venta` >= :fecha_venta:
+AND `fecha_venta` <= :fecha_venta.1:', [...], false)
+ 4 APPPATH\Controllers\Ventas_controller.php(95): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->listar_ventas()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-20 00:15:19 --> [Caused by] mysqli_sql_exception: Unknown column 'detalle_venta.id_producto' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `ventas`.*, `persona`.`nombre_persona` AS `nombre_persona`
+FROM `ventas`
+JOIN `persona` ON `persona`.`id_persona` = `ventas`.`id_persona`
+JOIN `producto` ON `producto`.`id_producto` = `detalle_venta`.`id_producto`
+WHERE `fecha_venta` >= \'2025-06-18\'
+AND `fecha_venta` <= \'2025-06-19\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ventas`.*, `persona`.`nombre_persona` AS `nombre_persona`
+FROM `ventas`
+JOIN `persona` ON `persona`.`id_persona` = `ventas`.`id_persona`
+JOIN `producto` ON `producto`.`id_producto` = `detalle_venta`.`id_producto`
+WHERE `fecha_venta` >= \'2025-06-18\'
+AND `fecha_venta` <= \'2025-06-19\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ventas`.*, `persona`.`nombre_persona` AS `nombre_persona`
+FROM `ventas`
+JOIN `persona` ON `persona`.`id_persona` = `ventas`.`id_persona`
+JOIN `producto` ON `producto`.`id_producto` = `detalle_venta`.`id_producto`
+WHERE `fecha_venta` >= \'2025-06-18\'
+AND `fecha_venta` <= \'2025-06-19\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `ventas`.*, `persona`.`nombre_persona` AS `nombre_persona`
+FROM `ventas`
+JOIN `persona` ON `persona`.`id_persona` = `ventas`.`id_persona`
+JOIN `producto` ON `producto`.`id_producto` = `detalle_venta`.`id_producto`
+WHERE `fecha_venta` >= :fecha_venta:
+AND `fecha_venta` <= :fecha_venta.1:', [...], false)
+ 5 APPPATH\Controllers\Ventas_controller.php(95): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ventas_controller->listar_ventas()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

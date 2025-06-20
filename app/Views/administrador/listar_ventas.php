@@ -1,3 +1,4 @@
+
 <div class="container my-5" style="max-width: 1100px;">
     <div class="card shadow rounded-4">
         <div class="card-body">
@@ -5,12 +6,38 @@
                 <i class="fa-solid fa-receipt"></i> Lista de Ventas
             </h2>
 
+            <!-- Formulario de filtros -->
+            <form method="get" class="row g-3 mb-4">
+                <div class="col-md-4">
+                    <label for="desde" class="form-label">Desde:</label>
+                    <input type="date" class="form-control" name="desde" id="desde" value="<?= esc($_GET['desde'] ?? '') ?>">
+                </div>
+                <div class="col-md-4">
+                    <label for="hasta" class="form-label">Hasta:</label>
+                    <input type="date" class="form-control" name="hasta" id="hasta" value="<?= esc($_GET['hasta'] ?? '') ?>">
+                </div>
+                <div class="col-md-4 d-flex align-items-end">
+                    <button type="submit" class="btn btn-primary w-100">
+                        <i class="fa-solid fa-filter"></i> Filtrar
+                    </button>
+                </div>
+            </form>
+
+            <!-- Alerta si hay filtro -->
+            <?php if (!empty($_GET['desde']) && !empty($_GET['hasta'])): ?>
+                <div class="alert alert-info text-center">
+                    Mostrando ventas entre <strong><?= date('d/m/Y', strtotime($_GET['desde'])) ?></strong> y <strong><?= date('d/m/Y', strtotime($_GET['hasta'])) ?></strong>.
+                </div>
+            <?php endif; ?>
+
+            <!-- Mensaje flash -->
             <?php if (session()->getFlashdata('mensaje')): ?>
                 <div class="alert alert-success text-center">
                     <?= session()->getFlashdata('mensaje') ?>
                 </div>
             <?php endif; ?>
 
+            <!-- Tabla de ventas -->
             <?php if (!empty($ventas)): ?>
                 <div class="table-responsive">
                     <table class="table table-bordered table-hover align-middle text-center">
@@ -47,6 +74,8 @@
                                             data-fecha="<?= date('d/m/Y H:i', strtotime($venta['fecha_venta'])) ?>"
                                             data-total="<?= number_format($venta['total_venta'], 2, ',', '.') ?>"
                                             data-cantidad="<?= $venta['cantidad_productos'] ?>"
+                                            data-metodo="<?= esc($venta['metodo_entrega']) ?>"
+                                            data-direccion="<?= esc($venta['direccion_entrega']) ?>"
                                         >
                                             Ver detalle
                                         </button>
@@ -76,6 +105,8 @@
         <p><strong>Fecha:</strong> <span id="modalFecha"></span></p>
         <p><strong>Total:</strong> $<span id="modalTotal"></span></p>
         <p><strong>Cantidad de productos:</strong> <span id="modalCantidad"></span></p>
+        <p><strong>Entrega:</strong> <span id="modalMetodo"></span></p>
+        <p><strong>Dirección:</strong> <span id="modalDireccion"></span></p>
         <hr>
         <div id="modalDetalleProductos">
           <p>Cargando detalle...</p>
@@ -95,24 +126,24 @@ document.addEventListener('DOMContentLoaded', function() {
   detalleModal.addEventListener('show.bs.modal', function(event) {
     var button = event.relatedTarget;
 
-    // Obtener datos del botón
     var cliente = button.getAttribute('data-cliente');
     var fecha = button.getAttribute('data-fecha');
     var total = button.getAttribute('data-total');
     var cantidad = button.getAttribute('data-cantidad');
+    var metodo = button.getAttribute('data-metodo');
+    var direccion = button.getAttribute('data-direccion');
     var idVenta = button.getAttribute('data-id');
 
-    // Setear datos en el modal
     document.getElementById('modalCliente').textContent = cliente;
     document.getElementById('modalFecha').textContent = fecha;
     document.getElementById('modalTotal').textContent = total;
     document.getElementById('modalCantidad').textContent = cantidad;
+    document.getElementById('modalMetodo').textContent = metodo;
+    document.getElementById('modalDireccion').textContent = direccion;
 
-    // Mostrar texto "Cargando..." mientras hacemos la petición AJAX
     var detalleProductosDiv = document.getElementById('modalDetalleProductos');
     detalleProductosDiv.innerHTML = '<p>Cargando detalle...</p>';
 
-    // Petición AJAX para obtener el detalle de productos de la venta
     fetch('<?= base_url('api/detalle_venta') ?>/' + idVenta)
       .then(response => response.json())
       .then(data => {
@@ -121,12 +152,12 @@ document.addEventListener('DOMContentLoaded', function() {
           html += '<thead><tr><th>Producto</th><th>Cantidad</th><th>Precio Unitario</th><th>Subtotal</th></tr></thead><tbody>';
 
           data.forEach(item => {
-            html += `<tr>
+            html += <tr>
                       <td>${item.nombre_producto}</td>
                       <td>${item.cantidad}</td>
                       <td>$${parseFloat(item.precio_unitario).toFixed(2)}</td>
                       <td>$${parseFloat(item.subtotal).toFixed(2)}</td>
-                    </tr>`;
+                    </tr>;
           });
 
           html += '</tbody></table>';
@@ -142,3 +173,4 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
+

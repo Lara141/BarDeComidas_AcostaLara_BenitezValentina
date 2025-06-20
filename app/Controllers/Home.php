@@ -1,22 +1,20 @@
 <?php
 
 namespace App\Controllers;
+use App\Models\producto_model;
 
 class Home extends BaseController
 {
     
 public function principal()
 {
-    $producto_model = new \App\Models\producto_model();
-<<<<<<< HEAD
+    $producto_model = new producto_model();
     $provincia = $this->request->getGet('provincia');
     if (empty($provincia)) {
         $provincia = 'Mendoza';
     }
-=======
  $provincia = $this->request->getGet('provincia') ?? 'Mendoza';
 
->>>>>>> 305321f78b41a8f796806c94e0540ca1d711969a
 
     // Productos filtrados por provincia (para la sección de comidas)
     $builder = $producto_model
@@ -32,7 +30,7 @@ public function principal()
     $data['productos'] = $builder->findAll();
 
     // --- Usá un nuevo modelo para evitar acumulación de condiciones ---
-    $producto_model2 = new \App\Models\producto_model();
+    $producto_model2 = new producto_model();
     $data['promociones'] = $producto_model2
         ->select('producto.*, categoria_producto.categoria_desc')
         ->where('estado_producto', 1)

@@ -68,22 +68,6 @@ public function verificar_login()
             . view('administrador/barraNav_admin');
     }
 
-<<<<<<< HEAD
-    public function cliente()
-    { 
-        $productoModel = new \App\Models\producto_model();
-        $data['productos'] = $productoModel->where('estado_producto', 1)->join('categoria_producto', 'categoria_producto.categoria_id=producto.categoria_id')->findAll();
-        $data['promociones']=$productoModel->where('estado_producto', 1)
-            ->where('stock_producto >', 0)
-            ->join('categoria_producto', 'categoria_producto.categoria_id=producto.categoria_id')
-            ->findAll();
-            
-        $data['titulo'] = "cliente";
-        return view('plantillas/encabezado', $data)
-            . view('plantillas/barraNavegacion')
-            . view('contenido/principal', $data)
-            . view('plantillas/piePagina');
-=======
   public function cliente()
 {
     $producto_model = new \App\Models\producto_model();
@@ -99,7 +83,6 @@ $provincia = $this->request->getGet('provincia') ?? 'Mendoza';
 
     if (!empty($provincia)) {
         $builder->where('provincia_producto', $provincia);
->>>>>>> 305321f78b41a8f796806c94e0540ca1d711969a
     }
 
     $data['productos'] = $builder->findAll();
