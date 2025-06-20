@@ -57,12 +57,7 @@
                                         <?= form_hidden('precio', $row['precio_producto']); ?>
                                         <?= form_hidden('descuento', $row['descuento_producto']); ?>
                                         <?= form_hidden('provincia', $row['provincia_producto']); ?>
-                                        <div class="d-flex justify-content-center mb-3">
-                                            <input type="number" name="qty" value="1" min="1" max="<?= $row['stock_producto'] ?>" class="form-control text-center" style="width: 80px;">
-                                </div>
                                     <?= form_close(); ?>
-                                <?php else: ?>
-                                    <p class="text-muted">Iniciá sesión para comprar</p>
                                 <?php endif; ?>
                             </div>
                         </div>

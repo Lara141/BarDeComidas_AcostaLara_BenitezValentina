@@ -12,7 +12,7 @@ class Sesion_controller extends BaseController
             . view('contenido/inicioDeSesion')
             . view('plantillas/piePagina');
     }
-
+    
 public function verificar_login()
 {
     $session = session();
@@ -117,16 +117,30 @@ $provincia = $this->request->getGet('provincia') ?? 'Mendoza';
         $usuarioModel = new \App\Models\UserModel();
         $data['usuario'] = $usuarioModel->find($usuario_id);
         $data['titulo'] = 'Mi cuenta';
-    
 
         $ventaModel = new \App\Models\Venta_Model();
-        $data['compras'] = $ventaModel->where('id_persona', $usuario_id)->orderBy('fecha_venta', 'DESC')->findAll();
+        $detalleModel = new \App\Models\Detalle_Venta_Model();
 
-        $data['titulo'] = 'Mi cuenta';
+        $compras = $ventaModel->where('id_persona', $usuario_id)
+                            ->orderBy('fecha_venta', 'DESC')
+                            ->findAll();
+
+        foreach ($compras as &$compra) {
+            $builder = $detalleModel->builder();
+            $builder->select('producto.nombre_producto, detalle_venta.cantidad, detalle_venta.precio_unitario, (detalle_venta.cantidad * detalle_venta.precio_unitario) as subtotal');
+            $builder->join('producto', 'producto.id_producto = detalle_venta.id_producto');
+            $builder->where('id_venta', $compra['id_venta']);
+            $compra['detalles'] = $builder->get()->getResultArray();
+        }
+
+        $data['compras'] = $compras;
+
         return view('plantillas/encabezado', $data)
             . view('plantillas/barraNavegacion')
-            . view('contenido/mi_cuenta', $data);
+            . view('contenido/mi_cuenta', $data)
+            .view('plantillas/piePagina');
     }
+
 
     public function actualizar_mi_cuenta()
     {

@@ -17,6 +17,7 @@
                                  <th>Provincia</th>
                                 <th>Localidad</th>
                                 <th>Mensaje</th>
+                                <th>Estado</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -31,7 +32,20 @@
                                     <td><?= esc($consulta['provincia_consulta'] ?? '') ?></td>
                                     <td><?= esc($consulta['localidad_consulta'] ?? '') ?></td>
                                     <td><?= esc($consulta['mensaje_consulta'] ?? '') ?></td>
-                                    <!--td class="text-center"><?= esc($consulta['fecha_consulta'] ?? '') ?></td-->
+                                    <!--td class="text-center"><?= esc($consulta['fecha_consulta'] ?? '') ?></td-->              
+                                    <td class="text-center">
+                                        <?php if (isset($consulta['estado_consulta']) && $consulta['estado_consulta'] == 1): ?>
+    <span class="badge bg-primary">Leído</span>
+    <a href="<?= base_url('consulta/noleido/' . $consulta['id_consulta']) ?>" class="btn btn-sm btn-outline-secondary ms-2">
+        Marcar como no leído
+    </a>
+<?php else: ?>
+    <span class="badge bg-light text-dark border border-secondary">No leído</span>
+    <a href="<?= base_url('consulta/leido/' . $consulta['id_consulta']) ?>" class="btn btn-sm btn-outline-primary ms-2">
+        Marcar como leído
+    </a>
+<?php endif; ?>
+                                    </td>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>

@@ -77,4 +77,18 @@ class Consulta_controller extends BaseController
             . view('administrador/barraNav_admin')
             . view('administrador/listar_consulta');
     }
+
+    public function marcar_leido($id = null)
+    {
+        $consulta = new \App\Models\consulta_model();
+        $consulta->update($id, ['estado_consulta' => 1]);
+        return redirect()->route('listar_consulta');
+    }
+
+    public function marcar_no_leido($id = null)
+    {
+        $consulta = new \App\Models\consulta_model();
+        $consulta->update($id, ['estado_consulta' => 0]);
+        return redirect()->route('listar_consulta');
+    }
 }

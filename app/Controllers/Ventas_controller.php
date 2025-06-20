@@ -76,41 +76,37 @@ public function listar_ventas()
     $hasta = $this->request->getGet('hasta');
     $metodoEntrega = $this->request->getGet('metodo_entrega');
 
-    $ventasModel = new \App\Models\Venta_model(); // corregido nombre del modelo
+        $data['ventas'] = $query->getResultArray();
 
-    $builder = $ventasModel->builder();
-    $builder->select('ventas.*, persona.nombre_persona AS nombre_persona'); // selecciona todo de ventas y nombre del cliente
-    $builder->join('persona', 'persona.id_persona = ventas.id_persona');
+        // Traer los detalles de cada venta
+        $detalleBuilder = $db->table('detalle_venta');
+        $detalleBuilder->select('detalle_venta.id_venta, producto.nombre_producto, detalle_venta.cantidad, detalle_venta.precio_unitario, detalle_venta.subtotal');
+        $detalleBuilder->join('producto', 'producto.id_producto = detalle_venta.id_producto');
+        $detalleQuery = $detalleBuilder->get();
 
-    if ($desde && $hasta) {
-        $builder->where('fecha_venta >=', $desde);
-        $builder->where('fecha_venta <=', $hasta);
-    }
+        // Organizar los detalles por ID de venta
+        $detallesRaw = $detalleQuery->getResultArray();
+        $detallesPorVenta = [];
 
-    if ($metodoEntrega !== null && $metodoEntrega !== '') {
-        $builder->where('metodo_entrega', $metodoEntrega);
-    }
+        foreach ($detallesRaw as $detalle) {
+            $idVenta = $detalle['id_venta'];
+            if (!isset($detallesPorVenta[$idVenta])) {
+                $detallesPorVenta[$idVenta] = [];
+            }
+            $detallesPorVenta[$idVenta][] = $detalle;
+        }
 
-    $ventas = $builder->get()->getResultArray();
-
-    return  view('administrador/encabezado_admin')
-            . view('administrador/barraNav_admin')
-            . view('administrador/listar_ventas', ['ventas' => $ventas]);
-}
-
-
-
-
-    public function listar_detalle_ventas($id=null)
-    {
-        $venta = new Venta_model();
-        $detalle_venta=new detalle_venta_model;
+        $data['detallesPorVenta'] = $detallesPorVenta;
+        $data['titulo'] = 'Lista de Ventas';
 
         return view('administrador/encabezado_admin', $data)
             . view('administrador/barraNav_admin')
-            . view('administrador/listar_ventas');
-
+            . view('administrador/listar_ventas', $data);
     }
+
+
+  
+
     public function eliminar_venta($id_venta)
     {
         $ventaModel = new Venta_Model();
