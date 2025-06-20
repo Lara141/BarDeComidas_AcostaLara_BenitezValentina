@@ -5219,4 +5219,10 @@ in APPPATH\Views\administrador\listar_ventas.php on line 71.
 =======
 >>>>>>> b949c3ebd5a2bad6ad5c2522a963ce381d182cf3
 DEBUG - 2025-06-19 23:55:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+<<<<<<< HEAD
+DEBUG - 2025-06-19 23:56:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 23:59:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-19 23:59:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+=======
 >>>>>>> cf5c91ca9d72b4bab41fa8b7f0db33aa5ee0c84f
+>>>>>>> cf4e0b9d6b3a0bdd20f91fca8a858ada0f4a8a43

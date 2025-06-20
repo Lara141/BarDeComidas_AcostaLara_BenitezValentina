@@ -244,14 +244,14 @@ public function menu_comida() {
     $producto_model = new producto_model();
     $data['productos'] = $producto_model->where('estado_producto', 1)->where('stock_producto >', 0)->join('categoria_producto', 'categoria_producto.categoria_id=producto.categoria_id')->where('LOWER(categoria_producto.categoria_desc)', 'comida')->findAll();
     $data['titulo'] = 'Catalogo de productos';
-    return view('plantillas/encabezado', $data).view('plantillas/barraNavegacion').view('contenido/menu_comida', $data); 
+    return view('plantillas/encabezado', $data).view('plantillas/barraNavegacion').view('contenido/menu_comida', $data).view('plantillas/piePagina');; 
 }
 
 public function menu_bebida() {
     $producto_model = new producto_model();
     $data['productos'] = $producto_model->where('estado_producto', 1)->where('stock_producto >', 0)->join('categoria_producto', 'categoria_producto.categoria_id=producto.categoria_id')->where('LOWER(categoria_producto.categoria_desc)', 'bebida')->findAll();
     $data['titulo'] = 'Catalogo de productos';
-    return view('plantillas/encabezado', $data).view('plantillas/barraNavegacion').view('contenido/menu_bebida', $data); 
+    return view('plantillas/encabezado', $data).view('plantillas/barraNavegacion').view('contenido/menu_bebida', $data).view('plantillas/piePagina');; 
 }
 
 public function eliminar_producto($id=null){
