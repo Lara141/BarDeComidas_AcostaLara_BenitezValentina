@@ -16,7 +16,7 @@ public function principal()
  $provincia = $this->request->getGet('provincia') ?? 'Mendoza';
 
 
-    // Productos filtrados por provincia (para la sección de comidas)
+    // esto filtra por provincia 
     $builder = $producto_model
         ->select('producto.*, categoria_producto.categoria_desc')
         ->where('estado_producto', 1)
@@ -29,7 +29,7 @@ public function principal()
 
     $data['productos'] = $builder->findAll();
 
-    // --- Usá un nuevo modelo para evitar acumulación de condiciones ---
+    //agregue nuevo model para que no haya acumulación de condiciones 
     $producto_model2 = new producto_model();
     $data['promociones'] = $producto_model2
         ->select('producto.*, categoria_producto.categoria_desc')

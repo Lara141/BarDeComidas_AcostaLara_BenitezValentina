@@ -1,6 +1,6 @@
 <?php helper('form'); ?>
 
-<!-- Botón de filtro estilo PedidosYa alineado a la derecha -->
+<!-- Botón de filtro a la derecha -->
 <div class="d-flex justify-content-end mb-4">
   <button type="button"
           class="btn btn-light border rounded-pill shadow-sm d-flex align-items-center px-3 py-2"
@@ -19,7 +19,7 @@
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content rounded-4">
       <form method="get" action="<?= site_url('menu_filtrado'); ?>">
-        <!-- Categoría oculta para saber que es bebida -->
+        <!-- Categoría para saber que es bebida -->
         <input type="hidden" name="categoria" value="bebida">
 
         <div class="modal-header border-0 pb-0 position-relative">

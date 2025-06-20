@@ -74,7 +74,7 @@ public function verificar_login()
 $provincia = $this->request->getGet('provincia') ?? 'Mendoza';
 
 
-    // Productos filtrados por provincia (para la sección de comidas)
+    // Productos filtrados por provincia 
     $builder = $producto_model
         ->select('producto.*, categoria_producto.categoria_desc')
         ->where('estado_producto', 1)
@@ -87,7 +87,7 @@ $provincia = $this->request->getGet('provincia') ?? 'Mendoza';
 
     $data['productos'] = $builder->findAll();
 
-     // Promociones activas
+     // Promociones 
     $data['promociones'] = $producto_model->where('estado_producto', 1)
         ->where('stock_producto >', 0)
         ->where('descuento_producto >', 0)

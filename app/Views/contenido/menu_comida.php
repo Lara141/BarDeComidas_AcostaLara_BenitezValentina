@@ -14,7 +14,7 @@
   </button>
 </div>
 
-<!-- Modal estilo PedidosYa -->
+<!-- Modal -->
 <div class="modal fade" id="filtrosPedidosYaModal" tabindex="-1" aria-labelledby="filtrosPedidosYaModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content rounded-4">

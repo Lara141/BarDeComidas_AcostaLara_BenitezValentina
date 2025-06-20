@@ -1,6 +1,6 @@
 <?php helper('form'); ?>
 
-<!-- Botón de filtro estilo PedidosYa alineado a la derecha -->
+<!-- Botón de filtro a la derecha -->
 <div class="d-flex justify-content-end mb-4">
   <button type="button"
           class="btn btn-light border rounded-pill shadow-sm d-flex align-items-center px-3 py-2"
@@ -14,7 +14,7 @@
   </button>
 </div>
 
-<!-- Modal estilo PedidosYa -->
+<!-- Modal  -->
 <div class="modal fade" id="filtrosPedidosYaModal" tabindex="-1" aria-labelledby="filtrosPedidosYaModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content rounded-4">

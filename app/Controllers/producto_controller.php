@@ -282,17 +282,17 @@ public function menu_filtrado()
     $builder->select('*');
     $builder->join('categoria_producto', 'producto.categoria_id = categoria_producto.categoria_id');
 
-    // Filtrar por categoría
+    // Filtra por categoría
     if ($categoria) {
         $builder->where('LOWER(categoria_producto.categoria_desc)', strtolower($categoria));
     }
 
-    // Si es comida, filtra por provincia si se eligió
+    // Si es comida, filtra por provincia si eligio alguna
     if (strtolower($categoria) === 'comida' && $provincia) {
         $builder->where('producto.provincia_producto', $provincia);
     }
 
-    // Solo promociones (para ambos)
+    // Solo promociones para cualquier producto
     if ($soloPromos) {
         $builder->where('producto.descuento_producto >', 0);
     }
