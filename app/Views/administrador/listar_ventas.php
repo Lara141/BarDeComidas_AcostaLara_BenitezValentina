@@ -6,29 +6,45 @@
                 <i class="fa-solid fa-receipt"></i> Lista de Ventas
             </h2>
 
-            <!-- Formulario de filtros -->
-            <form method="get" class="row g-3 mb-4">
-                <div class="col-md-4">
-                    <label for="desde" class="form-label">Desde:</label>
-                    <input type="date" class="form-control" name="desde" id="desde" value="<?= esc($_GET['desde'] ?? '') ?>">
-                </div>
-                <div class="col-md-4">
-                    <label for="hasta" class="form-label">Hasta:</label>
-                    <input type="date" class="form-control" name="hasta" id="hasta" value="<?= esc($_GET['hasta'] ?? '') ?>">
-                </div>
-                <div class="col-md-4 d-flex align-items-end">
-                    <button type="submit" class="btn btn-primary w-100">
-                        <i class="fa-solid fa-filter"></i> Filtrar
-                    </button>
-                </div>
-            </form>
+          <form method="get" class="row g-3 mb-4" id="formFiltros">
+    <div class="col-md-5">
+        <label for="desde" class="form-label">Desde:</label>
+        <input type="date" class="form-control" name="desde" id="desde" value="<?= esc($_GET['desde'] ?? '') ?>">
+    </div>
+    <div class="col-md-5">
+        <label for="hasta" class="form-label">Hasta:</label>
+        <input type="date" class="form-control" name="hasta" id="hasta" value="<?= esc($_GET['hasta'] ?? '') ?>">
+    </div>
+    <div class="col-md-2 d-flex align-items-end">
+        <button type="submit" class="btn btn-primary w-100">
+            <i class="fa-solid fa-filter"></i> Filtrar
+        </button>
+    </div>
+</form>
 
-            <!-- Alerta si hay filtro -->
-            <?php if (!empty($_GET['desde']) && !empty($_GET['hasta'])): ?>
-                <div class="alert alert-info text-center">
-                    Mostrando ventas entre <strong><?= date('d/m/Y', strtotime($_GET['desde'])) ?></strong> y <strong><?= date('d/m/Y', strtotime($_GET['hasta'])) ?></strong>.
-                </div>
-            <?php endif; ?>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('formFiltros');
+    form.addEventListener('submit', function (e) {
+        const desde = document.getElementById('desde').value;
+        const hasta = document.getElementById('hasta').value;
+
+        if (!desde || !hasta) {
+            e.preventDefault();
+            alert('Por favor, completá ambos campos de fecha: "Desde" y "Hasta".');
+        }
+    });
+});
+</script>
+
+
+      <?php if (!empty($_GET['desde']) && !empty($_GET['hasta'])): ?>
+    <div class="alert alert-info text-center">
+        Mostrando ventas entre <strong><?= date('d/m/Y', strtotime($_GET['desde'])) ?></strong> y <strong><?= date('d/m/Y', strtotime($_GET['hasta'])) ?></strong>.
+    </div>
+<?php endif; ?>
+
+
 
             <!-- Mensaje flash -->
             <?php if (session()->getFlashdata('mensaje')): ?>
@@ -152,12 +168,13 @@ document.addEventListener('DOMContentLoaded', function() {
           html += '<thead><tr><th>Producto</th><th>Cantidad</th><th>Precio Unitario</th><th>Subtotal</th></tr></thead><tbody>';
 
           data.forEach(item => {
-            html += <tr>
-                      <td>${item.nombre_producto}</td>
-                      <td>${item.cantidad}</td>
-                      <td>$${parseFloat(item.precio_unitario).toFixed(2)}</td>
-                      <td>$${parseFloat(item.subtotal).toFixed(2)}</td>
-                    </tr>;
+           html += `<tr>
+    <td>${item.nombre_producto}</td>
+    <td>${item.cantidad}</td>
+    <td>$${parseFloat(item.precio_unitario).toFixed(2)}</td>
+    <td>$${parseFloat(item.subtotal).toFixed(2)}</td>
+</tr>`;
+
           });
 
           html += '</tbody></table>';

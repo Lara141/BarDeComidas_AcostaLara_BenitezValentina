@@ -69,40 +69,34 @@ class Ventas_controller extends BaseController
 
     $cart->destroy();
     return redirect()->route('ver_carrito')->with('mensaje', '¡Gracias por su compra! Su venta ha sido registrada correctamente.');
-}
-public function listar_ventas()
+}public function listar_ventas()
 {
     $desde = $this->request->getGet('desde');
     $hasta = $this->request->getGet('hasta');
-    $metodoEntrega = $this->request->getGet('metodo_entrega');
 
-        $data['ventas'] = $query->getResultArray();
+    $ventasModel = new \App\Models\Venta_model();
 
-        // Traer los detalles de cada venta
-        $detalleBuilder = $db->table('detalle_venta');
-        $detalleBuilder->select('detalle_venta.id_venta, producto.nombre_producto, detalle_venta.cantidad, detalle_venta.precio_unitario, detalle_venta.subtotal');
-        $detalleBuilder->join('producto', 'producto.id_producto = detalle_venta.id_producto');
-        $detalleQuery = $detalleBuilder->get();
+    $builder = $ventasModel->builder();
+    $builder->select('ventas.*, persona.nombre_persona, COUNT(detalle_venta.id_producto) AS cantidad_productos');
+    $builder->join('persona', 'persona.id_persona = ventas.id_persona');
+    $builder->join('detalle_venta', 'detalle_venta.id_venta = ventas.id_venta');
 
-        // Organizar los detalles por ID de venta
-        $detallesRaw = $detalleQuery->getResultArray();
-        $detallesPorVenta = [];
-
-        foreach ($detallesRaw as $detalle) {
-            $idVenta = $detalle['id_venta'];
-            if (!isset($detallesPorVenta[$idVenta])) {
-                $detallesPorVenta[$idVenta] = [];
-            }
-            $detallesPorVenta[$idVenta][] = $detalle;
-        }
-
-        $data['detallesPorVenta'] = $detallesPorVenta;
-        $data['titulo'] = 'Lista de Ventas';
-
-        return view('administrador/encabezado_admin', $data)
-            . view('administrador/barraNav_admin')
-            . view('administrador/listar_ventas', $data);
+    if ($desde && $hasta) {
+        $builder->where('fecha_venta >=', $desde);
+        
+        // Incluir ventas hasta las 23:59:59 del día "hasta"
+        $hastaConHora = date('Y-m-d 23:59:59', strtotime($hasta));
+        $builder->where('fecha_venta <=', $hastaConHora);
     }
+
+    $builder->groupBy('ventas.id_venta');
+
+    $ventas = $builder->get()->getResultArray();
+
+    return  view('administrador/encabezado_admin')
+            . view('administrador/barraNav_admin')
+            . view('administrador/listar_ventas', ['ventas' => $ventas]);
+}
 
 
   

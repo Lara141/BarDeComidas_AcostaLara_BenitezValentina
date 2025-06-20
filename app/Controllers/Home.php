@@ -8,15 +8,11 @@ class Home extends BaseController
     
 public function principal()
 {
-<<<<<<< HEAD
     $producto_model = new producto_model();
     $provincia = $this->request->getGet('provincia');
     if (empty($provincia)) {
         $provincia = 'Mendoza';
     }
-=======
-    $producto_model = new \App\Models\producto_model();
->>>>>>> cf5c91ca9d72b4bab41fa8b7f0db33aa5ee0c84f
  $provincia = $this->request->getGet('provincia') ?? 'Mendoza';
 
 
