@@ -39,7 +39,19 @@
                             <td><?= $i++; ?></td>
                             <td><?= esc($item['name']); ?></td>
                             <td>$<?= number_format($item['price'], 2, ',', '.') ?></td>
-                            <td><?= esc($item['qty']); ?></td>
+                            <td>
+                                <form action="<?= base_url('actualizar_cantidad') ?>" method="post" class="d-inline">
+                                    <input type="hidden" name="rowid" value="<?= $item['rowid'] ?>">
+                                    <input type="hidden" name="qty" value="<?= $item['qty'] - 1 ?>">
+                                    <button type="submit" class="btn btn-sm btn-outline-secondary" <?= $item['qty'] <= 1 ? 'disabled' : '' ?>>−</button>
+                                </form>
+                                <span class="mx-2"><?= esc($item['qty']); ?></span>
+                                <form action="<?= base_url('actualizar_cantidad') ?>" method="post" class="d-inline">
+                                    <input type="hidden" name="rowid" value="<?= $item['rowid'] ?>">
+                                    <input type="hidden" name="qty" value="<?= $item['qty'] + 1 ?>">
+                                    <button type="submit" class="btn btn-sm btn-outline-secondary">+</button>
+                                </form>
+                            </td>
                             <td>$<?= number_format($item['subtotal'], 2, ',', '.') ?></td>
                             <td>
                                 <a href="<?= base_url('eliminar_item/' . $item['rowid']) ?>" class="btn btn-sm btn-danger">

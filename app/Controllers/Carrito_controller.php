@@ -71,5 +71,16 @@ class Carrito_controller extends BaseController
         $cart->destroy();
         return redirect()->route('ver_carrito')->with('mensaje', 'Carrito vaciado correctamente');
     }
-
+    
+    public function actualizar_cantidad()
+    {
+        $cart = \Config\Services::cart();
+        $rowid = $this->request->getPost('rowid');
+        $qty = $this->request->getPost('qty');
+        $cart->update([
+            'rowid' => $rowid,
+            'qty'   => $qty
+        ]);
+        return redirect()->back();
+    }
 }
