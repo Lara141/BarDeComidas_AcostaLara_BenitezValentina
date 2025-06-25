@@ -129,7 +129,8 @@
                 <?= form_hidden('provincia', $row['provincia_producto']); ?>
                 <input type="hidden" name="qty" value="1">
                 <button type="submit" class="btn btn-link p-0 border-0 bg-transparent">
-                  <img src="<?= base_url('assets/img/carrito.png'); ?>" alt="Carrito" style="width: 26px; height: 26px;">
+                  <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png"
+                       alt="Carrito" style="width: 26px; height: 26px;">
                 </button>
               <?= form_close(); ?>
             <?php endif; ?>

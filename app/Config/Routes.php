@@ -58,6 +58,7 @@ $routes->get('ver_carrito', 'Carrito_controller::ver_carrito');
 $routes->post('agregar_carrito', 'Carrito_controller::agregar_carrito');
 $routes->get('eliminar_item/(:any)', 'Carrito_controller::eliminar_item/$1');
 $routes->get('vaciar_carrito', 'Carrito_controller::vaciar_carrito');
+$routes->post('actualizar_cantidad', 'Carrito_controller::actualizar_cantidad');
 
 //ventas
 $routes->get('ventas', 'Ventas_controller::guardar_venta');

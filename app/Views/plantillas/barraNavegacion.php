@@ -14,10 +14,22 @@
           <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt="Perfil" style="width: 28px; height: 28px;"></a>
 
       <?php elseif ($session->get('perfil') == 2): ?>
-
-        <!-- CLIENTE REGISTRADO -->
-        <a class="nav-link" href="<?= base_url('/ver_carrito') ?>">
-          <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
+        <?php
+        $cart = \Config\Services::cart();
+        $cantidad = 0;
+        foreach ($cart->contents() as $item) {
+            $cantidad += $item['qty'];
+        }
+        ?>
+                <!-- CLIENTE REGISTRADO -->
+        <a class="nav-link position-relative" href="<?= base_url('/ver_carrito') ?>">
+            <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Carrito" style="width: 26px; height: 26px;">
+            <?php if ($cantidad > 0): ?>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    <?= $cantidad ?>
+                    <span class="visually-hidden">productos en el carrito</span>
+                </span>
+            <?php endif; ?>
         </a>
         <span class="nav-link"> <?= esc($session->get('nombre')) ?></span>
         <a class="nav-link" href="<?= base_url('/salir') ?>">Salir</a>
