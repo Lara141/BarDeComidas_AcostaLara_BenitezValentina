@@ -101,14 +101,29 @@ class producto_controller extends BaseController {
 
  }
 
+
+
 function gestionar_producto(){
-   $producto_model= new producto_model();
-   $categoria=new Categoria_Model();
+    $producto_model = new producto_model();
+    $categoria = new Categoria_Model();
 
-    $data['producto']= $producto_model->join('categoria_producto','categoria_producto.categoria_id=producto.categoria_id')->findAll();
-    $data['titulo']='Gestionar productos';
+    $buscar = $this->request->getGet('buscar');
 
-    return view('administrador/encabezado_admin',$data).view('administrador/barraNav_admin').view('administrador/gestionar_producto');
+    $builder = $producto_model
+        ->select('producto.*, categoria_producto.categoria_desc')
+        ->join('categoria_producto', 'categoria_producto.categoria_id=producto.categoria_id');
+
+    if (!empty($buscar)) {
+        // El tercer parámetro 'both' busca en cualquier parte del nombre
+        $builder->like('nombre_producto', $buscar, 'after');
+    }
+
+    $data['producto'] = $builder->findAll();
+    $data['titulo'] = 'Gestionar productos';
+
+    return view('administrador/encabezado_admin', $data)
+         . view('administrador/barraNav_admin', $data)
+         . view('administrador/gestionar_producto', $data);
 }
 
 function editar_producto($id=null){

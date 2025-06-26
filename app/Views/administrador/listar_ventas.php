@@ -6,45 +6,73 @@
                 <i class="fa-solid fa-receipt"></i> Lista de Ventas
             </h2>
 
-          <form method="get" class="row g-3 mb-4" id="formFiltros">
-    <div class="col-md-5">
-        <label for="desde" class="form-label">Desde:</label>
-        <input type="date" class="form-control" name="desde" id="desde" value="<?= esc($_GET['desde'] ?? '') ?>">
-    </div>
-    <div class="col-md-5">
-        <label for="hasta" class="form-label">Hasta:</label>
-        <input type="date" class="form-control" name="hasta" id="hasta" value="<?= esc($_GET['hasta'] ?? '') ?>">
-    </div>
-    <div class="col-md-2 d-flex align-items-end">
-        <button type="submit" class="btn btn-primary w-100">
-            <i class="fa-solid fa-filter"></i> Filtrar
-        </button>
-    </div>
-</form>
+            <!-- Botón de filtro -->
+            <div class="d-flex justify-content-end mb-4">
+                <button type="button"
+                        class="btn btn-light border rounded-pill shadow-sm d-flex align-items-center px-3 py-2"
+                        data-bs-toggle="modal"
+                        data-bs-target="#filtrosVentasModal"
+                        style="gap: 8px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16">
+                        <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .4.8l-4.6 6.1V13a1 1 0 0 1-2 0V7.9L1.6 1.8A.5.5 0 0 1 1.5 1.5z"/>
+                    </svg>
+                    <span class="fw-semibold">Filtros</span>
+                </button>
+            </div>
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('formFiltros');
-    form.addEventListener('submit', function (e) {
-        const desde = document.getElementById('desde').value;
-        const hasta = document.getElementById('hasta').value;
+            <!-- Modal de filtros -->
+            <div class="modal fade" id="filtrosVentasModal" tabindex="-1" aria-labelledby="filtrosVentasModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content rounded-4">
+                        <form method="get" action="<?= site_url('listar_ventas'); ?>">
+                            <div class="modal-header border-0 pb-0 position-relative">
+                                <h4 class="modal-title fw-bold" id="filtrosVentasModalLabel">Filtros</h4>
+                                <a href="<?= site_url('listar_ventas'); ?>"
+                                   class="btn btn-light border rounded-pill position-absolute end-0 top-0 mt-2 me-5"
+                                   style="z-index:2; font-size: 0.95rem;">
+                                    Reestablecer
+                                </a>
+                                <button type="button" class="btn-close ms-2" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body pt-2">
+                                <div class="mb-3">
+                                    <label for="desde" class="form-label">Desde:</label>
+                                    <input type="date" class="form-control" name="desde" id="desde" value="<?= esc($_GET['desde'] ?? '') ?>">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="hasta" class="form-label">Hasta:</label>
+                                    <input type="date" class="form-control" name="hasta" id="hasta" value="<?= esc($_GET['hasta'] ?? '') ?>">
+                                </div>
+                            </div>
+                            <div class="modal-footer border-0 pt-0 justify-content-center">
+                                <button type="submit" class="btn btn-primary rounded-pill px-5">Aplicar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
 
-        if (!desde || !hasta) {
-            e.preventDefault();
-            alert('Por favor, completá ambos campos de fecha: "Desde" y "Hasta".');
-        }
-    });
-});
-</script>
+            <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const form = document.querySelector('#filtrosVentasModal form');
+                if(form){
+                    form.addEventListener('submit', function (e) {
+                        const desde = document.getElementById('desde').value;
+                        const hasta = document.getElementById('hasta').value;
+                        if (!desde || !hasta) {
+                            e.preventDefault();
+                            alert('Por favor, completá ambos campos de fecha: "Desde" y "Hasta".');
+                        }
+                    });
+                }
+            });
+            </script>
 
-
-      <?php if (!empty($_GET['desde']) && !empty($_GET['hasta'])): ?>
-    <div class="alert alert-info text-center">
-        Mostrando ventas entre <strong><?= date('d/m/Y', strtotime($_GET['desde'])) ?></strong> y <strong><?= date('d/m/Y', strtotime($_GET['hasta'])) ?></strong>.
-    </div>
-<?php endif; ?>
-
-
+            <?php if (!empty($_GET['desde']) && !empty($_GET['hasta'])): ?>
+                <div class="alert alert-info text-center">
+                    Mostrando ventas entre <strong><?= date('d/m/Y', strtotime($_GET['desde'])) ?></strong> y <strong><?= date('d/m/Y', strtotime($_GET['hasta'])) ?></strong>.
+                </div>
+            <?php endif; ?>
 
             <!-- Mensaje flash -->
             <?php if (session()->getFlashdata('mensaje')): ?>
@@ -190,4 +218,3 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
-
