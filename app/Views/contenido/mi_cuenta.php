@@ -179,3 +179,4 @@
     No tenés compras registradas todavía.
   </div>
 <?php endif; ?>
+</div>
