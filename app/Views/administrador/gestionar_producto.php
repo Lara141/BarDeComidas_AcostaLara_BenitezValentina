@@ -5,6 +5,15 @@
             <h2 class="text-center mb-4 fw-bold text-primary">
                 <i class="fa-solid fa-boxes-stacked"></i> Gestión de productos
             </h2>
+            <!-- Barra de búsqueda -->
+            <form method="get" action="<?= base_url('/gestionar') ?>" class="mb-4">
+                <div class="input-group" style="max-width: 400px; margin: 0 auto;">
+                    <input type="text" name="buscar" class="form-control" placeholder="Buscar producto por nombre..." value="<?= esc($_GET['buscar'] ?? '') ?>">
+                    <button class="btn btn-primary" type="submit">
+                        <i class="fa fa-search"></i> Buscar
+                    </button>
+                </div>
+            </form>
             <?php if (session()->getFlashdata('mensaje')): ?>
                 <div class="alert alert-success text-center">
                     <?= session()->getFlashdata('mensaje') ?>
@@ -60,20 +69,21 @@
                                              class="img-thumbnail rounded"
                                              style="max-width: 80px;">
                                     </td>
-                                  <td class="text-center">
-    <div class="d-flex gap-1 justify-content-center">
-        <a class="btn btn-sm btn-primary" href="<?= base_url('editar/'.$row['id_producto']) ?>">
-            Editar
-        </a>
-        <?php if ($row['estado_producto'] == 1): ?>
-            <a class="btn btn-sm btn-danger" href="<?= base_url('eliminar/'.$row['id_producto']) ?>">
-                Eliminar
-            </a>
-        <?php else: ?>
-            <a class="btn btn-sm btn-success" href="<?= base_url('activar/'.$row['id_producto']) ?>">
-                Activar
-            </a>
-        <?php endif; ?>
+                                    <td class="text-center">
+                                        <div class="d-flex gap-1 justify-content-center">
+                                            <a class="btn btn-sm btn-primary" href="<?= base_url('editar/'.$row['id_producto']) ?>">
+                                                Editar
+                                            </a>
+                                            <?php if ($row['estado_producto'] == 1): ?>
+                                                <a class="btn btn-sm btn-danger" href="<?= base_url('eliminar/'.$row['id_producto']) ?>">
+                                                    Eliminar
+                                                </a>
+                                            <?php else: ?>
+                                                <a class="btn btn-sm btn-success" href="<?= base_url('activar/'.$row['id_producto']) ?>">
+                                                    Activar
+                                                </a>
+                                            <?php endif; ?>
+                                        </div>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>

@@ -31,7 +31,7 @@ $routes->post('consulta', 'Consulta_controller::add_consulta');
 $routes->get('listar_consulta', 'Consulta_controller::listar_consultas');
 $routes->get('consulta/leido/(:num)', 'Consulta_controller::marcar_leido/$1');
 $routes->get('consulta/noleido/(:num)', 'Consulta_controller::marcar_no_leido/$1');
-
+ 
 // productos
 $routes->get('agregar_producto', 'producto_controller::form_agregar_producto');
 $routes->post('insertar_producto', 'producto_controller::registrar_producto');
