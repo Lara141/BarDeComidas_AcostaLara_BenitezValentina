@@ -25,7 +25,7 @@
 
         <div class="modal-header border-0 pb-0 position-relative">
           <h4 class="modal-title fw-bold" id="filtrosPedidosYaModalLabel">Filtros</h4>
-          <a href="<?= site_url('menu_bebida'); ?>"
+          <a href="<?= site_url('bebida'); ?>"
              class="btn btn-light border rounded-pill position-absolute end-0 top-0 mt-2 me-5"
              style="z-index:2; font-size: 0.95rem;">
             Reestablecer

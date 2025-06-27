@@ -33,7 +33,7 @@
       <div class="footer-col footer-subscribe">
         <h4><strong>Suscribete a Sabor Argentino</strong></h4>
         <p>¡Enterate primero! Suscribite y disfrutá beneficios y promos exclusivos.</p>
-        <form action="ruta/del/servidor" method="POST" class="subscribe-form">
+        <form action="#" method="POST" class="subscribe-form">
           <div class="input-group">
             <input type="email" class="form-control" name="email" placeholder="Ingresá tu Gmail" required>
             <button type="submit" class="btn btn-info">Suscribirme</button>
